@@ -17,6 +17,7 @@ require.config({
       underscore:  'libs/underscore',
       handlebars : 'libs/handlebars.amd',
       backbone:    'libs/backbone',
+      d3:    'libs/d3',
       modelRapper: 'models/rapper.model',
       collectionRapper: 'collections/rapper.collection',
       viewRapperList: 'views/rapperList.view'
@@ -33,6 +34,9 @@ require.config({
     },
     handlebars: {
         exports: 'Handlebars'
+    },
+    d3: {
+        exports: 'd3'
     },
     backbone: {
       deps: ['underscore','handlebars','jquery'],
@@ -51,6 +55,15 @@ require([
   'viewRapperList'
 ], function (fullpage, backbone, modelRapper, collectionRapper,viewRapperList) {
 
+
+$('path').on('mouseenter',function(){$(this).css('fill', 'rgba(255,0,50,0.1)')});
+$('path').on('mouseout',function(){$(this).css('fill', 'rgba(255,0,50,0)')});
+$('#liste-rappeur li').on('mouseover',function(){ 
+  $('#liste-rappeur-name li').eq($(this).index()).addClass('active');
+});
+$('#liste-rappeur li').on('mouseout',function(){ 
+  $('#liste-rappeur-name li').eq($(this).index()).removeClass('active');
+});
 /*==========================================================================================*/
 /*----------------------------------  INIT OF FULLPAGE.JS  ---------------------------------*/
 /*==========================================================================================*/
@@ -59,7 +72,8 @@ $('#fullpage').fullpage({
   easing: 'swing',
   navigation: true,
   afterLoad: function(anchorLink, index){
-    router.navigate(""+index);
+    var suplmement = (Backbone.history.fragment).substring(2);
+    router.navigate(""+index+"/"+suplmement);
   }
 });
 
@@ -67,7 +81,6 @@ $('#home>a').on('click',function(event){
   event.preventDefault();
   $.fn.fullpage.moveSectionDown();
 });
-
 
 /*==========================================================================================*/
 /*-------------------------------------  ROUTER GESTION  -----------------------------------*/

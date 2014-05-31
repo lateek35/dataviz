@@ -17,6 +17,7 @@
         underscore:  'libs/underscore',
         handlebars : 'libs/handlebars.amd',
         backbone:    'libs/backbone',
+        d3:    'libs/d3',
         modelRapper: 'models/rapper.model',
         collectionRapper: 'collections/rapper.collection',
         viewRapperList: 'views/rapperList.view'
@@ -29,6 +30,9 @@
         },
         underscore: {
             exports: '_'
+        },
+        d3: {
+            exports: 'd3'
         },
         backbone: {
             deps: [

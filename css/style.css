@@ -7,15 +7,24 @@ Copyright (C) 2014 - Raquin Allan - Chapron Kevin - Mourgues Antoine - Florian P
 @under MIT license
 */
 html, body{
+	height: 100%;
 	font-family: 'bebas', Georgia, serif;
 	font-size: 100px;
 }
+#fullpage,#fullpage>div{
+	height: 100%;
+}
+
 #home{
 	background-image: url('../img/background-1.jpg');
 	background-size: cover;
 	text-align: center;
 	text-transform: uppercase;
 }
+	#home #carte{
+		width: 100%;
+		height: 100%;
+	}
 
 	#home h1{
 		font-family: 'open_sansextrabold', Georgia, serif;
@@ -70,5 +79,93 @@ html, body{
 	}
 
 #module-1{
-	background-color: #494949;
+background-color: #494949;
 }
+	#module-1 #liste-rappeur{
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 0.93rem;
+		background-color: rgba(0,0,0,0.25);
+		border-top: 1px solid #111;
+		z-index: 5;
+	}
+		#liste-rappeur ul{
+			display: block;
+			margin: 0 auto;
+			text-align: center
+		}
+
+		#liste-rappeur li{
+			-webkit-transition:all 0.1s ease-out;
+			-moz-transition:all 0.1s ease-out;
+			-o-transition:all 0.1s ease-out;
+			transition:all 0.1s ease-out;
+			font-size: 0rem;
+		    width:70px;
+		    height:70px;
+			border: 2px solid #313131;
+			display: inline-block;
+		    -webkit-border-radius:50px;
+		    -moz-border-radius:50px;
+		    border-radius:50px;
+		    margin: 0 0.08rem 0 0.08rem;
+		    overflow:hidden;   
+		}
+		#liste-rappeur li:hover{
+			border: 2px solid #e04852;
+		}
+		
+		#liste-rappeur img{
+			filter: url(filters.svg#grayscale);
+			 filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+			filter: gray; /* IE6-9 */
+			-webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+			position: relative;
+			margin-left: -87px;
+			left: 50%;
+		}
+		#liste-rappeur img:hover{
+			filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+			-webkit-filter: grayscale(0%);
+		}
+	#module-1 #liste-rappeur-name{
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0.93rem;
+		overflow: hidden;
+		z-index: 6;
+	}
+		#liste-rappeur-name ul{
+			height: 0.26rem;
+			text-align: center;
+			font-size: 0rem;
+		}
+		#liste-rappeur-name li{
+			-webkit-transition:all 0.1s ease-out;
+			-moz-transition:all 0.1s ease-out;
+			-o-transition:all 0.1s ease-out;
+			transition:all 0.1s ease-out;
+			position: relative;
+			top: 0.25rem;
+			width: 1.03rem;
+			height: 0.25rem;
+			display: inline-block;
+			vertical-align: top;
+			text-align: center;
+			line-height: 0.25rem;
+			margin: 0 auto;
+			color: #e04852;
+			background-color: #363636;
+			border-top: 1px solid #111;
+			border-left: 1px solid #111;
+			border-right: 1px solid #111;
+			border-bottom: 1px solid #363636;
+			font-size: 0.15rem;
+		}
+		#liste-rappeur-name li.active{
+			top: 0;
+		}
+
