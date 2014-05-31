@@ -1,0 +1,74 @@
+/*!
+
+PANAM ALL STARZ v1.0.0
+
+Copyright (C) 2014 - Raquin Allan - Chapron Kevin - Mourgues Antoine - Florian Pygmalion - Aquaviva Julien
+
+@under MIT license
+*/
+html, body{
+	font-family: 'bebas', Georgia, serif;
+	font-size: 100px;
+}
+#home{
+	background-image: url('../img/background-1.jpg');
+	background-size: cover;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+	#home h1{
+		font-family: 'open_sansextrabold', Georgia, serif;
+		font-size: 0.60rem;
+		color: #fff;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -2.86rem;
+		margin-top: -0.6rem;
+	}
+	#home h2{
+		font-size: 0.20rem;
+		color: #e94953;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -1.58rem;
+		margin-top: 0.1rem;
+	}
+	#home a{
+		font-size: 0.16rem;
+		display: block;
+		margin: 0 auto;
+		position: absolute;
+		left: 50%;
+	}
+	#home a:first-of-type{
+		bottom: 0.7rem;
+		margin-left : -65px;
+	}
+	#home a:last-of-type{
+		bottom: 0.3rem;
+		margin-left: -0.15rem;
+	}
+	#home a:link {
+	  color: #e94953; 
+	  text-decoration:none;
+	}
+	#home a:visited {
+	  color: #e94953;
+	  text-decoration:none;
+	}
+	#home a:hover {
+	  color:#e94953;
+	  text-decoration:none;
+	}
+	/* Déclaration pour IE qui assimile l'état :focus à l'état :active */
+	#home a:focus, a:active {
+	  text-decoration:none;
+	  color:#e94953;
+	}
+
+#module-1{
+	background-color: #494949;
+}
