@@ -1,4 +1,4 @@
-define(['backbone','modelRapper','collectionRapper'], function (backbone, modelRapper,collectionRapper) {
+define(['backbone','modelRapper','collectionRapper','text!templates/liste-rappeur.html'], function (backbone, modelRapper,collectionRapper,jstemplate) {
 
 /*==========================================================================================*/
 /*----------------------------  VUE POUR COLLECTION DE RAPPERS  ----------------------------*/
@@ -11,7 +11,7 @@ define(['backbone','modelRapper','collectionRapper'], function (backbone, modelR
       var rappers = new collectionRapper();
       rappers.fetch({
         success: function(rappers){
-          var source = $("#template").html();
+          var source = jstemplate;
           var template = Handlebars.compile(source);
           if(cp == -1){
             html = rappers.toJSON();
@@ -29,9 +29,17 @@ define(['backbone','modelRapper','collectionRapper'], function (backbone, modelR
 
           // populate the DOM with the resulting HTML
           that.$el.html(template(html));
+          that.delegateEvents()
         }
       })
+    },
+    events: {
+      "click": "affichedep"  
+    },
+    affichedep : function(){
+      
     }
   });
   return RapperList;
  });
+

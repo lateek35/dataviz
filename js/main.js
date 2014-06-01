@@ -55,9 +55,29 @@ require([
   'viewRapperList'
 ], function (fullpage, backbone, modelRapper, collectionRapper,viewRapperList) {
 
-
+/*==========================================================================================*/
+/*------------------------------------  ANIMATION CARTE  -----------------------------------*/
+/*==========================================================================================*/
+$( document ).ready(function() {
 $('path').on('mouseenter',function(){$(this).css('fill', 'rgba(255,0,50,0.1)')});
 $('path').on('mouseout',function(){$(this).css('fill', 'rgba(255,0,50,0)')});
+
+
+$('path').on('click',function(){
+  var _that = $(this);
+  $('path').not('#'+$(this).attr('id')).attr('class','bouge');
+  setTimeout(function(){
+    $('path').not('#'+_that.attr('id')).css('display','none')}, 500
+  );
+});
+$(document).mouseup(function(e){
+    $('path').show().attr('class','');
+});
+
+
+$('path').on('click',function(){
+  $('path').not('#'+$(this).attr('id')).attr('class','bouge');
+});
 $('#liste-rappeur li').on('mouseover',function(){ 
   $('#liste-rappeur-name li').eq($(this).index()).addClass('active');
 });
@@ -88,6 +108,7 @@ $('#home>a').on('click',function(event){
   var Router = Backbone.Router.extend({
     routes:{
       ':slide' : 'home',
+      ':slide/' : 'home',
       ':slide/dep/:cp' : 'departement'
     }
   });
@@ -110,4 +131,6 @@ $('#home>a').on('click',function(event){
   };
 
   Backbone.history.start();
+});
+
 });
