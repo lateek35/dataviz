@@ -29,6 +29,11 @@ require.config({
             'jquery'
         ]
     },
+    zoomooz: {
+        deps: [
+            'jquery'
+        ]
+    },
     underscore: {
         exports: '_'
     },
@@ -52,38 +57,59 @@ require([
   'backbone',
   'modelRapper',
   'collectionRapper',
-  'viewRapperList'
-], function (fullpage, backbone, modelRapper, collectionRapper,viewRapperList) {
+  'viewRapperList',
+  'd3'
+], function (fullpage,zoomooz, backbone, modelRapper, collectionRapper,viewRapperList,d3) {
 
 /*==========================================================================================*/
-/*------------------------------------  ANIMATION CARTE  -----------------------------------*/
+/*--------------------------------------  GESTION MAP  -------------------------------------*/
 /*==========================================================================================*/
 $( document ).ready(function() {
-$('path').on('mouseenter',function(){$(this).css('fill', 'rgba(255,0,50,0.1)')});
-$('path').on('mouseout',function(){$(this).css('fill', 'rgba(255,0,50,0)')});
-
-
+/*__________________________________________________________________________________________*/
+/*-----------------------------  Animation MAP (hover + zoom)  ----------------------------*/
+function mouseenterMap(){
+  $(this).css('fill', 'rgba(255,0,50,0.1)');
+  rapperList.runFilter(parseInt($(this)[0].id.substring(1)));
+}
+function mouseoutMap(){
+  $(this).css('fill', 'rgba(255,0,50,0)')
+}
+$('path').on('mouseenter',mouseenterMap);
+$('path').on('mouseout',mouseoutMap);
 $('path').on('click',function(){
   var _that = $(this);
+  $(this).attr('class','zoom');
   $('path').not('#'+$(this).attr('id')).attr('class','bouge');
+  $('path').unbind('mouseenter',mouseenterMap);
   setTimeout(function(){
-    $('path').not('#'+_that.attr('id')).css('display','none')}, 500
-  );
+    $('path').not('#'+_that.attr('id')).css('display','none');
+    $('path').bind('mouseenter',mouseenterMap);
+  }, 500);
 });
 $(document).mouseup(function(e){
-    $('path').show().attr('class','');
+  $('path').show().attr('class','');
+});
+/*__________________________________________________________________________________________*/
+/*--------------------------------  Animation liste rappeur  -------------------------------*/
+$('body').on('mouseover','#list-rapper li',function(){ 
+  $('#list-rapper-name li').eq($(this).index()).addClass('active');
+});
+$('body').on('mouseout','#list-rapper li',function(){ 
+  $('#list-rapper-name li').eq($(this).index()).removeClass('active');
 });
 
-
-$('path').on('click',function(){
-  $('path').not('#'+$(this).attr('id')).attr('class','bouge');
+/*__________________________________________________________________________________________*/
+/*------------------------------  Gestion URL Departement MAP ----------------------------*/
+$('path').on('click',function(){ 
+  var suplmement = (Backbone.history.fragment).substring(0,2);
+  router.navigate(suplmement+"dep/"+parseInt($(this)[0].id.substring(1)));
 });
-$('#liste-rappeur li').on('mouseover',function(){ 
-  $('#liste-rappeur-name li').eq($(this).index()).addClass('active');
-});
-$('#liste-rappeur li').on('mouseout',function(){ 
-  $('#liste-rappeur-name li').eq($(this).index()).removeClass('active');
-});
+/*__________________________________________________________________________________________*/
+/*---------------------------------  Gestion URL Rappeur MAP -------------------------------*/
+// $('path').on('click',function(){ 
+//   var suplmement = (Backbone.history.fragment).substring(0,9);
+//   router.navigate("caca/"+$(this)[0].id);
+// });
 /*==========================================================================================*/
 /*----------------------------------  INIT OF FULLPAGE.JS  ---------------------------------*/
 /*==========================================================================================*/
@@ -113,18 +139,20 @@ $('#home>a').on('click',function(event){
     }
   });
 
-  var rapperList = new viewRapperList();
+  var rappers = new collectionRapper();
+  var rapperList = new viewRapperList({collection : rappers});
 
   var router = new Router();
 
   router.on('route:home',function(slide){
     moveSlide(slide);
-    rapperList.render(-1);
+    rapperList.runFilter();
   });
   router.on('route:departement',function(slide,cp){
     moveSlide(slide);
-    rapperList.render(cp);
+    rapperList.runFilter(parseInt(cp));
   })
+
 
   var moveSlide = function(slide){
     $.fn.fullpage.moveTo(slide); 

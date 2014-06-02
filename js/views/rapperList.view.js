@@ -4,19 +4,26 @@ define(['backbone','modelRapper','collectionRapper','text!templates/liste-rappeu
 /*----------------------------  VUE POUR COLLECTION DE RAPPERS  ----------------------------*/
 /*==========================================================================================*/
   var RapperList = Backbone.View.extend({
-    el:'#page',
+    el:'#list-bottom',
+    events: {
+      "click #list-rapper": "runFilter"
+    },
+    runFilter: function(cp){
+      this.filter = {dep:cp};
+      this.render();
+    },
     render: function(cp){
       var html = [];
       var that = this;
-      var rappers = new collectionRapper();
-      rappers.fetch({
+      var filter = this.filter;
+      this.collection.fetch({
         success: function(rappers){
           var source = jstemplate;
           var template = Handlebars.compile(source);
           if(cp == -1){
             html = rappers.toJSON();
           }else{
-            var rappersFiltered = rappers.where({dep: parseInt(cp)});
+            var rappersFiltered = rappers.where(filter);
             _.each(rappersFiltered, function(rapper){
               html.push(rapper.toJSON());
             });
@@ -26,10 +33,8 @@ define(['backbone','modelRapper','collectionRapper','text!templates/liste-rappeu
           // console.log(rappers.toJSON());
           // that.$el.html(template({rappers : rappersFiltered}));
 
-
           // populate the DOM with the resulting HTML
           that.$el.html(template(html));
-          that.delegateEvents()
         }
       })
     },

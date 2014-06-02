@@ -6,6 +6,7 @@
 		"birth" : "12/12/1993",
 		"birth_place" : "Yvellines",
 		"begin_year" : 1994,
+		"min_pic" : "./img/mini-pic-1.jpg",
 		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
 		"label" :
 			[
@@ -50,6 +51,7 @@
 		"birth" : "12/12/1993",
 		"birth_place" : "Yvellines",
 		"begin_year" : 1994,
+		"min_pic" : "./img/mini-pic-2.jpg",
 		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
 		"label" :
 			[
@@ -86,5 +88,506 @@
 					"a_traks" : 12
 				}
 			]
+	},
+	{
+		"blazz" : "diams",
+		"firstname" : "allan",
+		"lastname" : "raquin",
+		"birth" : "12/12/1993",
+		"birth_place" : "Yvellines",
+		"begin_year" : 1994,
+		"min_pic" : "./img/mini-pic-1.jpg",
+		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
+		"label" :
+			[
+				{
+					"l_name" : "universal"
+				},
+				{
+					"l_name" : "tallac"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "b2oba"
+				},
+				{
+					"s_name" : "Le duc de boulogne"
+				}
+			],
+		"dep" : 75,
+		"album" :
+			[
+				{
+					"a_name" : "92 izi",
+					"a_sells" : 1000,
+					"a_years" : 2000,
+					"a_traks" : 12
+				}
+				,
+				{
+					"a_name" : "92 izi",
+					"a_sells" : 1000,
+					"a_years" : 2000,
+					"a_traks" : 12
+				}
+			]
+	},
+	{
+		"blazz" : "tunisiano",
+		"firstname" : "allan",
+		"lastname" : "raquin",
+		"birth" : "12/12/1993",
+		"birth_place" : "Yvellines",
+		"begin_year" : 1994,
+		"min_pic" : "./img/mini-pic-3.jpg",
+		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
+		"label" :
+			[
+				{
+					"l_name" : "universal"
+				},
+				{
+					"l_name" : "tallac"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "b2oba"
+				},
+				{
+					"s_name" : "Le duc de boulogne"
+				}
+			],
+		"dep" : 93,
+		"album" :
+			[
+				{
+					"a_name" : "92 izi",
+					"a_sells" : 1000,
+					"a_years" : 2000,
+					"a_traks" : 12
+				}
+				,
+				{
+					"a_name" : "92 izi",
+					"a_sells" : 1000,
+					"a_years" : 2000,
+					"a_traks" : 12
+				}
+			]
 	}
+	,
+	{
+		"blazz" : "tunisiano",
+		"firstname" : "allan",
+		"lastname" : "raquin",
+		"birth" : "12/12/1993",
+		"birth_place" : "Yvellines",
+		"begin_year" : 1994,
+		"min_pic" : "./img/mini-pic-3.jpg",
+		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
+		"label" :
+			[
+				{
+					"l_name" : "universal"
+				},
+				{
+					"l_name" : "tallac"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "b2oba"
+				},
+				{
+					"s_name" : "Le duc de boulogne"
+				}
+			],
+		"dep" : 94,
+		"album" :
+			[
+				{
+					"a_name" : "92 izi",
+					"a_sells" : 1000,
+					"a_years" : 2000,
+					"a_traks" : 12
+				}
+				,
+				{
+					"a_name" : "92 izi",
+					"a_sells" : 1000,
+					"a_years" : 2000,
+					"a_traks" : 12
+				}
+			]
+	},
+	{
+		"blazz" : "diams",
+		"firstname" : "allan",
+		"lastname" : "raquin",
+		"birth" : "12/12/1993",
+		"birth_place" : "Yvellines",
+		"begin_year" : 1994,
+		"min_pic" : "./img/mini-pic-1.jpg",
+		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
+		"label" :
+			[
+				{
+					"l_name" : "universal"
+				},
+				{
+					"l_name" : "tallac"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "b2oba"
+				},
+				{
+					"s_name" : "Le duc de boulogne"
+				}
+			],
+		"dep" : 94,
+		"album" :
+			[
+				{
+					"a_name" : "92 izi",
+					"a_sells" : 1000,
+					"a_years" : 2000,
+					"a_traks" : 12
+				}
+				,
+				{
+					"a_name" : "92 izi",
+					"a_sells" : 1000,
+					"a_years" : 2000,
+					"a_traks" : 12
+				}
+			]
+	},
+	{
+		"blazz" : "tunisiano",
+		"firstname" : "allan",
+		"lastname" : "raquin",
+		"birth" : "12/12/1993",
+		"birth_place" : "Yvellines",
+		"begin_year" : 1994,
+		"min_pic" : "./img/mini-pic-3.jpg",
+		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
+		"label" :
+			[
+				{
+					"l_name" : "universal"
+				},
+				{
+					"l_name" : "tallac"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "b2oba"
+				},
+				{
+					"s_name" : "Le duc de boulogne"
+				}
+			],
+		"dep" : 78,
+		"album" :
+			[
+				{
+					"a_name" : "92 izi",
+					"a_sells" : 1000,
+					"a_years" : 2000,
+					"a_traks" : 12
+				}
+				,
+				{
+					"a_name" : "92 izi",
+					"a_sells" : 1000,
+					"a_years" : 2000,
+					"a_traks" : 12
+				}
+			]
+	}
+	,
+	{
+		"blazz" : "tunisiano",
+		"firstname" : "allan",
+		"lastname" : "raquin",
+		"birth" : "12/12/1993",
+		"birth_place" : "Yvellines",
+		"begin_year" : 1994,
+		"min_pic" : "./img/mini-pic-3.jpg",
+		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
+		"label" :
+			[
+				{
+					"l_name" : "universal"
+				},
+				{
+					"l_name" : "tallac"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "b2oba"
+				},
+				{
+					"s_name" : "Le duc de boulogne"
+				}
+			],
+		"dep" : 91,
+		"album" :
+			[
+				{
+					"a_name" : "92 izi",
+					"a_sells" : 1000,
+					"a_years" : 2000,
+					"a_traks" : 12
+				}
+				,
+				{
+					"a_name" : "92 izi",
+					"a_sells" : 1000,
+					"a_years" : 2000,
+					"a_traks" : 12
+				}
+			]
+	},
+	{
+		"blazz" : "diams",
+		"firstname" : "allan",
+		"lastname" : "raquin",
+		"birth" : "12/12/1993",
+		"birth_place" : "Yvellines",
+		"begin_year" : 1994,
+		"min_pic" : "./img/mini-pic-1.jpg",
+		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
+		"label" :
+			[
+				{
+					"l_name" : "universal"
+				},
+				{
+					"l_name" : "tallac"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "b2oba"
+				},
+				{
+					"s_name" : "Le duc de boulogne"
+				}
+			],
+		"dep" : 91,
+		"album" :
+			[
+				{
+					"a_name" : "92 izi",
+					"a_sells" : 1000,
+					"a_years" : 2000,
+					"a_traks" : 12
+				}
+				,
+				{
+					"a_name" : "92 izi",
+					"a_sells" : 1000,
+					"a_years" : 2000,
+					"a_traks" : 12
+				}
+			]
+	},
+	{
+		"blazz" : "tunisiano",
+		"firstname" : "allan",
+		"lastname" : "raquin",
+		"birth" : "12/12/1993",
+		"birth_place" : "Yvellines",
+		"begin_year" : 1994,
+		"min_pic" : "./img/mini-pic-3.jpg",
+		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
+		"label" :
+			[
+				{
+					"l_name" : "universal"
+				},
+				{
+					"l_name" : "tallac"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "b2oba"
+				},
+				{
+					"s_name" : "Le duc de boulogne"
+				}
+			],
+		"dep" : 93,
+		"album" :
+			[
+				{
+					"a_name" : "92 izi",
+					"a_sells" : 1000,
+					"a_years" : 2000,
+					"a_traks" : 12
+				}
+				,
+				{
+					"a_name" : "92 izi",
+					"a_sells" : 1000,
+					"a_years" : 2000,
+					"a_traks" : 12
+				}
+			]
+	}
+	,
+	{
+		"blazz" : "tunisiano",
+		"firstname" : "allan",
+		"lastname" : "raquin",
+		"birth" : "12/12/1993",
+		"birth_place" : "Yvellines",
+		"begin_year" : 1994,
+		"min_pic" : "./img/mini-pic-1.jpg",
+		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
+		"label" :
+			[
+				{
+					"l_name" : "universal"
+				},
+				{
+					"l_name" : "tallac"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "b2oba"
+				},
+				{
+					"s_name" : "Le duc de boulogne"
+				}
+			],
+		"dep" : 92,
+		"album" :
+			[
+				{
+					"a_name" : "92 izi",
+					"a_sells" : 1000,
+					"a_years" : 2000,
+					"a_traks" : 12
+				}
+				,
+				{
+					"a_name" : "92 izi",
+					"a_sells" : 1000,
+					"a_years" : 2000,
+					"a_traks" : 12
+				}
+			]
+	}
+	,
+	{
+		"blazz" : "tunisiano",
+		"firstname" : "allan",
+		"lastname" : "raquin",
+		"birth" : "12/12/1993",
+		"birth_place" : "Yvellines",
+		"begin_year" : 1994,
+		"min_pic" : "./img/mini-pic-2.jpg",
+		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
+		"label" :
+			[
+				{
+					"l_name" : "universal"
+				},
+				{
+					"l_name" : "tallac"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "b2oba"
+				},
+				{
+					"s_name" : "Le duc de boulogne"
+				}
+			],
+		"dep" : 92,
+		"album" :
+			[
+				{
+					"a_name" : "92 izi",
+					"a_sells" : 1000,
+					"a_years" : 2000,
+					"a_traks" : 12
+				}
+				,
+				{
+					"a_name" : "92 izi",
+					"a_sells" : 1000,
+					"a_years" : 2000,
+					"a_traks" : 12
+				}
+			]
+	}
+	,
+	{
+		"blazz" : "tunisiano",
+		"firstname" : "allan",
+		"lastname" : "raquin",
+		"birth" : "12/12/1993",
+		"birth_place" : "Yvellines",
+		"begin_year" : 1994,
+		"min_pic" : "./img/mini-pic-3.jpg",
+		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
+		"label" :
+			[
+				{
+					"l_name" : "universal"
+				},
+				{
+					"l_name" : "tallac"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "b2oba"
+				},
+				{
+					"s_name" : "Le duc de boulogne"
+				}
+			],
+		"dep" : 92,
+		"album" :
+			[
+				{
+					"a_name" : "92 izi",
+					"a_sells" : 1000,
+					"a_years" : 2000,
+					"a_traks" : 12
+				}
+				,
+				{
+					"a_name" : "92 izi",
+					"a_sells" : 1000,
+					"a_years" : 2000,
+					"a_traks" : 12
+				}
+			]
+	}
+
 ]

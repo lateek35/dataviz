@@ -8,7 +8,7 @@ Copyright (C) 2014 - Raquin Allan - Chapron Kevin - Mourgues Antoine - Florian P
 */
 html, body{
 	height: 100%;
-	font-family: 'bebas', Georgia, serif;
+	font-family: 'source_sans_prosemibold', Georgia, serif;
 	font-size: 100px;
 }
 #fullpage,#fullpage>div{
@@ -16,8 +16,11 @@ html, body{
 }
 
 #home{
-	background-image: url('../img/background-1.jpg');
-	background-size: cover;
+	background-image: url('../img/pattern-1.png'),url("../img/background-2.jpg");
+	-webkit-background-size: auto,cover;
+	-moz-background-size: auto,cover;
+	-o-background-size: auto,cover;
+	background-size: auto,cover;
 	text-align: center;
 	text-transform: uppercase;
 }
@@ -27,23 +30,37 @@ html, body{
 	}
 
 	#home h1{
-		font-family: 'open_sansextrabold', Georgia, serif;
-		font-size: 0.60rem;
-		color: #fff;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		margin-left: -2.86rem;
-		margin-top: -0.6rem;
-	}
-	#home h2{
-		font-size: 0.20rem;
+		font-family: 'bebas', Georgia, serif;
+		letter-spacing: 0.1rem;
+		font-size: 0.75rem;
 		color: #e94953;
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		margin-left: -1.58rem;
-		margin-top: 0.1rem;
+		margin-left: -2.81rem;
+		margin-top: -0.9rem;
+	}
+	#home h2{
+		font-size: 0.20rem;
+		color: #fff;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -2.39rem;
+		margin-top: 0.2rem;
+	}
+	#home hr{
+		position: absolute;
+		top: 44.9%;
+		left: 50%;
+		border: 0;
+		height: 1px;
+		width: 6rem;
+		margin-left: -3rem;
+		background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(255,255,255,0.75), rgba(0,0,0,0));
+		background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(255,255,255,0.75), rgba(0,0,0,0));
+		background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(255,255,255,0.75), rgba(0,0,0,0));
+		background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(255,255,255,0.75), rgba(0,0,0,0));
 	}
 	#home a{
 		font-size: 0.16rem;
@@ -54,7 +71,7 @@ html, body{
 	}
 	#home a:first-of-type{
 		bottom: 0.7rem;
-		margin-left : -65px;
+		margin-left : -0.98rem;
 	}
 	#home a:last-of-type{
 		bottom: 0.3rem;
@@ -79,25 +96,31 @@ html, body{
 	}
 
 #module-1{
-background-color: #494949;
+		background-image: url('../img/pattern-2.png'),url("../img/background-2.jpg");
+		-webkit-background-size: auto,cover;
+		-moz-background-size: auto,cover;
+		-o-background-size: auto,cover;
+		background-size: auto,cover;
 }
-	#module-1 #liste-rappeur{
+	#module-1 #list-rapper{
 		position: absolute;
 		left: 0;
 		right: 0;
 		bottom: 0;
 		height: 0.93rem;
-		background-color: rgba(0,0,0,0.25);
+		background-color: #4F4F4F;
+		background-image: url('../img/pattern-1.png');
 		border-top: 1px solid #111;
 		z-index: 5;
 	}
-		#liste-rappeur ul{
+		#list-rapper ul{
 			display: block;
 			margin: 0 auto;
-			text-align: center
+			text-align: center;
+			padding-top: 0.05rem;
 		}
 
-		#liste-rappeur li{
+		#list-rapper li{
 			-webkit-transition:all 0.1s ease-out;
 			-moz-transition:all 0.1s ease-out;
 			-o-transition:all 0.1s ease-out;
@@ -113,11 +136,11 @@ background-color: #494949;
 		    margin: 0 0.08rem 0 0.08rem;
 		    overflow:hidden;   
 		}
-		#liste-rappeur li:hover{
+		#list-rapper li:hover{
 			border: 2px solid #e04852;
 		}
 		
-		#liste-rappeur img{
+		#list-rapper img{
 			filter: url(filters.svg#grayscale);
 			 filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
 			filter: gray; /* IE6-9 */
@@ -126,31 +149,29 @@ background-color: #494949;
 			margin-left: -87px;
 			left: 50%;
 		}
-		#liste-rappeur img:hover{
+		#list-rapper img:hover{
 			filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
 			-webkit-filter: grayscale(0%);
 		}
-	#module-1 #liste-rappeur-name{
+	#module-1 #list-rapper-name{
 		position: absolute;
 		left: 0;
 		right: 0;
 		bottom: 0.93rem;
 		overflow: hidden;
 		z-index: 6;
+		height: 0.26rem;
+		text-align: center;
+		font-size: 0rem;
 	}
-		#liste-rappeur-name ul{
-			height: 0.26rem;
-			text-align: center;
-			font-size: 0rem;
-		}
-		#liste-rappeur-name li{
+		#list-rapper-name li{
 			-webkit-transition:all 0.1s ease-out;
 			-moz-transition:all 0.1s ease-out;
 			-o-transition:all 0.1s ease-out;
 			transition:all 0.1s ease-out;
 			position: relative;
 			top: 0.25rem;
-			width: 1.03rem;
+			width: 1.08rem;
 			height: 0.25rem;
 			display: inline-block;
 			vertical-align: top;
@@ -158,14 +179,15 @@ background-color: #494949;
 			line-height: 0.25rem;
 			margin: 0 auto;
 			color: #e04852;
-			background-color: #363636;
+			background-color: #4F4F4F;
+			background-image: url('../img/pattern-1.png');
 			border-top: 1px solid #111;
 			border-left: 1px solid #111;
 			border-right: 1px solid #111;
 			border-bottom: 1px solid #363636;
 			font-size: 0.15rem;
 		}
-		#liste-rappeur-name li.active{
+		#list-rapper-name li.active{
 			top: 0;
 		}
 
@@ -178,6 +200,12 @@ path{
 path.bouge{
 	-webkit-transform: scale(0);
 	-webkit-transform-origin: 40% 40%;
+	-webkit-transition: all 0.5s ease-out;
+}
+
+path.zoom{
+	-webkit-transform: scale(1.3);
+	-webkit-transform-origin: 50% 50%;
 	-webkit-transition: all 0.5s ease-out;
 }
 

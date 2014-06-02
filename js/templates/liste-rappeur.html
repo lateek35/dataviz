@@ -1,3 +1,12 @@
-{{#each}}
-<p>{{this.blazz}} !!  </p>
-{{/each}}
+<ul id="list-rapper-name">
+ 	{{#each}}
+	<li>{{this.blazz}}</li>
+	{{/each}}
+</ul>
+<div id="list-rapper" class="77">
+    <ul>
+    	{{#each}}
+		<li id="{{this.blazz}}"><img src="{{this.min_pic}}" alt="Mini pic rappeur"/></li>
+		{{/each}}
+    </ul>
+</div>
