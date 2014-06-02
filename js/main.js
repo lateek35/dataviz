@@ -59,7 +59,7 @@ require([
   'collectionRapper',
   'viewRapperList',
   'd3'
-], function (fullpage,zoomooz, backbone, modelRapper, collectionRapper,viewRapperList,d3) {
+], function (fullpage, backbone, modelRapper, collectionRapper,viewRapperList,d3) {
 
 /*==========================================================================================*/
 /*--------------------------------------  GESTION MAP  -------------------------------------*/
@@ -76,18 +76,10 @@ function mouseoutMap(){
 }
 $('path').on('mouseenter',mouseenterMap);
 $('path').on('mouseout',mouseoutMap);
-$('path').on('click',function(){
-  var _that = $(this);
-  $(this).attr('class','zoom');
-  $('path').not('#'+$(this).attr('id')).attr('class','bouge');
-  $('path').unbind('mouseenter',mouseenterMap);
-  setTimeout(function(){
-    $('path').not('#'+_that.attr('id')).css('display','none');
-    $('path').bind('mouseenter',mouseenterMap);
-  }, 500);
-});
-$(document).mouseup(function(e){
+
+$('svg').mouseup(function(e){
   $('path').show().attr('class','');
+  router.navigate("#2/");
 });
 /*__________________________________________________________________________________________*/
 /*--------------------------------  Animation liste rappeur  -------------------------------*/
@@ -102,7 +94,7 @@ $('body').on('mouseout','#list-rapper li',function(){
 /*------------------------------  Gestion URL Departement MAP ----------------------------*/
 $('path').on('click',function(){ 
   var suplmement = (Backbone.history.fragment).substring(0,2);
-  router.navigate(suplmement+"dep/"+parseInt($(this)[0].id.substring(1)));
+  router.navigate(suplmement+"dep/"+parseInt($(this)[0].id.substring(1)),true);
 });
 /*__________________________________________________________________________________________*/
 /*---------------------------------  Gestion URL Rappeur MAP -------------------------------*/
@@ -135,7 +127,7 @@ $('#home>a').on('click',function(event){
     routes:{
       ':slide' : 'home',
       ':slide/' : 'home',
-      ':slide/dep/:cp' : 'departement'
+      ':2/dep/:cp' : 'departement'
     }
   });
 
@@ -143,7 +135,6 @@ $('#home>a').on('click',function(event){
   var rapperList = new viewRapperList({collection : rappers});
 
   var router = new Router();
-
   router.on('route:home',function(slide){
     moveSlide(slide);
     rapperList.runFilter();
@@ -151,8 +142,16 @@ $('#home>a').on('click',function(event){
   router.on('route:departement',function(slide,cp){
     moveSlide(slide);
     rapperList.runFilter(parseInt(cp));
-  })
+    $('path').show().attr('class','');
+    $('#_'+cp).attr('class','zoom');
+    $('path').not('#_'+cp).attr('class','bouge');
+    $('path').unbind('mouseenter',mouseenterMap);
+    setTimeout(function(){
+      $('path').not('#_'+cp).css('display','none');
+      $('path').bind('mouseenter',mouseenterMap);
+    }, 500);
 
+  })
 
   var moveSlide = function(slide){
     $.fn.fullpage.moveTo(slide); 
