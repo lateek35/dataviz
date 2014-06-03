@@ -6,11 +6,10 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
   var RapperListInsults = Backbone.View.extend({
     el:'#container-module',
     initialize: function(collection){
-      console.log(collection);
-      console.log(this.collection);
+      _.bindAll(this, 'render');
       this.collection.fetch({
-        render: function(rappers){
-          _.each(console.log(rappers.toJSON()));
+        success: function(collection, response){
+          // _.each(console.log(rappers.toJSON()));
         }
       });
       // console.log(this.collection.toJson());
@@ -26,16 +25,23 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
       
       // console.log(datas);
 
-      this.chart = d3.select(this.el).append("div")
+      var chart = d3.select(this.el).append("div")
           .attr("class", "hard-rapper")
           .style("width", "970px")
           .style("height", "400px");
 
-      d3.json(this.collection.toJSON(), function(error, data) {
-          
+      console.log(this.chart);
+
+      d3.json(this.collection.url, function(error, data) {
+
+          chart.selectAll("div")
+                    .data(data)
+                  .enter().append("div")
+                    .attr("class","mask")
+                    .style("left", function(d, i) { return i * 100 + "px"; })
+                    .text(function(d) { return d.blazz; });
       });
 
-      return this;
     }
   });
   return RapperListInsults;
