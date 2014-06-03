@@ -20,7 +20,8 @@ require.config({
       d3:    'libs/d3',
       modelRapper: 'models/rapper.model',
       collectionRapper: 'collections/rapper.collection',
-      viewRapperList: 'views/rapperList.view'
+      viewRapperList: 'views/rapperList.view',
+      viewRapperListInsults: 'views/rapperListInsults.view'
   },
   
   shim: {
@@ -58,8 +59,9 @@ require([
   'modelRapper',
   'collectionRapper',
   'viewRapperList',
+  'viewRapperListInsults',
   'd3'
-], function (fullpage, backbone, modelRapper, collectionRapper,viewRapperList,d3) {
+], function (fullpage, backbone, modelRapper, collectionRapper,viewRapperList,viewRapperListInsults,d3) {
 
 /*==========================================================================================*/
 /*--------------------------------------  GESTION MAP  -------------------------------------*/
@@ -133,6 +135,8 @@ $('#home>a').on('click',function(event){
 
   var rappers = new collectionRapper();
   var rapperList = new viewRapperList({collection : rappers});
+  var rapperListInsults = new viewRapperListInsults({collection : rappers});
+  rapperListInsults.render();
 
   var router = new Router();
   router.on('route:home',function(slide){
