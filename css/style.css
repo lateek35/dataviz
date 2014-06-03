@@ -51,7 +51,7 @@ html, body{
 	}
 	#home hr{
 		position: absolute;
-		top: 44.9%;
+		top: 43.6%;
 		left: 50%;
 		border: 0;
 		height: 1px;
@@ -95,14 +95,45 @@ html, body{
 	  color:#e94953;
 	}
 
-#module-1{
+.slide:first-child{
 		background-image: url('../img/pattern-2.png'),url("../img/background-2.jpg");
 		-webkit-background-size: auto,cover;
 		-moz-background-size: auto,cover;
 		-o-background-size: auto,cover;
 		background-size: auto,cover;
 }
+	.module-title{
+		position: absolute;
+		left: 25%;
+		top: 7.2%;
+		margin-left: -3.38rem;
+	}
+	.module-title h3{
+		text-align: center;
+		font-size: 0.35rem;
+		font-family: 'bebas', Georgia, serif;
+		letter-spacing: 0.1rem;
+		padding: 0.2rem;
+		color: #fff;
+		text-transform: uppercase;
+	}
+	.module-title hr{
+		height: 1px;
+		width: 1.8rem;
+		display: block;
+		margin: 0 auto;
+		border: 0;
+		background-color: #e94953;
+	}
+	.module-title p{
+		padding: 0.3rem 0 0.3rem 0;
+		font-family: 'source_sans_probold', Georgia, serif;
+		font-size: 0.14rem;
+		color: #e94953;
+		text-transform: uppercase;
+	}
 	#module-1 #list-rapper{
+		width: 100%;
 		position: absolute;
 		left: 0;
 		right: 0;
@@ -113,6 +144,26 @@ html, body{
 		border-top: 1px solid #111;
 		z-index: 5;
 	}
+		.departement{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 50%;
+			padding-bottom: 0.1rem;
+			font-family: bebas;
+			font-size: 0.7rem;
+			text-align: center;
+			text-transform: uppercase;
+			color: #fff;
+		}
+		#list-bottom{
+			position: relative;
+			top: 1rem;
+		}
+		#list-bottom.active{
+			top: 0;
+		}
+
 		#list-rapper ul{
 			display: block;
 			margin: 0 auto;
@@ -154,6 +205,7 @@ html, body{
 			-webkit-filter: grayscale(0%);
 		}
 	#module-1 #list-rapper-name{
+		width: 100%;
 		position: absolute;
 		left: 0;
 		right: 0;
@@ -190,6 +242,26 @@ html, body{
 		#list-rapper-name li.active{
 			top: 0;
 		}
+
+	video#bgvid {
+		position: absolute;
+		top: 0;
+		width: 50%;
+		z-index: -100;
+		background: url(./video/polina.jpg) no-repeat;
+		background-size: cover;
+	}
+
+	#page-rapper>div{
+		height: 50%;
+	}
+	#page-rapper>.top-part{
+
+	}
+	#page-rapper>.bottom-part{
+		background-color: #333333;
+	}
+
 
 path{
 	display: block;

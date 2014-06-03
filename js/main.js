@@ -21,7 +21,8 @@ require.config({
       modelRapper: 'models/rapper.model',
       collectionRapper: 'collections/rapper.collection',
       viewRapperList: 'views/rapperList.view',
-      viewRapperListInsults: 'views/rapperListInsults.view'
+      viewRapperListInsults: 'views/rapperListInsults.view',
+      viewRapperPage: 'views/rapperPage.view'
   },
   
   shim: {
@@ -60,8 +61,9 @@ require([
   'collectionRapper',
   'viewRapperList',
   'viewRapperListInsults',
+  'viewRapperPage',
   'd3'
-], function (fullpage, backbone, modelRapper, collectionRapper,viewRapperList,viewRapperListInsults,d3) {
+], function (fullpage, backbone, modelRapper, collectionRapper,viewRapperList,viewRapperListInsults,viewRapperPage,d3) {
 
 /*==========================================================================================*/
 /*--------------------------------------  GESTION MAP  -------------------------------------*/
@@ -70,8 +72,37 @@ $( document ).ready(function() {
 /*__________________________________________________________________________________________*/
 /*-----------------------------  Animation MAP (hover + zoom)  ----------------------------*/
 function mouseenterMap(){
-  $(this).css('fill', 'rgba(255,0,50,0.1)');
-  rapperList.runFilter(parseInt($(this)[0].id.substring(1)));
+  $(this).css('fill', 'rgba(233,73,83,0.35)');
+  switch (parseInt($(this)[0].id.substring(1))) 
+  { 
+  case 77: 
+    $('.departement').text("77 - SEINE ET MARNE"); 
+    break; 
+  case 91: 
+    $('.departement').text("91 - ESSONNE"); 
+    break;
+  case 78: 
+    $('.departement').text("78 - YVELINES"); 
+    break;
+  case 95: 
+    $('.departement').text("95 - VAL D'OISE"); 
+    break; 
+  case 93: 
+    $('.departement').text("93 - SAINE-SAINT-DENIS"); 
+    break; 
+  case 94: 
+    $('.departement').text("94 - VAL-DE-MARNE"); 
+    break; 
+  case 92: 
+    $('.departement').text("92 - HAUTS-DE-SEINE"); 
+    break; 
+  case 75: 
+    $('.departement').text("75 - PARIS"); 
+    break;
+  default: 
+    $('.departement').text("selectionnez votre département");
+    break; 
+  }
 }
 function mouseoutMap(){
   $(this).css('fill', 'rgba(255,0,50,0)')
@@ -81,7 +112,18 @@ $('path').on('mouseout',mouseoutMap);
 
 $('svg').mouseup(function(e){
   $('path').show().attr('class','');
+  $('path').bind('mouseenter',mouseenterMap);
   router.navigate("#2/");
+  $('.departement').stop().animate({
+      bottom: "0"
+    }, 500, function() {
+      // Animation complete.
+    });
+    $('#list-bottom').stop().animate({
+      top: "1rem"
+    }, 500, function() {
+      // Animation complete.
+    });
 });
 /*__________________________________________________________________________________________*/
 /*--------------------------------  Animation liste rappeur  -------------------------------*/
@@ -97,6 +139,16 @@ $('body').on('mouseout','#list-rapper li',function(){
 $('path').on('click',function(){ 
   var suplmement = (Backbone.history.fragment).substring(0,2);
   router.navigate(suplmement+"dep/"+parseInt($(this)[0].id.substring(1)),true);
+  $('.departement').stop().animate({
+    bottom: "-1rem"
+  }, 500, function() {
+    // Animation complete.
+  });
+  $('#list-bottom').stop().animate({
+    top: "0"
+  }, 500, function() {
+    // Animation complete.
+  });
 });
 /*__________________________________________________________________________________________*/
 /*---------------------------------  Gestion URL Rappeur MAP -------------------------------*/
@@ -116,6 +168,8 @@ $('#fullpage').fullpage({
     router.navigate(""+index+"/"+suplmement);
   }
 });
+$.fn.fullpage.setKeyboardScrolling(false);
+$(".section").find('.controlArrow').hide();
 
 $('#home>a').on('click',function(event){
   event.preventDefault();
@@ -129,7 +183,8 @@ $('#home>a').on('click',function(event){
     routes:{
       ':slide' : 'home',
       ':slide/' : 'home',
-      ':2/dep/:cp' : 'departement'
+      ':2/dep/:cp' : 'departement',
+      ':2/dep/:cp/:rapper' : 'rapperSolo'
     }
   });
 
@@ -154,8 +209,12 @@ $('#home>a').on('click',function(event){
       $('path').not('#_'+cp).css('display','none');
       $('path').bind('mouseenter',mouseenterMap);
     }, 500);
-
   })
+  router.on('route:rapperSolo',function(slide,cp,rapper){
+    $.fn.fullpage.moveSlideRight();
+    var rapperPage = new viewRapperPage({collection : rappers});
+    rapperPage.runFilter(rapper);
+  });
 
   var moveSlide = function(slide){
     $.fn.fullpage.moveTo(slide); 
