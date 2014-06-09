@@ -13,6 +13,7 @@ Copyright (C) 2014 - Raquin Allan - Chapron Kevin - Mourgues Antoine - Florian P
 require.config({
   paths: {
       jquery:      'libs/require-jquery',
+      slimScroll:      'libs/slimScroll',
       fullpage: 'libs/jquery.fullPage',
       underscore:  'libs/underscore',
       handlebars : 'libs/handlebars.amd',
@@ -30,7 +31,7 @@ require.config({
             'jquery'
         ]
     },
-    zoomooz: {
+    slimScroll: {
         deps: [
             'jquery'
         ]
@@ -54,6 +55,7 @@ require.config({
 /*-------------------------------------  REQUIRE APPEL  ------------------------------------*/
 /*==========================================================================================*/
 require([
+  'slimScroll',
   'fullpage',
   'backbone',
   'modelRapper',
@@ -61,7 +63,7 @@ require([
   'viewRapperList',
   'viewRapperPage',
   'd3'
-], function (fullpage, backbone, modelRapper, collectionRapper,viewRapperList,viewRapperPage,d3) {
+], function (slimScroll,fullpage, backbone, modelRapper, collectionRapper,viewRapperList,viewRapperPage,d3) {
 
 /*==========================================================================================*/
 /*--------------------------------------  GESTION MAP  -------------------------------------*/
@@ -161,6 +163,7 @@ $('#fullpage').fullpage({
   verticalCentered: false,
   easing: 'swing',
   navigation: true,
+  normalScrollElements: '#page-rapper',
   afterLoad: function(anchorLink, index){
     var suplmement = (Backbone.history.fragment).substring(2);
     router.navigate(""+index+"/"+suplmement);
@@ -207,7 +210,7 @@ $('#home>a').on('click',function(event){
     }, 500);
   })
   router.on('route:rapperSolo',function(slide,cp,rapper){
-    $.fn.fullpage.moveSlideRight();
+    $.fn.fullpage.moveTo(2,1);
     var rapperPage = new viewRapperPage({collection : rappers});
     rapperPage.runFilter(rapper);
   });

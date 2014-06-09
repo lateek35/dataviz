@@ -1,4 +1,4 @@
-define(['backbone','modelRapper','collectionRapper','text!templates/page-rappeur.html'], function (backbone, modelRapper,collectionRapper,jstemplate) {
+define(['backbone','modelRapper','collectionRapper','text!templates/module-harcore.html'], function (backbone, modelRapper,collectionRapper,jstemplate) {
 
 /*==========================================================================================*/
 /*----------------------------  VUE POUR COLLECTION DE RAPPERS  ----------------------------*/
