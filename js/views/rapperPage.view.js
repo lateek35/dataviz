@@ -44,7 +44,7 @@ define(['backbone','modelRapper','collectionRapper','text!templates/page-rappeur
       
     },
     d3 : function(donnee){
-      console.log(donnee);/*------ICI----------*/
+      console.log(donnee.blazz);/*------ICI----------*/
     }
   });
   return RapperPage;

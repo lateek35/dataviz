@@ -269,7 +269,6 @@ $('#home>a').on('click',function(event){
 
 
 
-
 $('body').on('click','.option',
     /*Event sur les boutton pour update les données*/
     function(event){
@@ -284,7 +283,7 @@ $('body').on('click','.option',
 
     var r = 593;
     var p = Math.PI;
-    var intervalScale = 8;
+    var intervalScale = 5;
     var color = d3.scale.linear()
         .domain([-1, 0, 1])
         .range(["#515e44", "#4a4758", "#e84852"]);
@@ -411,10 +410,16 @@ d3.json('./js/data.json',function(data){
             return d3.rgb(color(-1));
         })
         .on('mouseover',function(d){
-            $('#tes').text(d.v1); /*ICI JE TEMPLATE !!*/
             d3.select(this).transition().duration(200).style('fill',function(d){
                 return d3.rgb(colorB(-1));
             });
+            /*------------------GESTION CARD---------------------*/
+            $('#infos-comparaison').addClass('inactive-infos');
+            $('#rapper-card-comparaison').addClass('active-card');
+            d3.select('#rapper-card-comparaison>h4').text(d.blazz);
+            d3.select('#rapper-card-comparaison>h3').text("Nombre d'album : "+d.v1);
+            $('.head-card').css('background-image', 'url(./img/rapper-min/min-'+d.id+'.jpg)');
+
         })
         .on('mouseout',function(){
             d3.select(this).transition().duration(200).style('fill',function(d){
@@ -435,6 +440,13 @@ d3.json('./js/data.json',function(data){
             d3.select(this).transition().duration(200).style('fill',function(d){
                 return d3.rgb(colorB(0));
             });
+            /*------------------GESTION CARD---------------------*/
+            $('#infos-comparaison').addClass('inactive-infos');
+            $('#rapper-card-comparaison').addClass('active-card');
+            d3.select('#rapper-card-comparaison>h4').text(d.blazz);
+            d3.select('#rapper-card-comparaison>h3').text("Nombre de ventes: "+d.v2);
+            $('.head-card').css('background-image', 'url(./img/rapper-min/min-'+d.id+'.jpg)');
+
         })
         .on('mouseout',function(){
             d3.select(this).transition().duration(200).style('fill',function(d){
@@ -455,6 +467,12 @@ d3.json('./js/data.json',function(data){
             d3.select(this).transition().duration(200).style('fill',function(d){
                 return d3.rgb(colorB(1));
             });
+            /*------------------GESTION CARD---------------------*/
+            $('#infos-comparaison').addClass('inactive-infos');
+            $('#rapper-card-comparaison').addClass('active-card');
+            d3.select('#rapper-card-comparaison>h4').text(d.blazz);
+            d3.select('#rapper-card-comparaison>h3').text("Nombre de fan total : "+d.v3);
+            $('.head-card').css('background-image', 'url(./img/rapper-min/min-'+d.id+'.jpg)');
         })
         .on('mouseout',function(){
             d3.select(this).transition().duration(200).style('fill',function(d){
@@ -619,7 +637,6 @@ function updateData(eventPassed) {
         }
     });
 }
-
 
 
 
