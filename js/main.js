@@ -110,21 +110,21 @@ function mouseoutMap(){
 $('path').on('mouseenter',mouseenterMap);
 $('path').on('mouseout',mouseoutMap);
 
-$('svg').mouseup(function(e){
-  $('path').show().attr('class','');
-  $('path').bind('mouseenter',mouseenterMap);
-  router.navigate("#2/");
-  $('.departement').stop().animate({
-      bottom: "0"
-    }, 500, function() {
-      // Animation complete.
-    });
-    $('#list-bottom').stop().animate({
-      top: "1rem"
-    }, 500, function() {
-      // Animation complete.
-    });
-});
+// $('svg').mouseup(function(e){
+//   $('path').show().attr('class','');
+//   $('path').bind('mouseenter',mouseenterMap);
+//   router.navigate("#2/");
+//   $('.departement').stop().animate({
+//       bottom: "0"
+//     }, 500, function() {
+//       // Animation complete.
+//     });
+//     $('#list-bottom').stop().animate({
+//       top: "1rem"
+//     }, 500, function() {
+//       // Animation complete.
+//     });
+// });
 /*__________________________________________________________________________________________*/
 /*--------------------------------  Animation liste rappeur  -------------------------------*/
 $('body').on('mouseover','#list-rapper li',function(){ 
@@ -166,6 +166,9 @@ $('#fullpage').fullpage({
   afterLoad: function(anchorLink, index){
     var suplmement = (Backbone.history.fragment).substring(2);
     router.navigate(""+index+"/"+suplmement);
+    if(index == '4'){
+      rapperListInsults.render();
+    }
   }
 });
 $.fn.fullpage.setKeyboardScrolling(false);
@@ -181,17 +184,18 @@ $('#home>a').on('click',function(event){
 /*==========================================================================================*/
   var Router = Backbone.Router.extend({
     routes:{
-      ':slide' : 'home',
-      ':slide/' : 'home',
       ':2/dep/:cp' : 'departement',
-      ':2/dep/:cp/:rapper' : 'rapperSolo'
+      ':2/dep/:cp/:rapper' : 'rapperSolo',
+      // ':4' : 'launchHardcoreModule',
+      // ':4/' : 'launchHardcoreModule',
+      ':slide' : 'home',
+      ':slide/' : 'home'
     }
   });
 
   var rappers = new collectionRapper();
   var rapperList = new viewRapperList({collection : rappers});
   var rapperListInsults = new viewRapperListInsults({collection : rappers});
-  rapperListInsults.render();
 
   var router = new Router();
   router.on('route:home',function(slide){
@@ -215,6 +219,11 @@ $('#home>a').on('click',function(event){
     var rapperPage = new viewRapperPage({collection : rappers});
     rapperPage.runFilter(rapper);
   });
+  // router.on('route:launchHardcoreModule',function(){
+  //   moveSlide(4);
+  //   // rapperListInsults.render();
+  //   console.log("un truc");
+  // })
 
   var moveSlide = function(slide){
     $.fn.fullpage.moveTo(slide); 
