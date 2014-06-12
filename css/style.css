@@ -481,8 +481,12 @@ html, body{
 
 /* Css module hardcore */
 #module-3{
-	background: url("../img/background-3.jpg") no-repeat center center;
 	position:relative;
+	background: url("../img/background-3.jpg") no-repeat center center;
+	-webkit-background-size: auto,cover;
+	-moz-background-size: auto,cover;
+	-o-background-size: auto,cover;
+	background-size: auto,cover;
 }
 	#module-3 .module-title{
 		position:inherit;
@@ -602,27 +606,117 @@ html, body{
 	}
 	#graph-hardcore .graph-lines{
 		fill: #f0f0f0;
-		transition:all .3s ease;
+		-webkit-transition:all .3s ease;
+		   -moz-transition:all .3s ease;
+		     -o-transition:all .3s ease;
+		        transition:all .3s ease;
 	}
 	#graph-hardcore .graph-circles{
 		fill: transparent;
-		transition:all .3s ease;
+		-webkit-transition:all .3s ease;
+		   -moz-transition:all .3s ease;
+		     -o-transition:all .3s ease;
+		        transition:all .3s ease;
 	}
 	#graph-hardcore .graph-text{
-	  fill: #f0f0f0;
-	  font: 10px sans-serif;
-	  text-anchor: middle;
-	  transition:all .3s ease;
+	    fill: #f0f0f0;
+	    font: 10px sans-serif;
+	    text-anchor: middle;
+	    -webkit-transition:all .3s ease;
+		   -moz-transition:all .3s ease;
+		     -o-transition:all .3s ease;
+		        transition:all .3s ease;
 	}
 
-	#infos-hardcore{
+	#infos-hardcore-insults, #infos-hardcore-vocab{
 		position:absolute;
 		bottom: 0;
+		/*left:50%;
+		margin-left:-512px;*/
+		padding-bottom: 20px;
 		font-size: 0.16rem;
+		width: 100%;
+		-webkit-transition:all .3s ease;
+		   -moz-transition:all .3s ease;
+		     -o-transition:all .3s ease;
+		        transition:all .3s ease;
 	}
-	#infos-hardcore h3{
-		font-family: "source_sans_prosemibold";
+	#infos-hardcore-insults.inactive-infos, #infos-hardcore-vocab.inactive-infos{
+		bottom:-120px;
 	}
-	#infos-hardcore p{
-/*		font-family: "sou"
-*/	}
+	#infos-hardcore-insults h3, #infos-hardcore-vocab h3{
+		margin-bottom:10px;
+		color:#e94953;
+	}
+	#infos-hardcore-insults p, #infos-hardcore-vocab p{
+		font-family: "source_sans_prolight";
+		color:#f0f0f0;
+		line-height:25px;
+	}
+	.infos-card{
+		width:1024px;
+		position:relative;
+		left:50%;
+		margin-left:-512px;
+	}
+	#rapper-card{
+		height:66px;
+		width:490px;
+		position:absolute;
+		top:0;
+		margin-left: 100%;
+		-webkit-transition:all .3s ease;
+		   -moz-transition:all .3s ease;
+		     -o-transition:all .3s ease;
+		        transition:all .3s ease;
+	}
+	#rapper-card.active-card{
+		left: 50%;
+		margin-left: -245px;
+	}
+	#rapper-card .head-card{
+		height:64px;
+		width:64px;
+		float:left;
+		margin-right:10px;
+		border-radius:64px;
+		-webkit-border-radius:64px;
+		border:2px solid #e94953;
+		background-color: black;
+	}
+	#rapper-card h4{
+		width:340px;
+		display: inline-block;
+		vertical-align: baseline;
+		font-family: "bebas";
+		text-transform: uppercase;
+		color:#f0f0f0;
+		font-size:0.2rem;
+	}
+	#rapper-card hr{
+		height:1px;
+		border:none;
+		background-color: #f0f0f0;
+		margin:5px 0;
+	}
+	#infos-hardcore-insults #rapper-card h3, #infos-hardcore-vocab #rapper-card h3{
+		margin-bottom:3px;
+		text-transform: uppercase;
+	}
+	#rapper-card h3 span{
+		font-family: 'source_sans_prolight';
+		color:#f0f0f0;
+		text-transform:none;
+	}
+	#rapper-card a{
+		display:inline-block;
+		vertical-align: baseline;
+		font-family: 'source_sans_regular';
+		font-size: 0.14rem;
+		color:#e94953;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+	.clear{
+		clear:both;
+	}

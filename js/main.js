@@ -189,6 +189,8 @@ $('#home>a').on('click',function(event){
 /*==========================================================================================*/
   var Router = Backbone.Router.extend({
     routes:{
+      ':4/' : 'module-hardcore',
+      ':4' : 'module-hardcore',
       ':3/' : 'module-hard',
       ':3' : 'module-hard',
       ':2/dep/:cp/:rapper' : 'rapperSolo',
@@ -228,6 +230,9 @@ $('#home>a').on('click',function(event){
   router.on('route:module-hard',function(){
     $.fn.fullpage.moveTo(3,0);
     //moduleComparaison.render(-1);
+  });
+  router.on('route:module-hardcore',function(){
+    $.fn.fullpage.moveTo(4,0);
   });
 
   var moveSlide = function(slide){
@@ -382,7 +387,6 @@ d3.json('./js/data2.json',function(data){
             }else{
                 chiffre = +d.v3;
             }
-            console.log(chiffre);
             return scale3(chiffre);
         })
         .startAngle(function(d,i){
