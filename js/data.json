@@ -1,13 +1,13 @@
 [
 	{
+		"id" : 1,
 		"blazz" : "La Fouine",
 		"firstname" : "Laouni",
 		"lastname" : "Mouhid",
 		"birth" : "25/12/1981",
 		"birth_place" : "Trappes",
 		"begin_year" : 2001,
-		"min_pic" : "./img/",
-		"official_website" : "http://www.lafouine78.com",
+		"official_website" : "lafouine78.com",
 		"punchline" : "À trop haïr les noirs, Le Pen fait des nuits blanches",
 		"disque_or" : 4,
 		"disque_platine" : 2,
@@ -25,27 +25,12 @@
 				},
 				{
 					"l_name" : "Sony-BMG"
-				},
-				{
-					"l_name" : "Jive-Epic"
-				},
-				{
-					"l_name" : "Skal"
-				},
-				{
-					"l_name" : "Henijai Music"
-				},
-				{
-					"l_name" : "Dynastie Music"
 				}
 			],
 		"surname" :
 			[
 				{
-					"s_name" : ""
-				},
-				{
-					"s_name" : ""
+					"s_name" : "Fouiny"
 				}
 			],
 		"dep" : 78,
@@ -84,15 +69,15 @@
 			]
 	},
 	{
+		"id" : 2,
 		"blazz" : "Maitre Gims",
 		"firstname" : "Gandhi",
 		"lastname" : "Djuna",
 		"birth" : "06/05/1986",
 		"birth_place" : "Kinshasa",
 		"begin_year" : 2002,
-		"min_pic" : "./img/",
-		"official_website" : "http://www.maitre-gims.fr",
-		"punchline" : "J’ai mangé trop de problèmes, donc j’en chie des solutions.",
+		"official_website" : "maitre-gims.fr",
+		"punchline" : "J’ai mangé trop de problèmes, donc j’en chie des solutions",
 		"disque_or" : 1,
 		"disque_platine" : 1,
 		"double_disque_platine" : 1,
@@ -109,15 +94,6 @@
 				},
 				{
 					"l_name" : "M.M.C"
-				}
-			],
-		"surname" :
-			[
-				{
-					"s_name" : ""
-				},
-				{
-					"s_name" : ""
 				}
 			],
 		"dep" : 75,
@@ -144,14 +120,14 @@
 			]
 	},
 	{
+		"id" : 3,
 		"blazz" : "NTM",
-		"firstname" : "",
-		"lastname" : "",
-		"birth" : "",
-		"birth_place" : "",
+		"firstname" : "JoeyStarr,",
+		"lastname" : "Kool Shen",
+		"birth" : "1988",
+		"birth_place" : "Seine-Saint-Denis",
 		"begin_year" : 1988,
-		"min_pic" : "./img/",
-		"official_website" : "http://www.supreme-ntm.com",
+		"official_website" : "supreme-ntm.com",
 		"punchline" : "Au dessus des lois je bâtirais mon toit",
 		"disque_or" : 4,
 		"disque_platine" : 2,
@@ -159,22 +135,13 @@
 		"disque_diamant" : 0,
 		"v1": 4,
 	    "v2": 1500000,
-	    "v3": 5,
+	    "v3": 631583,
 	    "insults" : 30,
 	    "vocabulaire" : 1357,
 		"label" :
 			[
 				{
 					"l_name" : "Epic (Sony-BMG)"
-				}
-			],
-		"surname" :
-			[
-				{
-					"s_name" : ""
-				},
-				{
-					"s_name" : ""
 				}
 			],
 		"dep" : 93,
@@ -207,14 +174,14 @@
 			]
 	},
 	{
+		"id" : 4,
 		"blazz" : "Black M",
 		"firstname" : "Alpha",
 		"lastname" : "Diallo",
 		"birth" : "27/12/1984",
 		"birth_place" : "Paris",
 		"begin_year" : 2002,
-		"min_pic" : "./img/",
-		"official_website" : "http://www.blackmesrimes.com",
+		"official_website" : "blackmesrimes.com",
 		"punchline" : "Evidemment qu’on fait du cinéma, ramène Di Cap’, je l’handicape",
 		"disque_or" : 3,
 		"disque_platine" : 2,
@@ -234,10 +201,7 @@
 		"surname" :
 			[
 				{
-					"s_name" : ""
-				},
-				{
-					"s_name" : ""
+					"s_name" : "Black Shady"
 				}
 			],
 		"dep" : 75,
@@ -264,14 +228,14 @@
 			]
 	},
 	{
+		"id" : 5,
 		"blazz" : "Booba",
 		"firstname" : "Élie",
 		"lastname" : "Yaffa",
 		"birth" : "09/12/1976",
 		"birth_place" : "Boulogne-Billancourt",
 		"begin_year" : 1994,
-		"min_pic" : "./img/",
-		"official_website" : "http://www.unkut.fr",
+		"official_website" : "unkut.fr",
 		"punchline" : "Tu veux t’asseoir sur le trône ? Faudra t’asseoir sur mes genoux",
 		"disque_or" : 6,
 		"disque_platine" : 3,
@@ -357,14 +321,14 @@
 			]
 	},
 	{
+		"id" : 6,
 		"blazz" : "Mister You",
 		"firstname" : "Younes",
 		"lastname" : "Latifi",
 		"birth" : "05/02/1984",
 		"birth_place" : "Paris",
 		"begin_year" : 2004,
-		"min_pic" : "./img/",
-		"official_website" : "http://www.misteryou.fr",
+		"official_website" : "misteryou.fr",
 		"punchline" : "Je suis comme un café noir, souvent dans une tasse blanche",
 		"disque_or" : 1,
 		"disque_platine" : 1,
@@ -393,10 +357,7 @@
 		"surname" :
 			[
 				{
-					"s_name" : ""
-				},
-				{
-					"s_name" : ""
+					"s_name" : "Yougataga"
 				}
 			],
 		"dep" : 75,
@@ -417,14 +378,14 @@
 			]
 	},
 	{
+		"id" : 7,
 		"blazz" : "Rohff",
 		"firstname" : "Housni",
 		"lastname" : "Mkouboi",
 		"birth" : "15/12/1977",
 		"birth_place" : "Antananarivo",
 		"begin_year" : 1994,
-		"min_pic" : "./img/",
-		"official_website" : "http://www.roh2f.com",
+		"official_website" : "roh2f.com",
 		"punchline" : "Y’a pas de sentiments, que des centimètres",
 		"disque_or" : 6,
 		"disque_platine" : 3,
@@ -507,14 +468,14 @@
 			]
 	},
 	{
+		"id" : 8,
 		"blazz" : "Youssoupha",
 		"firstname" : "Youssoupha",
 		"lastname" : "Mabiki",
 		"birth" : "29/08/1979",
 		"birth_place" : "Kinshasa",
 		"begin_year" : 1999,
-		"min_pic" : "./img/",
-		"official_website" : "http://www.youssoupha.com",
+		"official_website" : "youssoupha.com",
 		"punchline" : "Comment veux-tu que je mène une vie de rêve alors que je ne dors plus ?",
 		"disque_or" : 3,
 		"disque_platine" : 1,
@@ -570,14 +531,13 @@
 			]
 	},
 	{
+		"id" : 9,
 		"blazz" : "Sefyu",
 		"firstname" : "Youssef",
 		"lastname" : "Soukouna",
 		"birth" : "20/04/1981",
 		"birth_place" : "Paris",
 		"begin_year" : 2004,
-		"min_pic" : "./img/",
-		"official_website" : "",
 		"punchline" : "Autant crever les yeux ouverts que vivre les yeux fermés",
 		"disque_or" : 2,
 		"disque_platine" : 0,
@@ -600,10 +560,7 @@
 		"surname" :
 			[
 				{
-					"s_name" : ""
-				},
-				{
-					"s_name" : ""
+					"s_name" : "Molotov"
 				}
 			],
 		"dep" : 93,
@@ -630,14 +587,14 @@
 			]
 	},
 	{
+		"id" : 10,
 		"blazz" : "Diam's",
 		"firstname" : "Mélanie",
 		"lastname" : "Georgiades",
 		"birth" : "25/07/1980",
 		"birth_place" : "Nicosie",
 		"begin_year" : 1996,
-		"min_pic" : "./img/",
-		"official_website" : "http://www.diams-lesite.com",
+		"official_website" : "diams-lesite.com",
 		"punchline" : "Vu que Mickey n’a plus de couilles, Minnie c’est Amy Winehouse",
 		"disque_or" : 3,
 		"disque_platine" : 2,
@@ -661,15 +618,6 @@
 				},
 				{
 					"l_name" : "Warner"
-				}
-			],
-		"surname" :
-			[
-				{
-					"s_name" : ""
-				},
-				{
-					"s_name" : ""
 				}
 			],
 		"dep" : 91,
@@ -702,14 +650,14 @@
 			]
 	},
 	{
+		"id" : 11,
 		"blazz" : "Kaaris",
 		"firstname" : "Gnakouri",
 		"lastname" : "Okou",
 		"birth" : "30/01/1980",
 		"birth_place" : "Abidjan",
 		"begin_year" : 1999,
-		"min_pic" : "./img/",
-		"official_website" : "http://www.kaaris.com",
+		"official_website" : "kaaris.com",
 		"punchline" : "Je n’ai confiance qu’en mon Desert Eagle et en Zizou dans les arrêts d’jeu",
 		"disque_or" : 1,
 		"disque_platine" : 0,
@@ -756,14 +704,14 @@
 			]
 	},
 	{
+		"id" : 12,
 		"blazz" : "Kery James",
 		"firstname" : "Alix",
 		"lastname" : "Mathurin",
 		"birth" : "28/12/1977",
 		"birth_place" : "Abymes",
 		"begin_year" : 1990,
-		"min_pic" : "./img/",
-		"official_website" : "http://www.keryjames.com",
+		"official_website" : "keryjames.com",
 		"punchline" : "Le savoir est une arme, mais personne braque pour acheter des livres",
 		"disque_or" : 3,
 		"disque_platine" : 2,
@@ -783,10 +731,7 @@
 		"surname" :
 			[
 				{
-					"s_name" : ""
-				},
-				{
-					"s_name" : ""
+					"s_name" : "Le rappeur repenti"
 				}
 			],
 		"dep" : 94,
@@ -837,14 +782,13 @@
 			]
 	},
 	{
+		"id" : 13,
 		"blazz" : "Sniper",
-		"firstname" : "",
-		"lastname" : "",
-		"birth" : "",
+		"firstname" : "Tunisiano, Aketo,",
+		"lastname" : "Blacko",
+		"birth" : "1997",
 		"birth_place" : "Deuil-la-Barre",
 		"begin_year" : 1997,
-		"min_pic" : "./img/",
-		"official_website" : "",
 		"punchline" : "Si notre planète se réchauffe, c’est qu’on se rapproche de l’enfer",
 		"disque_or" : 3,
 		"disque_platine" : 3,
@@ -865,15 +809,6 @@
 				},
 				{
 					"l_name" : "Mezoued Redcord's"
-				}
-			],
-		"surname" :
-			[
-				{
-					"s_name" : ""
-				},
-				{
-					"s_name" : ""
 				}
 			],
 		"dep" : 95,
@@ -900,14 +835,14 @@
 			]
 	},
 	{
+		"id" : 14,
 		"blazz" : "Disiz",
 		"firstname" : "Serigne Mbaye",
 		"lastname" : "Gueye",
 		"birth" : "22/03/1978",
 		"birth_place" : "Amiens",
 		"begin_year" : 1995,
-		"min_pic" : "./img/",
-		"official_website" : "http://www.disiz.fr",
+		"official_website" : "disiz.fr",
 		"punchline" : "Je prends ta carrière par derrière et encore, avec une demie molle",
 		"disque_or" : 1,
 		"disque_platine" : 0,
@@ -990,14 +925,14 @@
 			]
 	},
 	{
+		"id" : 15,
 		"blazz" : "Sinik",
 		"firstname" : "Thomas",
 		"lastname" : "Idir",
 		"birth" : "26/06/1980",
 		"birth_place" : "Paris",
 		"begin_year" : 1996,
-		"min_pic" : "./img/",
-		"official_website" : "http://www.sinik609.com",
+		"official_website" : "sinik609.com",
 		"punchline" : "J’ai baisé la justice, mon avocat demande l’avortement",
 		"disque_or" : 5,
 		"disque_platine" : 2,
@@ -1065,31 +1000,27 @@
 			]
 	},
 	{
+		"id" : 16,
 		"blazz" : "Mc Solaar",
 		"firstname" : "Claude",
 		"lastname" : "M'Barali",
 		"birth" : "05/03/1969",
 		"birth_place" : "Dakar",
 		"begin_year" : 1990,
-		"min_pic" : "./img/",
-		"official_website" : "",
-		"punchline" : "Peace, comme Kennedy : ‘Ich bin ein Berliner’. S’il était à Hambourg, il aurait dit : ‘Ich bin ein Hamburger’",
+		"punchline" : "J’peux pas sauver le monde, tout le monde s’est sauvé",
 		"disque_or" : 7,
 		"disque_platine" : 5,
 		"double_disque_platine" : 2,
 		"disque_diamant" : 0,
 		"v1": 7,
 	    "v2": 2894000,
-	    "v3": 0,
+	    "v3": 21000,
 	    "insults" : 5,
 	    "vocabulaire" : 1321,
 		"label" :
 			[
 				{
-					"l_name" : ""
-				},
-				{
-					"l_name" : ""
+					"l_name" : "Elektra Records"
 				}
 			],
 		"surname" :
@@ -1158,14 +1089,14 @@
 			]
 	},
 	{
+		"id" : 17,
 		"blazz" : "Tunisiano",
 		"firstname" : "Bachir",
 		"lastname" : "Baccour",
 		"birth" : "19/05/1979",
 		"birth_place" : "Deuil-la-Barre",
 		"begin_year" : 1995,
-		"min_pic" : "./img/",
-		"official_website" : "http://www.tunisiano-lesite.fr",
+		"official_website" : "tunisiano-lesite.fr",
 		"punchline" : "Non t’es pas une salope, t’es vaginalement très sociable",
 		"disque_or" : 0,
 		"disque_platine" : 0,
@@ -1191,15 +1122,6 @@
 				,
 				{
 					"l_name" : "Mezoued"
-				}
-			],
-		"surname" :
-			[
-				{
-					"s_name" : ""
-				},
-				{
-					"s_name" : ""
 				}
 			],
 		"dep" : 95,

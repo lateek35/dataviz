@@ -265,7 +265,8 @@ html, body{
 
 	#page-rapper>.top-part{
 		display: block;
-		width: 10.3rem;
+		width: 12rem;
+		position: relative;
 		margin: 0 auto;
 		padding-top: 0.7rem;
 	}
@@ -278,7 +279,8 @@ html, body{
 	}
 	.description {
 		width: 5.90rem;
-		margin-left: 1.2rem;
+		position: absolute;
+		right: 0;
 	}
 	.description, .top-part>img{
 		display: inline-block;

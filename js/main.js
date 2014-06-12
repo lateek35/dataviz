@@ -342,7 +342,7 @@ $('body').on('click','.option',
         .radius(function(d, i) {return radius})
         .angle(function(d, i) { return angle(i); });
 
-d3.json('./js/data2.json',function(data){
+d3.json('./js/data.json',function(data){
 
     total = data.length
 
@@ -459,7 +459,7 @@ d3.json('./js/data2.json',function(data){
     /*J'ajoute le texte*/
     d3.select('#container-module-comparaison>svg').selectAll("text").data(data).enter()
         .append("text")
-        .text(function(d) { return d.name; });
+        .text(function(d,i) { return "#"+(i+1)+" "+d.blazz; });
 
     for(i=0; i<65; i++){
       //J'augmente le rayon du cercle pour chaque passage
@@ -494,7 +494,7 @@ function updateData(eventPassed) {
     }
 
     // Get the data again
-    d3.json('./js/data2.json',function(data){
+    d3.json('./js/data.json',function(data){
         /*Je selectionne les éléments qui ne possède pas la classe récupérer au-dessus*/
         var gNotChosen = d3.selectAll("svg g:not(."+classClicked+")").transition();
         var gChosen = d3.selectAll("svg g."+classClicked).transition();
@@ -564,14 +564,14 @@ function updateData(eventPassed) {
                     var chiffre;
                     var donnee = +eval("d.v"+indice);
                     if(donnee>1000000){
-                        chiffre = (donnee/10)+900000;
+                        chiffre = (donnee+1500000)/2.5;
                     }else{
                         chiffre = donnee;
                     }
                     if(((i+0.5)*180/total)<90){
                         var angleRotation = ((i+0.5)*180/total);
-                        var x = ((eval('scale'+indice)(chiffre)+70)*-Math.cos((i+0.5)*(Math.PI)/total)+r)
-                        var y = ((eval('scale'+indice)(chiffre)+70)*Math.sin((i+0.5)*(-Math.PI)/total)+r)
+                        var x = ((eval('scale'+indice)(chiffre)+80)*-Math.cos((i+0.5)*(Math.PI)/total)+r)
+                        var y = ((eval('scale'+indice)(chiffre)+80)*Math.sin((i+0.5)*(-Math.PI)/total)+r)
                     }else{
                         var angleRotation = ((i+0.5)*180/total)-180;
                         var x = ((eval('scale'+indice)(chiffre)+10)*-Math.cos((i+0.5)*(Math.PI)/total)+r)
