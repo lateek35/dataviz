@@ -296,6 +296,12 @@ html, body{
 				letter-spacing: 0.05rem;
 				font-family: 'bebas', Georgia, serif;
 			}
+			.btn-play-pause{
+				width: 25px;
+				height: 11px;
+				float: right;
+				background: url('../img/btn-pause.png');
+			}
 		.description .bottom-description{
 			position: relative;
 		}

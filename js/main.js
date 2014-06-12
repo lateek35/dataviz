@@ -342,7 +342,7 @@ d3.json('./js/data2.json',function(data){
         .innerRadius(debutScaleAlbum)
         .outerRadius(function(d){
             return scale1(+d.v1);
-        })
+          })
         .startAngle(function(d,i){
             return (-p/2)+(p/total)*i+1/100; 
             })
