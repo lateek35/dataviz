@@ -65,8 +65,9 @@ require([
   'viewRapperList',
   'viewRapperPage',
   'viewModuleComparaison',
+  'viewRapperListInsults',
   'd3'
-], function (slimScroll,fullpage, backbone, modelRapper, collectionRapper,viewRapperList,viewRapperPage,viewModuleComparaison,d3) {
+], function (slimScroll,fullpage, backbone, modelRapper, collectionRapper,viewRapperList,viewRapperPage,viewModuleComparaison,viewRapperListInsults,d3) {
 
 /*==========================================================================================*/
 /*--------------------------------------  GESTION MAP  -------------------------------------*/
@@ -170,6 +171,9 @@ $('#fullpage').fullpage({
   afterLoad: function(anchorLink, index){
     var suplmement = (Backbone.history.fragment).substring(2);
     router.navigate(""+index+"/"+suplmement);
+    if(index == '4'){
+      rapperListInsults.render();
+    }
   }
 });
 $.fn.fullpage.setKeyboardScrolling(false);
@@ -196,6 +200,7 @@ $('#home>a').on('click',function(event){
 
   var rappers = new collectionRapper();
   var rapperList = new viewRapperList({collection : rappers});
+  var rapperListInsults = new viewRapperListInsults({collection : rappers});
   //var moduleComparaison = new viewModuleComparaison({collection : rappers});
 
   var router = new Router();

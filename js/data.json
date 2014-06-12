@@ -9,6 +9,8 @@
 		"min_pic" : "./img/mini-pic-1.jpg",
 		"official_website" : "http://www.google.fr",
 		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
+		"insults":150,
+		"vocabulaire":1090,
 		"disque_or" : 6,
 		"double_disque_or" : 1,
 		"disque_platine" : 3,
@@ -53,35 +55,40 @@
 			]
 	},
 	{
-		"blazz" : "Diziz",
-		"firstname" : "paul",
-		"lastname" : "berturs",
-		"birth" : "01/01/1957",
+		"blazz" : "booba",
+		"firstname" : "allan",
+		"lastname" : "raquin",
+		"birth" : "12/12/1993",
 		"birth_place" : "Yvellines",
-		"begin_year" : 1888,
-		"min_pic" : "./img/mini-pic-2.jpg",
+		"begin_year" : 1994,
+		"min_pic" : "./img/mini-pic-1.jpg",
 		"official_website" : "http://www.google.fr",
-		"punchline" : "T'aime ca ouesh",
-		"disque_or" : 4,
-		"double_disque_or" : 2,
-		"disque_platine" : 1,
-		"double_disque_platine" : 0,
-		"v1": 6,
-	    "v2": 150000,
-	    "v3": 794000,
+		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
+		"insults":150,
+		"vocabulaire":1090,
+		"disque_or" : 6,
+		"double_disque_or" : 1,
+		"disque_platine" : 3,
+		"double_disque_platine" : 1,
+		"v1": 8,
+	    "v2": 3000000,
+	    "v3": 6000000,
 		"label" :
 			[
 				{
 					"l_name" : "universal"
 				},
 				{
-					"l_name" : "jouet club"
+					"l_name" : "tallac"
 				}
 			],
 		"surname" :
 			[
 				{
-					"s_name" : "diziz la peste"
+					"s_name" : "b2oba"
+				},
+				{
+					"s_name" : "Le duc de boulogne"
 				}
 			],
 		"dep" : 77,
@@ -103,19 +110,24 @@
 			]
 	},
 	{
-		"blazz" : "sinik",
-		"firstname" : "yahn",
-		"lastname" : "arthus",
-		"birth" : "23/02/1976",
-		"birth_place" : "Rennes",
-		"begin_year" : 1984,
-		"min_pic" : "./img/mini-pic-3.jpg",
+		"blazz" : "booba",
+		"firstname" : "allan",
+		"lastname" : "raquin",
+		"birth" : "12/12/1993",
+		"birth_place" : "Yvellines",
+		"begin_year" : 1994,
+		"min_pic" : "./img/mini-pic-1.jpg",
 		"official_website" : "http://www.google.fr",
-		"punchline" : "Yo negga",
-		"disque_or" : 3,
+		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
+		"insults":150,
+		"vocabulaire":1090,
+		"disque_or" : 6,
 		"double_disque_or" : 1,
-		"disque_platine" : 0,
-		"double_disque_platine" : 0,
+		"disque_platine" : 3,
+		"double_disque_platine" : 1,
+		"v1": 8,
+	    "v2": 3000000,
+	    "v3": 6000000,
 		"label" :
 			[
 				{
@@ -128,13 +140,13 @@
 		"surname" :
 			[
 				{
-					"s_name" : "sisinik"
+					"s_name" : "b2oba"
 				},
 				{
-					"s_name" : "Yeaheayh"
+					"s_name" : "Le duc de boulogne"
 				}
 			],
-		"dep" : 93,
+		"dep" : 77,
 		"album" :
 			[
 				{
