@@ -7,9 +7,17 @@
 		"birth_place" : "Yvellines",
 		"begin_year" : 1994,
 		"min_pic" : "./img/mini-pic-1.jpg",
+		"official_website" : "http://www.google.fr",
 		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
 		"insults":150,
 		"vocabulaire":1090,
+		"disque_or" : 6,
+		"double_disque_or" : 1,
+		"disque_platine" : 3,
+		"double_disque_platine" : 1,
+		"v1": 8,
+	    "v2": 3000000,
+	    "v3": 6000000,
 		"label" :
 			[
 				{
@@ -29,242 +37,6 @@
 				}
 			],
 		"dep" : 77,
-		"album" :
-			[
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-				,
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-			]
-	},
-	{
-		"blazz" : "sinik",
-		"firstname" : "allan",
-		"lastname" : "raquin",
-		"birth" : "12/12/1993",
-		"birth_place" : "Yvellines",
-		"begin_year" : 1994,
-		"min_pic" : "./img/mini-pic-2.jpg",
-		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
-		"insults":100,
-		"vocabulaire":1200,
-		"label" :
-			[
-				{
-					"l_name" : "universal"
-				},
-				{
-					"l_name" : "tallac"
-				}
-			],
-		"surname" :
-			[
-				{
-					"s_name" : "b2oba"
-				},
-				{
-					"s_name" : "Le duc de boulogne"
-				}
-			],
-		"dep" : 75,
-		"album" :
-			[
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-				,
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-			]
-	},
-	{
-		"blazz" : "diams",
-		"firstname" : "allan",
-		"lastname" : "raquin",
-		"birth" : "12/12/1993",
-		"birth_place" : "Yvellines",
-		"begin_year" : 1994,
-		"min_pic" : "./img/mini-pic-1.jpg",
-		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
-		"insults":80,
-		"vocabulaire":1600,
-		"label" :
-			[
-				{
-					"l_name" : "universal"
-				},
-				{
-					"l_name" : "tallac"
-				}
-			],
-		"surname" :
-			[
-				{
-					"s_name" : "b2oba"
-				},
-				{
-					"s_name" : "Le duc de boulogne"
-				}
-			],
-		"dep" : 75,
-		"album" :
-			[
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-				,
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-			]
-	},
-	{
-		"blazz" : "tunisiano",
-		"firstname" : "allan",
-		"lastname" : "raquin",
-		"birth" : "12/12/1993",
-		"birth_place" : "Yvellines",
-		"begin_year" : 1994,
-		"min_pic" : "./img/mini-pic-3.jpg",
-		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
-		"insults":40,
-		"vocabulaire":1250,
-		"label" :
-			[
-				{
-					"l_name" : "universal"
-				},
-				{
-					"l_name" : "tallac"
-				}
-			],
-		"surname" :
-			[
-				{
-					"s_name" : "b2oba"
-				},
-				{
-					"s_name" : "Le duc de boulogne"
-				}
-			],
-		"dep" : 93,
-		"album" :
-			[
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-				,
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-			]
-	}
-	,
-	{
-		"blazz" : "black-m",
-		"firstname" : "allan",
-		"lastname" : "raquin",
-		"birth" : "12/12/1993",
-		"birth_place" : "Yvellines",
-		"begin_year" : 1994,
-		"min_pic" : "./img/mini-pic-3.jpg",
-		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
-		"insults":110,
-		"vocabulaire":1990,
-		"label" :
-			[
-				{
-					"l_name" : "universal"
-				},
-				{
-					"l_name" : "tallac"
-				}
-			],
-		"surname" :
-			[
-				{
-					"s_name" : "b2oba"
-				},
-				{
-					"s_name" : "Le duc de boulogne"
-				}
-			],
-		"dep" : 94,
-		"album" :
-			[
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-				,
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-			]
-	},
-	{
-		"blazz" : "vitaa",
-		"firstname" : "allan",
-		"lastname" : "raquin",
-		"birth" : "12/12/1993",
-		"birth_place" : "Yvellines",
-		"begin_year" : 1994,
-		"min_pic" : "./img/mini-pic-1.jpg",
-		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
-		"insults":70,
-		"vocabulaire":1080,
-		"label" :
-			[
-				{
-					"l_name" : "universal"
-				},
-				{
-					"l_name" : "tallac"
-				}
-			],
-		"surname" :
-			[
-				{
-					"s_name" : "b2oba"
-				},
-				{
-					"s_name" : "Le duc de boulogne"
-				}
-			],
-		"dep" : 94,
 		"album" :
 			[
 				{
@@ -290,9 +62,17 @@
 		"birth_place" : "Yvellines",
 		"begin_year" : 1994,
 		"min_pic" : "./img/mini-pic-1.jpg",
+		"official_website" : "http://www.google.fr",
 		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
 		"insults":150,
 		"vocabulaire":1090,
+		"disque_or" : 6,
+		"double_disque_or" : 1,
+		"disque_platine" : 3,
+		"double_disque_platine" : 1,
+		"v1": 8,
+	    "v2": 3000000,
+	    "v3": 6000000,
 		"label" :
 			[
 				{
@@ -312,242 +92,6 @@
 				}
 			],
 		"dep" : 77,
-		"album" :
-			[
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-				,
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-			]
-	},
-	{
-		"blazz" : "sinik",
-		"firstname" : "allan",
-		"lastname" : "raquin",
-		"birth" : "12/12/1993",
-		"birth_place" : "Yvellines",
-		"begin_year" : 1994,
-		"min_pic" : "./img/mini-pic-2.jpg",
-		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
-		"insults":100,
-		"vocabulaire":1200,
-		"label" :
-			[
-				{
-					"l_name" : "universal"
-				},
-				{
-					"l_name" : "tallac"
-				}
-			],
-		"surname" :
-			[
-				{
-					"s_name" : "b2oba"
-				},
-				{
-					"s_name" : "Le duc de boulogne"
-				}
-			],
-		"dep" : 75,
-		"album" :
-			[
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-				,
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-			]
-	},
-	{
-		"blazz" : "diams",
-		"firstname" : "allan",
-		"lastname" : "raquin",
-		"birth" : "12/12/1993",
-		"birth_place" : "Yvellines",
-		"begin_year" : 1994,
-		"min_pic" : "./img/mini-pic-1.jpg",
-		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
-		"insults":80,
-		"vocabulaire":1600,
-		"label" :
-			[
-				{
-					"l_name" : "universal"
-				},
-				{
-					"l_name" : "tallac"
-				}
-			],
-		"surname" :
-			[
-				{
-					"s_name" : "b2oba"
-				},
-				{
-					"s_name" : "Le duc de boulogne"
-				}
-			],
-		"dep" : 75,
-		"album" :
-			[
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-				,
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-			]
-	},
-	{
-		"blazz" : "tunisiano",
-		"firstname" : "allan",
-		"lastname" : "raquin",
-		"birth" : "12/12/1993",
-		"birth_place" : "Yvellines",
-		"begin_year" : 1994,
-		"min_pic" : "./img/mini-pic-3.jpg",
-		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
-		"insults":40,
-		"vocabulaire":1250,
-		"label" :
-			[
-				{
-					"l_name" : "universal"
-				},
-				{
-					"l_name" : "tallac"
-				}
-			],
-		"surname" :
-			[
-				{
-					"s_name" : "b2oba"
-				},
-				{
-					"s_name" : "Le duc de boulogne"
-				}
-			],
-		"dep" : 93,
-		"album" :
-			[
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-				,
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-			]
-	}
-	,
-	{
-		"blazz" : "black-m",
-		"firstname" : "allan",
-		"lastname" : "raquin",
-		"birth" : "12/12/1993",
-		"birth_place" : "Yvellines",
-		"begin_year" : 1994,
-		"min_pic" : "./img/mini-pic-3.jpg",
-		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
-		"insults":110,
-		"vocabulaire":1990,
-		"label" :
-			[
-				{
-					"l_name" : "universal"
-				},
-				{
-					"l_name" : "tallac"
-				}
-			],
-		"surname" :
-			[
-				{
-					"s_name" : "b2oba"
-				},
-				{
-					"s_name" : "Le duc de boulogne"
-				}
-			],
-		"dep" : 94,
-		"album" :
-			[
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-				,
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-			]
-	},
-	{
-		"blazz" : "vitaa",
-		"firstname" : "allan",
-		"lastname" : "raquin",
-		"birth" : "12/12/1993",
-		"birth_place" : "Yvellines",
-		"begin_year" : 1994,
-		"min_pic" : "./img/mini-pic-1.jpg",
-		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
-		"insults":70,
-		"vocabulaire":1080,
-		"label" :
-			[
-				{
-					"l_name" : "universal"
-				},
-				{
-					"l_name" : "tallac"
-				}
-			],
-		"surname" :
-			[
-				{
-					"s_name" : "b2oba"
-				},
-				{
-					"s_name" : "Le duc de boulogne"
-				}
-			],
-		"dep" : 94,
 		"album" :
 			[
 				{
@@ -573,9 +117,17 @@
 		"birth_place" : "Yvellines",
 		"begin_year" : 1994,
 		"min_pic" : "./img/mini-pic-1.jpg",
+		"official_website" : "http://www.google.fr",
 		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
 		"insults":150,
 		"vocabulaire":1090,
+		"disque_or" : 6,
+		"double_disque_or" : 1,
+		"disque_platine" : 3,
+		"double_disque_platine" : 1,
+		"v1": 8,
+	    "v2": 3000000,
+	    "v3": 6000000,
 		"label" :
 			[
 				{
@@ -595,195 +147,6 @@
 				}
 			],
 		"dep" : 77,
-		"album" :
-			[
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-				,
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-			]
-	},
-	{
-		"blazz" : "sinik",
-		"firstname" : "allan",
-		"lastname" : "raquin",
-		"birth" : "12/12/1993",
-		"birth_place" : "Yvellines",
-		"begin_year" : 1994,
-		"min_pic" : "./img/mini-pic-2.jpg",
-		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
-		"insults":100,
-		"vocabulaire":1200,
-		"label" :
-			[
-				{
-					"l_name" : "universal"
-				},
-				{
-					"l_name" : "tallac"
-				}
-			],
-		"surname" :
-			[
-				{
-					"s_name" : "b2oba"
-				},
-				{
-					"s_name" : "Le duc de boulogne"
-				}
-			],
-		"dep" : 75,
-		"album" :
-			[
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-				,
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-			]
-	},
-	{
-		"blazz" : "diams",
-		"firstname" : "allan",
-		"lastname" : "raquin",
-		"birth" : "12/12/1993",
-		"birth_place" : "Yvellines",
-		"begin_year" : 1994,
-		"min_pic" : "./img/mini-pic-1.jpg",
-		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
-		"insults":80,
-		"vocabulaire":1600,
-		"label" :
-			[
-				{
-					"l_name" : "universal"
-				},
-				{
-					"l_name" : "tallac"
-				}
-			],
-		"surname" :
-			[
-				{
-					"s_name" : "b2oba"
-				},
-				{
-					"s_name" : "Le duc de boulogne"
-				}
-			],
-		"dep" : 75,
-		"album" :
-			[
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-				,
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-			]
-	},
-	{
-		"blazz" : "tunisiano",
-		"firstname" : "allan",
-		"lastname" : "raquin",
-		"birth" : "12/12/1993",
-		"birth_place" : "Yvellines",
-		"begin_year" : 1994,
-		"min_pic" : "./img/mini-pic-3.jpg",
-		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
-		"insults":40,
-		"vocabulaire":1250,
-		"label" :
-			[
-				{
-					"l_name" : "universal"
-				},
-				{
-					"l_name" : "tallac"
-				}
-			],
-		"surname" :
-			[
-				{
-					"s_name" : "b2oba"
-				},
-				{
-					"s_name" : "Le duc de boulogne"
-				}
-			],
-		"dep" : 93,
-		"album" :
-			[
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-				,
-				{
-					"a_name" : "92 izi",
-					"a_sells" : 1000,
-					"a_years" : 2000,
-					"a_traks" : 12
-				}
-			]
-	}
-	,
-	{
-		"blazz" : "black-m",
-		"firstname" : "allan",
-		"lastname" : "raquin",
-		"birth" : "12/12/1993",
-		"birth_place" : "Yvellines",
-		"begin_year" : 1994,
-		"min_pic" : "./img/mini-pic-3.jpg",
-		"punchline" : "Je t'envoie rocco pour dépucelage, c'est ta rondelle qui te lache",
-		"insults":110,
-		"vocabulaire":1990,
-		"label" :
-			[
-				{
-					"l_name" : "universal"
-				},
-				{
-					"l_name" : "tallac"
-				}
-			],
-		"surname" :
-			[
-				{
-					"s_name" : "b2oba"
-				},
-				{
-					"s_name" : "Le duc de boulogne"
-				}
-			],
-		"dep" : 94,
 		"album" :
 			[
 				{

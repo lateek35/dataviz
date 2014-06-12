@@ -12,6 +12,7 @@ define(['backbone','modelRapper','collectionRapper','text!templates/page-rappeur
     render: function(cp){
       var html = [];
       var that = this;
+      var d3 = this.d3;
       var filter = this.filter;
       this.collection.fetch({
         success: function(rappers){
@@ -22,6 +23,7 @@ define(['backbone','modelRapper','collectionRapper','text!templates/page-rappeur
           }else{
             var rappersFiltered = rappers.where(filter);
             _.each(rappersFiltered, function(rapper){
+              d3(rapper.toJSON());/*------ICI----------*/
               html.push(rapper.toJSON());
             });
           }
@@ -40,6 +42,9 @@ define(['backbone','modelRapper','collectionRapper','text!templates/page-rappeur
     },
     affichedep : function(){
       
+    },
+    d3 : function(donnee){
+      console.log(donnee);/*------ICI----------*/
     }
   });
   return RapperPage;

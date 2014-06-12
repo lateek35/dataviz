@@ -10,6 +10,7 @@ html, body{
 	height: 100%;
 	font-family: 'source_sans_prosemibold', Georgia, serif;
 	font-size: 100px;
+	user-select :none;
 }
 #fullpage,#fullpage>div{
 	height: 100%;
@@ -248,44 +249,234 @@ html, body{
 		top: 0;
 		width: 50%;
 		z-index: -100;
-		background: url(./video/polina.jpg) no-repeat;
 		background-size: cover;
 	}
-
-	#page-rapper>div{
-		height: 50%;
+	.video-alpha{
+		position: absolute;
+		top: 0;
+		width: 50%;
+		height: 100%;
+		z-index: -99;
+		background-color: rgba(0,0,0,0.9);
 	}
-	#page-rapper>.top-part{
+	#page-rapper{
+		overflow-y: scroll;
+	}
 
+	#page-rapper>.top-part{
+		display: block;
+		width: 10.3rem;
+		margin: 0 auto;
+		padding-top: 0.7rem;
 	}
 	#page-rapper>.bottom-part{
+		min-height: 50%;
 		background-color: #333333;
 	}
+	.inline{
+		display: inline-block;
+	}
+	.description {
+		width: 5.90rem;
+		margin-left: 1.2rem;
+	}
+	.description, .top-part>img{
+		display: inline-block;
+		vertical-align: middle;
+	}
 
+		.description .top-description{
+			padding-bottom: 0.1rem;
+			border-bottom: 1px solid #fff;
+		}
+			.top-description h2{
+				color: #fff;
+				font-size: 0.5rem;
+				text-transform: uppercase;
+				letter-spacing: 0.05rem;
+				font-family: 'bebas', Georgia, serif;
+			}
+		.description .bottom-description{
+			position: relative;
+		}
+			.bottom-description p{
+				line-height: 0.30rem;
+				font-size: 0.20rem;
+				font-family: 'source_sans_regular', Georgia, serif;
+				color: #fff;
+			}
+			.bottom-description a{
+				font-family: 'source_sans_regular', Georgia, serif;
+				font-size: 0.20rem;
+				color: #fff;
+			}
+			.bottom-description .punchline{
+				position: absolute;
+				top: 0.3rem;
+				right: 0;
+				width: 2.5rem;
+				font-family: 'bebas', Georgia, serif;
+				font-size: 0.3rem;
+			}
+			.bottom-description span{
+				color: #e04852;
+			}
+			.bottom-description>ul>ul{
+				width: 1.30rem;
+				display: inline-block;
+			}
+			.bottom-description li{
+				text-align: center;
+				height: 0.5rem;
+			}
+			.bottom-description li:first-child{
+				font-size: 0.2rem;
+				letter-spacing: 0.01rem;
+				font-family: 'bebas', Georgia, serif;
+				vertical-align: top;
+				color: #e04852;
+			}
+			.bottom-description li:last-child{
+				font-size: 0.3rem;
+				color: #fff;
+			}
+	.bottom-part>.container{
+		width: 	10.24rem;
+		display: block;
+		margin: 0 auto;
+	}
+	.bottom-part li{
+		width: 3.25rem;
+		text-align: center;
+		display: inline-block;
+		font-family: 'bebas', Georgia, serif;
+		font-size: 0.3rem;
+		color: #fff;
+	}
 
-path{
+#carte path{
 	display: block;
 	-webkit-transform: scale(1);
 	-webkit-transform-origin: 40% 40%;
 	-webkit-transition: all 0.5s ease-out;
 }
-path.bouge{
+#carte path.bouge{
 	-webkit-transform: scale(0);
 	-webkit-transform-origin: 40% 40%;
 	-webkit-transition: all 0.5s ease-out;
 }
 
-path.zoom{
-	-webkit-transform: scale(1.3);
-	-webkit-transform-origin: 50% 50%;
+#_75.zoom{
+	-webkit-transform: scale(6.3);
+	-webkit-transform-origin: 40% 20%;
 	-webkit-transition: all 0.5s ease-out;
 }
+#_77.zoom{
+	-webkit-transform: scale(1.3);
+	-webkit-transform-origin: 160% 70%;
+	-webkit-transition: all 0.5s ease-out;
+}
+#_78.zoom{
+	-webkit-transform: scale(2);
+	-webkit-transform-origin: -40% 29%;
+	-webkit-transition: all 0.5s ease-out;
+}
+
+#_91.zoom{
+	-webkit-transform: scale(2.3);
+	-webkit-transform-origin: 20% 70%;
+	-webkit-transition: all 0.5s ease-out;
+}
+
+#_92.zoom{
+	-webkit-transform: scale(5);
+	-webkit-transform-origin: 30% 30%;
+	-webkit-transition: all 0.5s ease-out;
+}
+
+#_93.zoom{
+	-webkit-transform: scale(5.5);
+	-webkit-transform-origin: 51% 20%;
+	-webkit-transition: all 0.5s ease-out;
+}
+
+#_94.zoom{
+	-webkit-transform: scale(6);
+	-webkit-transform-origin: 50% 32%;
+	-webkit-transition: all 0.5s ease-out;
+}
+#_95.zoom{
+	-webkit-transform: scale(3.5);
+	-webkit-transform-origin: 35% -5%;
+	-webkit-transition: all 0.5s ease-out;
+}
+/* Css module comparaison */
+#module-comparaison {
+	background-image: url('../img/pattern-2.png'),url("../img/background-2.jpg");
+	-webkit-background-size: auto,cover;
+	-moz-background-size: auto,cover;
+	-o-background-size: auto,cover;
+	background-size: auto,cover;
+}
+#container-module-comparaison{
+	width: 1320px;
+	height: 600px;
+	position: relative;
+	display: block;
+	margin: 0 auto;
+}
+[class*="line"]{
+	fill: none;
+    stroke-width: 1px;
+}
+#module-comparaison text{
+	color: #fff;
+	fill: #fff;
+	font-size: 0.15rem;
+}
+#module-comparaison .line-green {
+    stroke: rgba(0,255,0,0.3);
+}
+#module-comparaison .line-blue {
+    stroke: rgba(0,0,255,0.3);
+}
+#module-comparaison .line-red {
+    stroke: rgba(255,0,0,0.3);
+}
+	#echelle-comparaison{
+		position: absolute;
+		bottom: 0;
+		left: 60px;
+	}
+	#echelle-comparaison>img{
+		position: absolute;
+	}
+	#echelle-comparaison .album{
+		top: 7px;
+		left: 501px;
+	}
+	#echelle-comparaison .vente{
+		top: 7px;
+		left: 357px;
+	}
+	#echelle-comparaison .popu{
+		top: 7px;
+		left: 186px;
+	}
+	#echelle-comparaison #btn-reset{
+		position: absolute;
+		left: 50%;
+		background-color: red;
+		width: 12px;
+		height: 12px;
+	}
 
 /* Css module hardcore */
 #module-3{
 	background: url("../img/background-3.jpg") no-repeat center center;
 	position:relative;
 }
+<<<<<<< HEAD
 	#module-3 .module-title{
 		position:inherit;
 		left:0;

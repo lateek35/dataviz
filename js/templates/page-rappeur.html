@@ -1,13 +1,65 @@
-<!-- {{#each}}
-<h2>{{blazz}}</h2>
-<h2>{{firstname}}</h2>
-<h2>{{lastname}}</h2>
-<h2>{{birth}}</h2>
-<h2>{{birth_place}}</h2>
-{{/each}} -->
 <video autoplay loop id="bgvid">
-	<source src="./video/polina.webm" type="video/webm">
-	<source src="./video/polina.mp4" type="video/mp4">
+	<source src="./video/small.webm" type="video/webm">
+	<source src="./video/small.mp4" type="video/mp4">
 </video>
-<div class="top-part"></div>
-<div class="bottom-part"></div>
+<div class="video-alpha"></div>
+<div class="top-part">
+{{#each}}
+<img src="./img/{{blazz}}.png" alt="{{blazz}}">
+
+
+
+<div class="description">
+	<div class="top-description">
+		<h2>{{blazz}}</h2>
+	</div>
+	<div class="bottom-description">
+		<p><span>Nom :</span> {{firstname}} {{lastname}}</p>
+		<p><span>Naissance :</span> {{birth}}</p>
+		<p><span>Lieu de naissance :</span> {{birth_place}}</p>
+		<p><span>Années actives :</span> Depuis {{begin_year}}</p>
+		<p><span>Labels :</span> 
+		{{#each label}}
+			{{#if @index}} , &thinsp;{{/if}} {{this.l_name}}
+		{{/each}}</p>
+		<p><span>Surnom :</span> 
+		{{#each surname}} 
+			{{#if @index}} , &thinsp;{{/if}} {{this.s_name}} 
+		{{/each}}</p>
+		<p class="inline"><span>Site officiel : </span> </p><a class="inline" href="{{official_website}}">{{official_website}}</a>
+		<p class="punchline">"{{punchline}}"</p>
+		<ul>
+				<ul>
+					<li>DISQUE D'OR</li>
+					<li>{{disque_or}}</li>
+				</ul>
+				<ul>
+					<li>DOUBLE DISQUE D'OR</li>
+					<li>{{double_disque_or}}</li>
+				</ul>
+				<ul>
+					<li>DISQUE DE PLATINE</li>
+					<li>{{disque_platine}}</li>
+				</ul>
+			</li>
+				<ul>
+					<li>DOUBLE DISQUE DE PLATINE</li>
+					<li>{{double_disque_platine}}</li>
+				</ul>
+		</ul>
+	</div>
+</div>
+
+
+
+{{/each}}
+</div>
+<div class="bottom-part">
+	<div class="container">
+		<ul>
+			<li id="bio">BIOGRAPHIE</li>
+			<li id="popularite">POPULARIté</li>
+			<li id="album vendu">ALBUMS VENDUS</li>
+		</ul>
+	</div>
+</div>
