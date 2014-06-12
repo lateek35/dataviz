@@ -139,6 +139,12 @@ $('body').on('mouseout','#list-rapper li',function(){
 });
 
 /*__________________________________________________________________________________________*/
+/*-------------------------------  Animation hardcore lyrics  ------------------------------*/
+// console.log("taille fenêtre : "+window.innerHeight);
+// console.log("position top head-rappers (dans body) : "+($('#head-rappers').offset().top-window.innerHeight*3));
+// console.log("hauteur total : "+window.innerHeight*4);
+
+/*__________________________________________________________________________________________*/
 /*------------------------------  Gestion URL Departement MAP ----------------------------*/
 $('path').on('click',function(){ 
   var suplmement = (Backbone.history.fragment).substring(0,2);

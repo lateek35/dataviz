@@ -161,9 +161,17 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
     },
     launchInsultsMode: function(){
       if($('#g-graph').attr('class')=='vocabulaire-mod'){
+
+        $("#infos-hardcore-insults .infos-card").attr('class','infos-card');
+        $("#infos-hardcore-insults #rapper-card").attr('class', '');
+
         $('#insults-module').attr('class','active');
         $('#vocabulaire-module').attr('class','');
         $('#g-graph').attr('class','insults-mod');
+        $('#infos-hardcore-vocab').attr('class','inactive-infos');
+        setTimeout(function(){
+          $('#infos-hardcore-insults').attr('class','');
+        },500);
 
         var height = 340,
             width = 894;
@@ -243,9 +251,17 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
     },
     launchVocMode: function(){
       if($('#g-graph').attr('class')=='insults-mod'){
+
+        $("#infos-hardcore-vocab .infos-card").attr('class','infos-card');
+        $("#infos-hardcore-vocab #rapper-card").attr('class', '');
+
         $('#insults-module').attr('class','');
         $('#vocabulaire-module').attr('class','active');
         $('#g-graph').attr('class','vocabulaire-mod');
+        $('#infos-hardcore-insults').attr('class','inactive-infos');
+        setTimeout(function(){
+          $('#infos-hardcore-vocab').attr('class','');
+        },500);
 
         var height = 340,
             width = 894;
@@ -324,7 +340,46 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
       }
     },
     showRapperDetails: function(event){
-      console.log(event.target);
+      var target = event.target;
+      var targetClass=$(target).parent().attr('class');
+      var targetPos = parseInt(targetClass.substring(targetClass.length-1, targetClass.length));
+      var rapperCardInsults = d3.select('#infos-hardcore-insults').select('#rapper-card');
+      var rapperCardVocab = d3.select('#infos-hardcore-vocab').select('#rapper-card');
+      if($("#g-graph").attr('class')=="insults-mod"){
+        $("#infos-hardcore-insults .infos-card").attr('class','infos-card infos-inactive');
+        $("#infos-hardcore-insults #rapper-card").attr('class', 'active-card');
+        $("#infos-hardcore-vocab .infos-card").attr('class','infos-card');
+        $("#infos-hardcore-vocab #rapper-card").attr('class', '');
+        d3.json(this.collection.url, function(error, data) {
+            rapperCardInsults.select(".head-card")
+                .style('background-image','url('+data[targetPos].id+'.jpg)')
+            rapperCardInsults.select("h4")
+                .text(data[targetPos].blazz);
+            rapperCardInsults.select("a")
+                .attr("href", "./#2/dep/"+data[targetPos].dep+"/"+data[targetPos].blazz);
+            rapperCardInsults.select(".album").select("span")
+                .text(data[targetPos].album[data[targetPos].v1-1].a_name);
+            rapperCardInsults.select(".nb").select("span")
+                .text(data[targetPos].insults);
+        });
+      }else{
+        $("#infos-hardcore-vocab .infos-card").attr('class','infos-card infos-inactive');
+        $("#infos-hardcore-vocab #rapper-card").attr('class', 'active-card');
+        $("#infos-hardcore-insults .infos-card").attr('class','infos-card');
+        $("#infos-hardcore-insults #rapper-card").attr('class', '');
+        d3.json(this.collection.url, function(error, data) {
+            rapperCardVocab.select(".head-card")
+                .style('background-image','url('+data[targetPos].id+'.jpg)')
+            rapperCardVocab.select("h4")
+                .text(data[targetPos].blazz);
+            rapperCardVocab.select("a")
+                .attr("href", "./#2/dep/"+data[targetPos].dep+"/"+data[targetPos].blazz);
+            rapperCardVocab.select(".album").select("span")
+                .text(data[targetPos].album[data[targetPos].v1-1].a_name);
+            rapperCardVocab.select(".nb").select("span")
+                .text(data[targetPos].vocabulaire);
+        });
+      }
     }
   });
   return RapperListInsults;
