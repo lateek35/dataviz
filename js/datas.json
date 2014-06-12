@@ -1,0 +1,1188 @@
+[
+	{
+		"blazz" : "La Fouine",
+		"firstname" : "Laouni",
+		"lastname" : "Mouhid",
+		"birth" : "25/12/1981",
+		"birth_place" : "Trappes",
+		"begin_year" : 2001,
+		"min_pic" : "./img/",
+		"official_website" : "http://www.lafouine78.com",
+		"punchline" : "À trop haïr les noirs, Le Pen fait des nuits blanches",
+		"disque_or" : 4,
+		"disque_platine" : 2,
+		"double_disque_platine" : 0,
+		"disque_diamant" : 0,
+		"v1": 5,
+	    "v2": 380000,
+	    "v3": 8430677,
+		"label" :
+			[
+				{
+					"l_name" : "Banlieue Sale Music"
+				},
+				{
+					"l_name" : "Sony-BMG"
+				},
+				{
+					"l_name" : "Jive-Epic"
+				},
+				{
+					"l_name" : "Skal"
+				},
+				{
+					"l_name" : "Henijai Music"
+				},
+				{
+					"l_name" : "Dynastie Music"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : ""
+				},
+				{
+					"s_name" : ""
+				}
+			],
+		"dep" : 78,
+		"album" :
+			[
+				{
+					"a_name" : "Bourré au son",
+					"a_sells" : 30000,
+					"a_years" : 2005,
+					"a_traks" : 16
+				},
+				{
+					"a_name" : "Aller-Retour",
+					"a_sells" : 40000,
+					"a_years" : 2007,
+					"a_traks" : 17
+				},
+				{
+					"a_name" : "Mes Repères",
+					"a_sells" : 100000,
+					"a_years" : 2009,
+					"a_traks" : 19
+				},
+				{
+					"a_name" : "La Fouine vs Laouni",
+					"a_sells" : 150000,
+					"a_years" : 2011,
+					"a_traks" : 25
+				},
+				{
+					"a_name" : "Drôle de parcours",
+					"a_sells" : 86000,
+					"a_years" : 2013,
+					"a_traks" : 16
+				}
+			]
+	},
+	{
+		"blazz" : "Maitre Gims",
+		"firstname" : "Gandhi",
+		"lastname" : "Djuna",
+		"birth" : "06/05/1986",
+		"birth_place" : "Kinshasa",
+		"begin_year" : 2002,
+		"min_pic" : "./img/",
+		"official_website" : "http://www.maitre-gims.fr",
+		"punchline" : "J’ai mangé trop de problèmes, donc j’en chie des solutions.",
+		"disque_or" : 1,
+		"disque_platine" : 1,
+		"double_disque_platine" : 1,
+		"disque_diamant" : 1,
+		"v1": 3,
+	    "v2": 2050000,
+	    "v3": 4938299,
+		"label" :
+			[
+				{
+					"l_name" : "Wati B"
+				},
+				{
+					"l_name" : "M.M.C"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : ""
+				},
+				{
+					"s_name" : ""
+				}
+			],
+		"dep" : 75,
+		"album" :
+			[
+				{
+					"a_name" : "L'École des points vitaux",
+					"a_sells" : 520000,
+					"a_years" : 2010,
+					"a_traks" : 16
+				},
+				{
+					"a_name" : "L'Apogée",
+					"a_sells" : 820000,
+					"a_years" : 2012,
+					"a_traks" : 17
+				},
+				{
+					"a_name" : "Subliminal",
+					"a_sells" : 710000,
+					"a_years" : 2013,
+					"a_traks" : 24
+				}
+			]
+	},
+	{
+		"blazz" : "NTM",
+		"firstname" : "",
+		"lastname" : "",
+		"birth" : "",
+		"birth_place" : "",
+		"begin_year" : 1988,
+		"min_pic" : "./img/",
+		"official_website" : "http://www.supreme-ntm.com",
+		"punchline" : "Au dessus des lois je bâtirais mon toit",
+		"disque_or" : 4,
+		"disque_platine" : 2,
+		"double_disque_platine" : 1,
+		"disque_diamant" : 0,
+		"v1": 4,
+	    "v2": 1500000,
+	    "v3": ,
+		"label" :
+			[
+				{
+					"l_name" : "Epic (Sony-BMG)"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : ""
+				},
+				{
+					"s_name" : ""
+				}
+			],
+		"dep" : 93,
+		"album" :
+			[
+				{
+					"a_name" : "Authentik",
+					"a_sells" : 100000,
+					"a_years" : 1991,
+					"a_traks" : 15
+				},
+				{
+					"a_name" : "1993… J'appuie sur la gâchette",
+					"a_sells" : 100000,
+					"a_years" : 1993,
+					"a_traks" : 17
+				},
+				{
+					"a_name" : "Subliminal",
+					"a_sells" : 500000,
+					"a_years" : 1995,
+					"a_traks" : 19
+				},
+				{
+					"a_name" : "Subliminal",
+					"a_sells" : 800000,
+					"a_years" : 1998,
+					"a_traks" : 16
+				}
+			]
+	},
+	{
+		"blazz" : "Black M",
+		"firstname" : "Alpha",
+		"lastname" : "Diallo",
+		"birth" : "27/12/1984",
+		"birth_place" : "Paris",
+		"begin_year" : 2002,
+		"min_pic" : "./img/",
+		"official_website" : "http://www.blackmesrimes.com",
+		"punchline" : "Evidemment qu’on fait du cinéma, ramène Di Cap’, je l’handicape",
+		"disque_or" : 3,
+		"disque_platine" : 2,
+		"double_disque_platine" : 2,
+		"disque_diamant" : 1,
+		"v1": 3,
+	    "v2": 1390000,
+	    "v3": 1188669,
+		"label" :
+			[
+				{
+					"l_name" : "Wati B"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : ""
+				},
+				{
+					"s_name" : ""
+				}
+			],
+		"dep" : 75,
+		"album" :
+			[
+				{
+					"a_name" : "L'École des points vitaux",
+					"a_sells" : 520000,
+					"a_years" : 2010,
+					"a_traks" : 16
+				},
+				{
+					"a_name" : "L'Apogée",
+					"a_sells" : 820000,
+					"a_years" : 2012,
+					"a_traks" : 17
+				},
+				{
+					"a_name" : "Les Yeux plus gros que le monde",
+					"a_sells" : 50000,
+					"a_years" : 2014,
+					"a_traks" : 19
+				}
+			]
+	},
+	{
+		"blazz" : "Booba",
+		"firstname" : "Élie",
+		"lastname" : "Yaffa",
+		"birth" : "09/12/1976",
+		"birth_place" : "Boulogne-Billancourt",
+		"begin_year" : 1994,
+		"min_pic" : "./img/",
+		"official_website" : "http://www.unkut.fr",
+		"punchline" : "Tu veux t’asseoir sur le trône ? Faudra t’asseoir sur mes genoux",
+		"disque_or" : 6,
+		"disque_platine" : 3,
+		"double_disque_platine" : 1,
+		"disque_diamant" : 0,
+		"v1": 6,
+	    "v2": 1150000,
+	    "v3": 5661312,
+		"label" :
+			[
+				{
+					"l_name" : "Tallac"
+				},
+				{
+					"l_name" : "Universal"
+				},
+				{
+					"l_name" : "Because Music"
+				},
+				{
+					"l_name" : "45 Scientific"
+				},
+				{
+					"l_name" : "Barclay"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "B2oba"
+				},
+				{
+					"s_name" : "Kopp"
+				},
+				{
+					"s_name" : "Le Duc de Boulogne"
+				},
+				{
+					"s_name" : "Saddam Hauts-de-Seine"
+				}
+			],
+		"dep" : 92,
+		"album" :
+			[
+				{
+					"a_name" : "Temps mort",
+					"a_sells" : 160000,
+					"a_years" : 2002,
+					"a_traks" : 14
+				},
+				{
+					"a_name" : "Panthéon",
+					"a_sells" : 250000,
+					"a_years" : 2004,
+					"a_traks" : 13
+				},
+				{
+					"a_name" : "Ouest Side",
+					"a_sells" : 300000,
+					"a_years" : 2006,
+					"a_traks" : 16
+				},
+				{
+					"a_name" : "0.9",
+					"a_sells" : 100000,
+					"a_years" : 2008,
+					"a_traks" : 15
+				},
+				{
+					"a_name" : "Lunatic",
+					"a_sells" : 200000,
+					"a_years" : 2010,
+					"a_traks" : 18
+				},
+				{
+					"a_name" : "Futur",
+					"a_sells" : 180000,
+					"a_years" : 2012,
+					"a_traks" : 16
+				}
+			]
+	},
+	{
+		"blazz" : "Mister You",
+		"firstname" : "Younes",
+		"lastname" : "Latifi",
+		"birth" : "05/02/1984",
+		"birth_place" : "Paris",
+		"begin_year" : 2004,
+		"min_pic" : "./img/",
+		"official_website" : "http://www.misteryou.fr",
+		"punchline" : "Je suis comme un café noir, souvent dans une tasse blanche",
+		"disque_or" : 1,
+		"disque_platine" : 1,
+		"double_disque_platine" : 0,
+		"disque_diamant" : 0,
+		"v1": 2,
+	    "v2": 116000,
+	    "v3": 3012573,
+		"label" :
+			[
+				{
+					"l_name" : "STAIVEMUSIC"
+				},
+				{
+					"l_name" : "No Time Records"
+				},
+				{
+					"l_name" : "Mercury Records"
+				},
+				{
+					"l_name" : "Def Jam"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : ""
+				},
+				{
+					"s_name" : ""
+				}
+			],
+		"dep" : 75,
+		"album" :
+			[
+				{
+					"a_name" : "Dans ma grotte",
+					"a_sells" : 100000,
+					"a_years" : 2011,
+					"a_traks" : 18
+				},
+				{
+					"a_name" : "Le Prince",
+					"a_sells" : 16000,
+					"a_years" : 2014,
+					"a_traks" : 15
+				}
+			]
+	},
+	{
+		"blazz" : "Rohff",
+		"firstname" : "Housni",
+		"lastname" : "Mkouboi",
+		"birth" : "15/12/1977",
+		"birth_place" : "Antananarivo",
+		"begin_year" : 1994,
+		"min_pic" : "./img/",
+		"official_website" : "http://www.roh2f.com",
+		"punchline" : "Y’a pas de sentiments, que des centimètres",
+		"disque_or" : 6,
+		"disque_platine" : 3,
+		"double_disque_platine" : 0,
+		"disque_diamant" : 0,
+		"v1": 7,
+	    "v2": 1238000,
+	    "v3": 2476534,
+		"label" :
+			[
+				{
+					"l_name" : "Warner"
+				},
+				{
+					"l_name" : "Foolek Empire"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "Roh2f"
+				},
+				{
+					"s_name" : "Soldat Comorien"
+				},
+				{
+					"s_name" : "Roh2Guerre"
+				},
+				{
+					"s_name" : "El Padre"
+				}
+			],
+		"dep" : 94,
+		"album" :
+			[
+				{
+					"a_name" : "Le Code De l'Honneur",
+					"a_sells" : 65000,
+					"a_years" : 1999,
+					"a_traks" : 14
+				},
+				{
+					"a_name" : "La vie avant la mort",
+					"a_sells" : 300000,
+					"a_years" : 2001,
+					"a_traks" : 17
+				},
+				{
+					"a_name" : "La fierté des nôtres",
+					"a_sells" : 275000,
+					"a_years" : 2004,
+					"a_traks" : 30
+				},
+				{
+					"a_name" : "Au-delà de mes limites",
+					"a_sells" : 220000,
+					"a_years" : 2005,
+					"a_traks" : 31
+				},
+				{
+					"a_name" : "Le code de l'horreur",
+					"a_sells" : 250000,
+					"a_years" : 2008,
+					"a_traks" : 17
+				},
+				{
+					"a_name" : "La cuenta",
+					"a_sells" : 80000,
+					"a_years" : 2010,
+					"a_traks" : 18
+				},
+				{
+					"a_name" : "P.D.R.G.",
+					"a_sells" : 100000,
+					"a_years" : 2013,
+					"a_traks" : 26
+				}
+			]
+	},
+	{
+		"blazz" : "Youssoupha",
+		"firstname" : "Youssoupha",
+		"lastname" : "Mabiki",
+		"birth" : "29/08/1979",
+		"birth_place" : "Kinshasa",
+		"begin_year" : 1999,
+		"min_pic" : "./img/",
+		"official_website" : "http://www.youssoupha.com",
+		"punchline" : "Comment veux-tu que je mène une vie de rêve alors que je ne dors plus ?",
+		"disque_or" : 3,
+		"disque_platine" : 1,
+		"double_disque_platine" : 0,
+		"disque_diamant" : 0,
+		"v1": 3,
+	    "v2": 241573,
+	    "v3": 1653114,
+		"label" :
+			[
+				{
+					"l_name" : "Bomayé Musik"
+				},
+				{
+					"l_name" : "EMI"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "Youss"
+				},
+				{
+					"s_name" : "Prims Parolier"
+				},
+				{
+					"s_name" : "Le Lyriciste Bantou"
+				}
+			],
+		"dep" : 78,
+		"album" :
+			[
+				{
+					"a_name" : "À chaque frère",
+					"a_sells" : 50000,
+					"a_years" : 2007,
+					"a_traks" : 16
+				},
+				{
+					"a_name" : "Sur les chemins du retour",
+					"a_sells" : 50000,
+					"a_years" : 2009,
+					"a_traks" : 13
+				},
+				{
+					"a_name" : "Noir D****",
+					"a_sells" : 141573,
+					"a_years" : 2012,
+					"a_traks" : 17
+				}
+			]
+	},
+	{
+		"blazz" : "Sefyu",
+		"firstname" : "Youssef",
+		"lastname" : "Soukouna",
+		"birth" : "20/04/1981",
+		"birth_place" : "Paris",
+		"begin_year" : 2004,
+		"min_pic" : "./img/",
+		"official_website" : "",
+		"punchline" : "Autant crever les yeux ouverts que vivre les yeux fermés",
+		"disque_or" : 2,
+		"disque_platine" : 0,
+		"double_disque_platine" : 0,
+		"disque_diamant" : 0,
+		"v1": 3,
+	    "v2": 200700,
+	    "v3": 1522768,
+		"label" :
+			[
+				{
+					"l_name" : "G-Huit"
+				},
+				{
+					"l_name" : "Sefyuncc"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : ""
+				},
+				{
+					"s_name" : ""
+				}
+			],
+		"dep" : 93,
+		"album" :
+			[
+				{
+					"a_name" : "Qui suis-je?",
+					"a_sells" : 75000,
+					"a_years" : 2006,
+					"a_traks" : 18
+				},
+				{
+					"a_name" : "Suis-je le gardien de mon frère?",
+					"a_sells" : 95700,
+					"a_years" : 2008,
+					"a_traks" : 17
+				},
+				{
+					"a_name" : "Oui je le suis",
+					"a_sells" : 30000,
+					"a_years" : 2011,
+					"a_traks" : 27
+				}
+			]
+	},
+	{
+		"blazz" : "Diam's",
+		"firstname" : "Mélanie",
+		"lastname" : "Georgiades",
+		"birth" : "25/07/1980",
+		"birth_place" : "Nicosie",
+		"begin_year" : 1996,
+		"min_pic" : "./img/",
+		"official_website" : "http://www.diams-lesite.com",
+		"punchline" : "Vu que Mickey n’a plus de couilles, Minnie c’est Amy Winehouse",
+		"disque_or" : 3,
+		"disque_platine" : 2,
+		"double_disque_platine" : 2,
+		"disque_diamant" : 1,
+		"v1": 4,
+	    "v2": 1283900,
+	    "v3": 878356,
+		"label" :
+			[
+				{
+					"l_name" : "Hostile Records"
+				},
+				{
+					"l_name" : "Capital Soul"
+				},
+				{
+					"l_name" : "Parlophone Records"
+				},
+				{
+					"l_name" : "Warner"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : ""
+				},
+				{
+					"s_name" : ""
+				}
+			],
+		"dep" : 91,
+		"album" :
+			[
+				{
+					"a_name" : "Premier Mandat",
+					"a_sells" : 8000,
+					"a_years" : 1999,
+					"a_traks" : 18
+				},
+				{
+					"a_name" : "Brut de femme",
+					"a_sells" : 179200,
+					"a_years" : 2003,
+					"a_traks" : 15
+				},
+				{
+					"a_name" : "Dans ma bulle",
+					"a_sells" : 846700,
+					"a_years" : 2006,
+					"a_traks" : 15
+				},
+				{
+					"a_name" : "SOS",
+					"a_sells" : 250000,
+					"a_years" : 2009,
+					"a_traks" : 16
+				}
+			]
+	},
+	{
+		"blazz" : "Kaaris",
+		"firstname" : "Gnakouri",
+		"lastname" : "Okou",
+		"birth" : "30/01/1980",
+		"birth_place" : "Abidjan",
+		"begin_year" : 1999,
+		"min_pic" : "./img/",
+		"official_website" : "http://www.kaaris.com",
+		"punchline" : "Je n’ai confiance qu’en mon Desert Eagle et en Zizou dans les arrêts d’jeu",
+		"disque_or" : 1,
+		"disque_platine" : 0,
+		"double_disque_platine" : 0,
+		"disque_diamant" : 0,
+		"v1": 2,
+	    "v2": 60000,
+	    "v3": 1101726,
+		"label" :
+			[
+				{
+					"l_name" : "Therapy Music"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "K Double A"
+				},
+				{
+					"s_name" : "Riss-Ka"
+				},
+				{
+					"s_name" : "Houdini"
+				}
+			],
+		"dep" : 93,
+		"album" :
+			[
+				{
+					"a_name" : "Or Noir",
+					"a_sells" : 50000,
+					"a_years" : 2013,
+					"a_traks" : 18
+				},
+				{
+					"a_name" : "Or Noir Part 2",
+					"a_sells" : 10000,
+					"a_years" : 2014,
+					"a_traks" : 28
+				}
+			]
+	},
+	{
+		"blazz" : "Kery James",
+		"firstname" : "Alix",
+		"lastname" : "Mathurin",
+		"birth" : "28/12/1977",
+		"birth_place" : "Abymes",
+		"begin_year" : 1990,
+		"min_pic" : "./img/",
+		"official_website" : "http://www.keryjames.com",
+		"punchline" : "Le savoir est une arme, mais personne braque pour acheter des livres",
+		"disque_or" : 3,
+		"disque_platine" : 2,
+		"double_disque_platine" : 0,
+		"disque_diamant" : 0,
+		"v1": 7,
+	    "v2": 455880,
+	    "v3": 877719,
+		"label" :
+			[
+				{
+					"l_name" : "AZ"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : ""
+				},
+				{
+					"s_name" : ""
+				}
+			],
+		"dep" : 94,
+		"album" :
+			[
+				{
+					"a_name" : "Si c'était à refaire",
+					"a_sells" : 120000,
+					"a_years" : 2001,
+					"a_traks" : 12
+				},
+				{
+					"a_name" : "Savoir et vivre ensemble",
+					"a_sells" : 30000,
+					"a_years" : 2004,
+					"a_traks" : 21
+				},
+				{
+					"a_name" : "Ma vérité",
+					"a_sells" : 30000,
+					"a_years" : 2005,
+					"a_traks" : 14
+				},
+				{
+					"a_name" : "À l'ombre du show business",
+					"a_sells" : 150000,
+					"a_years" : 2008,
+					"a_traks" : 17
+				},
+				{
+					"a_name" : "Réel",
+					"a_sells" : 80000,
+					"a_years" : 2009,
+					"a_traks" : 13
+				},
+				{
+					"a_name" : "92-2012",
+					"a_sells" : 5880,
+					"a_years" : 2012,
+					"a_traks" : 14
+				},
+				{
+					"a_name" : "Dernier MC",
+					"a_sells" : 40000,
+					"a_years" : 2013,
+					"a_traks" : 19
+				}
+			]
+	},
+	{
+		"blazz" : "Sniper",
+		"firstname" : "",
+		"lastname" : "",
+		"birth" : "",
+		"birth_place" : "Deuil-la-Barre",
+		"begin_year" : 1997,
+		"min_pic" : "./img/",
+		"official_website" : "",
+		"punchline" : "Si notre planète se réchauffe, c’est qu’on se rapproche de l’enfer",
+		"disque_or" : 3,
+		"disque_platine" : 3,
+		"double_disque_platine" : 1,
+		"disque_diamant" : 0,
+		"v1": 3,
+	    "v2": 956800,
+	    "v3": 577353,
+		"label" :
+			[
+				{
+					"l_name" : "EMI"
+				},
+				{
+					"l_name" : "Desh Musique"
+				},
+				{
+					"l_name" : "Mezoued Redcord's"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : ""
+				},
+				{
+					"s_name" : ""
+				}
+			],
+		"dep" : 95,
+		"album" :
+			[
+				{
+					"a_name" : "Du rire aux larmes",
+					"a_sells" : 200000,
+					"a_years" : 2001,
+					"a_traks" : 19
+				},
+				{
+					"a_name" : "Gravé dans la roche",
+					"a_sells" : 600000,
+					"a_years" : 2003,
+					"a_traks" : 16
+				},
+				{
+					"a_name" : "Trait pour trait",
+					"a_sells" : 156800,
+					"a_years" : 2006,
+					"a_traks" : 15
+				}
+			]
+	},
+	{
+		"blazz" : "Disiz",
+		"firstname" : "Serigne Mbaye",
+		"lastname" : "Gueye",
+		"birth" : "22/03/1978",
+		"birth_place" : "Amiens",
+		"begin_year" : 1995,
+		"min_pic" : "./img/",
+		"official_website" : "http://www.disiz.fr",
+		"punchline" : "Je prends ta carrière par derrière et encore, avec une demie molle",
+		"disque_or" : 1,
+		"disque_platine" : 0,
+		"double_disque_platine" : 0,
+		"disque_diamant" : 0,
+		"v1": 8,
+	    "v2": 283500,
+	    "v3": 420543,
+		"label" :
+			[
+				{
+					"l_name" : "Lucidream Republic"
+				},
+				{
+					"l_name" : "Def Jam Recordings / Universal Music Group"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "Disiz la Peste"
+				},
+				{
+					"s_name" : "Disiz Peter Punk"
+				}
+			],
+		"dep" : 91,
+		"album" :
+			[
+				{
+					"a_name" : "Le poisson rouge",
+					"a_sells" : 213000,
+					"a_years" : 2000,
+					"a_traks" : 20
+				},
+				{
+					"a_name" : "Jeu de société",
+					"a_sells" : 10000,
+					"a_years" : 2003,
+					"a_traks" : 19
+				},
+				{
+					"a_name" : "Les Histoires extraordinaires d'un jeune de banlieue",
+					"a_sells" : 28000,
+					"a_years" : 2006,
+					"a_traks" : 17
+				},
+				{
+					"a_name" : "Disiz the end",
+					"a_sells" : 6000,
+					"a_years" : 2009,
+					"a_traks" : 15
+				},
+				{
+					"a_name" : "Dans le ventre du crocodile",
+					"a_sells" : 500,
+					"a_years" : 2010,
+					"a_traks" : 13
+				},
+				{
+					"a_name" : "Lucide",
+					"a_sells" : 5000,
+					"a_years" : 2012,
+					"a_traks" : 8
+				},
+				{
+					"a_name" : "Extra-lucide",
+					"a_sells" : 14000,
+					"a_years" : 2012,
+					"a_traks" : 20
+				},
+				{
+					"a_name" : "Transe-Lucide",
+					"a_sells" : 7000,
+					"a_years" : 2014,
+					"a_traks" : 17
+				},
+			]
+	},
+	{
+		"blazz" : "Sinik",
+		"firstname" : "Thomas",
+		"lastname" : "Idir",
+		"birth" : "26/06/1980",
+		"birth_place" : "Paris",
+		"begin_year" : 1996,
+		"min_pic" : "./img/",
+		"official_website" : "http://www.sinik609.com",
+		"punchline" : "J’ai baisé la justice, mon avocat demande l’avortement",
+		"disque_or" : 5,
+		"disque_platine" : 2,
+		"double_disque_platine" : 0,
+		"disque_diamant" : 0,
+		"v1": 5,
+	    "v2": 950000,
+	    "v3": 459970,
+		"label" :
+			[
+				{
+					"l_name" : "Six-O-Nine"
+				},
+				{
+					"l_name" : "Warner"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "S.I.N.I.K"
+				},
+				{
+					"s_name" : "Malsain"
+				},
+				{
+					"s_name" : "L'assassin"
+				}
+			],
+		"dep" : 91,
+		"album" :
+			[
+				{
+					"a_name" : "La main sur le coeur",
+					"a_sells" : 250000,
+					"a_years" : 2005,
+					"a_traks" : 14
+				},
+				{
+					"a_name" : "Sang froid",
+					"a_sells" : 300000,
+					"a_years" : 2006,
+					"a_traks" : 17
+				},
+				{
+					"a_name" : "Le toit du monde",
+					"a_sells" : 250000,
+					"a_years" : 2007,
+					"a_traks" : 14
+				},
+				{
+					"a_name" : "Ballon d'or",
+					"a_sells" : 100000,
+					"a_years" : 2009,
+					"a_traks" : 14
+				},
+				{
+					"a_name" : "La plume et le poignard",
+					"a_sells" : 50000,
+					"a_years" : 2012,
+					"a_traks" : 19
+				}
+			]
+	},
+	{
+		"blazz" : "Mc Solaar",
+		"firstname" : "Claude",
+		"lastname" : "M'Barali",
+		"birth" : "05/03/1969",
+		"birth_place" : "Dakar",
+		"begin_year" : 1990,
+		"min_pic" : "./img/",
+		"official_website" : "",
+		"punchline" : "Peace, comme Kennedy : ‘Ich bin ein Berliner’. S’il était à Hambourg, il aurait dit : ‘Ich bin ein Hamburger’",
+		"disque_or" : 7,
+		"disque_platine" : 5,
+		"double_disque_platine" : 2,
+		"disque_diamant" : 0,
+		"v1": 7,
+	    "v2": 2894000,
+	    "v3": ,
+		"label" :
+			[
+				{
+					"l_name" : ""
+				},
+				{
+					"l_name" : ""
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "Claude MC"
+				},
+				{
+					"s_name" : "L'As de Trèfle"
+				},
+				{
+					"s_name" : "Le Cinquième As"
+				},
+				{
+					"s_name" : "Le Double A"
+				},
+				{
+					"s_name" : "Le Négro à Plateau"
+				}
+			],
+		"dep" : 94,
+		"album" :
+			[
+				{
+					"a_name" : "Qui sème le vent récolte le tempo",
+					"a_sells" : 321700,
+					"a_years" : 1991,
+					"a_traks" : 16
+				},
+				{
+					"a_name" : "Prose Combat",
+					"a_sells" : 869700,
+					"a_years" : 1994,
+					"a_traks" : 7
+				},
+				{
+					"a_name" : "Paradisiaque",
+					"a_sells" : 414300,
+					"a_years" : 1997,
+					"a_traks" : 17
+				},
+				{
+					"a_name" : "MC Solaar",
+					"a_sells" : 200000,
+					"a_years" : 1998,
+					"a_traks" : 11
+				},
+				{
+					"a_name" : "Cinquième As",
+					"a_sells" : 600000,
+					"a_years" : 2001,
+					"a_traks" : 19
+				},
+				{
+					"a_name" : "Mach 6",
+					"a_sells" : 300000,
+					"a_years" : 2003,
+					"a_traks" : 16
+				},
+				{
+					"a_name" : "Chapitre 7",
+					"a_sells" : 188300,
+					"a_years" : 2007,
+					"a_traks" : 18
+				}
+			]
+	},
+	{
+		"blazz" : "Tunisiano",
+		"firstname" : "Bachir",
+		"lastname" : "Baccour",
+		"birth" : "19/05/1979",
+		"birth_place" : "Deuil-la-Barre",
+		"begin_year" : 1995,
+		"min_pic" : "./img/",
+		"official_website" : "http://www.tunisiano-lesite.fr",
+		"punchline" : "Non t’es pas une salope, t’es vaginalement très sociable",
+		"disque_or" : ,
+		"disque_platine" : ,
+		"double_disque_platine" : ,
+		"disque_diamant" : ,
+		"v1": 2,
+	    "v2": 43650,
+	    "v3": 577353,
+		"label" :
+			[
+				{
+					"l_name" : "Columbia"
+				},
+				{
+					"l_name" : "Desh Musique"
+				}
+				,
+				{
+					"l_name" : "East West"
+				}
+				,
+				{
+					"l_name" : "Mezoued"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : ""
+				},
+				{
+					"s_name" : ""
+				}
+			],
+		"dep" : 95,
+		"album" :
+			[
+				{
+					"a_name" : "Le Regard des Gens",
+					"a_sells" : 38350,
+					"a_years" : 2008,
+					"a_traks" : 16
+				},
+				{
+					"a_name" : "Marqué à vie",
+					"a_sells" : 5300,
+					"a_years" : 2014,
+					"a_traks" : 19
+				}
+			]
+	}
+]
