@@ -278,7 +278,6 @@ html, body{
 	}
 	.description {
 		width: 5.90rem;
-		margin-left: 1.2rem;
 	}
 	.description, .top-part>img{
 		display: inline-block;
