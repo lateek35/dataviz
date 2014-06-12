@@ -13,6 +13,9 @@
 		"double_disque_or" : 1,
 		"disque_platine" : 3,
 		"double_disque_platine" : 1,
+		"v1": 8,
+	    "v2": 3000000,
+	    "v3": 6000000,
 		"label" :
 			[
 				{
@@ -63,6 +66,9 @@
 		"double_disque_or" : 2,
 		"disque_platine" : 1,
 		"double_disque_platine" : 0,
+		"v1": 6,
+	    "v2": 150000,
+	    "v3": 794000,
 		"label" :
 			[
 				{

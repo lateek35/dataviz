@@ -10,6 +10,5 @@ define(['backbone','modelRapper'], function (backbone, modelRapper) {
     model : modelRapper,
     url : './js/data.json'
   })
-
   return Rappers;
 });

@@ -5,6 +5,12 @@ define(['backbone','modelRapper','collectionRapper','text!templates/liste-rappeu
 /*==========================================================================================*/
   var RapperList = Backbone.View.extend({
     el:'#list-bottom',
+    events: {
+      "click #list-rapper": "runFilter"
+    },
+    initialize: function(){
+
+    },
     runFilter: function(cp){
       this.filter = {dep:cp};
       this.render();
@@ -44,3 +50,4 @@ define(['backbone','modelRapper','collectionRapper','text!templates/liste-rappeu
   });
   return RapperList;
  });
+

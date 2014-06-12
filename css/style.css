@@ -249,7 +249,6 @@ html, body{
 		top: 0;
 		width: 50%;
 		z-index: -100;
-		background: url(./video/polina.jpg) no-repeat;
 		background-size: cover;
 	}
 	.video-alpha{
@@ -355,13 +354,13 @@ html, body{
 		color: #fff;
 	}
 
-path{
+#carte path{
 	display: block;
 	-webkit-transform: scale(1);
 	-webkit-transform-origin: 40% 40%;
 	-webkit-transition: all 0.5s ease-out;
 }
-path.bouge{
+#carte path.bouge{
 	-webkit-transform: scale(0);
 	-webkit-transform-origin: 40% 40%;
 	-webkit-transition: all 0.5s ease-out;
@@ -411,7 +410,79 @@ path.bouge{
 	-webkit-transform-origin: 35% -5%;
 	-webkit-transition: all 0.5s ease-out;
 }
+/* Css module comparaison */
+#module-comparaison {
+	background-image: url('../img/pattern-2.png'),url("../img/background-2.jpg");
+	-webkit-background-size: auto,cover;
+	-moz-background-size: auto,cover;
+	-o-background-size: auto,cover;
+	background-size: auto,cover;
+}
+#container-module-comparaison{
+	width: 1320px;
+	height: 600px;
+	position: relative;
+	display: block;
+	margin: 0 auto;
+}
+[class*="line"]{
+	fill: none;
+    stroke-width: 1px;
+}
+#module-comparaison text{
+	color: #fff;
+	fill: #fff;
+	font-size: 0.15rem;
+}
+#module-comparaison .line-green {
+    stroke: rgba(0,255,0,0.3);
+}
+#module-comparaison .line-blue {
+    stroke: rgba(0,0,255,0.3);
+}
+#module-comparaison .line-red {
+    stroke: rgba(255,0,0,0.3);
+}
+	#echelle-comparaison{
+		position: absolute;
+		bottom: 0;
+		left: 60px;
+	}
+	#echelle-comparaison>img{
+		position: absolute;
+	}
+	#echelle-comparaison .album{
+		top: 7px;
+		left: 501px;
+	}
+	#echelle-comparaison .vente{
+		top: 7px;
+		left: 357px;
+	}
+	#echelle-comparaison .popu{
+		top: 7px;
+		left: 186px;
+	}
+	#echelle-comparaison #btn-reset{
+		position: absolute;
+		left: 50%;
+		background-color: red;
+		width: 12px;
+		height: 12px;
+	}
 
-
-
+/* Css module hardcore */
+#hard-rapper{
+	position:relative;
+}
+.mask{
+	height:20px;
+	width:20px;
+	-webkit-border-radius:20px;
+	border-radius: 20px;
+	background-color: blue;
+	position:absolute;
+	top:0;
+	font-size:12px;
+}
 
