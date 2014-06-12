@@ -1,14 +1,11 @@
 <video autoplay loop id="bgvid">
-	<source src="./video/small.webm" type="video/webm">
-	<source src="./video/small.mp4" type="video/mp4">
+	<source src="./video/sall.webm" type="video/webm">
+	<source src="./video/sall.mp4" type="video/mp4">
 </video>
 <div class="video-alpha"></div>
 <div class="top-part">
 {{#each}}
-<img src="./img/{{blazz}}.png" alt="{{blazz}}">
-
-
-
+<img src="./img/rapper-big/big-{{id}}.png" alt="{{blazz}}">
 <div class="description">
 	<div class="top-description">
 		<h2>{{blazz}}</h2>
@@ -23,11 +20,15 @@
 		{{#each label}}
 			{{#if @index}} , &thinsp;{{/if}} {{this.l_name}}
 		{{/each}}</p>
+		{{#if surnom}}
 		<p><span>Surnom :</span> 
 		{{#each surname}} 
 			{{#if @index}} , &thinsp;{{/if}} {{this.s_name}} 
 		{{/each}}</p>
-		<p class="inline"><span>Site officiel : </span> </p><a class="inline" href="{{official_website}}">{{official_website}}</a>
+		{{/if}}
+		{{#if official_website}}
+		<p class="inline"><span>Site officiel :&thinsp;</span></p><a class="inline" target="_blank" href="http://www.{{official_website}}"> {{official_website}}</a>
+		{{/if}}
 		<p class="punchline">"{{punchline}}"</p>
 		<ul>
 				<ul>
@@ -35,17 +36,16 @@
 					<li>{{disque_or}}</li>
 				</ul>
 				<ul>
-					<li>DOUBLE DISQUE D'OR</li>
-					<li>{{double_disque_or}}</li>
-				</ul>
-				<ul>
 					<li>DISQUE DE PLATINE</li>
 					<li>{{disque_platine}}</li>
 				</ul>
-			</li>
 				<ul>
 					<li>DOUBLE DISQUE DE PLATINE</li>
 					<li>{{double_disque_platine}}</li>
+				</ul>
+				<ul>
+					<li>DISQUE DE DIAMANT</li>
+					<li>{{disque_diamant}}</li>
 				</ul>
 		</ul>
 	</div>

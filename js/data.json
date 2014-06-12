@@ -643,15 +643,6 @@
 					"l_name" : "Warner"
 				}
 			],
-		"surname" :
-			[
-				{
-					"s_name" : ""
-				},
-				{
-					"s_name" : ""
-				}
-			],
 		"dep" : 91,
 		"album" :
 			[
