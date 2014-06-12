@@ -278,9 +278,7 @@ html, body{
 		display: inline-block;
 	}
 	.description {
-		width: 5.90rem;
-		position: absolute;
-		right: 0;
+		width: 47%;
 	}
 	.description, .image-centrage{
 		display: inline-block;
@@ -339,7 +337,7 @@ html, body{
 				color: #e04852;
 			}
 			.bottom-description>ul>ul{
-				width: 1.30rem;
+				width: 1.26rem;
 				display: inline-block;
 			}
 			.bottom-description li{
