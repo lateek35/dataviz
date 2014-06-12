@@ -282,9 +282,16 @@ html, body{
 		position: absolute;
 		right: 0;
 	}
-	.description, .top-part>img{
+	.description, .image-centrage{
 		display: inline-block;
 		vertical-align: middle;
+	}
+	.image-centrage{
+		width: 6.1rem;
+	}
+	.image-centrage img{
+		display: block;
+		margin: 0 auto;
 	}
 
 		.description .top-description{
