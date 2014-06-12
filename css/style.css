@@ -300,6 +300,8 @@ html, body{
 				width: 25px;
 				height: 11px;
 				float: right;
+				position: relative;
+				top: -0.10rem;
 				background: url('../img/btn-pause.png');
 			}
 		.description .bottom-description{
