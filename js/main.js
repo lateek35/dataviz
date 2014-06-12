@@ -65,8 +65,9 @@ require([
   'viewRapperList',
   'viewRapperPage',
   'viewModuleComparaison',
+  'viewRapperListInsults',
   'd3'
-], function (slimScroll,fullpage, backbone, modelRapper, collectionRapper,viewRapperList,viewRapperPage,viewModuleComparaison,d3) {
+], function (slimScroll,fullpage, backbone, modelRapper, collectionRapper,viewRapperList,viewRapperPage,viewModuleComparaison,viewRapperListInsults,d3) {
 
 /*==========================================================================================*/
 /*--------------------------------------  GESTION MAP  -------------------------------------*/
