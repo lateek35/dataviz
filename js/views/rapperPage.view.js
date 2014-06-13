@@ -228,7 +228,7 @@ define(['backbone','modelRapper','collectionRapper','text!templates/page-rappeur
             .attr("d", arc);
 
             foreground.transition()
-              .duration(750)
+              .duration(2000)
               .call(arcTween, angle);
 
             function arcTween(transition, newAngle) {
