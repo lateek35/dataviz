@@ -1120,6 +1120,7 @@ html, body{
 	}
 	#infos-hardcore-insults h3, #infos-hardcore-vocab h3{
 		margin-bottom:10px;
+		text-align: center;
 		color:#e94953;
 	}
 	#infos-hardcore-insults p, #infos-hardcore-vocab p{
