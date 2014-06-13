@@ -647,6 +647,16 @@ html, body{
 	background-color: #4880E6;
 }
 
+#btn-popularite{
+	color: #e94953;
+	border:1px solid #e94953;
+}
+#btn-popularite.active, #btn-popularite:hover{
+	color:white;
+	background-color: #e94953;
+}
+
+
 
 #container-module-comparaison{
 	width: 1320px;

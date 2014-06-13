@@ -483,7 +483,33 @@ d3.json('./js/data.json',function(data){
     /*J'ajoute le texte*/
     d3.select('#container-module-comparaison>svg').selectAll("text").data(data).enter()
         .append("text")
-        .text(function(d,i) { return d.blazz; });
+        .text(function(d,i) { return d.blazz; })
+        .attr("transform", function(d, i){
+                   /*Gère la rotation du texte, et le retourne passé les 90° pour ne pas avoirà lire à l'envers*/
+                    var chiffre;
+                    var donnee = +eval("d.v3");
+                    if(donnee>1000000){
+                        chiffre = (donnee+1500000)/2.5;
+                    }else{
+                        chiffre = donnee;
+                    }
+                    if(((i+0.5)*180/total)<90){
+                        var angleRotation = ((i+0.5)*180/total);
+                        var x = ((eval('scale3')(chiffre)+93)*-Math.cos((i+0.5)*(Math.PI)/total)+r)
+                        var y = ((eval('scale3')(chiffre)+93)*Math.sin((i+0.5)*(-Math.PI)/total)+r)
+                    }else{
+                        var angleRotation = ((i+0.5)*180/total)-180;
+                        var x = ((eval('scale3')(chiffre)+10)*-Math.cos((i+0.5)*(Math.PI)/total)+r)
+                        var y = ((eval('scale3')(chiffre)+10)*Math.sin((i+0.5)*(-Math.PI)/total)+r)
+                    }
+                    /*Placement du texte*/
+                    return "translate("
+                    + (x+60) +
+                    ","
+                    + y + ")" +
+                    "rotate(" 
+                    + angleRotation + ")";
+                });
 
     for(i=0; i<63; i++){
       //J'augmente le rayon du cercle pour chaque passage
