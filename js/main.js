@@ -198,7 +198,7 @@ $('#home>a').on('click',function(event){
       ':4/' : 'module-hardcore',
       ':4' : 'module-hardcore',
       ':3/' : 'module-hard',
-      ':3' : 'module-hard',
+      '' : 'module-hard',
       ':2/dep/:cp/:rapper' : 'rapperSolo',
       ':2/dep/:cp' : 'departement',
       ':slide' : 'home',
