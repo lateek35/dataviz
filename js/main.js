@@ -48,7 +48,7 @@ require.config({
         exports: 'd3'
     },
     backbone: {
-      deps: ['underscore','handlebars','jquery'],
+      deps: ['fullpage','underscore','handlebars','jquery'],
       exports: 'Backbone'
     }
   }
@@ -115,8 +115,8 @@ $('path').on('mouseenter',mouseenterMap);
 $('path').on('mouseout',mouseoutMap);
 
 $('svg#carte').mouseup(function(e){
-  $('path').show().attr('class','');
-  $('path').bind('mouseenter',mouseenterMap);
+  $('#carte path').show().attr('class','');
+  $('#carte path').bind('mouseenter',mouseenterMap);
   router.navigate("#2/");
   $('.departement').stop().animate({
       bottom: "0"
@@ -137,6 +137,18 @@ $('body').on('mouseover','#list-rapper li',function(){
 $('body').on('mouseout','#list-rapper li',function(){ 
   $('#list-rapper-name li').eq($(this).index()).removeClass('active');
 });
+
+
+
+$('body').on('click',".btn-play-pause",function(){
+  myVid=document.getElementById("bgvid");
+  if (myVid.muted) {
+    myVid.muted=false;  
+  }else{
+    myVid.muted=true;  
+  }
+
+})
 
 /*__________________________________________________________________________________________*/
 /*-------------------------------  Animation hardcore lyrics  ------------------------------*/
@@ -159,6 +171,9 @@ $('path').on('click',function(){
   }, 500, function() {
     // Animation complete.
   });
+});
+$('body').on('click','#btn-retour',function(){ 
+  $.fn.fullpage.moveSlideRight();
 });
 /*__________________________________________________________________________________________*/
 /*---------------------------------  Gestion URL Rappeur MAP -------------------------------*/
@@ -184,7 +199,6 @@ $('#fullpage').fullpage({
 });
 $.fn.fullpage.setKeyboardScrolling(false);
 $(".section").find('.controlArrow').hide();
-
 $('#home>a').on('click',function(event){
   event.preventDefault();
   $.fn.fullpage.moveSectionDown();
@@ -195,9 +209,7 @@ $('#home>a').on('click',function(event){
 /*==========================================================================================*/
   var Router = Backbone.Router.extend({
     routes:{
-      ':4/' : 'module-hardcore',
       ':4' : 'module-hardcore',
-      ':3/' : 'module-hard',
       ':3' : 'module-hard',
       ':2/dep/:cp/:rapper' : 'rapperSolo',
       ':2/dep/:cp' : 'departement',
@@ -219,13 +231,13 @@ $('#home>a').on('click',function(event){
   router.on('route:departement',function(slide,cp){
     moveSlide(slide);
     rapperList.runFilter(parseInt(cp));
-    $('path').show().attr('class','');
+    $('#carte path').show().attr('class','');
     $('#_'+cp).attr('class','zoom');
-    $('path').not('#_'+cp).attr('class','bouge');
-    $('path').unbind('mouseenter',mouseenterMap);
+    $('#carte path').not('#_'+cp).attr('class','bouge');
+    $('#carte path').unbind('mouseenter',mouseenterMap);
     setTimeout(function(){
-      $('path').not('#_'+cp).css('display','none');
-      $('path').bind('mouseenter',mouseenterMap);
+      $('#carte path').not('#_'+cp).css('display','none');
+      $('#carte path').bind('mouseenter',mouseenterMap);
     }, 500);
   })
   router.on('route:rapperSolo',function(slide,cp,rapper){
@@ -283,7 +295,7 @@ $('body').on('click','.option',
 
     var r = 593;
     var p = Math.PI;
-    var intervalScale = 6;
+    var intervalScale = 6.2;
     var color = d3.scale.linear()
         .domain([-1, 0, 1])
         .range(["#515e44", "#4a4758", "#e84852"]);
@@ -313,7 +325,7 @@ $('body').on('click','.option',
     var finScaleVente = debutScaleVente+(20*(intervalScale));
 
     var debutScalePopu = finScaleVente+intervalScale;
-    var finScalePopu = debutScalePopu+(27*(intervalScale));
+    var finScalePopu = debutScalePopu+(35*(intervalScale));
 
 
     var scale1 = d3.scale.linear();
@@ -325,7 +337,7 @@ $('body').on('click','.option',
         scale2.range([debutScaleVente, finScaleVente]);
 
     var scale3 = d3.scale.linear();
-        scale3.domain([0, 3000000]);
+        scale3.domain([0, 4000000]);
         scale3.range([debutScalePopu,finScalePopu]);
 
     var arc1,
@@ -416,10 +428,9 @@ d3.json('./js/data.json',function(data){
             /*------------------GESTION CARD---------------------*/
             $('#infos-comparaison').addClass('inactive-infos');
             $('#rapper-card-comparaison').addClass('active-card');
+            d3.select('#rapper-card-comparaison>h4').text(d.blazz+" : ");
+            d3.select('#rapper-card-comparaison>h3').text(d.v1+" Albums");
             $('.head-card').css('background-image', 'url(./img/rapper-min/min-'+d.id+'.jpg)');
-            d3.select('#rapper-card-comparaison>h4').text(d.blazz);
-            d3.select('#rapper-card-comparaison>h3').text(d.v1);
-            canvas.append('div')
             // $('.head-card').css('background-image', 'url(./img/rapper-min/min-'+d.id+'.jpg)');
 
         })
@@ -438,15 +449,14 @@ d3.json('./js/data.json',function(data){
             return d3.rgb(color(0));
         })
         .on('mouseover',function(d){
-            $('#tes').text(d.v2); /*ICI JE TEMPLATE !!*/
             d3.select(this).transition().duration(200).style('fill',function(d){
                 return d3.rgb(colorB(0));
             });
             /*------------------GESTION CARD---------------------*/
             $('#infos-comparaison').addClass('inactive-infos');
             $('#rapper-card-comparaison').addClass('active-card');
-            d3.select('#rapper-card-comparaison>h4').text(d.blazz);
-            d3.select('#rapper-card-comparaison>h3').text(d.v2);
+            d3.select('#rapper-card-comparaison>h4').text(d.blazz+" : ");
+            d3.select('#rapper-card-comparaison>h3').text(d.v2+" Ventes");
             $('.head-card').css('background-image', 'url(./img/rapper-min/min-'+d.id+'.jpg)');
 
         })
@@ -472,8 +482,8 @@ d3.json('./js/data.json',function(data){
             /*------------------GESTION CARD---------------------*/
             $('#infos-comparaison').addClass('inactive-infos');
             $('#rapper-card-comparaison').addClass('active-card');
-            d3.select('#rapper-card-comparaison>h4').text(d.blazz);
-            d3.select('#rapper-card-comparaison>h3').text(d.v3);
+            d3.select('#rapper-card-comparaison>h4').text(d.blazz+" : ");
+            d3.select('#rapper-card-comparaison>h3').text(d.v3+" Fans");
             $('.head-card').css('background-image', 'url(./img/rapper-min/min-'+d.id+'.jpg)');
         })
         .on('mouseout',function(){
@@ -485,9 +495,35 @@ d3.json('./js/data.json',function(data){
     /*J'ajoute le texte*/
     d3.select('#container-module-comparaison>svg').selectAll("text").data(data).enter()
         .append("text")
-        .text(function(d,i) { return "#"+(i+1)+" "+d.blazz; });
+        .text(function(d,i) { return d.blazz; })
+        .attr("transform", function(d, i){
+                   /*Gère la rotation du texte, et le retourne passé les 90° pour ne pas avoirà lire à l'envers*/
+                    var chiffre;
+                    var donnee = +eval("d.v3");
+                    if(donnee>1000000){
+                        chiffre = (donnee+1500000)/2.5;
+                    }else{
+                        chiffre = donnee;
+                    }
+                    if(((i+0.5)*180/total)<90){
+                        var angleRotation = ((i+0.5)*180/total);
+                        var x = ((eval('scale3')(chiffre)+93)*-Math.cos((i+0.5)*(Math.PI)/total)+r)
+                        var y = ((eval('scale3')(chiffre)+93)*Math.sin((i+0.5)*(-Math.PI)/total)+r)
+                    }else{
+                        var angleRotation = ((i+0.5)*180/total)-180;
+                        var x = ((eval('scale3')(chiffre)+10)*-Math.cos((i+0.5)*(Math.PI)/total)+r)
+                        var y = ((eval('scale3')(chiffre)+10)*Math.sin((i+0.5)*(-Math.PI)/total)+r)
+                    }
+                    /*Placement du texte*/
+                    return "translate("
+                    + (x+60) +
+                    ","
+                    + y + ")" +
+                    "rotate(" 
+                    + angleRotation + ")";
+                });
 
-    for(i=0; i<65; i++){
+    for(i=0; i<63; i++){
       //J'augmente le rayon du cercle pour chaque passage
       if(i>35){
            radius = 76+(i*intervalScale);
@@ -495,7 +531,7 @@ d3.json('./js/data.json',function(data){
             .attr("class", "line-red")
             .attr("d", line)
             .attr("transform", "translate("+(r+60)+","+(r)+")" + ",rotate(-90)");
-      }else if (i>15) {
+      }else if (i>14) {
           radius = 76+(i*intervalScale);
           canvas.append("path").datum(d3.range(points))
             .attr("class", "line-blue")
@@ -596,8 +632,8 @@ function updateData(eventPassed) {
                     }
                     if(((i+0.5)*180/total)<90){
                         var angleRotation = ((i+0.5)*180/total);
-                        var x = ((eval('scale'+indice)(chiffre)+80)*-Math.cos((i+0.5)*(Math.PI)/total)+r)
-                        var y = ((eval('scale'+indice)(chiffre)+80)*Math.sin((i+0.5)*(-Math.PI)/total)+r)
+                        var x = ((eval('scale'+indice)(chiffre)+93)*-Math.cos((i+0.5)*(Math.PI)/total)+r)
+                        var y = ((eval('scale'+indice)(chiffre)+93)*Math.sin((i+0.5)*(-Math.PI)/total)+r)
                     }else{
                         var angleRotation = ((i+0.5)*180/total)-180;
                         var x = ((eval('scale'+indice)(chiffre)+10)*-Math.cos((i+0.5)*(Math.PI)/total)+r)
