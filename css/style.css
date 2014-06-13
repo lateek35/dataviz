@@ -197,6 +197,7 @@ html, body{
 			 filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
 			filter: gray; /* IE6-9 */
 			-webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+			width: 70px;
 			position: relative;
 		}
 		#list-rapper img:hover{
@@ -244,7 +245,7 @@ html, body{
 
 	video#bgvid {
 		position: absolute;
-		top: 0;
+		top: -200px;
 		width: 50%;
 		z-index: -100;
 		background-size: cover;
@@ -255,7 +256,7 @@ html, body{
 		width: 50%;
 		height: 100%;
 		z-index: -99;
-		background-color: rgba(0,0,0,0.9);
+		background-color: rgba(0,0,0,0.75);
 	}
 	#page-rapper{
 		overflow-y: scroll;
@@ -292,6 +293,7 @@ html, body{
 
 		.description .top-description{
 			padding-bottom: 0.1rem;
+			margin-bottom: 0.1rem;
 			border-bottom: 1px solid #fff;
 		}
 			.top-description h2{
@@ -314,7 +316,7 @@ html, body{
 		}
 			.bottom-description p{
 				line-height: 0.30rem;
-				font-size: 0.20rem;
+				font-size: 0.18rem;
 				font-family: 'source_sans_regular', Georgia, serif;
 				color: #fff;
 			}
@@ -325,14 +327,20 @@ html, body{
 			}
 			.bottom-description .punchline{
 				position: absolute;
+				text-align: right;
 				top: 0.3rem;
 				right: 0;
 				width: 2.5rem;
 				font-family: 'bebas', Georgia, serif;
 				font-size: 0.3rem;
 			}
+
 			.bottom-description span{
+				font-family: 'source_sans_probold', Georgia, serif;
 				color: #e04852;
+			}
+			.bottom-description>ul{
+				margin-top: 0.1rem;
 			}
 			.bottom-description>ul>ul{
 				width: 1.26rem;
@@ -341,16 +349,16 @@ html, body{
 			.bottom-description li{
 				text-align: center;
 				height: 0.5rem;
+				font-family: 'bebas', Georgia, serif;
 			}
 			.bottom-description li:first-child{
 				font-size: 0.2rem;
 				letter-spacing: 0.01rem;
-				font-family: 'bebas', Georgia, serif;
 				vertical-align: top;
 				color: #e04852;
 			}
 			.bottom-description li:last-child{
-				font-size: 0.3rem;
+				font-size: 0.4rem;
 				color: #fff;
 			}
 	.bottom-part>.container{
@@ -433,6 +441,7 @@ html, body{
 }
 #module-comparaison .module-title{
 	left : 50%;
+	margin-left: -1.34rem;
 }
 #container-module-comparaison svg{
 	position: relative;
@@ -470,11 +479,11 @@ html, body{
 	width: 1320px;
 	height: 600px;
 	position: absolute;
-	bottom: 130px;
+	bottom: 107px;
 	display: block;
 	margin: 0 auto;
 	left: 50%;
-	margin-left: -660px;
+	margin-left: -647px;
 }
 [class*="line"]{
 	fill: none;
@@ -497,7 +506,7 @@ html, body{
 	#echelle-comparaison{
 		position: absolute;
 		bottom: 0;
-		left: 60px;
+		left: 1px;
 	}
 	#echelle-comparaison>img{
 		position: absolute;
@@ -571,8 +580,8 @@ html, body{
 	#rapper-card-comparaison{
 		position:absolute;
 		left: 50%;
-		margin-left: -106px;
-		width: 200px;
+		margin-left: -206px;
+		width: 400px;
 		height: 160px;
 		bottom: -94px;
 		text-align: center;
@@ -589,13 +598,25 @@ html, body{
 		border-radius: 64px;
 		-webkit-border-radius: 64px;
 		border: 2px solid #e94953;
-		background-color: black;
+		background-color : none;
 		background-size: 114px 114px;
 		margin: 0 auto;
 	}
 	#rapper-card-comparaison h4{
+		font-family: "source_sans_probold" !important;
+		position: relative;
+		top: -30px;
+		display: inline-block;
+	}
+	#rapper-card-comparaison h4, #rapper-card-comparaison h3 {
+		position: relative;
+		top: -45px;
+		display: inline-block;
+	}
+	#rapper-card-comparaison h4{
 		font-family: "bebas";
 		text-transform: uppercase;
+		padding-top: 0.05rem;
 		color:#f0f0f0;
 		font-size:0.2rem;
 	}
@@ -605,11 +626,16 @@ html, body{
 		background-color: #f0f0f0;
 		margin:5px 0;
 	}
-	#rapper-card-comparaison h3{
-		font-size: 0.13rem;
+	#rapper-card-comparaison h4{
+		color: #fff;
+		font-size: 0.19rem;
+		font-family: 'source_sans_probold', Georgia, serif;
 		text-transform: uppercase;
 	}
-	#rapper-card-comparaison h3 span{
+	#rapper-card-comparaison h3{
+		position: relative;
+		left: -10px;
+		font-size: 0.19rem;
 		font-family: 'source_sans_prolight';
 		color:#f0f0f0;
 		text-transform:none;
@@ -647,6 +673,34 @@ html, body{
 		margin-left:0;
 		padding-top:50px;
 		text-align:center;
+	}
+	.module-button2{
+		z-index: 105;
+		width: 16%; 
+		display: inline-block;
+		top: 50%;
+		position: absolute;
+		left: 60px;
+		margin-top: -0.8rem;
+	}
+	.module-button2 button{
+		height:40px;
+		width:160px;
+		display: block;
+		margin:10px auto;
+		font-family: 'bebas', Georgia, sans-serif;
+		font-size: 0.18rem;
+		color:#e94953;
+		text-transform: uppercase;
+		cursor:pointer;
+		outline: 0;
+		-webkit-appearance: none;
+		background: none;
+		border:1px solid #e94953;
+		-webkit-transition:all .3s ease;
+		   -moz-transition:all .3s ease;
+		     -o-transition:all .3s ease;
+		        transition:all .3s ease;
 	}
 	.module-button{
 		width:16%;

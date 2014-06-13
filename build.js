@@ -11,7 +11,7 @@
     fileExclusionRegExp: /^(r|build)\.js$/,
     optimizeCss: 'standard',
     removeCombined: true,
-    paths: {
+  paths: {
       jquery:      'libs/require-jquery',
       slimScroll:      'libs/slimScroll',
       fullpage: 'libs/jquery.fullPage',
@@ -25,30 +25,30 @@
       viewRapperListInsults: 'views/rapperListInsults.view',
       viewRapperPage: 'views/rapperPage.view',
       viewModuleComparaison: 'views/moduleComparaison.view'
+  },
+  shim: {
+    fullpage: {
+        deps: [
+            'jquery'
+        ]
     },
-    shim: {
-        fullpage: {
-            deps: [
-                'jquery'
-            ]
-        },
-        underscore: {
-            exports: '_'
-        },
-        d3: {
-            exports: 'd3'
-        },
-        backbone: {
-            deps: [
-                'underscore',
-                'jquery',
-                'handlebars'
-            ],
-            exports: 'Backbone'
-        },
-        backboneLocalstorage: {
-            deps: ['backbone'],
-            exports: 'Store'
-        }
+    slimScroll: {
+        deps: [
+            'jquery'
+        ]
+    },
+    underscore: {
+        exports: '_'
+    },
+    handlebars: {
+        exports: 'Handlebars'
+    },
+    d3: {
+        exports: 'd3'
+    },
+    backbone: {
+      deps: ['fullpage','underscore','handlebars','jquery'],
+      exports: 'Backbone'
     }
+  }
 })

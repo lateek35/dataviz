@@ -48,7 +48,7 @@ require.config({
         exports: 'd3'
     },
     backbone: {
-      deps: ['underscore','handlebars','jquery'],
+      deps: ['fullpage','underscore','handlebars','jquery'],
       exports: 'Backbone'
     }
   }
@@ -283,7 +283,7 @@ $('body').on('click','.option',
 
     var r = 593;
     var p = Math.PI;
-    var intervalScale = 6;
+    var intervalScale = 6.2;
     var color = d3.scale.linear()
         .domain([-1, 0, 1])
         .range(["#515e44", "#4a4758", "#e84852"]);
@@ -313,7 +313,7 @@ $('body').on('click','.option',
     var finScaleVente = debutScaleVente+(20*(intervalScale));
 
     var debutScalePopu = finScaleVente+intervalScale;
-    var finScalePopu = debutScalePopu+(27*(intervalScale));
+    var finScalePopu = debutScalePopu+(35*(intervalScale));
 
 
     var scale1 = d3.scale.linear();
@@ -325,7 +325,7 @@ $('body').on('click','.option',
         scale2.range([debutScaleVente, finScaleVente]);
 
     var scale3 = d3.scale.linear();
-        scale3.domain([0, 3000000]);
+        scale3.domain([0, 4000000]);
         scale3.range([debutScalePopu,finScalePopu]);
 
     var arc1,
@@ -416,10 +416,9 @@ d3.json('./js/data.json',function(data){
             /*------------------GESTION CARD---------------------*/
             $('#infos-comparaison').addClass('inactive-infos');
             $('#rapper-card-comparaison').addClass('active-card');
+            d3.select('#rapper-card-comparaison>h4').text(d.blazz+" : ");
+            d3.select('#rapper-card-comparaison>h3').text(d.v1+" Albums");
             $('.head-card').css('background-image', 'url(./img/rapper-min/min-'+d.id+'.jpg)');
-            d3.select('#rapper-card-comparaison>h4').text(d.blazz);
-            d3.select('#rapper-card-comparaison>h3').text(d.v1);
-            canvas.append('div')
             // $('.head-card').css('background-image', 'url(./img/rapper-min/min-'+d.id+'.jpg)');
 
         })
@@ -438,15 +437,14 @@ d3.json('./js/data.json',function(data){
             return d3.rgb(color(0));
         })
         .on('mouseover',function(d){
-            $('#tes').text(d.v2); /*ICI JE TEMPLATE !!*/
             d3.select(this).transition().duration(200).style('fill',function(d){
                 return d3.rgb(colorB(0));
             });
             /*------------------GESTION CARD---------------------*/
             $('#infos-comparaison').addClass('inactive-infos');
             $('#rapper-card-comparaison').addClass('active-card');
-            d3.select('#rapper-card-comparaison>h4').text(d.blazz);
-            d3.select('#rapper-card-comparaison>h3').text(d.v2);
+            d3.select('#rapper-card-comparaison>h4').text(d.blazz+" : ");
+            d3.select('#rapper-card-comparaison>h3').text(d.v2+" Ventes");
             $('.head-card').css('background-image', 'url(./img/rapper-min/min-'+d.id+'.jpg)');
 
         })
@@ -472,8 +470,8 @@ d3.json('./js/data.json',function(data){
             /*------------------GESTION CARD---------------------*/
             $('#infos-comparaison').addClass('inactive-infos');
             $('#rapper-card-comparaison').addClass('active-card');
-            d3.select('#rapper-card-comparaison>h4').text(d.blazz);
-            d3.select('#rapper-card-comparaison>h3').text(d.v3);
+            d3.select('#rapper-card-comparaison>h4').text(d.blazz+" : ");
+            d3.select('#rapper-card-comparaison>h3').text(d.v3+" Fans");
             $('.head-card').css('background-image', 'url(./img/rapper-min/min-'+d.id+'.jpg)');
         })
         .on('mouseout',function(){
@@ -485,9 +483,9 @@ d3.json('./js/data.json',function(data){
     /*J'ajoute le texte*/
     d3.select('#container-module-comparaison>svg').selectAll("text").data(data).enter()
         .append("text")
-        .text(function(d,i) { return "#"+(i+1)+" "+d.blazz; });
+        .text(function(d,i) { return d.blazz; });
 
-    for(i=0; i<65; i++){
+    for(i=0; i<63; i++){
       //J'augmente le rayon du cercle pour chaque passage
       if(i>35){
            radius = 76+(i*intervalScale);
@@ -495,7 +493,7 @@ d3.json('./js/data.json',function(data){
             .attr("class", "line-red")
             .attr("d", line)
             .attr("transform", "translate("+(r+60)+","+(r)+")" + ",rotate(-90)");
-      }else if (i>15) {
+      }else if (i>14) {
           radius = 76+(i*intervalScale);
           canvas.append("path").datum(d3.range(points))
             .attr("class", "line-blue")
@@ -596,8 +594,8 @@ function updateData(eventPassed) {
                     }
                     if(((i+0.5)*180/total)<90){
                         var angleRotation = ((i+0.5)*180/total);
-                        var x = ((eval('scale'+indice)(chiffre)+80)*-Math.cos((i+0.5)*(Math.PI)/total)+r)
-                        var y = ((eval('scale'+indice)(chiffre)+80)*Math.sin((i+0.5)*(-Math.PI)/total)+r)
+                        var x = ((eval('scale'+indice)(chiffre)+93)*-Math.cos((i+0.5)*(Math.PI)/total)+r)
+                        var y = ((eval('scale'+indice)(chiffre)+93)*Math.sin((i+0.5)*(-Math.PI)/total)+r)
                     }else{
                         var angleRotation = ((i+0.5)*180/total)-180;
                         var x = ((eval('scale'+indice)(chiffre)+10)*-Math.cos((i+0.5)*(Math.PI)/total)+r)
