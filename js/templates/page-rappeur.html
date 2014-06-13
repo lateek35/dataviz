@@ -61,34 +61,38 @@
 <div class="bottom-part">
 	<div class="container">
 		<ul class="menu-fiche">
-			<li id="bio" data-id="{{id}}">BIOGRAPHIE</li>
-			<li id="popularite" data-id="{{id}}">POPULARIté</li>
-			<li id="album-vendu" data-id="{{id}}">ALBUMS VENDUS</li>
+			<li id="bio" class="activeLiFiche" data-id="{{id}}"><p data-id="{{id}}">BIOGRAPHIE</p><span></span></li>
+			<li id="popularite" data-id="{{id}}"><p data-id="{{id}}">POPULARIté</p><span></span></li>
+			<li id="album-vendu" data-id="{{id}}"><p data-id="{{id}}">ALBUMS VENDUS</p><span></span></li>
 		</ul>
 		<div class="container-infos-rapper">
-			<div id="conteiner-popularite">
+			<div id="conteiner-biographie">
+				<p>{{biographie}}</p>
+				<div class="maskBio"><img src="./img/rapper-bio/bio-{{id}}.jpg" alt="Biographie de {{blazz}}"/></div>
+			</div>
+			<div id="conteiner-popularite" class="displayNonePage">
 				<ul>
 					<li>
-						<p>{{likes}}</p>
+						<p class="pLikes"></p>
 						<span class="likes">LIKES</span>
 					</li>
 					<li>
-						<p>{{followers}}</p>
+						<p class="pTwitter"></p>
 						<span class="twitter">FOLLOWERS</span>
 					</li>
 					<li>
-						<p>{{abonnes}}</p>
+						<p class="pAbonne"></p>
 						<span class="abonne">Abonés</span>
 					</li>
 					<li>
-						<p>{{instagram}}</p>
+						<p class="pInstagram"></p>
 						<span class="instagram">Followers</span>
 					</li>
 				</ul>
 				<div id="module-fan">
-					<div class="fan-rappeur"><h3>{{v3}}<br/><span>FANS {{blazz}}</span></h3></div>
+					<div class="fan-rappeur"><h3><p class="fan-rapper"></p><span>FANS {{blazz}}</span></h3></div>
 					<div class="circle-fan-vs"><div class="circle-total"></div><svg id="graph-fans"></svg></div>
-					<div class="total-fan"><h3>{{total_fans}}<br/><span>FANS PANAM ALL STARZ</span></h3></div>
+					<div class="total-fan"><h3><p class="total-rappers-fan"></p><span>FANS PANAM ALL STARZ</span></h3></div>
 				</div>
 			</div>
 			<div id="conteiner-module-albums" class="displayNonePage">

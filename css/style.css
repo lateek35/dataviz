@@ -377,7 +377,8 @@ html, body{
 		text-align: center;
 	}
 	.bottom-part ul.menu-fiche li{
-		width: 3.25rem;
+		width: 150px;
+		margin: 0 60px;
 		padding-bottom: 10px;
 		text-align: center;
 		display: inline-block;
@@ -391,16 +392,30 @@ html, body{
 			-o-transition:all 0.1s ease;
 			transition:all 0.1s ease;
 	}
+	.bottom-part ul.menu-fiche li span{
+		display:block;
+		margin:10px auto 0 auto;
+		height:1px;
+		width:1px;
+		background-color:transparent;
+		-webkit-transition:all 0.1s ease;
+			-moz-transition:all 0.1s ease;
+			-o-transition:all 0.1s ease;
+			transition:all 0.1s ease;
+	}
+	.bottom-part ul.menu-fiche li:hover span, .bottom-part ul.menu-fiche li.activeLiFiche span{
+		background-color:#e94953;
+		width:70px;
+	}
 	.bottom-part ul.menu-fiche li:hover, .bottom-part ul.menu-fiche li.activeLiFiche{
 		color:#e94953;
-		border-bottom:1px solid #e94953;
 	}
 	/******* module vente album ***********/
 	.container-infos-rapper{
 		width: 1090px;
 		margin:0 auto;
 	}
-	#conteiner-module-albums.displayNonePage, #conteiner-popularite.displayNonePage{
+	#conteiner-module-albums.displayNonePage, #conteiner-popularite.displayNonePage, #conteiner-biographie.displayNonePage{
 		display:none;
 	}
 	#conteiner-module-albums{
@@ -471,6 +486,7 @@ html, body{
 		width:950px;
 		height:380px;
 		margin:0 auto;
+		padding-top: 30px;
 	}
 	#conteiner-popularite ul{
 		text-align: center;
@@ -481,7 +497,7 @@ html, body{
 		display:inline-block;
 		font-family: "bebas";
 		font-size: 50px;
-		color:white;
+		color:#f0f0f0;
 	}
 	#conteiner-popularite ul li span{
 		font-size: 20px;
@@ -517,6 +533,7 @@ html, body{
 	}
 	#module-fan{
 		text-align: center;
+		margin-top:30px;
 	}
 	#conteiner-popularite .fan-rappeur{
 		color:#e94953;
@@ -540,10 +557,14 @@ html, body{
 	#conteiner-popularite .circle-fan-vs .circle-total{
 		width:184px;
 		height:184px;
-		border: 8px solid white;
+		border: 8px solid #f0f0f0;
 		-webkit-border-radius:200px;
 		   -moz-border-radius:200px;
 		        border-radius:200px;
+		text-align: center;
+		line-height: 184px;
+		font-size: 50px;
+		font-family: 'bebas';
 	}
 	#conteiner-popularite .circle-fan-vs #graph-fans{
 		width:200px;
@@ -551,6 +572,34 @@ html, body{
 		position:absolute;
 		top:0;
 		left: 0;
+	}
+	/*********** container biographie *************/
+	#conteiner-biographie{
+		width:950px;
+		min-height:380px;
+		margin:0 auto;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	#conteiner-biographie p{
+		color:#f0f0f0;
+		font-size: 15px;
+		line-height:24px;
+		font-family: 'source_sans_prolight';
+		width:570px;
+		margin-right: 20px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	#conteiner-biographie .maskBio{
+		width: 330px;
+		height:330px;
+		border:5px solid #f0f0f0;
+		-webkit-box-sizing: content-box;
+		-moz-box-sizing: content-box;
+		box-sizing: content-box;
+		display: inline-block;
+		vertical-align: top;
 	}
 
 #carte path{
