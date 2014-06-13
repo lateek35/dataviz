@@ -115,8 +115,8 @@ $('path').on('mouseenter',mouseenterMap);
 $('path').on('mouseout',mouseoutMap);
 
 $('svg#carte').mouseup(function(e){
-  $('path').show().attr('class','');
-  $('path').bind('mouseenter',mouseenterMap);
+  $('#carte path').show().attr('class','');
+  $('#carte path').bind('mouseenter',mouseenterMap);
   router.navigate("#2/");
   $('.departement').stop().animate({
       bottom: "0"
@@ -137,6 +137,18 @@ $('body').on('mouseover','#list-rapper li',function(){
 $('body').on('mouseout','#list-rapper li',function(){ 
   $('#list-rapper-name li').eq($(this).index()).removeClass('active');
 });
+
+
+
+$('body').on('click',".btn-play-pause",function(){
+  myVid=document.getElementById("bgvid");
+  if (myVid.muted) {
+    myVid.muted=false;  
+  }else{
+    myVid.muted=true;  
+  }
+
+})
 
 /*__________________________________________________________________________________________*/
 /*-------------------------------  Animation hardcore lyrics  ------------------------------*/
@@ -159,6 +171,9 @@ $('path').on('click',function(){
   }, 500, function() {
     // Animation complete.
   });
+});
+$('body').on('click','#btn-retour',function(){ 
+  $.fn.fullpage.moveSlideRight();
 });
 /*__________________________________________________________________________________________*/
 /*---------------------------------  Gestion URL Rappeur MAP -------------------------------*/
@@ -184,7 +199,6 @@ $('#fullpage').fullpage({
 });
 $.fn.fullpage.setKeyboardScrolling(false);
 $(".section").find('.controlArrow').hide();
-
 $('#home>a').on('click',function(event){
   event.preventDefault();
   $.fn.fullpage.moveSectionDown();
@@ -195,9 +209,7 @@ $('#home>a').on('click',function(event){
 /*==========================================================================================*/
   var Router = Backbone.Router.extend({
     routes:{
-      ':4/' : 'module-hardcore',
       ':4' : 'module-hardcore',
-      ':3/' : 'module-hard',
       ':3' : 'module-hard',
       ':2/dep/:cp/:rapper' : 'rapperSolo',
       ':2/dep/:cp' : 'departement',
@@ -219,13 +231,13 @@ $('#home>a').on('click',function(event){
   router.on('route:departement',function(slide,cp){
     moveSlide(slide);
     rapperList.runFilter(parseInt(cp));
-    $('path').show().attr('class','');
+    $('#carte path').show().attr('class','');
     $('#_'+cp).attr('class','zoom');
-    $('path').not('#_'+cp).attr('class','bouge');
-    $('path').unbind('mouseenter',mouseenterMap);
+    $('#carte path').not('#_'+cp).attr('class','bouge');
+    $('#carte path').unbind('mouseenter',mouseenterMap);
     setTimeout(function(){
-      $('path').not('#_'+cp).css('display','none');
-      $('path').bind('mouseenter',mouseenterMap);
+      $('#carte path').not('#_'+cp).css('display','none');
+      $('#carte path').bind('mouseenter',mouseenterMap);
     }, 500);
   })
   router.on('route:rapperSolo',function(slide,cp,rapper){

@@ -17,11 +17,7 @@ html, body{
 }
 
 #home{
-	background-image: url('../img/pattern-1.png'),url("../img/background-2.jpg");
-	-webkit-background-size: auto,cover;
-	-moz-background-size: auto,cover;
-	-o-background-size: auto,cover;
-	background-size: auto,cover;
+	background: url("../img/background-2.jpg") center center no-repeat;
 	text-align: center;
 	text-transform: uppercase;
 }
@@ -97,7 +93,7 @@ html, body{
 	}
 
 .slide:first-child{
-		background-image: url('../img/pattern-2.png'),url("../img/background-2.jpg");
+		background-image: url('../img/pattern-2.png'),url("../img/background-1.jpg");
 		-webkit-background-size: auto,cover;
 		-moz-background-size: auto,cover;
 		-o-background-size: auto,cover;
@@ -268,6 +264,16 @@ html, body{
 		position: relative;
 		margin: 0 auto;
 		padding-top: 0.7rem;
+	}
+	#btn-retour{
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		background: url('.././img/btn-retour.png') center center no-repeat;
+		background-color: #E94953;
+
 	}
 	#page-rapper>.bottom-part{
 		min-height: 50%;
@@ -605,11 +611,11 @@ html, body{
 }
 /* Css module comparaison */
 #module-comparaison {
-	background-image: url('../img/pattern-2.png'),url("../img/background-2.jpg");
-	-webkit-background-size: auto,cover;
-	-moz-background-size: auto,cover;
-	-o-background-size: auto,cover;
-	background-size: auto,cover;
+	background-image: url('../img/bg_boss.jpg');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 #module-comparaison .module-title{
 	left : 50%;
@@ -655,6 +661,16 @@ html, body{
 	background-color: #e94953;
 }
 
+#btn-reset{
+	position: relative;
+	top: -10px;
+	color: #FFFFFF;
+	border:1px solid #FFFFFF;
+}
+#btn-reset.active, #btn-reset:hover{
+	color:#333;
+	background-color: #FFFFFF;
+}
 
 
 #container-module-comparaison{
@@ -860,7 +876,7 @@ html, body{
 		z-index: 105;
 		width: 16%; 
 		display: inline-block;
-		top: 50%;
+		top: 40%;
 		position: absolute;
 		left: 60px;
 		margin-top: -0.8rem;
