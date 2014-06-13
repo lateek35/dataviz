@@ -283,7 +283,7 @@ $('body').on('click','.option',
 
     var r = 593;
     var p = Math.PI;
-    var intervalScale = 5;
+    var intervalScale = 7;
     var color = d3.scale.linear()
         .domain([-1, 0, 1])
         .range(["#515e44", "#4a4758", "#e84852"]);
