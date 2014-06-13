@@ -532,35 +532,30 @@ html, body{
 
 
 	#rapper-card-comparaison{
-		height:66px;
-		width:490px;
 		position:absolute;
-		bottom:10px;
-		left: 100%;
+		left: 50%;
+		margin-left: -106px;
+		width: 200px;
+		bottom: -94px;
+		text-align: center;
 		-webkit-transition:all .3s ease;
 		   -moz-transition:all .3s ease;
 		     -o-transition:all .3s ease;
 		        transition:all .3s ease;
 	}
-	#rapper-card-comparaison.active-card{
-		left: 50%;
-		margin-left: -245px;
-	}
+
 	#rapper-card-comparaison .head-card{
-		height:64px;
-		width:64px;
-		float:left;
-		margin-right:10px;
-		border-radius:64px;
-		-webkit-border-radius:64px;
-		border:2px solid #e94953;
+		height: 114px;
+		width: 114px;
+		margin-right: 10px;
+		border-radius: 64px;
+		-webkit-border-radius: 64px;
+		border: 2px solid #e94953;
 		background-color: black;
-		background-size:64px 64px;
+		background-size: 114px 114px;
+		margin: 0 auto;
 	}
 	#rapper-card-comparaison h4{
-		width:340px;
-		display: inline-block;
-		vertical-align: baseline;
 		font-family: "bebas";
 		text-transform: uppercase;
 		color:#f0f0f0;
@@ -574,7 +569,6 @@ html, body{
 	}
 	#rapper-card-comparaison h3{
 		font-size: 0.13rem;
-		margin-bottom:3px;
 		text-transform: uppercase;
 	}
 	#rapper-card-comparaison h3 span{
