@@ -176,6 +176,8 @@ $('path').on('click',function(){
 });
 $('body').on('click','#btn-retour',function(){ 
   $.fn.fullpage.moveSlideRight();
+  $("#bgvid")[0].muted=true;
+  $('#fullPage-nav>ul').show();
 });
 /*__________________________________________________________________________________________*/
 /*---------------------------------  Gestion URL Rappeur MAP -------------------------------*/
@@ -246,6 +248,7 @@ $('#home>a').on('click',function(event){
     $.fn.fullpage.moveTo(2,1);
     var rapperPage = new viewRapperPage({collection : rappers});
     rapperPage.runFilter(rapper);
+    $('#fullPage-nav>ul').hide();
   });
   router.on('route:module-hard',function(){
     $.fn.fullpage.moveTo(3,0);
