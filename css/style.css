@@ -356,17 +356,143 @@ html, body{
 				color: #fff;
 			}
 	.bottom-part>.container{
-		width: 	10.24rem;
+		width: 100%;
+		position:relative;
 		display: block;
 		margin: 0 auto;
 	}
-	.bottom-part li{
+	.bottom-part>.container ul.menu-fiche{
+		text-align: center;
+	}
+	.bottom-part ul.menu-fiche li{
 		width: 3.25rem;
+		padding-bottom: 10px;
 		text-align: center;
 		display: inline-block;
 		font-family: 'bebas', Georgia, serif;
 		font-size: 0.3rem;
 		color: #fff;
+		cursor: pointer;
+		border:1px solid transparent;
+		-webkit-transition:all 0.1s ease;
+			-moz-transition:all 0.1s ease;
+			-o-transition:all 0.1s ease;
+			transition:all 0.1s ease;
+	}
+	.bottom-part ul.menu-fiche li:hover, .bottom-part ul.menu-fiche li.activeLiFiche{
+		color:#e94953;
+		border-bottom:1px solid #e94953;
+	}
+	/******* module vente album ***********/
+	.container-infos-rapper{
+		width: 1090px;
+		margin:0 auto;
+	}
+	#conteiner-module-albums.displayNonePage, #conteiner-popularite.displayNonePage{
+		display:none;
+	}
+	#conteiner-module-albums{
+		padding-bottom: 20px;
+		margin-top:20px;
+	}
+	#graph-albums{
+		padding-left: 85px;
+		padding-right: 85px;
+		padding-top:75px;
+		padding-bottom: 20px;
+		width:960px;
+		height:280px;
+	}
+	#graph-albums .g-axis-albums text, #graph-albums .g-axis-albums-x text, .g-rapper text{
+	  font-family: 'source_sans_probold';
+	  font: 15px sans-serif;
+	  font-weight: bold;
+	  fill: #f0f0f0;
+	  text-anchor: middle;
+	}
+	.g-rapper text, .g-rapper rect{
+		display:none;
+	}
+	.g-rapper text.activeDisplay, .g-rapper rect.activeDisplay{
+		display:block;
+	}
+	#graph-albums .g-axis-albums-x text{
+	  text-anchor: start;
+	}
+	#graph-albums .g-axis-albums path,
+	#graph-albums .g-axis-albums line,
+	#graph-albums .g-axis-albums-x path,
+	#graph-albums .g-axis-albums-x line {
+	  display: none;
+	}
+	#graph-albums .area {
+	    fill: rgba(98,42,45,.75);
+	}
+	#graph-albums .line {
+	    stroke: #cc424b;
+	    stroke-width: 1;
+	}
+	#conteiner-module-albums ul{
+		height:20px;
+		padding-top:10px;
+		padding-left: 56px;
+	}
+	#conteiner-module-albums ul li{
+		width:100px;
+		display:inline-block;
+		vertical-align: top;
+		font-size:14px;
+		font-family: 'source_sans_probold';
+		text-transform: uppercase;
+		color:#f0f0f0;
+	}
+	#conteiner-module-albums ul li.displayNoneNbAlbum{
+		display:none;
+	}
+	#conteiner-module-albums ul li em{
+		font-size:8px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	/********* container popularite **********/
+	#conteiner-popularite{
+		width:950px;
+		height:380px;
+		margin:0 auto;
+		background-color: green;
+	}
+	#conteiner-popularite ul{
+		text-align: center;
+	}
+	#conteiner-popularite ul li{
+		width:190px;
+		height:90px;
+		display:inline-block;
+		font-family: "bebas";
+		font-size: 50px;
+		color:white;
+	}
+	#conteiner-popularite ul li span{
+		font-size: 20px;
+		padding-left: 35px;
+		background-position: left center;
+		background-repeat: no-repeat;
+	}
+	#conteiner-popularite ul li span.likes{
+		color:#3b5998;
+		background-image:url('../img/fb.png');
+	}
+	#conteiner-popularite ul li span.twitter{
+		color:#4099ff;
+		background-image:url('../img/twitter.png');
+	}
+	#conteiner-popularite ul li span.abonne{
+		color:#e52d27;
+		background-image:url('../img/abonne.png');
+	}
+	#conteiner-popularite ul li span.instagram{
+		color:#956d53;
+		background-image:url('../img/instagram.png');
 	}
 
 #carte path{
@@ -587,7 +713,7 @@ html, body{
 	#graph-hardcore{
 		padding-left:50px;
 		padding-right:120px;
-		padding-top:10px;
+		padding-top:1px;
 		margin-bottom:10px;
 	}
 	#graph-hardcore .g-axis text {
@@ -627,7 +753,7 @@ html, body{
 	}
 	#graph-hardcore .graph-text{
 	    fill: #f0f0f0;
-	    font: 10px sans-serif;
+	    font: 11px sans-serif;
 	    text-anchor: middle;
 	    -webkit-transition:all .3s ease;
 		   -moz-transition:all .3s ease;
@@ -707,6 +833,15 @@ html, body{
 		color:#f0f0f0;
 		font-size:0.2rem;
 	}
+	#rapper-card a{
+		display:inline-block;
+		vertical-align: baseline;
+		font-family: 'source_sans_regular';
+		font-size: 0.14rem;
+		color:#e94953;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
 	#rapper-card hr{
 		height:1px;
 		border:none;
@@ -722,15 +857,7 @@ html, body{
 		color:#f0f0f0;
 		text-transform:none;
 	}
-	#rapper-card a{
-		display:inline-block;
-		vertical-align: baseline;
-		font-family: 'source_sans_regular';
-		font-size: 0.14rem;
-		color:#e94953;
-		text-transform: uppercase;
-		text-decoration: none;
-	}
+	
 	.clear{
 		clear:both;
 	}

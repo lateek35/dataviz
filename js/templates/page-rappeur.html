@@ -55,14 +55,44 @@
 
 
 
-{{/each}}
 </div>
 <div class="bottom-part">
 	<div class="container">
-		<ul>
-			<li id="bio">BIOGRAPHIE</li>
-			<li id="popularite">POPULARIté</li>
-			<li id="album vendu">ALBUMS VENDUS</li>
+		<ul class="menu-fiche">
+			<li id="bio" data-id="{{id}}">BIOGRAPHIE</li>
+			<li id="popularite" data-id="{{id}}">POPULARIté</li>
+			<li id="album-vendu" data-id="{{id}}">ALBUMS VENDUS</li>
 		</ul>
+		<div class="container-infos-rapper">
+			<div id="conteiner-popularite">
+				<ul>
+					<li>
+						<p>{{likes}}</p>
+						<span class="likes">LIKES</span>
+					</li>
+					<li>
+						<p>{{followers}}</p>
+						<span class="twitter">FOLLOWERS</span>
+					</li>
+					<li>
+						<p>{{abonnes}}</p>
+						<span class="abonne">Abonés</span>
+					</li>
+					<li>
+						<p>{{instagram}}</p>
+						<span class="instagram">Followers</span>
+					</li>
+				</ul>
+				<div id="module-fan">
+					<div class="fan-rappeur"></div>
+					<div class="circle-fan-vs"></div>
+					<div class="total-fan"><h3>{{total_fans}}<span>FANS PANAM ALL STARZ</span></h3></div>
+				</div>
+			</div>
+			<div id="conteiner-module-albums" class="displayNonePage">
+				<svg id="graph-albums"></svg>
+			</div>
+		</div>
 	</div>
 </div>
+{{/each}}
