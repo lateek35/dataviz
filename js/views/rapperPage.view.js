@@ -10,7 +10,6 @@ define(['backbone','modelRapper','collectionRapper','text!templates/page-rappeur
       this.render();
     },
     render: function(cp){
-      console.log($("#conteiner-module-albums"));
       var html = [];
       var that = this;
       //var d3 = this.d3;
@@ -190,6 +189,41 @@ define(['backbone','modelRapper','collectionRapper','text!templates/page-rappeur
       idRapper=idRapper-1;
 
       var svgFans = d3.select(this.el).select('#graph-fans');
+      var τ = 2 * Math.PI;
+      var arc = d3.svg.arc()
+        .innerRadius(92)
+        .outerRadius(100)
+        .startAngle(0);
+      var group = svgFans.append("g");
+      d3.json(this.collection.url, function(error, data) {
+
+        var angle = (data[idRapper].v3 * τ)/data[idRapper].total_fans;
+
+        console.log(angle);
+
+        var foreground = group.append("path")
+        .datum({endAngle: .127 * τ})
+        .style("fill", "orange")
+        .attr("d", arc);
+
+        setInterval(function() {
+          foreground.transition()
+            .duration(750)
+            .call(arcTween, Math.random() * τ);
+            }, 1500);
+
+        function arcTween(transition, newAngle) {
+
+            transition.attrTween("d", function(d) {
+              var interpolate = d3.interpolate(d.endAngle, newAngle);
+              return function(t) {
+                d.endAngle = interpolate(t);
+                  return arc(d);
+              };
+          });
+        }
+      });
+
     }
   });
   return RapperPage;
