@@ -37,3 +37,4 @@ $RECYCLE.BIN/
 
 ### Ignore the build folder ###
 build/
+video/
