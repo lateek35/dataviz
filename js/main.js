@@ -141,11 +141,13 @@ $('body').on('mouseout','#list-rapper li',function(){
 
 
 $('body').on('click',".btn-play-pause",function(){
-  myVid=document.getElementById("bgvid");
-  if (myVid.muted) {
-    myVid.muted=false;  
+  myVid=$("#bgvid");
+  if (myVid[0].muted) {
+    myVid[0].muted=false;
+    $('.btn-play-pause')[0].style.backgroundImage = 'url(./img/btn-pause.png)';
   }else{
-    myVid.muted=true;  
+    myVid[0].muted=true;  
+    $('.btn-play-pause')[0].style.backgroundImage = 'url(./img/btn-play.png)';
   }
 
 })
