@@ -50,9 +50,10 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
             })
             .each(function(d) {
                 d3.select(this).append("div")
-                  .style("background",function(d){return "url('"+d.min_pic+"')";})
+                  .style("background",function(d){return "url('./img/rapper-min/min-"+d.id+".jpg')";})
                   .style("background-position","center center")
-                  .style("background-repeat","no-repeat");
+                  .style("background-repeat","no-repeat")
+                  .style("background-size","40px 40px");
             });
 
           axis = graphHardcore.append("g")
@@ -87,6 +88,9 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
             .attr("class", "insults-mod");
         var barRappers = d3.selectAll(".g-rapper");
         d3.json(this.collection.url, function(error, data) {
+
+          console.log(data);
+
 
             yInsults.domain([0, 150]);
             // yInsults.domain([0, d3.max(data, function(d) { return d.insults })]);
@@ -341,8 +345,9 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
     },
     showRapperDetails: function(event){
       var target = event.target;
+      var stringBase ="head-rapper head";
       var targetClass=$(target).parent().attr('class');
-      var targetPos = parseInt(targetClass.substring(targetClass.length-1, targetClass.length));
+      var targetPos = parseInt(targetClass.substring(stringBase.length, targetClass.length));
       var rapperCardInsults = d3.select('#infos-hardcore-insults').select('#rapper-card');
       var rapperCardVocab = d3.select('#infos-hardcore-vocab').select('#rapper-card');
       if($("#g-graph").attr('class')=="insults-mod"){
@@ -352,7 +357,8 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
         $("#infos-hardcore-vocab #rapper-card").attr('class', '');
         d3.json(this.collection.url, function(error, data) {
             rapperCardInsults.select(".head-card")
-                .style('background-image','url('+data[targetPos].id+'.jpg)')
+                .style('background-image','url(./img/rapper-min/min-'+data[targetPos].id+'.jpg)')
+                .style("background-size","64px 64px");
             rapperCardInsults.select("h4")
                 .text(data[targetPos].blazz);
             rapperCardInsults.select("a")
@@ -369,7 +375,7 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
         $("#infos-hardcore-insults #rapper-card").attr('class', '');
         d3.json(this.collection.url, function(error, data) {
             rapperCardVocab.select(".head-card")
-                .style('background-image','url('+data[targetPos].id+'.jpg)')
+                .style('background-image','url(./img/rapper-min/min-'+data[targetPos].id+'.jpg)')
             rapperCardVocab.select("h4")
                 .text(data[targetPos].blazz);
             rapperCardVocab.select("a")

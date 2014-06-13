@@ -362,17 +362,190 @@ html, body{
 				color: #fff;
 			}
 	.bottom-part>.container{
-		width: 	10.24rem;
+		width: 100%;
+		position:relative;
 		display: block;
 		margin: 0 auto;
 	}
-	.bottom-part li{
+	.bottom-part>.container ul.menu-fiche{
+		text-align: center;
+	}
+	.bottom-part ul.menu-fiche li{
 		width: 3.25rem;
+		padding-bottom: 10px;
 		text-align: center;
 		display: inline-block;
 		font-family: 'bebas', Georgia, serif;
 		font-size: 0.3rem;
 		color: #fff;
+		cursor: pointer;
+		border:1px solid transparent;
+		-webkit-transition:all 0.1s ease;
+			-moz-transition:all 0.1s ease;
+			-o-transition:all 0.1s ease;
+			transition:all 0.1s ease;
+	}
+	.bottom-part ul.menu-fiche li:hover, .bottom-part ul.menu-fiche li.activeLiFiche{
+		color:#e94953;
+		border-bottom:1px solid #e94953;
+	}
+	/******* module vente album ***********/
+	.container-infos-rapper{
+		width: 1090px;
+		margin:0 auto;
+	}
+	#conteiner-module-albums.displayNonePage, #conteiner-popularite.displayNonePage{
+		display:none;
+	}
+	#conteiner-module-albums{
+		padding-bottom: 20px;
+		margin-top:20px;
+	}
+	#graph-albums{
+		padding-left: 85px;
+		padding-right: 85px;
+		padding-top:75px;
+		padding-bottom: 20px;
+		width:960px;
+		height:280px;
+	}
+	#graph-albums .g-axis-albums text, #graph-albums .g-axis-albums-x text, .g-rapper text{
+	  font-family: 'source_sans_probold';
+	  font: 15px sans-serif;
+	  font-weight: bold;
+	  fill: #f0f0f0;
+	  text-anchor: middle;
+	}
+	#graph-albums .g-rapper text, #graph-albums .g-rapper rect{
+		display:none;
+	}
+	#graph-albums .g-rapper text.activeDisplay, #graph-albums .g-rapper rect.activeDisplay{
+		display:block;
+	}
+	#graph-albums .g-axis-albums-x text{
+	  text-anchor: start;
+	}
+	#graph-albums .g-axis-albums path,
+	#graph-albums .g-axis-albums line,
+	#graph-albums .g-axis-albums-x path,
+	#graph-albums .g-axis-albums-x line {
+	  display: none;
+	}
+	#graph-albums .area {
+	    fill: rgba(98,42,45,.75);
+	}
+	#graph-albums .line {
+	    stroke: #cc424b;
+	    stroke-width: 1;
+	}
+	#conteiner-module-albums ul{
+		height:20px;
+		padding-top:10px;
+		padding-left: 56px;
+	}
+	#conteiner-module-albums ul li{
+		width:100px;
+		display:inline-block;
+		vertical-align: top;
+		font-size:14px;
+		font-family: 'source_sans_probold';
+		text-transform: uppercase;
+		color:#f0f0f0;
+	}
+	#conteiner-module-albums ul li.displayNoneNbAlbum{
+		display:none;
+	}
+	#conteiner-module-albums ul li em{
+		font-size:8px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	/********* container popularite **********/
+	#conteiner-popularite{
+		width:950px;
+		height:380px;
+		margin:0 auto;
+		background-color: green;
+	}
+	#conteiner-popularite ul{
+		text-align: center;
+	}
+	#conteiner-popularite ul li{
+		width:190px;
+		height:90px;
+		display:inline-block;
+		font-family: "bebas";
+		font-size: 50px;
+		color:white;
+	}
+	#conteiner-popularite ul li span{
+		font-size: 20px;
+		padding-left: 35px;
+		background-position: left center;
+		background-repeat: no-repeat;
+	}
+	#conteiner-popularite ul li span.likes{
+		color:#3b5998;
+		background-image:url('../img/fb.png');
+	}
+	#conteiner-popularite ul li span.twitter{
+		color:#4099ff;
+		background-image:url('../img/twitter.png');
+	}
+	#conteiner-popularite ul li span.abonne{
+		color:#e52d27;
+		background-image:url('../img/abonne.png');
+	}
+	#conteiner-popularite ul li span.instagram{
+		color:#956d53;
+		background-image:url('../img/instagram.png');
+	}
+	#conteiner-popularite div h3{
+		width:300px;
+		height:90px;
+		display:inline-block;
+		font-family: "bebas";
+		font-size: 75px;
+	}
+	#conteiner-popularite div h3 span{
+		font-size: 25px;
+	}
+	#module-fan{
+		text-align: center;
+	}
+	#conteiner-popularite .fan-rappeur{
+		color:#e94953;
+		text-align: center;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	#conteiner-popularite .total-fan{
+		color:white;
+		text-align: center;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	#conteiner-popularite .circle-fan-vs{
+		width:200px;
+		height:200px;
+		display: inline-block;
+		vertical-align: middle;
+		position:relative;
+	}
+	#conteiner-popularite .circle-fan-vs .circle-total{
+		width:184px;
+		height:184px;
+		border: 8px solid white;
+		-webkit-border-radius:200px;
+		   -moz-border-radius:200px;
+		        border-radius:200px;
+	}
+	#conteiner-popularite .circle-fan-vs #graph-fans{
+		width:200px;
+		height:200px;
+		position:absolute;
+		top:0;
+		left: 0;
 	}
 
 #carte path{
@@ -758,6 +931,7 @@ html, body{
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		transition:all .3s ease;
+		cursor: pointer;
 	}
 	.head-rapper:hover{
 		border:2px solid rgba(233,73,83,1);
@@ -774,6 +948,10 @@ html, body{
 	    -ms-filter: grayscale(100%);
 	    -o-filter: grayscale(100%);
 	    transition:all .3s ease;
+/*	    -webkit-background-size: 40px 40px;
+		-moz-background-size: 40px 40px;
+		-o-background-size: 40px 40px;
+		background-size: 40px 40px;*/
 	}
 	.head-rapper:hover div{
 		filter: grayscale(0%);
@@ -786,7 +964,7 @@ html, body{
 	#graph-hardcore{
 		padding-left:50px;
 		padding-right:120px;
-		padding-top:10px;
+		padding-top:1px;
 		margin-bottom:10px;
 	}
 	#graph-hardcore .g-axis text {
@@ -826,7 +1004,7 @@ html, body{
 	}
 	#graph-hardcore .graph-text{
 	    fill: #f0f0f0;
-	    font: 10px sans-serif;
+	    font: 11px sans-serif;
 	    text-anchor: middle;
 	    -webkit-transition:all .3s ease;
 		   -moz-transition:all .3s ease;
@@ -906,6 +1084,15 @@ html, body{
 		color:#f0f0f0;
 		font-size:0.2rem;
 	}
+	#rapper-card a{
+		display:inline-block;
+		vertical-align: baseline;
+		font-family: 'source_sans_regular';
+		font-size: 0.14rem;
+		color:#e94953;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
 	#rapper-card hr{
 		height:1px;
 		border:none;
@@ -921,15 +1108,7 @@ html, body{
 		color:#f0f0f0;
 		text-transform:none;
 	}
-	#rapper-card a{
-		display:inline-block;
-		vertical-align: baseline;
-		font-family: 'source_sans_regular';
-		font-size: 0.14rem;
-		color:#e94953;
-		text-transform: uppercase;
-		text-decoration: none;
-	}
+	
 	.clear{
 		clear:both;
 	}
