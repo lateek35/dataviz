@@ -283,7 +283,7 @@ $('body').on('click','.option',
 
     var r = 593;
     var p = Math.PI;
-    var intervalScale = 6.5;
+    var intervalScale = 6;
     var color = d3.scale.linear()
         .domain([-1, 0, 1])
         .range(["#515e44", "#4a4758", "#e84852"]);
@@ -416,6 +416,7 @@ d3.json('./js/data.json',function(data){
             /*------------------GESTION CARD---------------------*/
             $('#infos-comparaison').addClass('inactive-infos');
             $('#rapper-card-comparaison').addClass('active-card');
+            $('.head-card').css('background-image', 'url(./img/rapper-min/min-'+d.id+'.jpg)');
             d3.select('#rapper-card-comparaison>h4').text(d.blazz);
             d3.select('#rapper-card-comparaison>h3').text(d.v1);
             canvas.append('div')

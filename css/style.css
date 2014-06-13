@@ -431,14 +431,23 @@ html, body{
 	-o-background-size: auto,cover;
 	background-size: auto,cover;
 }
+#module-comparaison .module-title{
+	left : 50%;
+}
+#container-module-comparaison svg{
+	position: relative;
+	z-index: 99;
+}
 #container-module-comparaison .module-button{
 	width: 1.6rem;
 	position: absolute;
+	z-index: 200;
 	top: 50%;
 	left: -25px;
 }
 
 #btn-albums{
+	position: relative;
 	color:#367f2d;
 	border:1px solid #367f2d;
 }
@@ -460,9 +469,12 @@ html, body{
 #container-module-comparaison{
 	width: 1320px;
 	height: 600px;
-	position: relative;
+	position: absolute;
+	bottom: 130px;
 	display: block;
 	margin: 0 auto;
+	left: 50%;
+	margin-left: -660px;
 }
 [class*="line"]{
 	fill: none;
