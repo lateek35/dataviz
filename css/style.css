@@ -198,8 +198,6 @@ html, body{
 			filter: gray; /* IE6-9 */
 			-webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
 			position: relative;
-			margin-left: -87px;
-			left: 50%;
 		}
 		#list-rapper img:hover{
 			filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
@@ -559,12 +557,50 @@ html, body{
 	-o-background-size: auto,cover;
 	background-size: auto,cover;
 }
+#module-comparaison .module-title{
+	left : 50%;
+}
+#container-module-comparaison svg{
+	position: relative;
+	z-index: 99;
+}
+#container-module-comparaison .module-button{
+	width: 1.6rem;
+	position: absolute;
+	z-index: 200;
+	top: 50%;
+	left: -25px;
+}
+
+#btn-albums{
+	position: relative;
+	color:#367f2d;
+	border:1px solid #367f2d;
+}
+#btn-albums.active, #btn-albums:hover{
+	color:white;
+	background-color: #367f2d;
+}
+
+#btn-ventes{
+	color: #4880E6;
+	border:1px solid #4880E6;
+}
+#btn-ventes.active, #btn-ventes:hover{
+	color:white;
+	background-color: #4880E6;
+}
+
+
 #container-module-comparaison{
 	width: 1320px;
 	height: 600px;
-	position: relative;
+	position: absolute;
+	bottom: 130px;
 	display: block;
 	margin: 0 auto;
+	left: 50%;
+	margin-left: -660px;
 }
 [class*="line"]{
 	fill: none;
@@ -612,14 +648,123 @@ html, body{
 		height: 12px;
 	}
 
+
+
+
+
+
+
+#infos-comparaison{
+		position:absolute;
+		bottom: 0;
+		/*left:50%;
+		margin-left:-512px;*/
+		padding-bottom: 20px;
+		font-size: 0.16rem;
+		width: 100%;
+		-webkit-transition:all .3s ease;
+		   -moz-transition:all .3s ease;
+		     -o-transition:all .3s ease;
+		        transition:all .3s ease;
+	}
+	#infos-comparaison.inactive-infos{
+		bottom:-120px;
+	}
+	.infos-card{
+		width:980px;
+		position:relative;
+		left:50%;
+		margin-left:-490px;
+		-webkit-transition:all .3s ease;
+		   -moz-transition:all .3s ease;
+		     -o-transition:all .3s ease;
+		        transition:all .3s ease;
+	}
+	.infos-inactive{
+		left:-100%;
+	}
+	#infos-comparaison h3{
+		margin-bottom:10px;
+		color:#e94953;
+	}
+	#infos-comparaison p{
+		font-family: "source_sans_prolight";
+		color:#f0f0f0;
+		line-height:25px;
+	}
+
+
+	#rapper-card-comparaison{
+		position:absolute;
+		left: 50%;
+		margin-left: -106px;
+		width: 200px;
+		height: 160px;
+		bottom: -94px;
+		text-align: center;
+		-webkit-transition:all .3s ease;
+		   -moz-transition:all .3s ease;
+		     -o-transition:all .3s ease;
+		        transition:all .3s ease;
+	}
+
+	#rapper-card-comparaison .head-card{
+		height: 114px;
+		width: 114px;
+		margin-right: 10px;
+		border-radius: 64px;
+		-webkit-border-radius: 64px;
+		border: 2px solid #e94953;
+		background-color: black;
+		background-size: 114px 114px;
+		margin: 0 auto;
+	}
+	#rapper-card-comparaison h4{
+		font-family: "bebas";
+		text-transform: uppercase;
+		color:#f0f0f0;
+		font-size:0.2rem;
+	}
+	#rapper-card-comparaison hr{
+		height:1px;
+		border:none;
+		background-color: #f0f0f0;
+		margin:5px 0;
+	}
+	#rapper-card-comparaison h3{
+		font-size: 0.13rem;
+		text-transform: uppercase;
+	}
+	#rapper-card-comparaison h3 span{
+		font-family: 'source_sans_prolight';
+		color:#f0f0f0;
+		text-transform:none;
+	}
+	#rapper-card-comparaison a{
+		display:inline-block;
+		vertical-align: baseline;
+		font-family: 'source_sans_regular';
+		font-size: 0.14rem;
+		color:#e94953;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+
+
+
+
+
+
+
+
 /* Css module hardcore */
 #module-3{
 	position:relative;
 	background: url("../img/background-3.jpg") no-repeat center center;
-	-webkit-background-size: auto,cover;
-	-moz-background-size: auto,cover;
-	-o-background-size: auto,cover;
-	background-size: auto,cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 	#module-3 .module-title{
 		position:inherit;
