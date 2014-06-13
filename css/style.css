@@ -408,10 +408,10 @@ html, body{
 	  fill: #f0f0f0;
 	  text-anchor: middle;
 	}
-	.g-rapper text, .g-rapper rect{
+	#graph-albums .g-rapper text, #graph-albums .g-rapper rect{
 		display:none;
 	}
-	.g-rapper text.activeDisplay, .g-rapper rect.activeDisplay{
+	#graph-albums .g-rapper text.activeDisplay, #graph-albums .g-rapper rect.activeDisplay{
 		display:block;
 	}
 	#graph-albums .g-axis-albums-x text{
@@ -491,6 +491,53 @@ html, body{
 	#conteiner-popularite ul li span.instagram{
 		color:#956d53;
 		background-image:url('../img/instagram.png');
+	}
+	#conteiner-popularite div h3{
+		width:300px;
+		height:90px;
+		display:inline-block;
+		font-family: "bebas";
+		font-size: 75px;
+	}
+	#conteiner-popularite div h3 span{
+		font-size: 25px;
+	}
+	#module-fan{
+		text-align: center;
+	}
+	#conteiner-popularite .fan-rappeur{
+		color:#e94953;
+		text-align: center;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	#conteiner-popularite .total-fan{
+		color:white;
+		text-align: center;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	#conteiner-popularite .circle-fan-vs{
+		width:200px;
+		height:200px;
+		display: inline-block;
+		vertical-align: middle;
+		position:relative;
+	}
+	#conteiner-popularite .circle-fan-vs .circle-total{
+		width:184px;
+		height:184px;
+		border: 8px solid white;
+		-webkit-border-radius:200px;
+		   -moz-border-radius:200px;
+		        border-radius:200px;
+	}
+	#conteiner-popularite .circle-fan-vs #graph-fans{
+		width:200px;
+		height:200px;
+		position:absolute;
+		top:0;
+		left: 0;
 	}
 
 #carte path{
@@ -830,6 +877,7 @@ html, body{
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		transition:all .3s ease;
+		cursor: pointer;
 	}
 	.head-rapper:hover{
 		border:2px solid rgba(233,73,83,1);
@@ -846,6 +894,10 @@ html, body{
 	    -ms-filter: grayscale(100%);
 	    -o-filter: grayscale(100%);
 	    transition:all .3s ease;
+/*	    -webkit-background-size: 40px 40px;
+		-moz-background-size: 40px 40px;
+		-o-background-size: 40px 40px;
+		background-size: 40px 40px;*/
 	}
 	.head-rapper:hover div{
 		filter: grayscale(0%);

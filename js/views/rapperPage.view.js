@@ -186,6 +186,10 @@ define(['backbone','modelRapper','collectionRapper','text!templates/page-rappeur
       $("#conteiner-popularite").attr('class','');
       $('#album-vendu').attr('class','');
       $('#popularite').attr('class','activeLiFiche');
+      var idRapper = $(e.target).data('id');
+      idRapper=idRapper-1;
+
+      var svgFans = d3.select(this.el).select('#graph-fans');
     }
   });
   return RapperPage;
