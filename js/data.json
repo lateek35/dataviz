@@ -257,7 +257,7 @@
 		"firstname" : "Élie",
 		"lastname" : "Yaffa",
 		"birth" : "09/12/1976",
-		"birth_place" : "Boulogne-Billancourt",
+		"birth_place" : "Boulogne",
 		"begin_year" : 1994,
 		"official_website" : "unkut.fr",
 		"punchline" : "Tu veux t’asseoir sur le trône ? Faudra t’asseoir sur mes genoux",
@@ -283,15 +283,6 @@
 				},
 				{
 					"l_name" : "Universal"
-				},
-				{
-					"l_name" : "Because Music"
-				},
-				{
-					"l_name" : "45 Scientific"
-				},
-				{
-					"l_name" : "Barclay"
 				}
 			],
 		"surname" :
@@ -382,12 +373,6 @@
 				},
 				{
 					"l_name" : "No Time Records"
-				},
-				{
-					"l_name" : "Mercury Records"
-				},
-				{
-					"l_name" : "Def Jam"
 				}
 			],
 		"surname" :
@@ -672,12 +657,6 @@
 				},
 				{
 					"l_name" : "Capital Soul"
-				},
-				{
-					"l_name" : "Parlophone Records"
-				},
-				{
-					"l_name" : "Warner"
 				}
 			],
 		"dep" : 91,
@@ -884,9 +863,6 @@
 				},
 				{
 					"l_name" : "Desh Musique"
-				},
-				{
-					"l_name" : "Mezoued Redcord's"
 				}
 			],
 		"dep" : 95,
@@ -941,9 +917,6 @@
 			[
 				{
 					"l_name" : "Lucidream Republic"
-				},
-				{
-					"l_name" : "Def Jam Recordings / Universal Music Group"
 				}
 			],
 		"surname" :
@@ -1216,14 +1189,6 @@
 				},
 				{
 					"l_name" : "Desh Musique"
-				}
-				,
-				{
-					"l_name" : "East West"
-				}
-				,
-				{
-					"l_name" : "Mezoued"
 				}
 			],
 		"dep" : 95,
