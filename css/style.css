@@ -129,13 +129,15 @@ nav {
 		cursor: pointer;
 	}
 	#open{
-		background-color: #333;
 		padding: 10px;
 		position: fixed;
 		left: 30px;
 		top: 30px;
 		cursor: pointer;
 		z-index: 95;
+	}
+	#open svg {
+		fill : #e94953;
 	}
 #fullpage,#fullpage>div{
 	height: 100%;
