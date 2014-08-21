@@ -68,6 +68,27 @@ require([
   'viewRapperListInsults',
   'd3'
 ], function (slimScroll,fullpage, backbone, modelRapper, collectionRapper,viewRapperList,viewRapperPage,viewModuleComparaison,viewRapperListInsults,d3) {
+/*==========================================================================================*/
+/*--------------------------------------  MENU GESTION  ------------------------------------*/
+/*==========================================================================================*/
+$('#close').on('click', function(){
+  $(this).parent().css({
+    "left" : "-440px"
+  })
+  $('#fullpage').css({
+    "left" : "0"
+  });
+})
+$('#open').on('click', function(){
+  $('nav').css({
+    "left" : "0"
+  });
+  $('#fullpage').css({
+    "left" : "400px"
+  });
+
+})
+
 
 /*==========================================================================================*/
 /*--------------------------------------  GESTION MAP  -------------------------------------*/
@@ -217,8 +238,8 @@ $('#home>a').on('click',function(event){
       ':3' : 'module-hard',
       ':2/dep/:cp/:rapper' : 'rapperSolo',
       ':2/dep/:cp' : 'departement',
-      ':slide' : 'home',
-      ':slide/' : 'home'
+      ':1' : 'home',
+      '/' : 'home'
     }
   });
 

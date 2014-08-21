@@ -11,9 +11,140 @@ html, body{
 	font-family: 'source_sans_prosemibold', Georgia, serif;
 	font-size: 100px;
 	user-select :none;
+	background-color: #333;
 }
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 400px;
+	background-color: #333;
+	z-index: 99;
+	color: #e9e7e7;
+	font-family: 'bebas', Georgia, serif;
+	-webkit-transition:all 0.1s ease-out;
+	-moz-transition:all 0.1s ease-out;
+	-o-transition:all 0.1s ease-out;
+	transition:all 0.1s ease-out;
+}
+	nav h2{
+		letter-spacing: 0.05rem;
+		font-size: 0.4rem;
+		color: #e94953;
+		text-align: center;
+		padding: 100px 100px 0 100px;
+	}
+	nav ul {
+		font-size: 0.25rem;
+		letter-spacing: 0.01rem;
+	}
+	nav li{
+		padding: 15px 30px;
+		cursor: pointer;
+	}
+		nav li a:link {
+		  color: #e9e7e7; 
+		  text-decoration:none;
+		}
+		nav li a:visited {
+		  color: #e9e7e7;
+		  text-decoration:none;
+		}
+		nav li a:hover {
+		  color:#e9e7e7;
+		  text-decoration:none;
+		}
+		/* Déclaration pour IE qui assimile l'état :focus à l'état :active */
+		nav li a:focus, nav li a:active {
+		  text-decoration:none;
+		  color:#e9e7e7;
+		}
+	nav li:hover{
+		background-color: #733b3e;
+	}
+	nav hr{
+		border: 0;
+		height: 1px;
+		width: 3.5rem;
+		background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(255,255,255,0.75), rgba(0,0,0,0));
+		background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(255,255,255,0.75), rgba(0,0,0,0));
+		background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(255,255,255,0.75), rgba(0,0,0,0));
+		background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(255,255,255,0.75), rgba(0,0,0,0));
+	}
+	nav h4{
+		text-transform: uppercase;
+		font-family: 'source_sans_probold', Georgia, serif;
+		margin-top: 1rem;
+		font-size: 0.2rem;
+		color: #e94953;
+		padding: 15px 30px;
+
+	}
+	nav h4 a:link {
+		  color: #e94953; 
+		  text-decoration:none;
+		}
+		nav h4 a:visited {
+		  color: #e94953;
+		  text-decoration:none;
+		}
+		nav h4 a:hover {
+		  color:#e94953;
+		  text-decoration:underline;
+		}
+		/* Déclaration pour IE qui assimile l'état :focus à l'état :active */
+		nav h4 a:focus, nav h4 a:active {
+		  text-decoration:none;
+		  color:#e94953;
+		}
+	nav p{
+		padding: 5px 30px;
+		font-family: 'source_sans_prolight';
+		font-size: 0.16rem;
+	}
+		nav p a:link {
+		  color: #e9e7e7; 
+		  text-decoration:none;
+		}
+		nav p a:visited {
+		  color: #e9e7e7;
+		  text-decoration:none;
+		}
+		nav p a:hover {
+		  color:#e9e7e7;
+		  text-decoration:underline;
+		}
+		/* Déclaration pour IE qui assimile l'état :focus à l'état :active */
+		nav p a:focus, nav p a:active {
+		  text-decoration:none;
+		  color:#e9e7e7;
+		}
+	#close{
+		background-color: #333;
+		padding: 10px;
+		position: absolute;
+		right: -30px;
+		top: 125px;
+		cursor: pointer;
+	}
+	#open{
+		background-color: #333;
+		padding: 10px;
+		position: fixed;
+		left: 30px;
+		top: 30px;
+		cursor: pointer;
+		z-index: 95;
+	}
 #fullpage,#fullpage>div{
 	height: 100%;
+}
+#fullpage{
+	-webkit-transition:all 0.1s ease-out;
+	-moz-transition:all 0.1s ease-out;
+	-o-transition:all 0.1s ease-out;
+	transition:all 0.1s ease-out;
 }
 
 #home{
@@ -36,6 +167,7 @@ html, body{
 		left: 50%;
 		margin-left: -2.81rem;
 		margin-top: -0.9rem;
+
 	}
 	#home h2{
 		font-size: 0.20rem;
@@ -1189,3 +1321,26 @@ html, body{
 	.clear{
 		clear:both;
 	}
+
+/*------------utils---------------*/
+.rotate{
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+     
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+     
+    overflow:hidden;
+ 
+    }  
+ 
+.rotate:hover  
+{
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -o-transform:rotate(90deg);
+}
