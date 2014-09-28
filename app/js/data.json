@@ -1,0 +1,1211 @@
+[
+	{
+		"id" : 1,
+		"blazz" : "La Fouine",
+		"firstname" : "Laouni",
+		"lastname" : "Mouhid",
+		"birth" : "25/12/1981",
+		"birth_place" : "Trappes",
+		"begin_year" : 2001, 
+		"official_website" : "lafouine78.com",
+		"punchline" : "À trop haïr les noirs, Le Pen fait des nuits blanches",
+		"disque_or" : 4,
+		"disque_platine" : 2,
+		"double_disque_platine" : 0,
+		"disque_diamant" : 0,
+		"v1": 5,
+	    "v2": 380000,
+	    "v3": 5671312,
+	    "likes": 5605246,
+	    "followers": 1927121,
+	    "abonnes": 723021,
+	    "instagram": 175289,
+	    "total_fans": 34143634,
+	    "insults" : 32,
+	    "vocabulaire" : 1556,
+	    "biographie": "La Fouine, de son vrai nom Laouni Mouhid né le 25 décembre 1981 à Trappes (Yvelines), est un rappeur français d'origine marocaine. Il quitte l'école à 14 ans pour se consacrer à la musique. Plus tard, La Fouine a créé Banlieue Sale Music, son propre label. La Fouine a été élu le meilleur artiste français au MTV Europe Music Awards en 2011 et meilleur artiste masculin au Trace Urban Music Awards en 2013. En avril 2014, La Fouine a créé un autre label, Dynastie Music avec comme première signature Sindy.",
+		"label" :
+			[
+				{
+					"l_name" : "Banlieue Sale Music"
+				},
+				{
+					"l_name" : "Sony-BMG"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "Fouiny"
+				}
+			],
+		"dep" : 78,
+		"album" :
+			[
+				{
+					"a_name" : "Bourré au son",
+					"a_sells" : 30000,
+					"a_years" : 2005,
+					"a_traks" : 16
+				},
+				{
+					"a_name" : "Aller-Retour",
+					"a_sells" : 40000,
+					"a_years" : 2007,
+					"a_traks" : 17
+				},
+				{
+					"a_name" : "Mes Repères",
+					"a_sells" : 100000,
+					"a_years" : 2009,
+					"a_traks" : 19
+				},
+				{
+					"a_name" : "La Fouine vs Laouni",
+					"a_sells" : 150000,
+					"a_years" : 2011,
+					"a_traks" : 25
+				},
+				{
+					"a_name" : "Drôle de parcours",
+					"a_sells" : 86000,
+					"a_years" : 2013,
+					"a_traks" : 16
+				}
+			]
+	},
+	{
+		"id" : 2,
+		"blazz" : "Maitre Gims",
+		"firstname" : "Gandhi",
+		"lastname" : "Djuna",
+		"birth" : "06/05/1986",
+		"birth_place" : "Kinshasa",
+		"begin_year" : 2002,
+		"official_website" : "maitre-gims.fr",
+		"punchline" : "J’ai mangé trop de problèmes, donc j’en chie des solutions",
+		"disque_or" : 1,
+		"disque_platine" : 1,
+		"double_disque_platine" : 1,
+		"disque_diamant" : 1,
+		"v1": 3,
+	    "v2": 2050000,
+	    "v3": 4936127,
+	    "likes": 3991737,
+	    "followers": 695352,
+	    "abonnes": 249038,
+	    "instagram": 0,
+	    "total_fans": 34143634,
+	    "insults" : 23,
+	    "vocabulaire" : 1296,
+	    "biographie": "Maître Gims, de son vrai nom Gandhi Djuna, est un chanteur, rappeur et compositeur français né le 5 mai 1986 à Kinshasa au Zaïre (depuis République démocratique du Congo). Il est issu d'une famille de musiciens, son père était le chanteur du groupe Papa Wemba et des frères rappeurs. Membre du groupe Sexion d'Assaut, il sort son premier album solo Subliminal en 2013. L'album connait un succès commercial avec plus de 600 000 exemplaires vendus. En 2013, Maître Gims lance une nouvelle marque de vêtements : Vortex. Cette marque fit son apparition peu après la sortie du clip de J'me tire dans lequel Maître Gims apparaît pour la première fois vêtu d'un t-shirt Vortex.",
+		"label" :
+			[
+				{
+					"l_name" : "Wati B"
+				},
+				{
+					"l_name" : "M.M.C"
+				}
+			],
+		"dep" : 75,
+		"album" :
+			[
+				{
+					"a_name" : "L'École des points vitaux",
+					"a_sells" : 520000,
+					"a_years" : 2010,
+					"a_traks" : 16
+				},
+				{
+					"a_name" : "L'Apogée",
+					"a_sells" : 820000,
+					"a_years" : 2012,
+					"a_traks" : 17
+				},
+				{
+					"a_name" : "Subliminal",
+					"a_sells" : 710000,
+					"a_years" : 2013,
+					"a_traks" : 24
+				}
+			]
+	},
+	{
+		"id" : 3,
+		"blazz" : "NTM",
+		"firstname" : "JoeyStarr,",
+		"lastname" : "Kool Shen",
+		"birth" : "1988",
+		"birth_place" : "Seine-Saint-Denis",
+		"begin_year" : 1988,
+		"official_website" : "supreme-ntm.com",
+		"punchline" : "Au dessus des lois je bâtirais mon toit",
+		"disque_or" : 4,
+		"disque_platine" : 2,
+		"double_disque_platine" : 1,
+		"disque_diamant" : 0,
+		"v1": 4,
+	    "v2": 1500000,
+	    "v3": 632896,
+	    "likes": 621535,
+	    "followers": 10088,
+	    "abonnes": 1273,
+	    "instagram": 0,
+	    "total_fans": 34143634,
+	    "insults" : 30,
+	    "vocabulaire" : 1357,
+	    "biographie": "Suprême NTM ou simplement NTM est un groupe de Hip-hop et de Rap français. Originaire du département de la Seine-Saint-Denis, composé principalement de deux rappeurs, JoeyStarr (Didier Morville) et Kool Shen (Bruno Lopes), et qui a marqué les débuts du rap des années 1990 en France. Formé en 1988 et dissous en 1998, le groupe se reforme en 2008 sans annoncer de nouvel album et pour une tournée nationale . Les deux rappeurs JoeyStarr et Kool Shen revendiquent leurs origines banlieusardes du département 93, c'est-à-dire, de jeunes ayant vécu et survécu dans un milieu défavorisé. Ainsi, le groupe s'appelle à ses débuts : 93 NTM, identité représentative de leurs origines. Si NTM est connu avant 1998 pour son hostilité à l'égard de la police, des paroles virulentes, et une bataille juridique avec les autorités françaises, il est aussi connu pour ses paroles ouvertement critiques sur le racisme et les inégalités de classe dans la société française, et qui portent un constat d'urgence sur l'état des banlieues. Dans ce groupe voulu « réaliste » ou « authentique » par ses auteurs, le contraste entre les styles est marqué : alors que JoeyStarr a un flow relativement lent, des paroles agressives, des textes plutôt engagés, une voix profonde, résonnante et éraillée, Kool Shen a un flow plus lyrique, des paroles plus mélancoliques et poétiques. Leur style musical évolue entre celui d'un rap hardcore et celui d'un rap conscient tout en passant par celui d'un rap festif comme dans le single La fièvre ou Pass pass le oinj, qui a contribué à faire connaître le groupe. Certains albums ont clairement des influences funk, soul et reggae. Au total, six albums ont été publiés par Sony Music Entertainment sous le label Epic Records. Leur dernier album Suprême NTM, qui contient le morceau Laisse pas traîner ton fils a connu un certain succès commercial sur 2 500 000 disques vendus jusqu'à aujourd'hui. En 1998, le groupe sort son dernier album avec des airs originaux sous le label NTM, alors que JoeyStarr et Kool Shen ont lancé chacun leurs propres labels, faisant la promotion de nouveaux groupes et créant de nouvelles branches dans d'autres domaines tels que l'industrie du vêtement (2 High est la marque de Kool Shen, Com8 celle de JoeyStarr). Alors que le groupe existait encore officiellement, la notoriété de son nom a été utilisée en 2001, pour promouvoir un « duel » mettant en scène les deux labels des artistes l'un contre l'autre. Malgré la déclaration de Kool Shen en 2004 : « on en a fini avec NTM en 98 », le groupe se reforme le temps d'un succès d'une tournée nationale en 2008. À Bercy, les trois premiers concerts tournent à guichets fermés, confirmant le succès de retrouvailles attendues par les fans.",
+		"label" :
+			[
+				{
+					"l_name" : "Epic (Sony-BMG)"
+				}
+			],
+		"dep" : 93,
+		"album" :
+			[
+				{
+					"a_name" : "Authentik",
+					"a_sells" : 100000,
+					"a_years" : 1991,
+					"a_traks" : 15
+				},
+				{
+					"a_name" : "1993… J'appuie sur la gâchette",
+					"a_sells" : 100000,
+					"a_years" : 1993,
+					"a_traks" : 17
+				},
+				{
+					"a_name" : "Subliminal",
+					"a_sells" : 500000,
+					"a_years" : 1995,
+					"a_traks" : 19
+				},
+				{
+					"a_name" : "Subliminal",
+					"a_sells" : 800000,
+					"a_years" : 1998,
+					"a_traks" : 16
+				}
+			]
+	},
+	{
+		"id" : 4,
+		"blazz" : "Black M",
+		"firstname" : "Alpha",
+		"lastname" : "Diallo",
+		"birth" : "27/12/1984",
+		"birth_place" : "Paris",
+		"begin_year" : 2002,
+		"official_website" : "blackmesrimes.com",
+		"punchline" : "Evidemment qu’on fait du cinéma, ramène Di Cap’, je l’handicape",
+		"disque_or" : 3,
+		"disque_platine" : 2,
+		"double_disque_platine" : 2,
+		"disque_diamant" : 1,
+		"v1": 3,
+	    "v2": 1390000,
+	    "v3": 1189169,
+	    "likes": 906335,
+	    "followers": 281180,
+	    "abonnes": 0,
+	    "instagram": 1654,
+	    "total_fans": 34143634,
+	    "insults" : 19,
+	    "vocabulaire" : 1351,
+	    "biographie": "Black M ou Black Mesrimes, de son vrai nom Alpha Diallo est un rappeur français né le 27 décembre 1984. Il est membre de Sexion d'Assaut. Il réside dans le 13e arrondissement de Paris ; il a cependant grandi rue du Bac. Il est marié et a un enfant. Le 31 mars 2014, il sort son album solo intitulé Les Yeux plus gros que le monde.",
+		"label" :
+			[
+				{
+					"l_name" : "Wati B"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "Black Shady"
+				}
+			],
+		"dep" : 75,
+		"album" :
+			[
+				{
+					"a_name" : "L'École des points vitaux",
+					"a_sells" : 520000,
+					"a_years" : 2010,
+					"a_traks" : 16
+				},
+				{
+					"a_name" : "L'Apogée",
+					"a_sells" : 820000,
+					"a_years" : 2012,
+					"a_traks" : 17
+				},
+				{
+					"a_name" : "Les Yeux plus gros que le monde",
+					"a_sells" : 50000,
+					"a_years" : 2014,
+					"a_traks" : 19
+				}
+			]
+	},
+	{
+		"id" : 5,
+		"blazz" : "Booba",
+		"firstname" : "Élie",
+		"lastname" : "Yaffa",
+		"birth" : "09/12/1976",
+		"birth_place" : "Boulogne",
+		"begin_year" : 1994,
+		"official_website" : "unkut.fr",
+		"punchline" : "Tu veux t’asseoir sur le trône ? Faudra t’asseoir sur mes genoux",
+		"disque_or" : 6,
+		"disque_platine" : 3,
+		"double_disque_platine" : 1,
+		"disque_diamant" : 0,
+		"v1": 6,
+	    "v2": 1150000,
+	    "v3": 5661759,
+	    "likes": 3842416,
+	    "followers": 1607187,
+	    "abonnes": 6567,
+	    "instagram": 205589,
+	    "total_fans": 34143634,
+	    "insults" : 70,
+	    "vocabulaire" : 1375,
+	    "biographie": "Booba, de son vrai nom Élie Yaffa, est un rappeur français né le 9 décembre 1976 à Boulogne-Billancourt. Il est membre du 92I, un collectif de rap français dont il a été le fondateur, regroupant des rappeurs issus des Hauts-de-Seine, Mala et Bram's (ce dernier est mort le 21 mai 2011). Il a créé sa propre marque de vêtements streetwear nommée Ünkut. Après 20 ans de carrière, Booba reste un des plus célèbres rappeurs francophones.  Il est le premier rappeur solo français à remplir le Palais omnisports de Paris-Bercy sans aucune aide de la part des médias. Alors second artiste rap à remplir Bercy après NTM, il s'est d'abord fait connaître grâce au groupe Lunatic, avec son compère Ali originaire d'Issy-les-Moulineaux, où le succès vient à la fois de la critique et du public. L'album Mauvais œil entrera dans l'histoire du rap français en obtenant un disque d'or. Il s'agit en effet du premier album en indépendant à obtenir une telle récompense. Booba a déjà vendu plus d'un million d'albums et en a produit six.  Le premier, nommé Temps mort, voit le jour en 2002 ; en 2004 sort la mixtape, Autopsie Vol. 1. Un cinquième album, nommé Lunatic, est sorti le 22 novembre 2010, le titre reprend le nom de l'ancien groupe de Booba. L'album a été certifié disque d'or dès la première semaine et est aujourd'hui double-disque de platine. Le 26 novembre 2012, Booba sort son sixième album nommé Futur qui deviendra disque d'or en une seule semaine en se vendant à plus de 51 000 exemplaires ce qui est le meilleur démarrage de vente de toute la carrière du rappeur. Il a battu également le record français d'albums numériques vendus, toutes catégories musicales confondues, sur iTunes avec plus de 17 000 exemplaires en une seule semaine, détrôné aujourd'hui par les Daft Punk.",
+		"label" :
+			[
+				{
+					"l_name" : "Tallac"
+				},
+				{
+					"l_name" : "Universal"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "B2oba"
+				},
+				{
+					"s_name" : "Kopp"
+				},
+				{
+					"s_name" : "Le Duc de Boulogne"
+				},
+				{
+					"s_name" : "Saddam Hauts-de-Seine"
+				}
+			],
+		"dep" : 92,
+		"album" :
+			[
+				{
+					"a_name" : "Temps mort",
+					"a_sells" : 160000,
+					"a_years" : 2002,
+					"a_traks" : 14
+				},
+				{
+					"a_name" : "Panthéon",
+					"a_sells" : 250000,
+					"a_years" : 2004,
+					"a_traks" : 13
+				},
+				{
+					"a_name" : "Ouest Side",
+					"a_sells" : 300000,
+					"a_years" : 2006,
+					"a_traks" : 16
+				},
+				{
+					"a_name" : "0.9",
+					"a_sells" : 100000,
+					"a_years" : 2008,
+					"a_traks" : 15
+				},
+				{
+					"a_name" : "Lunatic",
+					"a_sells" : 200000,
+					"a_years" : 2010,
+					"a_traks" : 18
+				},
+				{
+					"a_name" : "Futur",
+					"a_sells" : 180000,
+					"a_years" : 2012,
+					"a_traks" : 16
+				}
+			]
+	},
+	{
+		"id" : 6,
+		"blazz" : "Mister You",
+		"firstname" : "Younes",
+		"lastname" : "Latifi",
+		"birth" : "05/02/1984",
+		"birth_place" : "Paris",
+		"begin_year" : 2004,
+		"official_website" : "misteryou.fr",
+		"punchline" : "Je suis comme un café noir, souvent dans une tasse blanche",
+		"disque_or" : 1,
+		"disque_platine" : 1,
+		"double_disque_platine" : 0,
+		"disque_diamant" : 0,
+		"v1": 2,
+	    "v2": 116000,
+	    "v3": 3012569,
+	    "likes": 2873377,
+	    "followers": 139192,
+	    "abonnes": 0,
+	    "instagram": 0,
+	    "total_fans": 34143634,
+	    "insults" : 44,
+	    "vocabulaire" : 1521,
+	    "biographie": "Mister You, de son vrai nom Younes Latifi, né le 5 février 1984 à Paris est un rappeur français d'origine marocaine. Il devient célèbre grâce à sa cavale qui a été un tremplin pour sa carrière.",
+		"label" :
+			[
+				{
+					"l_name" : "STAIVEMUSIC"
+				},
+				{
+					"l_name" : "No Time Records"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "Yougataga"
+				}
+			],
+		"dep" : 75,
+		"album" :
+			[
+				{
+					"a_name" : "Dans ma grotte",
+					"a_sells" : 100000,
+					"a_years" : 2011,
+					"a_traks" : 18
+				},
+				{
+					"a_name" : "Le Prince",
+					"a_sells" : 16000,
+					"a_years" : 2014,
+					"a_traks" : 15
+				}
+			]
+	},
+	{
+		"id" : 7,
+		"blazz" : "Rohff",
+		"firstname" : "Housni",
+		"lastname" : "Mkouboi",
+		"birth" : "15/12/1977",
+		"birth_place" : "Antananarivo",
+		"begin_year" : 1994,
+		"official_website" : "roh2f.com",
+		"punchline" : "Y’a pas de sentiments, que des centimètres",
+		"disque_or" : 6,
+		"disque_platine" : 3,
+		"double_disque_platine" : 0,
+		"disque_diamant" : 0,
+		"v1": 7,
+	    "v2": 1238000,
+	    "v3": 2476692,
+	    "likes": 2097133,
+	    "followers": 299317,
+	    "abonnes": 36184,
+	    "instagram": 44058,
+	    "total_fans": 34143634,
+	    "insults" : 39,
+	    "vocabulaire" : 1628,
+	    "biographie": "Rohff, de son vrai nom Housni Mkouboi, est un rappeur français d'origine comorienne né le 15 décembre 1977 à Antananarivo, Madagascar. En 20 ans de carrière, Rohff a produit sept albums, pour un total de 1 400 000 albums vendus. Considéré comme étant l'un des plus grands rappeur français de sa génération, Rohff est le rappeur français qui a vendu le plus d'album solo parmi les rappeur toujours en activité. Ex-membre de la Mafia K'1 Fry, il sort son premier album intitulé Le Code De L'Honneur en décembre 1999. Cet album restera un classique du rap français avec notamment le titre Génération sacrifiée. Son second album sorti en 2001, nommé La Vie Avant La Mort, se vendra à plus de 300 000 exemplaires, et donc certifié disque de platine : c'est l'album le plus vendu de sa carrière. En 2008, Rohff sort son cinquième album, Le Code De L'Horreur. Dès la première semaine, l'album est certifié disque d'or avec 58 400 exemplaires écroulés. Après un sixième album nommé La Cuenta, qui sera vendu à seulement 80 000 exemplaires, Rohff sort un septième album en 2013, P.D.R.G., qu'il considère comme étant le meilleur album de sa carrière. Son frère, Ikbal Vockal, est membre du groupe TLF avec Alain 2 L'ombre. Rohff a créé en 2007 sa propre marque de vêtement nommée Distinct qu'il relance en 2013 afin de conquérir le marché.",
+		"label" :
+			[
+				{
+					"l_name" : "Warner"
+				},
+				{
+					"l_name" : "Foolek Empire"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "Roh2f"
+				},
+				{
+					"s_name" : "Soldat Comorien"
+				},
+				{
+					"s_name" : "Roh2Guerre"
+				},
+				{
+					"s_name" : "El Padre"
+				}
+			],
+		"dep" : 94,
+		"album" :
+			[
+				{
+					"a_name" : "Le Code De l'Honneur",
+					"a_sells" : 65000,
+					"a_years" : 1999,
+					"a_traks" : 14
+				},
+				{
+					"a_name" : "La vie avant la mort",
+					"a_sells" : 300000,
+					"a_years" : 2001,
+					"a_traks" : 17
+				},
+				{
+					"a_name" : "La fierté des nôtres",
+					"a_sells" : 275000,
+					"a_years" : 2004,
+					"a_traks" : 30
+				},
+				{
+					"a_name" : "Au-delà de mes limites",
+					"a_sells" : 220000,
+					"a_years" : 2005,
+					"a_traks" : 31
+				},
+				{
+					"a_name" : "Le code de l'horreur",
+					"a_sells" : 250000,
+					"a_years" : 2008,
+					"a_traks" : 17
+				},
+				{
+					"a_name" : "La cuenta",
+					"a_sells" : 80000,
+					"a_years" : 2010,
+					"a_traks" : 18
+				},
+				{
+					"a_name" : "P.D.R.G.",
+					"a_sells" : 100000,
+					"a_years" : 2013,
+					"a_traks" : 26
+				}
+			]
+	},
+	{
+		"id" : 8,
+		"blazz" : "Youssoupha",
+		"firstname" : "Youssoupha",
+		"lastname" : "Mabiki",
+		"birth" : "29/08/1979",
+		"birth_place" : "Kinshasa",
+		"begin_year" : 1999,
+		"official_website" : "youssoupha.com",
+		"punchline" : "Comment veux-tu que je mène une vie de rêve alors que je ne dors plus ?",
+		"disque_or" : 3,
+		"disque_platine" : 1,
+		"double_disque_platine" : 0,
+		"disque_diamant" : 0,
+		"v1": 3,
+	    "v2": 241573,
+	    "v3": 1652844,
+	    "likes": 1649581,
+	    "followers": 0,
+	    "abonnes": 3263,
+	    "instagram": 0,
+	    "total_fans": 34143634,
+	    "insults" : 26,
+	    "vocabulaire" : 1597,
+	    "biographie": "Youssoupha, de son vrai nom Youssoupha Mabiki, né le 29 août 1979 à Kinshasa (Zaïre), est un rappeur français d'origine congolaise.",
+		"label" :
+			[
+				{
+					"l_name" : "Bomayé Musik"
+				},
+				{
+					"l_name" : "EMI"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "Youss"
+				},
+				{
+					"s_name" : "Prims Parolier"
+				},
+				{
+					"s_name" : "Le Lyriciste Bantou"
+				}
+			],
+		"dep" : 78,
+		"album" :
+			[
+				{
+					"a_name" : "À chaque frère",
+					"a_sells" : 50000,
+					"a_years" : 2007,
+					"a_traks" : 16
+				},
+				{
+					"a_name" : "Sur les chemins du retour",
+					"a_sells" : 50000,
+					"a_years" : 2009,
+					"a_traks" : 13
+				},
+				{
+					"a_name" : "Noir D****",
+					"a_sells" : 141573,
+					"a_years" : 2012,
+					"a_traks" : 17
+				}
+			]
+	},
+	{
+		"id" : 9,
+		"blazz" : "Sefyu",
+		"firstname" : "Youssef",
+		"lastname" : "Soukouna",
+		"birth" : "20/04/1981",
+		"birth_place" : "Paris",
+		"begin_year" : 2004,
+		"punchline" : "Autant crever les yeux ouverts que vivre les yeux fermés",
+		"disque_or" : 2,
+		"disque_platine" : 0,
+		"double_disque_platine" : 0,
+		"disque_diamant" : 0,
+		"v1": 3,
+	    "v2": 200700,
+	    "v3": 1522761,
+	    "likes": 1469262,
+	    "followers": 52931,
+	    "abonnes": 568,
+	    "instagram": 0,
+	    "total_fans": 34143634,
+	    "insults" : 37,
+	    "vocabulaire" : 1729,
+	    "biographie": "Sefyu, de son vrai nom Youssef Soukouna, est un rappeur français d'origine sénégalaise né le 20 avril 1981 à Paris. Résidant à Aulnay-sous-Bois (« cité de l'Europe »), en Seine-Saint-Denis, Sefyu fait carrière dans le milieu du hip-hop français au début des années 2000 après avoir tenté une carrière de footballeur.",
+		"label" :
+			[
+				{
+					"l_name" : "G-Huit"
+				},
+				{
+					"l_name" : "Sefyuncc"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "Molotov"
+				}
+			],
+		"dep" : 93,
+		"album" :
+			[
+				{
+					"a_name" : "Qui suis-je?",
+					"a_sells" : 75000,
+					"a_years" : 2006,
+					"a_traks" : 18
+				},
+				{
+					"a_name" : "Suis-je le gardien de mon frère?",
+					"a_sells" : 95700,
+					"a_years" : 2008,
+					"a_traks" : 17
+				},
+				{
+					"a_name" : "Oui je le suis",
+					"a_sells" : 30000,
+					"a_years" : 2011,
+					"a_traks" : 27
+				}
+			]
+	},
+	{
+		"id" : 10,
+		"blazz" : "Diam's",
+		"firstname" : "Mélanie",
+		"lastname" : "Georgiades",
+		"birth" : "25/07/1980",
+		"birth_place" : "Nicosie",
+		"begin_year" : 1996,
+		"official_website" : "diams-lesite.com",
+		"punchline" : "Vu que Mickey n’a plus de couilles, Minnie c’est Amy Winehouse",
+		"disque_or" : 3,
+		"disque_platine" : 2,
+		"double_disque_platine" : 2,
+		"disque_diamant" : 1,
+		"v1": 4,
+	    "v2": 1283900,
+	    "v3": 878358,
+	    "likes": 840526,
+	    "followers": 36006,
+	    "abonnes": 1826,
+	    "instagram": 0,
+	    "total_fans": 34143634,
+	    "insults" : 26,
+	    "vocabulaire" : 1758,
+	    "biographie": "Diam's, de son vrai nom Mélanie Georgiades, est une ancienne rappeuse française née à Nicosie (Chypre) le 25 juillet 1980. Le 30 septembre 2012, elle annonce mettre un terme à sa carrière.",
+		"label" :
+			[
+				{
+					"l_name" : "Hostile Records"
+				},
+				{
+					"l_name" : "Capital Soul"
+				}
+			],
+		"dep" : 91,
+		"album" :
+			[
+				{
+					"a_name" : "Premier Mandat",
+					"a_sells" : 8000,
+					"a_years" : 1999,
+					"a_traks" : 18
+				},
+				{
+					"a_name" : "Brut de femme",
+					"a_sells" : 179200,
+					"a_years" : 2003,
+					"a_traks" : 15
+				},
+				{
+					"a_name" : "Dans ma bulle",
+					"a_sells" : 1000000,
+					"a_years" : 2006,
+					"a_traks" : 15
+				},
+				{
+					"a_name" : "SOS",
+					"a_sells" : 250000,
+					"a_years" : 2009,
+					"a_traks" : 16
+				}
+			]
+	},
+	{
+		"id" : 11,
+		"blazz" : "Kaaris",
+		"firstname" : "Gnakouri",
+		"lastname" : "Okou",
+		"birth" : "30/01/1980",
+		"birth_place" : "Abidjan",
+		"begin_year" : 1999,
+		"official_website" : "kaaris.com",
+		"punchline" : "Je n’ai confiance qu’en mon Desert Eagle et en Zizou dans les arrêts d’jeu",
+		"disque_or" : 1,
+		"disque_platine" : 0,
+		"double_disque_platine" : 0,
+		"disque_diamant" : 0,
+		"v1": 2,
+	    "v2": 60000,
+	    "v3": 1101845,
+	    "likes": 834134,
+	    "followers": 187356,
+	    "abonnes": 11224,
+	    "instagram": 69131,
+	    "total_fans": 34143634,
+	    "insults" : 119,
+	    "vocabulaire" : 1374,
+	    "biographie": "Kaaris, de son vrai nom Gnakouri Okou, est un rappeur français originaire de Sevran né le 30 janvier 1980 à Abidjan, Côte d'Ivoire. Actif dans le rap depuis 1999, il connait un parcours tumultueux avant de « percer » en 2012 à la suite d'un featuring nommé Kalash, avec le rappeur Booba. Il sort son premier album intitulé Or Noir le 21 octobre 2013, en ayant auparavant réalisé deux projets solos de moindre envergure. Ce premier album sera certifié disque d'or quelques mois après sa sortie.",
+		"label" :
+			[
+				{
+					"l_name" : "Therapy Music"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "K Double A"
+				},
+				{
+					"s_name" : "Riss-Ka"
+				},
+				{
+					"s_name" : "Houdini"
+				}
+			],
+		"dep" : 93,
+		"album" :
+			[
+				{
+					"a_name" : "Or Noir",
+					"a_sells" : 50000,
+					"a_years" : 2013,
+					"a_traks" : 18
+				},
+				{
+					"a_name" : "Or Noir Part 2",
+					"a_sells" : 10000,
+					"a_years" : 2014,
+					"a_traks" : 28
+				}
+			]
+	},
+	{
+		"id" : 12,
+		"blazz" : "Kery James",
+		"firstname" : "Alix",
+		"lastname" : "Mathurin",
+		"birth" : "28/12/1977",
+		"birth_place" : "Abymes",
+		"begin_year" : 1990,
+		"official_website" : "keryjames.com",
+		"punchline" : "Le savoir est une arme, mais personne braque pour acheter des livres",
+		"disque_or" : 3,
+		"disque_platine" : 2,
+		"double_disque_platine" : 0,
+		"disque_diamant" : 0,
+		"v1": 7,
+	    "v2": 455880,
+	    "v3": 877750,
+	    "likes": 759452,
+	    "followers": 109998,
+	    "abonnes": 5424,
+	    "instagram": 2876,
+	    "total_fans": 34143634,
+	    "insults" : 0,
+	    "vocabulaire" : 1620,
+	    "biographie": "Kery James, de son vrai nom Alix Mathurin ou Ali Mathurin, né le 28 décembre 1977, aux Abymes en Guadeloupe, est un rappeur français. Débutant sa carrière musicale dès le début de son adolescence, il fait partie du groupe Ideal J sous le nom de Daddy Kery. Il quitte ensuite ce groupe, se convertit à l'islam1 avant de se lancer dans une carrière solo sous son nom actuel. Son œuvre, qualifié de rap conscient, évoque la vie en banlieue et les inégalités dans la France d'aujourd'hui. Kery James fait également partie du collectif Mafia K'1 Fry.",
+		"label" :
+			[
+				{
+					"l_name" : "AZ"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "Le rappeur repenti"
+				}
+			],
+		"dep" : 94,
+		"album" :
+			[
+				{
+					"a_name" : "Si c'était à refaire",
+					"a_sells" : 120000,
+					"a_years" : 2001,
+					"a_traks" : 12
+				},
+				{
+					"a_name" : "Savoir et vivre ensemble",
+					"a_sells" : 30000,
+					"a_years" : 2004,
+					"a_traks" : 21
+				},
+				{
+					"a_name" : "Ma vérité",
+					"a_sells" : 30000,
+					"a_years" : 2005,
+					"a_traks" : 14
+				},
+				{
+					"a_name" : "À l'ombre du show business",
+					"a_sells" : 150000,
+					"a_years" : 2008,
+					"a_traks" : 17
+				},
+				{
+					"a_name" : "Réel",
+					"a_sells" : 80000,
+					"a_years" : 2009,
+					"a_traks" : 13
+				},
+				{
+					"a_name" : "92-2012",
+					"a_sells" : 5880,
+					"a_years" : 2012,
+					"a_traks" : 14
+				},
+				{
+					"a_name" : "Dernier MC",
+					"a_sells" : 40000,
+					"a_years" : 2013,
+					"a_traks" : 19
+				}
+			]
+	},
+	{
+		"id" : 13,
+		"blazz" : "Sniper",
+		"firstname" : "Tunisiano, Aketo,",
+		"lastname" : "Blacko",
+		"birth" : "1997",
+		"birth_place" : "Deuil-la-Barre",
+		"begin_year" : 1997,
+		"punchline" : "Si notre planète se réchauffe, c’est qu’on se rapproche de l’enfer",
+		"disque_or" : 3,
+		"disque_platine" : 3,
+		"double_disque_platine" : 1,
+		"disque_diamant" : 0,
+		"v1": 3,
+	    "v2": 956800,
+	    "v3": 578544,
+	    "likes": 508079,
+	    "followers": 69192,
+	    "abonnes": 1273,
+	    "instagram": 0,
+	    "total_fans": 34143634,
+	    "insults" : 38,
+	    "vocabulaire" : 1792,
+	    "biographie": "Sniper est un groupe de rap français originaire de Deuil-la-Barre (Val-d'Oise). Il est composé de Tunisiano (Bachir Baccour), d'Aketo (Ryad Selmi) et anciennement de Blacko (Karl Appela), qui les quitta en 2007. Dj Boudj a fait partie des deux premiers albums du groupe, mais le quittera par la suite. Le 18 mars 2011, ils publient un extrait de leur nouvel album intitulé Blues de la tess, marquant leur retour sur la scène française.",
+		"label" :
+			[
+				{
+					"l_name" : "EMI"
+				},
+				{
+					"l_name" : "Desh Musique"
+				}
+			],
+		"dep" : 95,
+		"album" :
+			[
+				{
+					"a_name" : "Du rire aux larmes",
+					"a_sells" : 200000,
+					"a_years" : 2001,
+					"a_traks" : 19
+				},
+				{
+					"a_name" : "Gravé dans la roche",
+					"a_sells" : 600000,
+					"a_years" : 2003,
+					"a_traks" : 16
+				},
+				{
+					"a_name" : "Trait pour trait",
+					"a_sells" : 156800,
+					"a_years" : 2006,
+					"a_traks" : 15
+				}
+			]
+	},
+	{
+		"id" : 14,
+		"blazz" : "Disiz",
+		"firstname" : "Serigne Mbaye",
+		"lastname" : "Gueye",
+		"birth" : "22/03/1978",
+		"birth_place" : "Amiens",
+		"begin_year" : 1995,
+		"official_website" : "disiz.fr",
+		"punchline" : "Je prends ta carrière par derrière et encore, avec une demie molle",
+		"disque_or" : 1,
+		"disque_platine" : 0,
+		"double_disque_platine" : 0,
+		"disque_diamant" : 0,
+		"v1": 8,
+	    "v2": 283500,
+	    "v3": 420584,
+	    "likes": 300708,
+	    "followers": 98010,
+	    "abonnes": 1949,
+	    "instagram": 19917,
+	    "total_fans": 34143634,
+	    "insults" : 56,
+	    "vocabulaire" : 1566,
+	    "biographie": "Disiz, né le 22 mars 1978 à Amiens (Somme), de son vrai nom Serigne Mbaye Gueye1, est un rappeur et un écrivain français.",
+		"label" :
+			[
+				{
+					"l_name" : "Lucidream Republic"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "Disiz la Peste"
+				},
+				{
+					"s_name" : "Disiz Peter Punk"
+				}
+			],
+		"dep" : 91,
+		"album" :
+			[
+				{
+					"a_name" : "Le poisson rouge",
+					"a_sells" : 213000,
+					"a_years" : 2000,
+					"a_traks" : 20
+				},
+				{
+					"a_name" : "Jeu de société",
+					"a_sells" : 10000,
+					"a_years" : 2003,
+					"a_traks" : 19
+				},
+				{
+					"a_name" : "Les Histoires extraordinaires d'un jeune de banlieue",
+					"a_sells" : 28000,
+					"a_years" : 2006,
+					"a_traks" : 17
+				},
+				{
+					"a_name" : "Disiz the end",
+					"a_sells" : 6000,
+					"a_years" : 2009,
+					"a_traks" : 15
+				},
+				{
+					"a_name" : "Dans le ventre du crocodile",
+					"a_sells" : 500,
+					"a_years" : 2010,
+					"a_traks" : 13
+				},
+				{
+					"a_name" : "Lucide",
+					"a_sells" : 5000,
+					"a_years" : 2012,
+					"a_traks" : 8
+				},
+				{
+					"a_name" : "Extra-lucide",
+					"a_sells" : 14000,
+					"a_years" : 2012,
+					"a_traks" : 20
+				},
+				{
+					"a_name" : "Transe-Lucide",
+					"a_sells" : 7000,
+					"a_years" : 2014,
+					"a_traks" : 17
+				}
+			]
+	},
+	{
+		"id" : 15,
+		"blazz" : "Sinik",
+		"firstname" : "Thomas",
+		"lastname" : "Idir",
+		"birth" : "26/06/1980",
+		"birth_place" : "Paris",
+		"begin_year" : 1996,
+		"official_website" : "sinik609.com",
+		"punchline" : "J’ai baisé la justice, mon avocat demande l’avortement",
+		"disque_or" : 5,
+		"disque_platine" : 2,
+		"double_disque_platine" : 0,
+		"disque_diamant" : 0,
+		"v1": 5,
+	    "v2": 950000,
+	    "v3": 460975,
+	    "likes": 423000,
+	    "followers": 35966,
+	    "abonnes": 2009,
+	    "instagram": 0,
+	    "total_fans": 34143634,
+	    "insults" : 34,
+	    "vocabulaire" : 1603,
+	    "biographie": "Sinik, de son vrai nom Thomas Idir, né le 26 juin 1980 à Paris, est un rappeur français d'origine algérienne par son père kabyle, et française par sa mère, aussi connu sous les noms de scène de Malsain L'assassin ou S.I.N.I.K. En 1996, Sinik forme le groupe L'Amalgame, un collectif de rap français avec Sinik, Templar, Fik’s, Niavo, Grödash, Kid Butch, P.Kaer Reno, Djorka Fella. L'Amalgame a fusionné avec d'autres groupes de l'Essonne et des Hauts-de-Seine comme L'Affront (R2eno / P.Kaer) et Frères Guerriers (K.I.D / Templar) et Djorka Fella pour former Ul'Team Atom en 1998. Après plus de 10 ans de carrière, avec près de un million exemplaires de vente en quatre albums studio, deux Street albums, deux mixtape, deux maxis. Le premier, nommé Malsain, sort en 2002. En 2004 sort l'album La Main sur le cœur qui arrive en tête des ventes dès la première semaine alors que Sinik est encore peu connu. L'album est un énorme succès et devient disque de platine avec plus de 250 000 exemplaires vendus, suivi de Sang froid avec 300 000 exemplaires vendus Le Toit du monde avec 250 000 exemplaires vendus puis Ballon D'or et La Plume et le Poignard vendu a 50 000 exemplaires.",
+		"label" :
+			[
+				{
+					"l_name" : "Six-O-Nine"
+				},
+				{
+					"l_name" : "Warner"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "S.I.N.I.K"
+				},
+				{
+					"s_name" : "Malsain"
+				},
+				{
+					"s_name" : "L'assassin"
+				}
+			],
+		"dep" : 91,
+		"album" :
+			[
+				{
+					"a_name" : "La main sur le coeur",
+					"a_sells" : 250000,
+					"a_years" : 2005,
+					"a_traks" : 14
+				},
+				{
+					"a_name" : "Sang froid",
+					"a_sells" : 300000,
+					"a_years" : 2006,
+					"a_traks" : 17
+				},
+				{
+					"a_name" : "Le toit du monde",
+					"a_sells" : 250000,
+					"a_years" : 2007,
+					"a_traks" : 14
+				},
+				{
+					"a_name" : "Ballon d'or",
+					"a_sells" : 100000,
+					"a_years" : 2009,
+					"a_traks" : 14
+				},
+				{
+					"a_name" : "La plume et le poignard",
+					"a_sells" : 50000,
+					"a_years" : 2012,
+					"a_traks" : 19
+				}
+			]
+	},
+	{
+		"id" : 16,
+		"blazz" : "Mc Solaar",
+		"firstname" : "Claude",
+		"lastname" : "M'Barali",
+		"birth" : "05/03/1969",
+		"birth_place" : "Dakar",
+		"begin_year" : 1990,
+		"punchline" : "J’peux pas sauver le monde, tout le monde s’est sauvé",
+		"disque_or" : 7,
+		"disque_platine" : 5,
+		"double_disque_platine" : 2,
+		"disque_diamant" : 0,
+		"v1": 7,
+	    "v2": 2894000,
+	    "v3": 21790,
+	    "likes": 21252,
+	    "followers": 0,
+	    "abonnes": 538,
+	    "instagram": 0,
+	    "total_fans": 34143634,
+	    "insults" : 5,
+	    "vocabulaire" : 1321,
+	    "biographie": "MC Solaar, de son vrai nom Claude M'Barali, est un rappeur français d'origine sénégalo-tchadienne né le 5 mars 1969 à Dakar. MC Solaar est l'un des premiers à avoir réussi à populariser le rap en France en le faisant découvrir au grand public, notamment grâce à ses textes élaborés et nettement moins violents que certains de ses confrères. Il est reconnu comme faisant partie des piliers du rap français des années 1990 avec des artistes comme Lionel D, Assassin, IAM et Suprême NTM. Son succès et la qualité littéraire de ses textes sont le fruit d'inspirations diverses allant de Serge Gainsbourg (auquel il rend hommage en samplant Bonnie and Clyde sur Nouveau Western), en passant par les musiques africaines (ivoiriennes, maliennes, tchadiennes) sans oublier les classiques noirs américains (jazz et rap US). Ses textes sont régulièrement étudiés à l'étranger (USA, Australie, Grande-Bretagne, Europe de l'Est) alors qu'il est toujours le meilleur vendeur de disques dans la catégorie rap français (plus de 15 millions vendus à ce jour).",
+		"label" :
+			[
+				{
+					"l_name" : "Elektra Records"
+				}
+			],
+		"surname" :
+			[
+				{
+					"s_name" : "Claude MC"
+				},
+				{
+					"s_name" : "L'As de Trèfle"
+				},
+				{
+					"s_name" : "Le Cinquième As"
+				},
+				{
+					"s_name" : "Le Double A"
+				},
+				{
+					"s_name" : "Le Négro à Plateau"
+				}
+			],
+		"dep" : 94,
+		"album" :
+			[
+				{
+					"a_name" : "Qui sème le vent récolte le tempo",
+					"a_sells" : 321700,
+					"a_years" : 1991,
+					"a_traks" : 16
+				},
+				{
+					"a_name" : "Prose Combat",
+					"a_sells" : 869700,
+					"a_years" : 1994,
+					"a_traks" : 7
+				},
+				{
+					"a_name" : "Paradisiaque",
+					"a_sells" : 414300,
+					"a_years" : 1997,
+					"a_traks" : 17
+				},
+				{
+					"a_name" : "MC Solaar",
+					"a_sells" : 200000,
+					"a_years" : 1998,
+					"a_traks" : 11
+				},
+				{
+					"a_name" : "Cinquième As",
+					"a_sells" : 600000,
+					"a_years" : 2001,
+					"a_traks" : 19
+				},
+				{
+					"a_name" : "Mach 6",
+					"a_sells" : 300000,
+					"a_years" : 2003,
+					"a_traks" : 16
+				},
+				{
+					"a_name" : "Chapitre 7",
+					"a_sells" : 188300,
+					"a_years" : 2007,
+					"a_traks" : 18
+				}
+			]
+	},
+	{
+		"id" : 17,
+		"blazz" : "Tunisiano",
+		"firstname" : "Bachir",
+		"lastname" : "Baccour",
+		"birth" : "19/05/1979",
+		"birth_place" : "Deuil-la-Barre",
+		"begin_year" : 1995,
+		"official_website" : "tunisiano-lesite.fr",
+		"punchline" : "Non t’es pas une salope, t’es vaginalement très sociable",
+		"disque_or" : 0,
+		"disque_platine" : 0,
+		"double_disque_platine" : 0,
+		"disque_diamant" : 0,
+		"v1": 2,
+	    "v2": 43650,
+	    "v3": 288340,
+	    "likes": 210534,
+	    "followers": 69191,
+	    "abonnes": 0,
+	    "instagram": 8615,
+	    "total_fans": 34143634,
+	    "insults" : 52,
+	    "vocabulaire" : 1734,
+	    "biographie": "Tunisiano, de son vrai nom Bachir Baccour, est un rappeur français d'origine tunisienne né le 19 mai 1979 à Deuil-la-Barre (Val-d'Oise). Il est membre du groupe Sniper.",
+		"label" :
+			[
+				{
+					"l_name" : "Columbia"
+				},
+				{
+					"l_name" : "Desh Musique"
+				}
+			],
+		"dep" : 95,
+		"album" :
+			[
+				{
+					"a_name" : "Le Regard des Gens",
+					"a_sells" : 38350,
+					"a_years" : 2008,
+					"a_traks" : 16
+				},
+				{
+					"a_name" : "Marqué à vie",
+					"a_sells" : 5300,
+					"a_years" : 2014,
+					"a_traks" : 19
+				}
+			]
+	}
+]

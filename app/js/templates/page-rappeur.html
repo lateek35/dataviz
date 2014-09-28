@@ -1,0 +1,104 @@
+{{#each}}
+<div id="btn-retour">
+</div>
+<video autoplay loop id="bgvid">
+	<source src="./video/vid-{{id}}.mp4" type="video/mp4">
+	<source src="./video/vid-{{id}}.webm" type="video/webm">
+</video>
+<div class="video-alpha"></div>
+<div class="top-part">
+<div class="image-centrage " data-scroll-reveal='enter left'>
+	<img src="./img/rapper-big/big-{{id}}.png" alt="{{blazz}}">
+</div>
+<div class="description" data-scroll-reveal='enter right'>
+	<div class="top-description">
+		<h2>{{blazz}}</h2>
+		<div class="btn-play-pause"></div>
+	</div>
+	<div class="bottom-description">
+		<p><span>Nom :</span> {{firstname}} {{lastname}}</p>
+		<p><span>Naissance :</span> {{birth}}</p>
+		<p><span>Lieu de naissance :</span> {{birth_place}}</p>
+		<p><span>Années actives :</span> Depuis {{begin_year}}</p>
+		<p><span>Labels :</span> 
+		{{#each label}}
+			{{#if @index}} , &thinsp;{{/if}} {{this.l_name}}
+		{{/each}}</p>
+		{{#if surnom}}
+		<p><span>Surnom :</span> 
+		{{#each surname}} 
+			{{#if @index}} , &thinsp;{{/if}} {{this.s_name}} 
+		{{/each}}</p>
+		{{/if}}
+		{{#if official_website}}
+		<p class="inline"><span>Site officiel :&thinsp;</span></p><a class="inline" target="_blank" href="http://www.{{official_website}}"> {{official_website}}</a>
+		{{/if}}
+		<p class="punchline">"{{punchline}}"</p>
+		<ul>
+				<ul>
+					<li>DISQUE D'OR</li>
+					<li>{{disque_or}}</li>
+				</ul>
+				<ul>
+					<li>DISQUE DE PLATINE</li>
+					<li>{{disque_platine}}</li>
+				</ul>
+				<ul>
+					<li>DOUBLE DISQUE DE PLATINE</li>
+					<li>{{double_disque_platine}}</li>
+				</ul>
+				<ul>
+					<li>DISQUE DE DIAMANT</li>
+					<li>{{disque_diamant}}</li>
+				</ul>
+		</ul>
+	</div>
+</div>
+
+
+
+</div>
+<div class="bottom-part">
+	<div class="container">
+		<ul class="menu-fiche">
+			<li id="bio" class="activeLiFiche" data-id="{{id}}"><p data-id="{{id}}">BIOGRAPHIE</p><span></span></li>
+			<li id="popularite" data-id="{{id}}"><p data-id="{{id}}">POPULARIté</p><span></span></li>
+			<li id="album-vendu" data-id="{{id}}"><p data-id="{{id}}">ALBUMS VENDUS</p><span></span></li>
+		</ul>
+		<div class="container-infos-rapper">
+			<div id="conteiner-biographie">
+				<p>{{biographie}}</p>
+				<div class="maskBio"><img src="./img/rapper-bio/bio-{{id}}.jpg" alt="Biographie de {{blazz}}"/></div>
+			</div>
+			<div id="conteiner-popularite" class="displayNonePage">
+				<ul>
+					<li>
+						<p class="pLikes"></p>
+						<span class="likes">LIKES</span>
+					</li>
+					<li>
+						<p class="pTwitter"></p>
+						<span class="twitter">FOLLOWERS</span>
+					</li>
+					<li>
+						<p class="pAbonne"></p>
+						<span class="abonne">Abonés</span>
+					</li>
+					<li>
+						<p class="pInstagram"></p>
+						<span class="instagram">Followers</span>
+					</li>
+				</ul>
+				<div id="module-fan">
+					<div class="fan-rappeur"><h3><p class="fan-rapper"></p><span>FANS {{blazz}}</span></h3></div>
+					<div class="circle-fan-vs"><div class="circle-total"></div><svg id="graph-fans"></svg></div>
+					<div class="total-fan"><h3><p class="total-rappers-fan"></p><span>FANS PANAM ALL STARZ</span></h3></div>
+				</div>
+			</div>
+			<div id="conteiner-module-albums" class="displayNonePage">
+				<svg id="graph-albums"></svg>
+			</div>
+		</div>
+	</div>
+</div>
+{{/each}}
