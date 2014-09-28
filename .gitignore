@@ -36,5 +36,6 @@ $RECYCLE.BIN/
 
 
 ### Ignore the build folder ###
-build/
+dist/
 video/
+node_modules/
