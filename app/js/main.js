@@ -213,10 +213,12 @@ $('#fullpage').fullpage({
   verticalCentered: false,
   easing: 'swing',
   navigation: true,
+  css3 : true,
+  scrollingSpeed: 300,
   normalScrollElements: '#page-rapper',
   afterLoad: function(anchorLink, index){
     var suplmement = (Backbone.history.fragment).substring(2);
-    router.navigate(""+index+"/"+suplmement);
+    router.navigate("//"+index+"/"+suplmement);
     if(index == '4'){
       rapperListInsults.render();
     }
@@ -234,11 +236,12 @@ $('#home>a').on('click',function(event){
 /*==========================================================================================*/
   var Router = Backbone.Router.extend({
     routes:{
-      ':4' : 'module-hardcore',
-      ':3' : 'module-hard',
-      ':2/dep/:cp/:rapper' : 'rapperSolo',
-      ':2/dep/:cp' : 'departement',
-      ':1' : 'home',
+      '4(/)' : 'module-hardcore',
+      '3(/)' : 'module-hard',
+      '2/dep/:cp/:rapper(/)' : 'rapperSolo',
+      '2/dep/:cp(/)' : 'departement',
+      '2(/)' : 'map',
+      '1(/)' : 'home',
       '/' : 'home'
     }
   });
@@ -249,12 +252,18 @@ $('#home>a').on('click',function(event){
   //var moduleComparaison = new viewModuleComparaison({collection : rappers});
 
   var router = new Router();
+
   router.on('route:home',function(slide){
-    moveSlide(slide);
+    $.fn.fullpage.moveTo(1,0);
     rapperList.runFilter();
   });
-  router.on('route:departement',function(slide,cp){
-    moveSlide(slide);
+
+  router.on('route:map',function(slide){
+    $.fn.fullpage.moveTo(2,0);
+  });
+
+  router.on('route:departement',function(cp){
+    $.fn.fullpage.moveTo(2,0);
     rapperList.runFilter(parseInt(cp));
     $('#carte path').show().attr('class','');
     $('#_'+cp).attr('class','zoom');
@@ -265,23 +274,23 @@ $('#home>a').on('click',function(event){
       $('#carte path').bind('mouseenter',mouseenterMap);
     }, 500);
   });
-  router.on('route:rapperSolo',function(slide,cp,rapper){
+
+  router.on('route:rapperSolo',function(cp,rapper){
     $.fn.fullpage.moveTo(2,1);
     var rapperPage = new viewRapperPage({collection : rappers});
     rapperPage.runFilter(rapper);
     $('#fullPage-nav>ul').hide();
   });
+
   router.on('route:module-hard',function(){
     $.fn.fullpage.moveTo(3,0);
     //moduleComparaison.render(-1);
   });
+
   router.on('route:module-hardcore',function(){
     $.fn.fullpage.moveTo(4,0);
   });
 
-  var moveSlide = function(slide){
-    $.fn.fullpage.moveTo(slide); 
-  };
 
   Backbone.history.start();
 

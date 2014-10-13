@@ -90,7 +90,7 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
         var barRappers = d3.selectAll(".g-rapper");
         d3.json(this.collection.url, function(error, data) {
 
-          console.log(data);
+          // console.log(data);
 
 
             yInsults.domain([0, 150]);
