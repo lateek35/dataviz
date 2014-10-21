@@ -158,11 +158,11 @@ gulp.task('html', function(){
 gulp.task('images', function(){
 	return gulp.src('app/img/**/*.{jpg,jpeg,png,tiff,svg}')
         .pipe(changed('./dist/img'))
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngcrush()]
-        }))
+        // .pipe(imagemin({
+        //     progressive: true,
+        //     svgoPlugins: [{removeViewBox: false}],
+        //     use: [pngcrush()]
+        // }))
         .pipe(gulp.dest('./dist/img'));
 });
 

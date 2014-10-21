@@ -115,9 +115,6 @@ nav {
 
 /* Déclaration pour IE qui assimile l'état :focus à l'état :active */
 
-/* Déclaration pour IE qui assimile l'état :focus à l'état :active */
-
-/* Déclaration pour IE qui assimile l'état :focus à l'état :active */
 
 #close {
   background-color: #333;
@@ -235,7 +232,7 @@ a:active {
 .module-title {
   position: absolute;
   left: 25%;
-  top: 7.2%;
+  top: 5.2%;
   margin-left: -3.38rem;
   h3 {
     text-align: center;
@@ -400,7 +397,8 @@ video#bgvid {
   overflow-y: scroll;
   > .top-part {
     display: block;
-    width: 12rem;
+    width: 100%;
+    max-width: 12rem;
     position: relative;
     margin: 0 auto;
     padding-top: 0.7rem;
@@ -864,6 +862,11 @@ video#bgvid {
 }
 
 #container-module-comparaison {
+  -moz-transform-origin: 50% 100%;
+  -webkit-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
   svg {
     position: relative;
     z-index: 99;
@@ -906,8 +909,6 @@ video#bgvid {
 }
 
 #btn-reset {
-  position: relative;
-  top: -10px;
   color: #FFFFFF;
   border: 1px solid #FFFFFF;
   &.active, &:hover {
@@ -920,11 +921,11 @@ video#bgvid {
   width: 1320px;
   height: 600px;
   position: absolute;
-  bottom: 107px;
+  bottom: 14%;
   display: block;
   margin: 0 auto;
   left: 50%;
-  margin-left: -647px;
+  margin-left: -660px;
 }
 
 [class*="line"] {
@@ -953,7 +954,9 @@ video#bgvid {
   position: absolute;
   bottom: 0;
   left: 1px;
+  width: 100%;
   > img {
+    width: 100%;
     position: absolute;
   }
   .album {
@@ -992,17 +995,6 @@ video#bgvid {
   &.inactive-infos {
     bottom: -120px;
   }
-}
-
-.infos-card {
-  width: 980px;
-  position: relative;
-  left: 50%;
-  margin-left: -490px;
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease;
 }
 
 .infos-inactive {
@@ -1116,17 +1108,15 @@ video#bgvid {
 }
 
 .module-button2 {
+  padding-top: 150px;
+  margin: 0 auto;
+  width: 700px;
   z-index: 105;
-  width: 16%;
-  display: inline-block;
-  top: 40%;
-  position: absolute;
-  left: 60px;
-  margin-top: -0.8rem;
+  display: block;
   button {
     height: 40px;
     width: 160px;
-    display: block;
+    display: inline-block;
     margin: 10px auto;
     font-family: 'bebas', Georgia, sans-serif;
     font-size: 0.18rem;
@@ -1145,14 +1135,13 @@ video#bgvid {
 }
 
 .module-button {
-  width: 16%;
-  display: inline-block;
+  margin: 0 auto;
+  width: 340px;
   vertical-align: middle;
-  margin-right: -0.2rem;
   button {
     height: 40px;
     width: 160px;
-    display: block;
+    display: inline-block;
     margin: 10px auto;
     font-family: 'bebas', Georgia, sans-serif;
     font-size: 0.18rem;
@@ -1175,17 +1164,24 @@ video#bgvid {
 }
 
 #container-module {
-  display: block;
+  -moz-transform-origin:  0% 50%;
+  -webkit-transform-origin:  0% 50%;
+  -o-transform-origin:  0% 50%;
+  -ms-transform-origin:  0% 50%;
+  transform-origin:  0% 50%;
+  transform-origin: 0% 50%;
   width: 80%;
-  display: inline-block;
   vertical-align: middle;
+  display: block;
+  margin: 0 auto;
 }
 
 #head-rappers {
   height: 42px;
   width: 960px;
-  margin-left: 28px;
+  margin: 0 auto;
   position: relative;
+  left: 10px; 
 }
 
 .head-rapper {
@@ -1234,10 +1230,11 @@ video#bgvid {
 }
 
 #graph-hardcore {
-  padding-left: 50px;
-  padding-right: 120px;
+  display: block;
+  margin: 0 auto;
   padding-top: 1px;
   margin-bottom: 10px;
+  overflow: inherit;
   .g-axis {
     text {
       font-family: 'bebas';
@@ -1306,10 +1303,11 @@ video#bgvid {
 }
 
 .infos-card {
-  width: 980px;
+  padding: 0 10px;
+  margin: 0 auto;
+  max-width: 980px;
+  width: 100%;
   position: relative;
-  left: 50%;
-  margin-left: -490px;
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
   -o-transition: all .3s ease;
@@ -1414,3 +1412,16 @@ video#bgvid {
     -o-transform: rotate(90deg);
   }
 }
+
+
+
+// Meida queries
+
+@media screen and (max-width: 990px) {
+  .departement {
+    font-size: .5em;
+  }
+}
+
+
+

@@ -69,25 +69,34 @@ require([
   'd3'
 ], function (slimScroll,fullpage, backbone, modelRapper, collectionRapper,viewRapperList,viewRapperPage,viewModuleComparaison,viewRapperListInsults,d3) {
 /*==========================================================================================*/
-/*--------------------------------------  MENU GESTION  ------------------------------------*/
+/*-----------------------------------  GESTION RESPONSIVE ----------------------------------*/
 /*==========================================================================================*/
-$('#close').on('click', function(){
-  $(this).parent().css({
-    "left" : "-440px"
-  });
-  $('#fullpage').css({
-    "left" : "0"
-  });
-});
-$('#open').on('click', function(){
-  $('nav').css({
-    "left" : "0"
-  });
-  $('#fullpage').css({
-    "left" : "400px"
-  });
 
-});
+gestionResponsive();
+
+window.addEventListener("orientationchange", function() {
+  gestionResponsive();
+
+}, false);
+
+window.addEventListener("resize", function() {
+  gestionResponsive();
+}, false);
+
+
+function gestionResponsive(){
+  var wHeight = ($(window).height()-180)/700;
+  var wWidth = $(window).width()/1100;
+  var facteur = wHeight<wWidth?wHeight:wWidth;
+  $('#container-module-comparaison').css({
+    'transform':'scale('+facteur+')'
+  })
+
+  $('#container-module').css({
+    'transform':'scale('+facteur/1+')'
+  })
+
+}
 
 
 /*==========================================================================================*/
