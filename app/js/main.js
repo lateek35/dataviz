@@ -90,11 +90,11 @@ function gestionResponsive(){
   var facteur = wHeight<wWidth?wHeight:wWidth;
   $('#container-module-comparaison').css({
     'transform':'scale('+facteur+')'
-  })
+  });
 
   $('#container-module').css({
     'transform':'scale('+facteur/1+')'
-  })
+  });
 
 }
 
@@ -180,6 +180,12 @@ $('body').on('click',".btn-play-pause",function(){
     $('.btn-play-pause')[0].style.backgroundImage = 'url(./img/btn-play.png)';
   }
 
+});
+/*__________________________________________________________________________________________*/
+/*--------------------------------------  Menu appear --------------------------------------*/
+$('#hamburger-icon').on('click', function(){
+  $(this).toggleClass('active');
+  $('#menu-overlay').toggleClass('open');
 });
 
 /*__________________________________________________________________________________________*/

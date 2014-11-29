@@ -49,8 +49,8 @@ gulp.task('style', function(){
 	var master = gulpFilter(['master.scss']);
 
 	return gulp.src('app/style/**')
-        .pipe(allscss)
 		.pipe(plumber())
+        .pipe(allscss)
 		.pipe(changed('dist/style'))
   //   	.pipe(scsslint({
 		//     'config': 'lint.yml',
@@ -58,7 +58,7 @@ gulp.task('style', function(){
         .pipe(allscss.restore())
 		.pipe(master)
 		.pipe(compass({
-			errLogToConsole: true
+
 		}))
 		.pipe(size())
 		.pipe(minifyCSS({
@@ -158,11 +158,11 @@ gulp.task('html', function(){
 gulp.task('images', function(){
 	return gulp.src('app/img/**/*.{jpg,jpeg,png,tiff,svg}')
         .pipe(changed('./dist/img'))
-        // .pipe(imagemin({
-        //     progressive: true,
-        //     svgoPlugins: [{removeViewBox: false}],
-        //     use: [pngcrush()]
-        // }))
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngcrush()]
+        }))
         .pipe(gulp.dest('./dist/img'));
 });
 
