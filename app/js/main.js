@@ -182,11 +182,44 @@ $('body').on('click',".btn-play-pause",function(){
 
 });
 /*__________________________________________________________________________________________*/
+/*----------------------------------  Animation liste fans  --------------------------------*/
+
+$('.bottom').on('mouseover',function(){
+  var moveList = setInterval(function(){ 
+    if( parseInt($('.fans>ul').css('top'))>=-142 ){
+      $('.fans>ul').css('top','-=5px');
+    }
+  }, 20);
+
+  $(this).on('mouseout',function(){
+    clearInterval(moveList);
+  });
+});
+
+$('.up').on('mouseover',function(){
+  var moveList = setInterval(function(){
+    if( parseInt($('.fans>ul').css('top'))<0 ){
+      $('.fans>ul').css('top','+=5px');
+    }
+  }, 20);
+
+  $(this).on('mouseout',function(){
+    clearInterval(moveList);
+  });
+});
+
+/*__________________________________________________________________________________________*/
 /*--------------------------------------  Menu appear --------------------------------------*/
 $('#hamburger-icon').on('click', function(){
   $(this).toggleClass('active');
   $('#menu-overlay').toggleClass('open');
 });
+
+$('#menu-overlay a').on('click', function(e){
+  $('#hamburger-icon').toggleClass('active');
+  $('#menu-overlay').toggleClass('open');
+});
+
 
 /*__________________________________________________________________________________________*/
 /*-------------------------------  Animation hardcore lyrics  ------------------------------*/
@@ -251,6 +284,7 @@ $('#home>a').on('click',function(event){
 /*==========================================================================================*/
   var Router = Backbone.Router.extend({
     routes:{
+      '5(/)' : 'module-fan',
       '4(/)' : 'module-hardcore',
       '3(/)' : 'module-hard',
       '2/dep/:cp/:rapper(/)' : 'rapperSolo',
@@ -288,7 +322,7 @@ $('#home>a').on('click',function(event){
       $('#carte path').not('#_'+cp).css('display','none');
       $('#carte path').bind('mouseenter',mouseenterMap);
     }, 500);
-  });
+  }); 
 
   router.on('route:rapperSolo',function(cp,rapper){
     $.fn.fullpage.moveTo(2,1);
@@ -304,6 +338,10 @@ $('#home>a').on('click',function(event){
 
   router.on('route:module-hardcore',function(){
     $.fn.fullpage.moveTo(4,0);
+  });
+
+  router.on('route:module-fan',function(){
+    $.fn.fullpage.moveTo(5,0);
   });
 
 

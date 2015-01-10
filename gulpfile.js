@@ -49,17 +49,22 @@ gulp.task('style', function(){
 	var master = gulpFilter(['master.scss']);
 
 	return gulp.src('app/style/**')
-		.pipe(plumber())
-        .pipe(allscss)
+		.pipe(plumber({
+      errorHandler: function (error) {
+        console.log(error.message);
+        this.emit('end');
+    }}))
+    .pipe(allscss)
 		.pipe(changed('dist/style'))
   //   	.pipe(scsslint({
 		//     'config': 'lint.yml',
 		// }))
-        .pipe(allscss.restore())
+    .pipe(allscss.restore())
 		.pipe(master)
-		.pipe(compass({
-
-		}))
+		.pipe(compass({}))
+    .on('error', function(err) {
+      // Would like to catch the error here
+    })
 		.pipe(size())
 		.pipe(minifyCSS({
 			keepSpecialComments : 0,

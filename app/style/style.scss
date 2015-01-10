@@ -1479,6 +1479,7 @@ video#bgvid {
 
 #module-3 {
   position: relative;
+  overflow: hidden;
   background: url("../img/background-3.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -1781,6 +1782,158 @@ video#bgvid {
 .clear {
   clear: both;
 }
+/*----------- MODULE 4 -----------*/
+#module-4{
+  background: url("../img/background-4.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  .module-title {
+    position: inherit;
+    left: 0;
+    top: 0;
+    margin-left: 0;
+    padding-top: 50px;
+    text-align: center;
+  }
+  .fans-container{
+    top: 50%;
+    position: absolute;
+    height: 355px;
+    width: 80%;
+    max-width: 1030px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    margin-top: -190px;
+  }
+  .fans{
+    width: 100%;
+    position: relative;
+    height: 360px;
+    overflow: hidden;
+    ul {
+      position: relative;
+      top: 0;
+      -webkit-transition: all .02s linear;
+      -moz-transition: all .02s linear;
+      -o-transition: all .02s linear;
+      transition: all .02s linear;
+    }
+    li{
+      height: 71px;
+      border-bottom: 1px solid #555;
+      position: relative;
+    }
+
+    p{
+      font-size: .24rem;
+      font-family: bebas,Georgia,serif;
+      color: white;
+      display: inline-block;
+    }
+    .name{
+      color: $rouge;
+    }
+    .left {
+      height: 71px;
+      position: absolute;
+      left: 0;
+      img {
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+        border-radius: 50px;
+        width: 50px;
+        height: auto;
+        display: inline-block;
+        position: relative;
+        top: -17px;
+        margin-left: 20px;
+      }
+      p{
+        vertical-align: super
+      }
+    }
+    .btn-vote{
+      top: 20px;
+      border: 1px solid $rouge;
+      width: 100px;
+      height: 30px;
+      position: absolute;
+      right: 46px;
+      display: inline-block;
+      img{
+        display: inline-block;
+        width: auto;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+      p{
+        position: absolute;
+        top: 8px;
+        right: 23px;
+        display: inline-block;
+        color: $rouge;
+        font-size: 0.14rem;
+        font-family: 'source_sans_prosemibold', Georgia, serif;
+        text-transform: uppercase;
+      }
+    }
+    .nbr-votes{
+      display: block;
+      width: 100%;
+      line-height: 72px;
+      text-align: center;
+      font-size: 0.22rem;
+      letter-spacing: 1px;
+    }
+  }
+  .up{
+    float: right;
+    display: inline-block;
+    opacity: 0.5;
+    position: relative;
+    top: -10px;
+    z-index: 10;
+  }
+  .bottom{
+    float: right;
+    display: inline-block;
+    position: relative;
+    top: 20px;
+    z-index: 10;
+  }
+  .information{
+    padding: 0 10px;
+    margin: 0 auto;
+    max-width: 980px;
+    width: 100%;
+    font-size: 0.16rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    h3{
+      color: $rouge;
+      text-transform: uppercase;
+      font-family: 'source_sans_prosemibold', Georgia, serif;
+    }
+    p {
+      color: white;
+      font-family: 'source_sans_prolight', Georgia, serif;
+      margin-top: 10px;
+      line-height: 25px;
+    }
+    .red{
+      color: $rouge;
+    }
+  }
+}
+/*----------- END MODULE 4 -----------*/
+
 
 /*------------utils---------------*/
 
@@ -1803,7 +1956,7 @@ video#bgvid {
 
 
 
-// Meida queries
+// Media queries
 
 @media screen and (max-width: 990px) {
   .departement {
