@@ -7,27 +7,83 @@
     <link rel="stylesheet" href="./style/master.css">
     </head>
     <body>
-    <div id="open">
-        <img src="img/btn-open.png" alt="Btn to close menu">
-    </div>
-<!--     <nav>
-        <div id="close">
-            <img src="img/btn-close.png" alt="Btn to close menu" class="rotate">
+    <a id="hamburger-icon" href="#" title="Menu">
+      <span class="line line-1"></span>
+      <span class="line line-2"></span>
+      <span class="line line-3"></span>
+    </a>
+    <div id="menu-overlay">
+        <div class="container-effet">
+            <ul>
+                <li>
+                    <a href="#/1">Accueil</a>
+                </li>
+                <li>
+                    <a href="#/2">All starz map</a>
+                </li>
+                <li>
+                    <a href="#/3">Panam Boss</a>
+                </li>
+                <li>
+                    <a href="#/4">All starz lyrics</a>
+                </li>
+                <li>
+                    <a href="#/5">Classement</a>
+                </li>
+                <li>
+                    <a href="">A propos</a>
+                </li>
+            </ul>
+            <div class="team">
+                <div class="sep">
+                    <h4>Notre équipe</h4>
+                    <hr>
+                </div>
+                <div class="members">
+                    <div class="member-wrapper">
+                        <div class="member">
+                            <a href="http://www.allanraquin.fr/" target="_blank"><img src="./img/member-allan.jpg" alt="Mini pic rappeur"></a>
+                        </div>
+                        <p>Antoine MOURGUES</p>
+                        <hr>
+                        <p class="red">Art director / Webdesign</p>
+                    </div>
+                    <div class="member-wrapper">
+                        <div class="member">
+                            <a href="#2/dep/95/Sniper"><img src="./img/member-allan.jpg" alt="Mini pic rappeur"></a>
+                        </div>
+                        <p>Allan RAQUIN</p>
+                        <hr>
+                        <p class="red">Lead front-end developpement</p>
+                    </div>
+                    <div class="member-wrapper">
+                        <div class="member">
+                            <a href="#2/dep/95/Sniper"><img src="./img/member-allan.jpg" alt="Mini pic rappeur"></a>
+                        </div>
+                        <p>Julien ACQUAVIVA</p>
+                        <hr>
+                        <p class="red">Webdesign</p>
+                    </div>
+                    <div class="member-wrapper">
+                        <div class="member">
+                            <a href="#2/dep/95/Sniper"><img src="./img/member-allan.jpg" alt="Mini pic rappeur"></a>
+                        </div>
+                        <p>Kévin CHAPRON</p>
+                        <hr>
+                        <p class="red">Front-end developpement</p>
+                    </div>
+                    <div class="member-wrapper">
+                        <div class="member">
+                            <a href="#2/dep/95/Sniper"><img src="./img/member-allan.jpg" alt="Mini pic rappeur"></a>
+                        </div>
+                        <p>Florian PYGMALION</p>
+                        <hr>
+                        <p class="red">Back-end developpement</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <h2>Panam all starz</h2>
-        <hr>
-        <ul>
-            <li><a href="#/1">Accueil</a></li>
-            <li><a href="#/2">All starz map</a></li>
-            <li><a href="#/3">Panam boss</a></li>
-            <li><a href="#/4">All starz lyrics</a></li>
-            <li><a href="#/5">A propos</a></li>
-        </ul>
-        <h4>Par des étudiants d'<a href="http://www.hetic.net/">hétic</a></h4>
-        <p><a href="#">Antoine MOURGUES</a> - <a href="#">Kévin CHAPRON</a></p>
-        <p><a href="#">Florian PYGMALION</a> - <a href="#">Julien ACQUAVIVA</a></p>
-        <p><a href="http://www.allanraquin.fr">Allan RAQUIN</a></p>
-    </nav> -->
+    </div>
     <div id="fullpage">
         <div class="section" id="home">
             <h1>PANAM ALL STARZ</h1>
@@ -85,7 +141,7 @@
                 </div>
 <!--             <div id="tes"></div>-->
             <div class="module-button2">
-                <button class="option" id="btn-reset">TOUS</button>
+                <button class="option" id="btn-reset">TOUS</button> 
                 <button class="option album" data-class="album" id="btn-albums">ALBUMS</button>
                 <button class="option vente" id="btn-ventes" data-class="vente">VENTES</button>
                 <button class="option popu" id="btn-popularite" data-class="popu">POPULARITE</button>
@@ -154,8 +210,113 @@
                 </div>
             </div>
         </div>
+        <div class="section" id="module-4">
+            <div class="module-title">
+                <hr>
+                <h3>All starz fans</h3>
+                <hr>
+                <p>Découvrez quel est le rappeur préféré des utilisateurs et partcipez vous aussi à ce classement</p>
+            </div>
+            <div class="fans-container">
+                
+                <img class="up" src="img/btn-up-fans.png" alt="btn-up">
+                <div class="fans">
+                    <ul>
+                        <li>
+                            <div class="left">
+                                <p>1</p>
+                                <img src="./img/rapper-min/min-1.jpg" alt="Mini pic rappeur">
+                                <p class="name">La fouine</p>
+                            </div>
+                            <p class="nbr-votes">125612 votes</p>
+                            <div class="btn-vote">
+                                <img src="img/btn-tick.png" alt="tick">
+                                <p>voter</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <p>2</p>
+                                <img src="./img/rapper-min/min-4.jpg" alt="Mini pic rappeur">
+                                <p class="name">allan</p>
+                            </div>
+                            <p class="nbr-votes">186912 votes</p>
+                            <div class="btn-vote">
+                                <img src="img/btn-tick.png" alt="tick">
+                                <p>voter</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <p>3</p>
+                                <img src="./img/rapper-min/min-2.jpg" alt="Mini pic rappeur">
+                                <p class="name">booba</p>
+                            </div>
+                            <p class="nbr-votes">12638 votes</p>
+                            <div class="btn-vote">
+                                <img src="img/btn-tick.png" alt="tick">
+                                <p>voter</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <p>4</p>
+                                <img src="./img/rapper-min/min-5.jpg" alt="Mini pic rappeur">
+                                <p class="name">ton père</p>
+                            </div>
+                            <p class="nbr-votes">712393 votes</p>
+                            <div class="btn-vote">
+                                <img src="img/btn-tick.png" alt="tick">
+                                <p>voter</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <p>5</p>
+                                <img src="./img/rapper-min/min-6.jpg" alt="Mini pic rappeur">
+                                <p class="name">ton père</p>
+                            </div>
+                            <p class="nbr-votes">125612 votes</p>
+                            <div class="btn-vote">
+                                <img src="img/btn-tick.png" alt="tick">
+                                <p>voter</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <p>6</p>
+                                <img src="./img/rapper-min/min-7.jpg" alt="Mini pic rappeur">
+                                <p class="name">ton père</p>
+                            </div>
+                            <p class="nbr-votes">125612 votes</p>
+                            <div class="btn-vote">
+                                <img src="img/btn-tick.png" alt="tick">
+                                <p>voter</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <p>7</p>
+                                <img src="./img/rapper-min/min-8.jpg" alt="Mini pic rappeur">
+                                <p class="name">ton père</p>
+                            </div>
+                            <p class="nbr-votes">125612 votes</p>
+                            <div class="btn-vote">
+                                <img src="img/btn-tick.png" alt="tick">
+                                <p>voter</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <img class="bottom" src="img/btn-bottom-fans.png" alt="btn-down">
+            </div>
+            <div class="information">
+                <h3>information</h3>
+                <p>Ce module permet aux internautes d’élire leur rappeur préféré. Le classement est mis à jour automatiquement et chaque vote est comptabilisé instantanément. Vous avez la possibilité de voter pour un seul rappeur soit en cliquant sur le bouton VOTER soit en cliquant sur le <span class="red">♥</span> présent sur la page du rappeur.</p>
+            </div>
+        </div>
     </div>
     </body>
     <!-- === Références aux Frameworks === -->
-	<script data-main="js/main" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.11/require.min.js"></script>
+    <script data-main="js/main" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.11/require.min.js"></script>
 </html>

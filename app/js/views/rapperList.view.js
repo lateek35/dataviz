@@ -17,7 +17,7 @@ define(['backbone','modelRapper','collectionRapper','text!templates/liste-rappeu
       this.render();
     },
     render: function(cp){
-      var html = [] ;
+      var html = [] ;  
       var that = this;
       var filter = this.filter;
       this.collection.fetch({

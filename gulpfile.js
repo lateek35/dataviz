@@ -49,17 +49,22 @@ gulp.task('style', function(){
 	var master = gulpFilter(['master.scss']);
 
 	return gulp.src('app/style/**')
-        .pipe(allscss)
-		.pipe(plumber())
+		.pipe(plumber({
+      errorHandler: function (error) {
+        console.log(error.message);
+        this.emit('end');
+    }}))
+    .pipe(allscss)
 		.pipe(changed('dist/style'))
   //   	.pipe(scsslint({
 		//     'config': 'lint.yml',
 		// }))
-        .pipe(allscss.restore())
+    .pipe(allscss.restore())
 		.pipe(master)
-		.pipe(compass({
-			errLogToConsole: true
-		}))
+		.pipe(compass({}))
+    .on('error', function(err) {
+      // Would like to catch the error here
+    })
 		.pipe(size())
 		.pipe(minifyCSS({
 			keepSpecialComments : 0,
@@ -158,11 +163,11 @@ gulp.task('html', function(){
 gulp.task('images', function(){
 	return gulp.src('app/img/**/*.{jpg,jpeg,png,tiff,svg}')
         .pipe(changed('./dist/img'))
-        // .pipe(imagemin({
-        //     progressive: true,
-        //     svgoPlugins: [{removeViewBox: false}],
-        //     use: [pngcrush()]
-        // }))
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngcrush()]
+        }))
         .pipe(gulp.dest('./dist/img'));
 });
 
