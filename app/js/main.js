@@ -92,9 +92,9 @@ function gestionResponsive(){
     'transform':'scale('+facteur+')'
   })
 
-  $('#container-module').css({
+  /*$('#container-module').css({
     'transform':'scale('+facteur/1+')'
-  })
+  })*/
 
 }
 

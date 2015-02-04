@@ -1136,12 +1136,13 @@ video#bgvid {
 
 .module-button {
   margin: 0 auto;
-  width: 340px;
-  vertical-align: middle;
+  display: inline-block;
+  width:20%;
+  background:yellow;
   button {
     height: 40px;
     width: 160px;
-    display: inline-block;
+    display: block;
     margin: 10px auto;
     font-family: 'bebas', Georgia, sans-serif;
     font-size: 0.18rem;
@@ -1164,24 +1165,29 @@ video#bgvid {
 }
 
 #container-module {
-  -moz-transform-origin:  0% 50%;
+  /*-moz-transform-origin:  0% 50%;
   -webkit-transform-origin:  0% 50%;
   -o-transform-origin:  0% 50%;
   -ms-transform-origin:  0% 50%;
   transform-origin:  0% 50%;
-  transform-origin: 0% 50%;
-  width: 80%;
+  transform-origin: 0% 50%;*/
+  height:50%;
+  width: 72%;
+  overflow: hidden;
   vertical-align: middle;
-  display: block;
+  display: inline-block;
   margin: 0 auto;
+  background:green;
+  position:relative;
 }
 
 #head-rappers {
   height: 42px;
   width: 960px;
   margin: 0 auto;
-  position: relative;
+  position: absolute;
   left: 10px; 
+  bottom: 0;
 }
 
 .head-rapper {

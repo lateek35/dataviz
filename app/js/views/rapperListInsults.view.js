@@ -16,8 +16,8 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
 
       var headRappers = d3.select(this.el).select("#head-rappers");
       var graphHardcore = d3.select(this.el).select("#graph-hardcore")
-            .attr("width",width)
-            .attr("height",height+40);
+            .attr("width",width);
+            /*.attr("height",height+40);*/
       var barRappers;
 
       var yInsults = d3.scale.linear()
