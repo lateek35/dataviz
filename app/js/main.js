@@ -284,6 +284,7 @@ $('#home>a').on('click',function(event){
 /*==========================================================================================*/
   var Router = Backbone.Router.extend({
     routes:{
+      '6(/)' : 'a-propos',
       '5(/)' : 'module-fan',
       '4(/)' : 'module-hardcore',
       '3(/)' : 'module-hard',
@@ -344,6 +345,9 @@ $('#home>a').on('click',function(event){
     $.fn.fullpage.moveTo(5,0);
   });
 
+  router.on('route:a-propos',function(){
+    $.fn.fullpage.moveTo(6,0);
+  });
 
   Backbone.history.start();
 

@@ -21,7 +21,6 @@ define(['backbone'], function (backbone) {
 	    });
     },
     returnn: function(){
-    	console.log('test');
   		return this;
     }
     // defaults : {
