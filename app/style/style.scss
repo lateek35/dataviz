@@ -1939,7 +1939,45 @@ video#bgvid {
   }
 }
 /*----------- END MODULE 4 -----------*/
+/*-------------  ABOUT 4 -------------*/
 
+#about {
+  background: url("../img/background-4.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  .module-title {
+    position: inherit;
+    left: 0;
+    top: 0;
+    margin-left: 0;
+    padding-top: 50px;
+    text-align: center;
+  }
+  p{
+    color: white;
+    font-size: 0.16rem;
+    font-family: 'source_sans_prolight';
+    line-height: 25px;
+  }
+  h2{
+    color: $rouge;
+    font-size: 0.24rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: bebas,Georgia,serif;
+    padding: 33px 0;
+  }
+  .content{
+    width: 100%;
+    max-width: 1024px;
+    padding: 0 24px;
+    box-sizing: border-box;
+    margin: 30px auto;
+  }
+}
+/*----------- END  ABOUT -----------*/
 
 /*------------utils---------------*/
 
