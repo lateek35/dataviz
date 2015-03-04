@@ -33,7 +33,7 @@ $rotation: 45deg;
 $translateY: ($height-icon / 2);
 $translateX: 0;
 
-
+.displayNone{display: none;}
 
 #hamburger-icon {
   width:$width-line;
@@ -1553,16 +1553,13 @@ video#bgvid {
   }
 }
 
+.buttonSlide{height: 25px;width: 25px;position: absolute;bottom:20px;}
+.slideL{background: blue;left:-25px;}
+.slideR{background: pink;right:-25px;}
+
 #container-module {
-  /*-moz-transform-origin:  0% 50%;
-  -webkit-transform-origin:  0% 50%;
-  -o-transform-origin:  0% 50%;
-  -ms-transform-origin:  0% 50%;
-  transform-origin:  0% 50%;
-  transform-origin: 0% 50%;*/
   height:50%;
   width: 72%;
-  overflow: hidden;
   vertical-align: middle;
   display: inline-block;
   margin: 0 auto;
@@ -1570,25 +1567,35 @@ video#bgvid {
   position:relative;
 }
 
+#inter-container{
+  display: block;
+  height: 100%;width: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
 #head-rappers {
-  height: 42px;
-  width: 960px;
+  height: 20%;
   margin: 0 auto;
   position: absolute;
-  left: 10px; 
+  left: 0px;
   bottom: 0;
+  -webkit-transition: left 1s ease-out;
+  -moz-transition: left 1s ease-out;
+  -o-transition: left 1s ease-out;
+  transition: left 1s ease-out;
 }
 
 .head-rapper {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   position: absolute;
   bottom: 0;
   z-index: 2;
-  margin-left: -20px;
+  /*margin-left: -20px;*/
   overflow: hidden;
-  border-radius: 60px;
-  -webkit-border-radius: 60px;
+  border-radius: 80px;
+  -webkit-border-radius: 80px;
   border: 2px solid rgba(255, 0, 0, 0);
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1599,21 +1606,18 @@ video#bgvid {
     border: 2px solid rgba(233, 73, 83, 1);
   }
   div {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     position: absolute;
     top: 0;
     left: 0;
+    background-size: 100%;
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
     -ms-filter: grayscale(100%);
     -o-filter: grayscale(100%);
     transition: all .3s ease;
-    /*	    -webkit-background-size: 40px 40px;
-    		-moz-background-size: 40px 40px;
-    		-o-background-size: 40px 40px;
-    		background-size: 40px 40px;*/
   }
   &:hover div {
     filter: grayscale(0%);
@@ -1625,11 +1629,18 @@ video#bgvid {
 }
 
 #graph-hardcore {
+  height: 80%;
+  position: absolute;
+  left:0;
   display: block;
   margin: 0 auto;
   padding-top: 1px;
-  margin-bottom: 10px;
+  /*margin-bottom: 10px;*/
   overflow: inherit;
+  -webkit-transition: left 1s ease-out;
+  -moz-transition: left 1s ease-out;
+  -o-transition: left 1s ease-out;
+  transition: left 1s ease-out;
   .g-axis {
     text {
       font-family: 'bebas';
@@ -1747,6 +1758,7 @@ video#bgvid {
     -webkit-border-radius: 64px;
     border: 2px solid $rouge;
     background-color: black;
+    background-size: 100%;
   }
   h4 {
     width: 340px;

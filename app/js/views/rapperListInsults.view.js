@@ -3,29 +3,31 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
 /*==========================================================================================*/
 /*----------------------------  VUE POUR COLLECTION DE RAPPERS  ----------------------------*/
 /*==========================================================================================*/
+
+  var settings = {
+    oneRapperWidth: $("#container-module").width()/10,
+    slideWidth: $("#container-module").width(),
+    nbRappers: 0,
+    nbClicsLeft: 0,
+    nbClicsRight: 0,
+    goodForClick: true
+  }
+
   var RapperListInsults = Backbone.View.extend({
     el:'#module-3',
     events: {
       "click #insults-module": "launchInsultsMode",
       "click #vocabulaire-module": "launchVocMode",
-      "click .head-rapper": "showRapperDetails"
+      "click .head-rapper": "showRapperDetails",
+      "click #slide-left": "moveGraphHardcoreLeft",
+      "click #slide-right": "moveGraphHardcoreRight"
     },
     initialize: function(collection){
-      var width = 894,
-          height = 340;
 
       var headRappers = d3.select(this.el).select("#head-rappers");
-      var graphHardcore = d3.select(this.el).select("#graph-hardcore")
-            .attr("width",width);
-            /*.attr("height",height+40);*/
+      var graphHardcore = d3.select(this.el).select("#graph-hardcore");
+
       var barRappers;
-
-      var yInsults = d3.scale.linear()
-        .range([height, 0]);
-
-      var yAxis = d3.svg.axis()
-        .scale(yInsults)
-        .orient("left");
 
       var axis;
       var moy;
@@ -33,54 +35,74 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
 
       d3.json(this.collection.url, function(error, data) {
 
-          yInsults.domain([0, 150]);
-          //yInsults.domain([0, d3.max(data, function(d) { return d.insults })]);
+        settings.nbRappers = data.length;
+        var nbClics = settings.nbRappers / 10;
+        settings.nbClicsLeft = parseInt(nbClics);
+        // if(parseFloat(nbClics)>0){
+        //   settings.nbClicsLeft = parseInt(nbClics)+1;
+        // }else{
+        //   settings.nbClicsLeft = parseInt(nbClics);
+        // }
 
-          headRappers.selectAll("div").data(data).enter()
-            .append("div")
-            .attr("class", function(d,i){return "head-rapper head"+i;})
-            .style("left",function(d,i){return (i*52)+42+"px";})
-            .on("mouseover", function(d,i){
-              d3.selectAll(".head-stat-fill"+i).style("fill", "#e94953");
-              d3.select(".head-stat-stroke"+i).attr("stroke", "#e94953");
-            })
-            .on("mouseleave", function(d,i){
-              d3.selectAll(".head-stat-fill"+i).style("fill", "#f0f0f0");
-              d3.select(".head-stat-stroke"+i).attr("stroke", "#f0f0f0");
-            })
-            .each(function(d) {
-                d3.select(this).append("div")
-                  .style("background",function(d){return "url('./img/rapper-min/min-"+d.id+".jpg')";})
-                  .style("background-position","center center")
-                  .style("background-repeat","no-repeat")
-                  .style("background-size","40px 40px");
-            });
+        var width = settings.nbRappers*settings.oneRapperWidth,
+          height = $("#graph-hardcore").height();
 
-          axis = graphHardcore.append("g")
-            .attr('class', 'g-axis')
-            .attr('transform', "translate(0, 35)")
+        graphHardcore.attr("width", width);
+        $('#head-rappers').css("width", width+'px');
+
+        var yInsults = d3.scale.linear()
+          .range([height, 0])
+          .domain([0, 150]);
+
+        var yAxis = d3.svg.axis()
+          .scale(yInsults)
+          .orient("left");
+
+        headRappers.selectAll("div").data(data).enter()
+          .append("div")
+          .attr("class", function(d,i){return "head-rapper head"+i;})
+          .style("left",function(d,i){return (i*settings.oneRapperWidth)+((settings.oneRapperWidth/2)-30)+"px";})
+          .on("mouseover", function(d,i){
+            d3.selectAll(".head-stat-fill"+i).style("fill", "#e94953");
+            d3.select(".head-stat-stroke"+i).attr("stroke", "#e94953");
+          })
+          .on("mouseleave", function(d,i){
+            d3.selectAll(".head-stat-fill"+i).style("fill", "#f0f0f0");
+            d3.select(".head-stat-stroke"+i).attr("stroke", "#f0f0f0");
+          })
+          .each(function(d) {
+              d3.select(this).append("div")
+                .style("background",function(d){return "url('./img/rapper-min/min-"+d.id+".jpg')";})
+                .style("background-position","center center")
+                .style("background-repeat","no-repeat")
+                .style("background-size","60px 60px");
+          });
+
+        axis = graphHardcore.append("g")
+          .attr('class', 'g-axis')
+          .attr('transform', "translate(0, 35)")
+          .append("g")
+          .attr("class", "y axis")
+          .call(yAxis);
+
+        moy = graphHardcore.append("g")
+            .attr('class', 'moy')
+            .append("line");
+
+        barRappers = graphHardcore.append("g")
+            .attr('id', 'g-graph')
+          .selectAll("g").data(data).enter()
             .append("g")
-            .attr("class", "y axis")
-            .call(yAxis);
-
-          moy = graphHardcore.append("g")
-              .attr('class', 'moy')
-              .append("line");
-
-          barRappers = graphHardcore.append("g")
-              .attr('id', 'g-graph')
-            .selectAll("g").data(data).enter()
-              .append("g")
-              .attr("class", "g-rapper")
-              .attr("transform", function(d, i) { return "translate("+(i*52+21)+", 40)"; });
+            .attr("class", "g-rapper")
+            .attr("transform", function(d, i) { return "translate("+(i*settings.oneRapperWidth+settings.oneRapperWidth/2)+", 0)"; });
 
       });
     },
     render: function(){
 
       if($("#graph-hardcore").is(':not(.rend)')){ 
-        var height = 340,
-            width = 894;
+        var height = $("#graph-hardcore").height(),
+            width = 2000;
         var yInsults = d3.scale.linear()
           .range([height, 0]);
         d3.select(this.el).select("#graph-hardcore")
@@ -164,7 +186,7 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
         });
       }
     },
-    launchInsultsMode: function(){
+    launchInsultsMode: function(){/*
       if($('#g-graph').attr('class')=='vocabulaire-mod'){
 
         $("#infos-hardcore-insults .infos-card").attr('class','infos-card');
@@ -253,8 +275,8 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
 
         });
       }
-    },
-    launchVocMode: function(){
+    */},
+    launchVocMode: function(){/*
       if($('#g-graph').attr('class')=='insults-mod'){
 
         $("#infos-hardcore-vocab .infos-card").attr('class','infos-card');
@@ -343,8 +365,8 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
 
         });
       }
-    },
-    showRapperDetails: function(event){
+    */},
+    showRapperDetails: function(event){/*
       var target = event.target;
       var stringBase ="head-rapper head";
       var targetClass=$(target).parent().attr('class');
@@ -386,6 +408,46 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
             rapperCardVocab.select(".nb").select("span")
                 .text(data[targetPos].vocabulaire);
         });
+      }
+    */},
+    moveGraphHardcoreLeft: function(event){
+      // on vérifie que le bouton est clickable
+      if(settings.goodForClick == true){
+        // plus les rappers sont nombreux => plus la largeur est grande => plus il y aura à slider => plus le nombre de click sera important
+        // s'il est à 0, il n'est donc plus possible de slider dans ce sens là
+        if(settings.nbClicsLeft>0){
+          //  dès qu'on click, les boutons ne sont alors plus clickable durant 1s, le temps que le slide se fasse
+          settings.goodForClick = false;
+
+          settings.nbClicsLeft -= 1;
+          settings.nbClicsRight += 1;
+
+          // on fait le slide
+          $('#graph-hardcore').css("left", $('#graph-hardcore').position().left-settings.slideWidth);
+          $('#head-rappers').css("left", $('#head-rappers').position().left-settings.slideWidth);
+
+          // on attend 1s, le temps que l'animation se fasse, pour rendre de nouveau clickable les boutons
+          setTimeout(function() {
+                settings.goodForClick = true;
+          }, 1000);
+        }
+      }
+    },
+    moveGraphHardcoreRight: function(event){
+      if(settings.goodForClick == true){
+        if(settings.nbClicsRight>0){
+          settings.goodForClick = false;
+
+          settings.nbClicsLeft += 1;
+          settings.nbClicsRight -= 1;
+
+          $('#graph-hardcore').css("left", $('#graph-hardcore').position().left+settings.slideWidth);
+          $('#head-rappers').css("left", $('#head-rappers').position().left+settings.slideWidth);
+
+          setTimeout(function() {
+                settings.goodForClick = true;
+          }, 1000);
+        }
       }
     }
   });
