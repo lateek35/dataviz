@@ -1526,8 +1526,8 @@ video#bgvid {
 .module-button {
   margin: 0 auto;
   display: inline-block;
-  width:20%;
-  background:yellow;
+  width:15%;
+  /*background:yellow;*/
   button {
     height: 40px;
     width: 160px;
@@ -1553,17 +1553,31 @@ video#bgvid {
   }
 }
 
-.buttonSlide{height: 25px;width: 25px;position: absolute;bottom:20px;}
-.slideL{background: blue;left:-25px;}
-.slideR{background: pink;right:-25px;}
+.buttonSlide{
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  bottom:20px;
+  border:0;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all .1s ease;
+    -moz-transition: all .1s ease;
+    -o-transition: all .1s ease;
+    transition: all .1s ease;
+}
+.slideL{background: url("../img/btn-left-hardcore-slide.png") no-repeat center center;left:-25px;}
+.slideL:hover{background: url("../img/btn-left-hardcore-slide-hover.png") no-repeat center center;}
+.slideR{background: url("../img/btn-right-hardcore-slide.png") no-repeat center center;right:-25px;}
+.slideR:hover{background: url("../img/btn-right-hardcore-slide-hover.png") no-repeat center center;}
 
 #container-module {
   height:50%;
-  width: 72%;
+  width: 75%;
   vertical-align: middle;
   display: inline-block;
-  margin: 0 auto;
-  background:green;
+  margin: 50px auto 0 auto;
+  /*background:green;*/
   position:relative;
 }
 
@@ -1641,6 +1655,33 @@ video#bgvid {
   -moz-transition: left 1s ease-out;
   -o-transition: left 1s ease-out;
   transition: left 1s ease-out;
+  .graph-lines {
+    fill: #f0f0f0;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+  }
+  .graph-circles {
+    fill: transparent;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+  }
+  .graph-text {
+    fill: #f0f0f0;
+    font: 11px sans-serif;
+    text-anchor: middle;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+  }
+}
+
+#axis-moy{
+  overflow: inherit;
   .g-axis {
     text {
       font-family: 'bebas';
@@ -1664,29 +1705,6 @@ video#bgvid {
       font-weight: bold;
       fill: $rouge;
     }
-  }
-  .graph-lines {
-    fill: #f0f0f0;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
-  }
-  .graph-circles {
-    fill: transparent;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
-  }
-  .graph-text {
-    fill: #f0f0f0;
-    font: 11px sans-serif;
-    text-anchor: middle;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
   }
 }
 

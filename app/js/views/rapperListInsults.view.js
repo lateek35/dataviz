@@ -19,13 +19,14 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
       "click #insults-module": "launchInsultsMode",
       "click #vocabulaire-module": "launchVocMode",
       "click .head-rapper": "showRapperDetails",
-      "click #slide-left": "moveGraphHardcoreLeft",
-      "click #slide-right": "moveGraphHardcoreRight"
+      "click #slide-right": "moveGraphHardcoreLeft",
+      "click #slide-left": "moveGraphHardcoreRight"
     },
     initialize: function(collection){
 
       var headRappers = d3.select(this.el).select("#head-rappers");
       var graphHardcore = d3.select(this.el).select("#graph-hardcore");
+      var axisMoy = d3.select(this.el).select("#axis-moy");
 
       var barRappers;
 
@@ -49,6 +50,9 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
 
         graphHardcore.attr("width", width);
         $('#head-rappers').css("width", width+'px');
+
+        axisMoy.attr("width", settings.slideWidth);
+        axisMoy.attr("height", height);
 
         var yInsults = d3.scale.linear()
           .range([height, 0])
@@ -78,14 +82,14 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
                 .style("background-size","60px 60px");
           });
 
-        axis = graphHardcore.append("g")
+        axis = axisMoy.append("g")
           .attr('class', 'g-axis')
-          .attr('transform', "translate(0, 35)")
+          .attr('transform', "translate(0, 0)")
           .append("g")
           .attr("class", "y axis")
           .call(yAxis);
 
-        moy = graphHardcore.append("g")
+        moy = axisMoy.append("g")
             .attr('class', 'moy')
             .append("line");
 
@@ -101,8 +105,8 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
     render: function(){
 
       if($("#graph-hardcore").is(':not(.rend)')){ 
-        var height = $("#graph-hardcore").height(),
-            width = 2000;
+        var width = settings.nbRappers*settings.oneRapperWidth,
+          height = $("#graph-hardcore").height();
         var yInsults = d3.scale.linear()
           .range([height, 0]);
         d3.select(this.el).select("#graph-hardcore")
@@ -120,23 +124,34 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
 
             d3.select('.moy').select('line')
               .attr("x1","0")
-              .attr("x2", width-10)
-              .attr("y1",(height+40))
-              .attr("y2",(height+40))
+              .attr("x2", settings.slideWidth-10)
+              .attr("y1",height)
+              .attr("y2",height)
               .transition()
               .duration(500)
               .ease("out")
-              .attr("y1", (yInsults(d3.sum(data, function(d) { return d.insults; })/data.length))+40)
-              .attr("y2", (yInsults(d3.sum(data, function(d) { return d.insults; })/data.length))+40);
+              .attr("y1", (yInsults(d3.sum(data, function(d) { return d.insults; })/data.length)))
+              .attr("y2", (yInsults(d3.sum(data, function(d) { return d.insults; })/data.length)));
 
             d3.select(".moy").append("text")
-              .text("MOYENNE ("+(Math.round(d3.sum(data, function(d) { return d.insults; })/data.length))+")")
-              .attr("dx",width)
-              .attr("dy",(height+40))
+              .attr("class","lMoy")
+              .text("MOYENNE")
+              .attr("dx",settings.slideWidth)
+              .attr("dy",height)
               .transition()
               .duration(500)
               .ease("out")
-              .attr("dy", ((yInsults(d3.sum(data, function(d) { return d.insults; })/data.length)))+44);
+              .attr("dy", ((yInsults(d3.sum(data, function(d) { return d.insults; })/data.length)))-5);
+
+            d3.select(".moy").append("text")
+              .attr("class","vMoy")
+              .text("("+(Math.round(d3.sum(data, function(d) { return d.insults; })/data.length))+")")
+              .attr("dx",settings.slideWidth)
+              .attr("dy",height+15)
+              .transition()
+              .duration(500)
+              .ease("out")
+              .attr("dy", ((yInsults(d3.sum(data, function(d) { return d.insults; })/data.length)))+15);
 
             barRappers.append("rect")
               .attr("class",function(d,i){return "graph-lines head-stat-fill"+i;})
@@ -186,7 +201,7 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
         });
       }
     },
-    launchInsultsMode: function(){/*
+    launchInsultsMode: function(){
       if($('#g-graph').attr('class')=='vocabulaire-mod'){
 
         $("#infos-hardcore-insults .infos-card").attr('class','infos-card');
@@ -200,8 +215,8 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
           $('#infos-hardcore-insults').attr('class','');
         },500);
 
-        var height = 340,
-            width = 894;
+        var width = settings.nbRappers*settings.oneRapperWidth,
+          height = $("#graph-hardcore").height();
 
         var yInsults = d3.scale.linear()
           .range([height, 0]);
@@ -223,23 +238,32 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
             d3.select('.g-axis').select('.axis')
               .call(yAxis);
             
-            d3.select('.moy').select('line')
-              .attr("y1",(yVocab(d3.sum(data, function(d) { return d.vocabulaire; })/data.length))+40)
-              .attr("y2",(yVocab(d3.sum(data, function(d) { return d.vocabulaire; })/data.length))+40)
-              .transition()
-              .duration(500)
-              .ease("out")
-              .attr("y1", (yInsults(d3.sum(data, function(d) { return d.insults; })/data.length))+40)
-              .attr("y2", (yInsults(d3.sum(data, function(d) { return d.insults; })/data.length))+40);
 
-            d3.select(".moy").select("text")
-              .text("MOYENNE ("+(Math.round(d3.sum(data, function(d) { return d.insults; })/data.length))+")")
-              .attr("dx",width)
-              .attr("dy",((yVocab(d3.sum(data, function(d) { return d.vocabulaire; })/data.length)))+44)
+            d3.select('.moy').select('line')
+              .attr("y1",yVocab(d3.sum(data, function(d) { return d.vocabulaire; })/data.length))
+              .attr("y2",yVocab(d3.sum(data, function(d) { return d.vocabulaire; })/data.length))
               .transition()
               .duration(500)
               .ease("out")
-              .attr("dy", ((yInsults(d3.sum(data, function(d) { return d.insults; })/data.length)))+44);
+              .attr("y1", (yInsults(d3.sum(data, function(d) { return d.insults; })/data.length)))
+              .attr("y2", (yInsults(d3.sum(data, function(d) { return d.insults; })/data.length)));
+
+            d3.select(".moy").select(".lMoy")
+              .attr("dx",settings.slideWidth)
+              .attr("dy",yVocab(d3.sum(data, function(d) { return d.vocabulaire; })/data.length))
+              .transition()
+              .duration(500)
+              .ease("out")
+              .attr("dy", ((yInsults(d3.sum(data, function(d) { return d.insults; })/data.length)))-5);
+
+            d3.select(".moy").select(".vMoy")
+              .text("("+(Math.round(d3.sum(data, function(d) { return d.insults; })/data.length))+")")
+              .attr("dx",settings.slideWidth)
+              .attr("dy",yVocab(d3.sum(data, function(d) { return d.vocabulaire; })/data.length)+15)
+              .transition()
+              .duration(500)
+              .ease("out")
+              .attr("dy", ((yInsults(d3.sum(data, function(d) { return d.insults; })/data.length)))+15);
 
             barRappers.select("rect")
               .attr("y", function(d) { return yVocab(d.vocabulaire); })
@@ -275,8 +299,8 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
 
         });
       }
-    */},
-    launchVocMode: function(){/*
+    },
+    launchVocMode: function(){
       if($('#g-graph').attr('class')=='insults-mod'){
 
         $("#infos-hardcore-vocab .infos-card").attr('class','infos-card');
@@ -290,8 +314,8 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
           $('#infos-hardcore-vocab').attr('class','');
         },500);
 
-        var height = 340,
-            width = 894;
+        var width = settings.nbRappers*settings.oneRapperWidth,
+          height = $("#graph-hardcore").height();
 
         var yInsults = d3.scale.linear()
           .range([height, 0]);
@@ -314,22 +338,31 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
               .call(yAxis);
             
             d3.select('.moy').select('line')
-              .attr("y1",(yInsults(d3.sum(data, function(d) { return d.insults; })/data.length))+40)
-              .attr("y2",(yInsults(d3.sum(data, function(d) { return d.insults; })/data.length))+40)
+              .attr("y1",(yInsults(d3.sum(data, function(d) { return d.insults; })/data.length)))
+              .attr("y2",(yInsults(d3.sum(data, function(d) { return d.insults; })/data.length)))
               .transition()
               .duration(500)
               .ease("out")
-              .attr("y1", (yVocab(d3.sum(data, function(d) { return d.vocabulaire; })/data.length))+40)
-              .attr("y2", (yVocab(d3.sum(data, function(d) { return d.vocabulaire; })/data.length))+40);
+              .attr("y1", (yVocab(d3.sum(data, function(d) { return d.vocabulaire; })/data.length)))
+              .attr("y2", (yVocab(d3.sum(data, function(d) { return d.vocabulaire; })/data.length)));
 
-            d3.select(".moy").select("text")
-              .text("MOYENNE ("+(Math.round(d3.sum(data, function(d) { return d.vocabulaire; })/data.length))+")")
-              .attr("dx",width)
-              .attr("dy",((yInsults(d3.sum(data, function(d) { return d.insults; })/data.length)))+44)
+
+            d3.select(".moy").select(".lMoy")
+              .attr("dx",settings.slideWidth)
+              .attr("dy",yInsults(d3.sum(data, function(d) { return d.insults; })/data.length))
               .transition()
               .duration(500)
               .ease("out")
-              .attr("dy", ((yVocab(d3.sum(data, function(d) { return d.vocabulaire; })/data.length)))+44);
+              .attr("dy", yVocab(d3.sum(data, function(d) { return d.vocabulaire; })/data.length)-5);
+
+            d3.select(".moy").select(".vMoy")
+              .text("("+(Math.round(d3.sum(data, function(d) { return d.vocabulaire; })/data.length))+")")
+              .attr("dx",settings.slideWidth)
+              .attr("dy",yInsults(d3.sum(data, function(d) { return d.insults; })/data.length)+15)
+              .transition()
+              .duration(500)
+              .ease("out")
+              .attr("dy", ((yVocab(d3.sum(data, function(d) { return d.vocabulaire; })/data.length)))+15);
 
             barRappers.select("rect")
               .attr("y", function(d) { return yInsults(d.insults); })
@@ -365,8 +398,8 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
 
         });
       }
-    */},
-    showRapperDetails: function(event){/*
+    },
+    showRapperDetails: function(event){
       var target = event.target;
       var stringBase ="head-rapper head";
       var targetClass=$(target).parent().attr('class');
@@ -409,7 +442,7 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
                 .text(data[targetPos].vocabulaire);
         });
       }
-    */},
+    },
     moveGraphHardcoreLeft: function(event){
       // on vérifie que le bouton est clickable
       if(settings.goodForClick == true){
