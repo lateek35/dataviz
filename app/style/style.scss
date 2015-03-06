@@ -1974,7 +1974,26 @@ video#bgvid {
     max-width: 1024px;
     padding: 0 24px;
     box-sizing: border-box;
-    margin: 30px auto;
+    margin: 60px auto;
+  }
+  a{
+    color:$rouge;
+    font-size: 0.16rem;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 0.20rem;
+    display: block;
+    font-family: 'source_sans_prolight';
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  ul{
+    margin-left:30px;
+    margin-top: 20px;
+  }
+  li{
+    height: 0.20rem;
   }
 }
 /*----------- END  ABOUT -----------*/
