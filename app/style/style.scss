@@ -843,14 +843,35 @@ video#bgvid {
   font-family: 'bebas', Georgia, serif;
 }
 
-.btn-play-pause {
-  cursor: pointer;
-  width: 25px;
-  height: 11px;
-  float: right;
+.top-description .rapper-small-icon, .btn-play-pause {
+  cursor:pointer;
+  float:right;
   position: relative;
   top: -0.1rem;
-  background: url('../img/btn-pause.png');
+}
+.top-description .rapper-small-icon{
+  color:white;
+  font-size: .1rem;
+  margin-right: 9px;
+  
+}
+.top-description .fb-icon{
+  font-weight: bold;
+}
+.top-description .tw-icon{
+  font-weight: bold;
+  font-size: .12rem;
+}
+.top-description .rapper-small-icon:hover, .top-description .rapper-small-icon.active{
+  color: $rouge;
+}
+
+.btn-play-pause {
+  width: 25px;
+  height: 11px;
+  background: url("../img/btn-pause.png") no-repeat center right;
+  border-left: 1px solid white;
+  padding-left: 7px;
 }
 
 .description .bottom-description {
@@ -1163,14 +1184,17 @@ video#bgvid {
     margin-bottom: 40px;
   }
   .maskBio {
-    width: 330px;
-    height: 330px;
+    width: 17%;
     border: 5px solid #f0f0f0;
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
     display: inline-block;
     vertical-align: top;
+    margin-right: 0;
+    img{
+      width: 100%;
+    }
   }
 }
 
