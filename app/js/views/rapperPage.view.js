@@ -3,6 +3,8 @@ define(['backbone','modelRapper','collectionRapper','text!templates/page-rappeur
 /*==========================================================================================*/
 /*----------------------------  VUE POUR COLLECTION DE RAPPERS  ----------------------------*/
 /*==========================================================================================*/
+  var likes=0;
+
   var RapperPage = Backbone.View.extend({
     el:'#page-rapper',
     runFilter: function(rapper){
@@ -60,8 +62,6 @@ define(['backbone','modelRapper','collectionRapper','text!templates/page-rappeur
           var idRapper = $(e.target).data('id');
           idRapper=idRapper-1;
 
-          console.log(idRapper);
-
           var height = 280,
               width = 960;
 
@@ -86,6 +86,7 @@ define(['backbone','modelRapper','collectionRapper','text!templates/page-rappeur
             .orient("bottom");
 
           d3.json(this.collection.url, function(error, data) {
+
               x.domain(data[idRapper].album.map(function(d,i) { return "ALBUM "+(i+1); }));
               y.domain([0, 1000000]);
               var nbAlbum = parseInt(data[idRapper].album.length);
@@ -259,12 +260,26 @@ define(['backbone','modelRapper','collectionRapper','text!templates/page-rappeur
               .transition()
               .duration(1000)
               .tween("text", function(d) {
-                  var i = d3.interpolate(this.textContent, data[idRapper].likes),
-                      prec = (data[idRapper].likes + "").split("."),
-                      round = (prec.length > 1) ? Math.pow(10, prec[1].length) : 1;
-                  return function(t) {
-                      this.textContent = Math.round(i(t) * round) / round;
-                  };
+
+                if(data[idRapper].facebook != ""){
+                  $.ajax({
+                    url: "http://graph.facebook.com/"+data[idRapper].facebook,
+                    dataType: 'json',
+                    async: false,
+                    success: function(data) {
+                      likes = data.likes;
+                    }
+                  });
+                }else{
+                  likes = 0;
+                }
+
+                var i = d3.interpolate(this.textContent, likes),
+                    prec = (likes + "").split("."),
+                    round = (prec.length > 1) ? Math.pow(10, prec[1].length) : 1;
+                return function(t) {
+                    this.textContent = Math.round(i(t) * round) / round;
+                };
               });
 
               d3.select(".pTwitter")
