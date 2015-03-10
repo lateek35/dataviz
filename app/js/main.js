@@ -231,7 +231,7 @@ $('#menu-overlay a').on('click', function(e){
 /*------------------------------  Gestion URL Departement MAP ----------------------------*/
 $('path').on('click',function(){ 
   var suplmement = (Backbone.history.fragment).substring(0,2);
-  router.navigate(suplmement+"dep/"+parseInt($(this)[0].id.substring(1)),true);
+  router.navigate(suplmement+"departement/"+parseInt($(this)[0].id.substring(1)),true);
   $('.departement').stop().animate({
     bottom: "-1rem"
   }, 500, function() {
@@ -244,7 +244,11 @@ $('path').on('click',function(){
   });
 });
 $('body').on('click','#btn-retour',function(){ 
-  $.fn.fullpage.moveSlideRight();
+  if(Backbone.history.history.back() == undefined){
+    $.fn.fullpage.moveTo(2,0);
+  }else{
+    Backbone.history.history.back();
+  }
   $("#bgvid")[0].muted=true;
   $('#fullPage-nav>ul').show();
 });
@@ -259,20 +263,25 @@ $('body').on('click','#btn-retour',function(){
 /*==========================================================================================*/
 $('#fullpage').fullpage({
   verticalCentered: false,
-  easing: 'swing',
   navigation: true,
   css3 : true,
-  scrollingSpeed: 300,
+  easingcss3: 'ease',
+  scrollingSpeed: 1400,
   normalScrollElements: '#page-rapper',
   afterLoad: function(anchorLink, index){
     var suplmement = (Backbone.history.fragment).substring(2);
-    router.navigate("//"+index+"/"+suplmement);
+    if (suplmement.length == 0)
+    {
+      router.navigate("//"+index);
+    }else{
+      router.navigate("//"+index+"/"+suplmement);
+    }
     if(index == '4'){
       rapperListInsults.render();
     }
   }
 });
-$.fn.fullpage.setKeyboardScrolling(false);
+$.fn.fullpage.setKeyboardScrolling(true);
 $(".section").find('.controlArrow').hide();
 $('#home>a').on('click',function(event){
   event.preventDefault();
@@ -288,8 +297,8 @@ $('#home>a').on('click',function(event){
       '5(/)' : 'module-fan',
       '4(/)' : 'module-hardcore',
       '3(/)' : 'module-hard',
-      '2/dep/:cp/:rapper(/)' : 'rapperSolo',
-      '2/dep/:cp(/)' : 'departement',
+      '2/:rapper(/)' : 'rapperSolo',
+      '2/departement/:cp(/)' : 'departement',
       '2(/)' : 'map',
       '1(/)' : 'home',
       '/' : 'home'
@@ -302,14 +311,18 @@ $('#home>a').on('click',function(event){
   //var moduleComparaison = new viewModuleComparaison({collection : rappers});
 
   var router = new Router();
+  Backbone.history.length = 0;
+  Backbone.history.on('route', function () { ++this.length; });
 
   router.on('route:home',function(slide){
     $.fn.fullpage.moveTo(1,0);
     rapperList.runFilter();
+    console.log('home');
   });
 
   router.on('route:map',function(slide){
     $.fn.fullpage.moveTo(2,0);
+    console.log('route map');
   });
 
   router.on('route:departement',function(cp){
@@ -325,11 +338,15 @@ $('#home>a').on('click',function(event){
     }, 500);
   }); 
 
-  router.on('route:rapperSolo',function(cp,rapper){
-    $.fn.fullpage.moveTo(2,1);
+  router.on('route:rapperSolo',function(rapper){
+    if(Backbone.history.length<=1){
+      $.fn.fullpage.setScrollingSpeed(0);
+    }
+    $.fn.fullpage.moveTo(2, 1);
     var rapperPage = new viewRapperPage({collection : rappers});
     rapperPage.runFilter(rapper);
     $('#fullPage-nav>ul').hide();
+    $.fn.fullpage.setScrollingSpeed(1200);
   });
 
   router.on('route:module-hard',function(){
@@ -349,7 +366,10 @@ $('#home>a').on('click',function(event){
     $.fn.fullpage.moveTo(6,0);
   });
 
-  Backbone.history.start();
+
+  Backbone.history.start({ 
+    pushState: false
+  });
 
 
 
@@ -642,6 +662,7 @@ function updateData(eventPassed) {
 
     /*Je récupère l'attribut data-class */
     if (eventPassed) {
+      console.log(eventPassed.target.getAttribute('data-class'));
         var classClicked = eventPassed.target.getAttribute('data-class');
     }
 
@@ -739,7 +760,7 @@ function updateData(eventPassed) {
                 });
 
 
-        if (classClicked === undefined || classClicked === "") {
+        if (classClicked === undefined || classClicked === "" || classClicked === null) {
             d3.select('g.popu').selectAll("path")
               .transition()
               .duration(1000)

@@ -536,6 +536,8 @@ nav {
 }
 
 #home {
+  position: relative;
+  z-index: 15;
   background: url("../img/background-2.jpg") center center no-repeat;
   text-align: center;
   text-transform: uppercase;
@@ -1498,7 +1500,7 @@ video#bgvid {
 .module-button2 {
   padding-top: 150px;
   margin: 0 auto;
-  width: 700px;
+  width: 704px;
   z-index: 105;
   position: relative;
   display: block;
@@ -1972,7 +1974,7 @@ video#bgvid {
 /*-------------  ABOUT 4 -------------*/
 
 #about {
-  background: url("../img/background-4.jpg") no-repeat center center;
+  background: url("../img/background-5.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
