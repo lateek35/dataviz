@@ -405,7 +405,7 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
             rapperCardInsults.select("h4")
                 .text(data[targetPos].blazz);
             rapperCardInsults.select("a")
-                .attr("href", "./#2/dep/"+data[targetPos].dep+"/"+data[targetPos].blazz);
+                .attr("href", "./#2/"+data[targetPos].blazz);
             rapperCardInsults.select(".album").select("span")
                 .text(data[targetPos].album[data[targetPos].v1-1].a_name);
             rapperCardInsults.select(".nb").select("span")
@@ -422,7 +422,7 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
             rapperCardVocab.select("h4")
                 .text(data[targetPos].blazz);
             rapperCardVocab.select("a")
-                .attr("href", "./#2/dep/"+data[targetPos].dep+"/"+data[targetPos].blazz);
+                .attr("href", "./#2/"+data[targetPos].blazz);
             rapperCardVocab.select(".album").select("span")
                 .text(data[targetPos].album[data[targetPos].v1-1].a_name);
             rapperCardVocab.select(".nb").select("span")

@@ -239,7 +239,7 @@ gulp.task('watch', function(){
     gulp.watch('app/js/**/*.json', ['json']);
     gulp.watch('app/js/**/*.js', ['jshint','js']);
     gulp.watch('app/*.{html,php}', ['html']);
-    gulp.watch('app/js/**/*.html', ['template']);
+    gulp.watch('app/js/**/*.html', ['html']);
     gulp.watch('app/img/**/*.{jpg,jpeg,png,tiff,svg}', ['images']);
 
 

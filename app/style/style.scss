@@ -536,6 +536,8 @@ nav {
 }
 
 #home {
+  position: relative;
+  z-index: 15;
   background: url("../img/background-2.jpg") center center no-repeat;
   text-align: center;
   text-transform: uppercase;
@@ -1997,7 +1999,7 @@ video#bgvid {
 /*-------------  ABOUT 4 -------------*/
 
 #about {
-  background: url("../img/background-4.jpg") no-repeat center center;
+  background: url("../img/background-5.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -2029,7 +2031,26 @@ video#bgvid {
     max-width: 1024px;
     padding: 0 24px;
     box-sizing: border-box;
-    margin: 30px auto;
+    margin: 60px auto;
+  }
+  a{
+    color:$rouge;
+    font-size: 0.16rem;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 0.20rem;
+    display: block;
+    font-family: 'source_sans_prolight';
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  ul{
+    margin-left:30px;
+    margin-top: 20px;
+  }
+  li{
+    height: 0.20rem;
   }
 }
 /*----------- END  ABOUT -----------*/
