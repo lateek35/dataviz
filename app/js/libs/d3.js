@@ -2745,7 +2745,7 @@
   };
   var d3_locale_enUS = d3.locale({
     decimal: ".",
-    thousands: ",",
+    thousands: " ",
     grouping: [ 3 ],
     currency: [ "$", "" ],
     dateTime: "%a %b %e %X %Y",
