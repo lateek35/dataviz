@@ -138,27 +138,64 @@ function mouseenterMap(){
     break; 
   }
 }
+
 function mouseoutMap(){
-  $(this).css('fill', 'rgba(255,0,50,0)');
+  $(this).not('.path-selected').css('fill', 'rgba(255,0,50,0)');
 }
 $('path').on('mouseenter',mouseenterMap);
 $('path').on('mouseout',mouseoutMap);
 
 $('svg#carte').mouseup(function(e){
-  $('#carte path').show().attr('class','');
-  $('#carte path').bind('mouseenter',mouseenterMap);
   router.navigate("#2/");
   $('.departement').stop().animate({
-      bottom: "0"
-    }, 500, function() {
-      // Animation complete.
-    });
-    $('#list-bottom').stop().animate({
-      top: "1rem"
-    }, 500, function() {
-      // Animation complete.
-    });
+    bottom: "0"
+  }, 500, function() {
+    // Animation complete.
+  });
+  $('#list-bottom').stop().animate({
+    top: "1rem"
+  }, 500, function() {
+    // Animation complete.
+  });
 });
+
+/*__________________________________________________________________________________________*/
+/*------------------------------  Gestion URL Departement MAP ----------------------------*/
+$('path').on('click',function(){ 
+  $('.path-selected').css('fill', 'rgba(255,0,50,0)');
+  $('.path-selected').attr('class','');
+  $(this).attr("class", "path-selected");
+  var suplmement = (Backbone.history.fragment).substring(0,2);
+  router.navigate(suplmement+"departement/"+parseInt($(this)[0].id.substring(1)),true);
+  $('.departement').stop().animate({
+    bottom: "-1rem"
+  }, 500, function() {
+    // Animation complete.
+  });
+  $('#list-bottom').stop().animate({
+    top: "0"
+  }, 500, function() {
+    // Animation complete.
+  });
+});
+$('body').on('click','#btn-retour',function(){ 
+  if(Backbone.history.history.back() == undefined){
+    $.fn.fullpage.moveTo(2,0);
+  }else{
+    Backbone.history.history.back();
+  }
+  $("#bgvid")[0].muted=true;
+  setTimeout(function() {
+    $('#fp-nav>ul').show();
+  }, 600);
+});
+/*__________________________________________________________________________________________*/
+/*---------------------------------  Gestion URL Rappeur MAP -------------------------------*/
+// $('path').on('click',function(){ 
+//   var suplmement = (Backbone.history.fragment).substring(0,9);
+//   router.navigate("caca/"+$(this)[0].id);
+// });
+
 /*__________________________________________________________________________________________*/
 /*--------------------------------  Animation liste rappeur  -------------------------------*/
 $('body').on('mouseover','#list-rapper li',function(){ 
@@ -213,11 +250,13 @@ $('.up').on('mouseover',function(){
 $('#hamburger-icon').on('click', function(){
   $(this).toggleClass('active');
   $('#menu-overlay').toggleClass('open');
+  $.fn.fullpage.setAllowScrolling(false);
 });
 
 $('#menu-overlay a').on('click', function(e){
   $('#hamburger-icon').toggleClass('active');
   $('#menu-overlay').toggleClass('open');
+  $.fn.fullpage.setAllowScrolling(true);
 });
 
 
@@ -227,37 +266,7 @@ $('#menu-overlay a').on('click', function(e){
 // console.log("position top head-rappers (dans body) : "+($('#head-rappers').offset().top-window.innerHeight*3));
 // console.log("hauteur total : "+window.innerHeight*4);
 
-/*__________________________________________________________________________________________*/
-/*------------------------------  Gestion URL Departement MAP ----------------------------*/
-$('path').on('click',function(){ 
-  var suplmement = (Backbone.history.fragment).substring(0,2);
-  router.navigate(suplmement+"departement/"+parseInt($(this)[0].id.substring(1)),true);
-  $('.departement').stop().animate({
-    bottom: "-1rem"
-  }, 500, function() {
-    // Animation complete.
-  });
-  $('#list-bottom').stop().animate({
-    top: "0"
-  }, 500, function() {
-    // Animation complete.
-  });
-});
-$('body').on('click','#btn-retour',function(){ 
-  if(Backbone.history.history.back() == undefined){
-    $.fn.fullpage.moveTo(2,0);
-  }else{
-    Backbone.history.history.back();
-  }
-  $("#bgvid")[0].muted=true;
-  $('#fullPage-nav>ul').show();
-});
-/*__________________________________________________________________________________________*/
-/*---------------------------------  Gestion URL Rappeur MAP -------------------------------*/
-// $('path').on('click',function(){ 
-//   var suplmement = (Backbone.history.fragment).substring(0,9);
-//   router.navigate("caca/"+$(this)[0].id);
-// });
+
 /*==========================================================================================*/
 /*----------------------------------  INIT OF FULLPAGE.JS  ---------------------------------*/
 /*==========================================================================================*/
@@ -317,25 +326,17 @@ $('#home>a').on('click',function(event){
   router.on('route:home',function(slide){
     $.fn.fullpage.moveTo(1,0);
     rapperList.runFilter();
-    console.log('home');
   });
 
   router.on('route:map',function(slide){
     $.fn.fullpage.moveTo(2,0);
-    console.log('route map');
   });
 
   router.on('route:departement',function(cp){
     $.fn.fullpage.moveTo(2,0);
     rapperList.runFilter(parseInt(cp));
-    $('#carte path').show().attr('class','');
-    $('#_'+cp).attr('class','zoom');
-    $('#carte path').not('#_'+cp).attr('class','bouge');
-    $('#carte path').unbind('mouseenter',mouseenterMap);
-    setTimeout(function(){
-      $('#carte path').not('#_'+cp).css('display','none');
-      $('#carte path').bind('mouseenter',mouseenterMap);
-    }, 500);
+    $('#_'+cp).attr('class','path-selected');
+    $('#_'+cp).css('fill', 'rgba(233,73,83,0.35)');
   }); 
 
   router.on('route:rapperSolo',function(rapper){
@@ -345,7 +346,7 @@ $('#home>a').on('click',function(event){
     $.fn.fullpage.moveTo(2, 1);
     var rapperPage = new viewRapperPage({collection : rappers});
     rapperPage.runFilter(rapper);
-    $('#fullPage-nav>ul').hide();
+    $('#fp-nav>ul').hide();
     $.fn.fullpage.setScrollingSpeed(1200);
   });
 
@@ -662,7 +663,6 @@ function updateData(eventPassed) {
 
     /*Je récupère l'attribut data-class */
     if (eventPassed) {
-      console.log(eventPassed.target.getAttribute('data-class'));
         var classClicked = eventPassed.target.getAttribute('data-class');
     }
 
