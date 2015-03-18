@@ -39,11 +39,6 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
         settings.nbRappers = data.length;
         var nbClics = settings.nbRappers / 10;
         settings.nbClicsLeft = parseInt(nbClics);
-        // if(parseFloat(nbClics)>0){
-        //   settings.nbClicsLeft = parseInt(nbClics)+1;
-        // }else{
-        //   settings.nbClicsLeft = parseInt(nbClics);
-        // }
 
         var width = settings.nbRappers*settings.oneRapperWidth,
           height = $("#graph-hardcore").height();
@@ -116,11 +111,7 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
         var barRappers = d3.selectAll(".g-rapper");
         d3.json(this.collection.url, function(error, data) {
 
-          // console.log(data);
-
-
             yInsults.domain([0, 150]);
-            // yInsults.domain([0, d3.max(data, function(d) { return d.insults })]);
 
             d3.select('.moy').select('line')
               .attr("x1","0")
@@ -232,8 +223,6 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
 
             yInsults.domain([0, 150]);
             yVocab.domain([1000, 2000]);
-            // yInsults.domain([0, d3.max(data, function(d) { return d.insults })]);
-            // yVocab.domain([d3.min(data, function(d) { return d.vocabulaire }), d3.max(data, function(d) { return d.vocabulaire })]);
 
             d3.select('.g-axis').select('.axis')
               .call(yAxis);
@@ -331,8 +320,6 @@ define(['backbone','modelRapper','collectionRapper','d3'], function (backbone, m
 
             yInsults.domain([0, 150]);
             yVocab.domain([1000, 2000]);
-            // yInsults.domain([0, d3.max(data, function(d) { return d.insults })]);
-            // yVocab.domain([d3.min(data, function(d) { return d.vocabulaire }), d3.max(data, function(d) { return d.vocabulaire })]);
 
             d3.select('.g-axis').select('.axis')
               .call(yAxis);

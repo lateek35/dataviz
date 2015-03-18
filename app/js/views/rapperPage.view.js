@@ -249,9 +249,11 @@ define(['backbone','modelRapper','collectionRapper','text!templates/page-rappeur
               .tween("text", function(d) {
                   var i = d3.interpolate(this.textContent, percent),
                       prec = (percent + "").split("."),
-                      round = (prec.length > 1) ? Math.pow(10, prec[1].length) : 1;
+                      round = (prec.length > 1) ? Math.pow(10, prec[1].length) : 1
+                      f = d3.format(",");
                   return function(t) {
-                      this.textContent = (Math.round(i(t) * round) / round)+"%";
+                    // tickFormat(d3.format("d"))
+                      this.textContent = f(Math.round(i(t) * round) / round)+"%";
                   };
               });
 
@@ -260,25 +262,12 @@ define(['backbone','modelRapper','collectionRapper','text!templates/page-rappeur
               .transition()
               .duration(1000)
               .tween("text", function(d) {
-
-                if(data[idRapper].facebook != ""){
-                  $.ajax({
-                    url: "http://graph.facebook.com/"+data[idRapper].facebook,
-                    dataType: 'json',
-                    async: false,
-                    success: function(data) {
-                      likes = data.likes;
-                    }
-                  });
-                }else{
-                  likes = 0;
-                }
-
-                var i = d3.interpolate(this.textContent, likes),
-                    prec = (likes + "").split("."),
-                    round = (prec.length > 1) ? Math.pow(10, prec[1].length) : 1;
+                var i = d3.interpolate(this.textContent, data[idRapper].likes),
+                    prec = (data[idRapper].likes + "").split("."),
+                    round = (prec.length > 1) ? Math.pow(10, prec[1].length) : 1
+                    f = d3.format(",");
                 return function(t) {
-                    this.textContent = Math.round(i(t) * round) / round;
+                    this.textContent = f(Math.round(i(t) * round) / round);
                 };
               });
 
@@ -287,12 +276,14 @@ define(['backbone','modelRapper','collectionRapper','text!templates/page-rappeur
               .transition()
               .duration(1000)
               .tween("text", function(d) {
-                  var i = d3.interpolate(this.textContent, data[idRapper].followers),
-                      prec = (data[idRapper].followers + "").split("."),
-                      round = (prec.length > 1) ? Math.pow(10, prec[1].length) : 1;
-                  return function(t) {
-                      this.textContent = Math.round(i(t) * round) / round;
-                  };
+
+                var i = d3.interpolate(this.textContent, data[idRapper].followers),
+                    prec = (data[idRapper].followers + "").split("."),
+                    round = (prec.length > 1) ? Math.pow(10, prec[1].length) : 1
+                    f = d3.format(",");
+                return function(t) {
+                    this.textContent = f(Math.round(i(t) * round) / round);
+                };
               });
 
               d3.select(".pAbonne")
@@ -302,9 +293,10 @@ define(['backbone','modelRapper','collectionRapper','text!templates/page-rappeur
               .tween("text", function(d) {
                   var i = d3.interpolate(this.textContent, data[idRapper].abonnes),
                       prec = (data[idRapper].abonnes + "").split("."),
-                      round = (prec.length > 1) ? Math.pow(10, prec[1].length) : 1;
+                      round = (prec.length > 1) ? Math.pow(10, prec[1].length) : 1
+                      f = d3.format(",");
                   return function(t) {
-                      this.textContent = Math.round(i(t) * round) / round;
+                      this.textContent = f(Math.round(i(t) * round) / round);
                   };
               });
 
@@ -313,11 +305,12 @@ define(['backbone','modelRapper','collectionRapper','text!templates/page-rappeur
               .transition()
               .duration(1000)
               .tween("text", function(d) {
-                  var i = d3.interpolate(this.textContent, data[idRapper].instagram),
-                      prec = (data[idRapper].instagram + "").split("."),
-                      round = (prec.length > 1) ? Math.pow(10, prec[1].length) : 1;
+                  var i = d3.interpolate(this.textContent, data[idRapper].insta_follows),
+                      prec = (data[idRapper].insta_follows + "").split("."),
+                      round = (prec.length > 1) ? Math.pow(10, prec[1].length) : 1
+                      f = d3.format(",");
                   return function(t) {
-                      this.textContent = Math.round(i(t) * round) / round;
+                      this.textContent = f(Math.round(i(t) * round) / round);
                   };
               });
 
@@ -328,9 +321,10 @@ define(['backbone','modelRapper','collectionRapper','text!templates/page-rappeur
               .tween("text", function(d) {
                   var i = d3.interpolate(this.textContent, data[idRapper].v3),
                       prec = (data[idRapper].v3 + "").split("."),
-                      round = (prec.length > 1) ? Math.pow(10, prec[1].length) : 1;
+                      round = (prec.length > 1) ? Math.pow(10, prec[1].length) : 1
+                      f = d3.format(",");
                   return function(t) {
-                      this.textContent = Math.round(i(t) * round) / round;
+                      this.textContent = f(Math.round(i(t) * round) / round);
                   };
               });
 
@@ -341,9 +335,10 @@ define(['backbone','modelRapper','collectionRapper','text!templates/page-rappeur
               .tween("text", function(d) {
                   var i = d3.interpolate(this.textContent, data[idRapper].total_fans),
                       prec = (data[idRapper].total_fans + "").split("."),
-                      round = (prec.length > 1) ? Math.pow(10, prec[1].length) : 1;
+                      round = (prec.length > 1) ? Math.pow(10, prec[1].length) : 1
+                      f = d3.format(",");
                   return function(t) {
-                      this.textContent = Math.round(i(t) * round) / round;
+                      this.textContent = f(Math.round(i(t) * round) / round);
                   };
               });
 
