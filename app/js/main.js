@@ -106,6 +106,29 @@ $( document ).ready(function() {
 /*__________________________________________________________________________________________*/
 /*-----------------------------  Animation MAP (hover + zoom)  ----------------------------*/
 function mouseenterMap(){
+  if ($(this)[0].getAttribute("class")!=="path-selected") {
+    $('.departement').stop().animate({
+      bottom: "0"
+    }, 500, function() {
+      // Animation complete.
+    });
+    $('#list-bottom').stop().animate({
+      top: "1rem"
+    }, 500, function() {
+      // Animation complete.
+    });
+  }else{
+    $('.departement').stop().animate({
+      bottom: "-1rem"
+    }, 500, function() {
+      // Animation complete.
+    });
+    $('#list-bottom').stop().animate({
+      top: "0"
+    }, 500, function() {
+      // Animation complete.
+    });
+  }
   $(this).css('fill', 'rgba(233,73,83,0.35)');
   switch (parseInt($(this)[0].id.substring(1))) 
   { 
@@ -140,6 +163,16 @@ function mouseenterMap(){
 }
 
 function mouseoutMap(){
+  $('.departement').stop().animate({
+    bottom: "-1rem"
+  }, 500, function() {
+    // Animation complete.
+  });
+  $('#list-bottom').stop().animate({
+    top: "0"
+  }, 500, function() {
+    // Animation complete.
+  });
   $(this).not('.path-selected').css('fill', 'rgba(255,0,50,0)');
 }
 $('path').on('mouseenter',mouseenterMap);
