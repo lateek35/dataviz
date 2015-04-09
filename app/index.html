@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     </head>
     <body>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.3&appId=697353357039820";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     <a id="hamburger-icon" href="#" title="Menu">
       <span class="line line-1"></span>
       <span class="line line-2"></span>
@@ -90,8 +100,14 @@
             <h1>PANAM ALL STARZ</h1>
             <hr>
             <h2>Découvrez qui est le boss du rap game français</h2>
-            <a href="#">Commencer l'expérience</a>
-            <a href="#"><img src="img/arrow-down.png" alt="Flèche pour aller vers le bas"></a>
+            <div class="begin">
+                <a href="#">Commencer l'expérience</a>
+                <a href="#"><img src="img/mouse-down.png" alt="Flèche pour aller vers le bas"></a>
+            </div>
+            <div class="social-buttons">
+                <div class="fb-share-button" data-href="http://panamallstarz.fr/" data-layout="button_count"></div>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-text="Panam All Starz - Qui est le boss du rap game ?" data-via="PanamAllStarz75" data-lang="fr" data-hashtags="PanamAllStarz">Tweeter</a>
+            </div>
         </div>
         <div class="section" id="module-1">
             <div class="slide">
