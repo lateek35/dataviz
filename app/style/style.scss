@@ -623,7 +623,14 @@ nav {
   .begin{
     position:absolute;
     width: 100%;
-    bottom:40px;
+    
+    bottom:0;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 1s 1s ease;
+    -moz-transition: all 1s 1s ease;
+    -o-transition: all 1s 1s ease;
+    transition: all 1s 1s ease;
 
     a {
       font-family: 'source_sans_probold', Georgia, serif;
@@ -652,10 +659,27 @@ nav {
       }
     }
   }
+  .begin.animOn{
+    bottom:40px;
+    visibility: visible;
+    opacity: 1;
+  }
   .social-buttons{
     position: absolute;
-    bottom: 20px;
     left: 20px;
+
+    bottom:0;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 1s 1s ease;
+    -moz-transition: all 1s 1s ease;
+    -o-transition: all 1s 1s ease;
+    transition: all 1s 1s ease;
+  }
+  .social-buttons.animOn{
+    bottom: 20px;
+    visibility: visible;
+    opacity: 1;
   }
 }
 

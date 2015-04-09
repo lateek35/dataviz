@@ -253,6 +253,12 @@ $('body').on('click',".btn-play-pause",function(){
 
 });
 /*__________________________________________________________________________________________*/
+/*---------------------------------------Animation home ------------------------------------*/
+function launchHomeAnim(){
+  $('#home hr, #home h1, #home h2, #hamburger-icon, #home .social-buttons, #home .begin').addClass('animOn');
+}
+launchHomeAnim();
+/*__________________________________________________________________________________________*/
 /*----------------------------------  Animation liste fans  --------------------------------*/
 
 // $('.bottom').on('mouseover',function(){
@@ -359,8 +365,6 @@ $('#home>.begin>a').on('click',function(event){
 
   router.on('route:home',function(slide){
     $.fn.fullpage.moveTo(1,0);
-    alert("test");
-    launchHomeAnim();
     rapperList.runFilter();
   });
 
@@ -409,10 +413,6 @@ $('#home>.begin>a').on('click',function(event){
     pushState: false
   });
 
-  function launchHomeAnim(){
-    alert("test");
-    $('#home hr, #home h1, #home h2, #hamburger-icon').addClass('animOn');
-  }
 
 
 
