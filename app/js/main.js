@@ -1,3 +1,4 @@
+
 /*!
 
 PANAM ALL STARZ v1.0.0
@@ -325,7 +326,7 @@ $('#fullpage').fullpage({
 });
 $.fn.fullpage.setKeyboardScrolling(true);
 $(".section").find('.controlArrow').hide();
-$('#home>a').on('click',function(event){
+$('#home>.begin>a').on('click',function(event){
   event.preventDefault();
   $.fn.fullpage.moveSectionDown();
 });
@@ -358,6 +359,8 @@ $('#home>a').on('click',function(event){
 
   router.on('route:home',function(slide){
     $.fn.fullpage.moveTo(1,0);
+    alert("test");
+    launchHomeAnim();
     rapperList.runFilter();
   });
 
@@ -405,8 +408,10 @@ $('#home>a').on('click',function(event){
     pushState: false
   });
 
-
-
+  function launchHomeAnim(){
+    alert("test");
+    $('#home hr, #home h1, #home h2, #hamburger-icon').addClass('animOn');
+  }
 
 
 
