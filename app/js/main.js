@@ -255,29 +255,29 @@ $('body').on('click',".btn-play-pause",function(){
 /*__________________________________________________________________________________________*/
 /*----------------------------------  Animation liste fans  --------------------------------*/
 
-$('.bottom').on('mouseover',function(){
-  var moveList = setInterval(function(){ 
-    if( parseInt($('.fans>ul').css('top'))>=-142 ){
-      $('.fans>ul').css('top','-=5px');
-    }
-  }, 20);
+// $('.bottom').on('mouseover',function(){
+//   var moveList = setInterval(function(){ 
+//     if( parseInt($('.fans>ul').css('top'))>=-142 ){
+//       $('.fans>ul').css('top','-=5px');
+//     }
+//   }, 20);
 
-  $(this).on('mouseout',function(){
-    clearInterval(moveList);
-  });
-});
+//   $(this).on('mouseout',function(){
+//     clearInterval(moveList);
+//   });
+// });
 
-$('.up').on('mouseover',function(){
-  var moveList = setInterval(function(){
-    if( parseInt($('.fans>ul').css('top'))<0 ){
-      $('.fans>ul').css('top','+=5px');
-    }
-  }, 20);
+// $('.up').on('mouseover',function(){
+//   var moveList = setInterval(function(){
+//     if( parseInt($('.fans>ul').css('top'))<0 ){
+//       $('.fans>ul').css('top','+=5px');
+//     }
+//   }, 20);
 
-  $(this).on('mouseout',function(){
-    clearInterval(moveList);
-  });
-});
+//   $(this).on('mouseout',function(){
+//     clearInterval(moveList);
+//   });
+// });
 
 /*__________________________________________________________________________________________*/
 /*--------------------------------------  Menu appear --------------------------------------*/
@@ -336,8 +336,8 @@ $('#home>.begin>a').on('click',function(event){
 /*==========================================================================================*/
   var Router = Backbone.Router.extend({
     routes:{
-      '6(/)' : 'a-propos',
-      '5(/)' : 'module-fan',
+      '5(/)' : 'a-propos',
+      // '5(/)' : 'module-fan',
       '4(/)' : 'module-hardcore',
       '3(/)' : 'module-hard',
       '2/:rapper(/)' : 'rapperSolo',
@@ -395,12 +395,13 @@ $('#home>.begin>a').on('click',function(event){
     $.fn.fullpage.moveTo(4,0);
   });
 
-  router.on('route:module-fan',function(){
-    $.fn.fullpage.moveTo(5,0);
-  });
+  // router.on('route:module-fan',function(){
+  //   $.fn.fullpage.moveTo(5,0);
+  // });
 
   router.on('route:a-propos',function(){
-    $.fn.fullpage.moveTo(6,0);
+    console.log('test');
+    $.fn.fullpage.moveTo(5,0);
   });
 
 
