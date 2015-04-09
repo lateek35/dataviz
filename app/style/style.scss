@@ -25,8 +25,8 @@ $background: #3d566e;
 $color: #ecf0f1;
 
 $height-icon: 20px;
-$width-line: 40px;
-$height-line: 2px;
+$width-line: 35px;
+$height-line: 5px;
 
 $transition-time: 0.4s;
 $rotation: 45deg;
@@ -51,10 +51,7 @@ $translateX: 0;
     height:$height-line;
     position:absolute;
     left:0;
-    border-radius:($height-line / 2);
     transition: all $transition-time;
-    -webkit-transition: all $transition-time;
-    -moz-transition: all $transition-time;
     
     &.line-1 {
       top:0;
