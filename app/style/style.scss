@@ -578,28 +578,42 @@ nav {
     background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
     background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
   }
-  a {
-    font-size: 0.16rem;
-    display: block;
-    margin: 0 auto;
+  .begin{
+    position:absolute;
+    width: 100%;
+    bottom:40px;
+
+    a {
+      font-family: 'source_sans_probold', Georgia, serif;
+      font-size: 0.12rem;
+      display: block;
+      width: 160px;
+      margin: 0 auto;
+      text-align: center;
+      
+      &:first-of-type {
+        
+      }
+      &:last-of-type {
+        
+      }
+      &:link, &:visited, &:hover {
+        color: white;
+        text-decoration: none;
+      }
+      &:focus {
+        text-decoration: none;
+        color: white;
+      }
+      img{
+        margin-top:20px;
+      }
+    }
+  }
+  .social-buttons{
     position: absolute;
-    left: 50%;
-    &:first-of-type {
-      bottom: 0.7rem;
-      margin-left: -0.98rem;
-    }
-    &:last-of-type {
-      bottom: 0.3rem;
-      margin-left: -0.15rem;
-    }
-    &:link, &:visited, &:hover {
-      color: $rouge;
-      text-decoration: none;
-    }
-    &:focus {
-      text-decoration: none;
-      color: $rouge;
-    }
+    bottom: 20px;
+    left: 20px;
   }
 }
 
