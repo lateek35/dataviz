@@ -24,9 +24,9 @@ html, body {
 $background: #3d566e;
 $color: #ecf0f1;
 
-$height-icon: 20px;
-$width-line: 35px;
-$height-line: 5px;
+$height-icon: 16px;
+$width-line: 28px;
+$height-line: 4px;
 
 $transition-time: 0.4s;
 $rotation: 45deg;
@@ -63,7 +63,7 @@ $translateX: 0;
       top:100%;
     }
   }
-  &:hover, &:focus {
+  &:hover{
      .line-1 {
         transform: translateY($height-line / 2 * -1);
         -webkit-transform: translateY($height-line / 2 * -1);
