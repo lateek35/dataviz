@@ -318,6 +318,7 @@ $('#fullpage').fullpage({
   scrollingSpeed: 1400,
   normalScrollElements: '#page-rapper',
   afterLoad: function(anchorLink, index){
+    $(this).addClass('animSlide');
     var suplmement = (Backbone.history.fragment).substring(2);
     if (suplmement.length == 0)
     {
@@ -328,6 +329,7 @@ $('#fullpage').fullpage({
     if(index == '4'){
       rapperListInsults.render();
     }
+
   }
 });
 $.fn.fullpage.setKeyboardScrolling(true);
@@ -445,71 +447,71 @@ $('body').on('click','.option',
 /*-----------------------------------  CREATION DU MODULE  ----------------------------------*/
 /*==========================================================================================*/
 
-    var r = 593;
-    var p = Math.PI;
-    var intervalScale = 6.2;
-    var color = d3.scale.linear()
-        .domain([-1, 0, 1])
-        .range(["#515e44", "#4a4758", "#e84852"]);
+var r = 593;
+var p = Math.PI;
+var intervalScale = 6.2;
+var color = d3.scale.linear()
+    .domain([-1, 0, 1])
+    .range(["#515e44", "#4a4758", "#e84852"]);
 
-    var colorB = d3.scale.linear()
-        .domain([-1, 0, 1])
-        .range(["#516839", "#453F61", "#F73943"]);
+var colorB = d3.scale.linear()
+    .domain([-1, 0, 1])
+    .range(["#516839", "#453F61", "#F73943"]);
 
-    var canvas = d3.select('#container-module-comparaison').append('svg')
-        .attr('width','100%')
-        .attr('height','100%');
+var canvas = d3.select('#container-module-comparaison').append('svg')
+    .attr('width','100%')
+    .attr('height','100%');
 
-    var group3 = canvas.append('g')
-        .attr('class','popu')
-        .attr('transform','translate('+(r+60)+','+(r)+')');
-    var group2 = canvas.append('g')
-        .attr('class','vente')
-        .attr('transform','translate('+(r+60)+','+(r)+')');
-    var group1 = canvas.append('g')
-        .attr('class','album')
-        .attr('transform','translate('+(r+60)+','+(r)+')');
+var group3 = canvas.append('g')
+    .attr('class','popu')
+    .attr('transform','translate('+(r+60)+','+(r)+')');
+var group2 = canvas.append('g')
+    .attr('class','vente')
+    .attr('transform','translate('+(r+60)+','+(r)+')');
+var group1 = canvas.append('g')
+    .attr('class','album')
+    .attr('transform','translate('+(r+60)+','+(r)+')');
 
-    var debutScaleAlbum = 76;
-    var finScaleAlbum = 76+(14*(intervalScale));
+var debutScaleAlbum = 76;
+var finScaleAlbum = 76+(14*(intervalScale));
 
-    var debutScaleVente = finScaleAlbum+intervalScale;
-    var finScaleVente = debutScaleVente+(20*(intervalScale));
+var debutScaleVente = finScaleAlbum+intervalScale;
+var finScaleVente = debutScaleVente+(20*(intervalScale));
 
-    var debutScalePopu = finScaleVente+intervalScale;
-    var finScalePopu = debutScalePopu+(35*(intervalScale));
+var debutScalePopu = finScaleVente+intervalScale;
+var finScalePopu = debutScalePopu+(35*(intervalScale));
 
 
-    var scale1 = d3.scale.linear();
-        scale1.domain([1, 8]);
-        scale1.range([76, finScaleAlbum]);
+var scale1 = d3.scale.linear();
+    scale1.domain([1, 8]);
+    scale1.range([76, finScaleAlbum]);
 
-    var scale2 = d3.scale.linear();
-        scale2.domain([0, 2000000]);
-        scale2.range([debutScaleVente, finScaleVente]);
+var scale2 = d3.scale.linear();
+    scale2.domain([0, 2000000]);
+    scale2.range([debutScaleVente, finScaleVente]);
 
-    var scale3 = d3.scale.linear();
-        scale3.domain([0, 4000000]);
-        scale3.range([debutScalePopu,finScalePopu]);
+var scale3 = d3.scale.linear();
+    scale3.domain([0, 4000000]);
+    scale3.range([debutScalePopu,finScalePopu]);
 
-    var arc1,
-        arc2,
-        arc3,
-        total;
+var arc1,
+    arc2,
+    arc3,
+    total;
 
-    var radius = 100,
-        radians = 2 * p,
-        points = 30;
+var radius = 100,
+    radians = 2 * p,
+    points = 30;
 
-    var angle = d3.scale.linear()
-        .domain([0, points-1])
-        .range([0, radians/2]);
+var angle = d3.scale.linear()
+    .domain([0, points-1])
+    .range([0, radians/2]);
 
-    var line = d3.svg.line.radial()
-        .interpolate("basis")
-        .tension(0)
-        .radius(function(d, i) {return radius;})
-        .angle(function(d, i) { return angle(i); });
+var line = d3.svg.line.radial()
+    .interpolate("basis")
+    .tension(0)
+    .radius(function(d, i) {return radius;})
+    .angle(function(d, i) { return angle(i); });
 
 d3.json('./js/data.json',function(data){
 
