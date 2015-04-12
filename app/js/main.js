@@ -393,6 +393,7 @@ $('#home>.begin>a').on('click',function(event){
   });
 
   router.on('route:module-hard',function(){
+    setTimeout(updateData,500);
     $.fn.fullpage.moveTo(3,0);
     //moduleComparaison.render(-1);
   });
@@ -497,6 +498,7 @@ var scale3 = d3.scale.linear();
 var arc1,
     arc2,
     arc3,
+    arc0,
     total;
 
 var radius = 100,
@@ -519,6 +521,15 @@ d3.json('./js/data.json',function(data){
 
 /*__________________________________________________________________________________________*/
 /*-------------------------CREATION DES CERCLES RELIES A L'ECHELLE-------------------------*/
+    arc0 = d3.svg.arc()
+                .innerRadius(76)
+                .outerRadius(76)
+                .startAngle(function(d,i){
+                    return (-p/2)+(p/total)*i; 
+                })
+                .endAngle(function(d,i){
+                    return(-p/2)+(p/total)*(i+1);
+                });
     arc1 = d3.svg.arc()
         .innerRadius(debutScaleAlbum)
         .outerRadius(function(d){
@@ -571,7 +582,7 @@ d3.json('./js/data.json',function(data){
         .data(data)
         .enter()
         .append('path')
-        .attr('d',arc1)
+        .attr('d',arc0)
         .style("fill", function(d){
             return d3.rgb(color(-1));
         })
@@ -598,7 +609,7 @@ d3.json('./js/data.json',function(data){
         .data(data)
         .enter()
         .append('path')
-        .attr('d',arc2)
+        .attr('d',arc0)
         .style("fill", function(d){
             return d3.rgb(color(0));
         })
@@ -624,7 +635,7 @@ d3.json('./js/data.json',function(data){
         .data(data)
         .enter()
         .append('path')
-        .attr('d',arc3)
+        .attr('d',arc0)
         .style("fill", function(d){
             return d3.rgb(color(1));
         })
@@ -698,13 +709,14 @@ d3.json('./js/data.json',function(data){
       }
     }
 });
-updateData();
+// updateData();
 
 function updateData(eventPassed) {
 
     /*Je récupère l'attribut data-class */
+    var classClicked = undefined;
     if (eventPassed) {
-        var classClicked = eventPassed.target.getAttribute('data-class');
+        classClicked = eventPassed.target.getAttribute('data-class');
     }
 
     // Get the data again
@@ -714,17 +726,6 @@ function updateData(eventPassed) {
         var gChosen = d3.selectAll("svg g."+classClicked).transition();
 
       /*Je défini 1 à 1 mes 3 arcs qui serviront a représenté mes 3 données*/
-
-            /*Je créer un arc de "reboot*/
-            var arc0 = d3.svg.arc()
-                .innerRadius(76)
-                .outerRadius(76)
-                .startAngle(function(d,i){
-                    return (-p/2)+(p/total)*i; 
-                })
-                .endAngle(function(d,i){
-                    return(-p/2)+(p/total)*(i+1);
-                });
 
             /*Je défini un compteur j car le i revient à 0 au changement de donnée*/
             var j = 0;
