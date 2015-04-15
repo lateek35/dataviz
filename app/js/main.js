@@ -393,7 +393,7 @@ $('#home>.begin>a').on('click',function(event){
   });
 
   router.on('route:module-hard',function(){
-    setTimeout(updateData,500);
+    setTimeout(updateData ,2000);
     $.fn.fullpage.moveTo(3,0);
     //moduleComparaison.render(-1);
   });

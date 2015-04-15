@@ -161,7 +161,7 @@ gulp.task('html', function(){
 
 //COMPRESSION ET TRANSFERT DES IMAGES
 gulp.task('images', function(){
-	return gulp.src('app/img/**/*.{jpg,jpeg,png,tiff,svg}')
+	return gulp.src('app/img/**/*.{jpg,jpeg,png,tiff}')
         .pipe(changed('./dist/img'))
         .pipe(imagemin({
             progressive: true,

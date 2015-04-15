@@ -1653,6 +1653,18 @@ video#bgvid {
   background-size: cover;
 }
 
+  text{
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    .animSlide &{
+      opacity: 1;
+      @for $i from 0 to 30 {
+        &:nth-of-type(#{$i}) {
+           transition-delay: #{($i*0.05)+1}s;
+        }
+      }
+    }
+  }
 .module-button2 {
   margin: 0 auto;
   width: 100%;
@@ -1661,6 +1673,17 @@ video#bgvid {
   position: relative;
   display: block;
   button {
+    .animSlide &{
+      transform: translate3d(0,0,0);
+      opacity: 1;
+      @for $i from 0 to 5 {
+        &:nth-child(#{$i}) {
+           transition-delay: #{($i*0.1)+0.4}s;
+        }
+      }
+    }
+    transform: translate3d(0,-20px,0);
+    opacity: 0;
     height: 40px;
     width: 160px;
     display: inline-block;
@@ -1674,10 +1697,10 @@ video#bgvid {
     -webkit-appearance: none;
     background: none;
     border: 1px solid $rouge;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
   }
 }
 
