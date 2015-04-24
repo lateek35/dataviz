@@ -1106,7 +1106,7 @@ video#bgvid {
     .fp-slide.animSlide.active &{
       @for $i from 0 to 4 {
         &:nth-child(#{$i}) {
-            transition: all 0.8s ease-out #{$i*0.1+1}s;
+            transition: opacity 0.8s ease-out #{$i*0.1+1}s, transform 0.8s ease-out #{$i*0.1+1}s;
             opacity: 1;
             transform: translateY(0px);
         }
