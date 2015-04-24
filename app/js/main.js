@@ -317,6 +317,11 @@ $('#fullpage').fullpage({
   easingcss3: 'ease',
   scrollingSpeed: 1400,
   normalScrollElements: '#page-rapper',
+  afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){ 
+    if(slideIndex===1){
+      $('.fp-slide.active').addClass('animSlide');
+    }
+  },
   afterLoad: function(anchorLink, index){
     $(this).addClass('animSlide');
     var suplmement = (Backbone.history.fragment).substring(2);
