@@ -21,6 +21,8 @@ var gulp = require('gulp'),
 	open = require('open'),
 	Notification = require('node-notifier');
 
+var config = require('./config');
+
 
 
 //CLEAN DU DOSSIER DIST
@@ -181,7 +183,7 @@ gulp.task('build', function() {
 //COMMANDE DE BUILD-PREPROD SEQUENCER
 gulp.task('deploy', function() {
   runSequence('master-clean',
-  	['fonts','style','json','html','jshint','js','requirejsBuild','images'],'ask'
+  	['fonts','style','json','html','jshint','js','requirejsBuild'],'ask'
   );
 });
 
@@ -200,14 +202,14 @@ gulp.task('ask', function() {
 
 //COMANDE DE DEPLOIEMENT
 gulp.task('deploy-preprod', function () {
-    return gulp.src('dist/**/*')
-        .pipe(ftp({
-            host: 'ftp.panamallstarz.fr',
-            user: 'panamall',
-            pass: 'paname93',
-            remotePath : 'preprod'
-        }))
-        .pipe(filelog());
+  return gulp.src('dist/**/*')
+      .pipe(ftp({
+          host: 'ftp.panamallstarz.fr',
+          user: config.ftp.username,
+          pass: config.ftp.password,
+          remotePath : 'preprod'
+      }))
+      .pipe(filelog());
 });
 
 //COMANDE DE DEPLOIEMENT

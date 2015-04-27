@@ -70,6 +70,26 @@ require([
   'd3'
 ], function (slimScroll,fullpage, backbone, modelRapper, collectionRapper,viewRapperList,viewRapperPage,viewModuleComparaison,viewRapperListInsults,d3) {
 /*==========================================================================================*/
+/*-------------------------------------  GESTION LOADER ------------------------------------*/
+/*==========================================================================================*/
+
+var loader = setInterval(function(){ progessload() }, 25);
+
+function progessload() {
+  if ($('#up-load').width() < 455) {
+    $('#up-load').width($('#up-load').width()+(Math.random()*20));
+  }else{
+    stopLoader();
+  }
+  console.log($('#up-load').width()+(Math.random()*10));
+}
+
+function stopLoader() {
+    clearInterval(loader);
+    $('#loader-overlay').fadeOut();
+    launchHomeAnim();
+}
+/*==========================================================================================*/
 /*-----------------------------------  GESTION RESPONSIVE ----------------------------------*/
 /*==========================================================================================*/
 
@@ -254,10 +274,10 @@ $('body').on('click',".btn-play-pause",function(){
 });
 /*__________________________________________________________________________________________*/
 /*---------------------------------------Animation home ------------------------------------*/
-function launchHomeAnim(){
+launchHomeAnim = function (){
   $('#home hr, #home h1, #home h2, #hamburger-icon, #home .social-buttons, #home .begin').addClass('animOn');
 }
-launchHomeAnim();
+
 /*__________________________________________________________________________________________*/
 /*----------------------------------  Animation liste fans  --------------------------------*/
 

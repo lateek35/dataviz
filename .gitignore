@@ -24,6 +24,7 @@ ehthumbs.db
 
 # Folder config file
 Desktop.ini
+config.js
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/

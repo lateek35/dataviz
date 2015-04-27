@@ -19,6 +19,52 @@ html, body {
   user-select: none;
   background-color: #333;
 }
+/********* LOADER ***********/
+#loader-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #333333;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999;
+  color: $rouge;
+  font-family: bebas,Georgia,serif;
+  font-size: 65px;
+  letter-spacing: 6px;
+}
+#loader{
+  width: 445px;
+  height: 65px;
+  position: absolute;
+  top: 50%;
+  margin-top: -33px;
+  left: 50%;
+  margin-left: -223px;
+  >h1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #4e3638;
+  }
+}
+#up-load{
+  width: 0;
+  height: 65px;
+  max-height: 65px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  h1{
+    color: $rouge;
+    width: 445px;
+  }
+}
+/********* END LOADER ***********/
+
 
 /************* MENU ************/
 $background: #3d566e;
