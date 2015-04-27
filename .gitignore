@@ -40,4 +40,3 @@ $RECYCLE.BIN/
 dist/
 video/
 node_modules/
-gulpfile.js
