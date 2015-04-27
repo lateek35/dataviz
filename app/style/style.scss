@@ -1,2376 +1,380 @@
-/*!
-
-PANAM ALL STARZ v1.0.0
-
-Copyright (C) 2014 - Raquin Allan - Chapron Kevin - Mourgues Antoine - Florian Pygmalion - Aquaviva Julien
-
-@under MIT license
-*/
-
- 
-@function grayscale($value) {
-  @return #{ "grayscale(" + $value + ")" };
-}
-$rouge : #e94953;
-html, body {
-  height: 100%;
-  font-family: 'source_sans_prosemibold', Georgia, serif;
-  font-size: 100px;
-  user-select: none;
-  background-color: #333;
-}
-/********* LOADER ***********/
-#loader-overlay{
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #333333;
-  width: 100%;
-  height: 100%;
-  z-index: 9999999;
-  color: $rouge;
-  font-family: bebas,Georgia,serif;
-  font-size: 65px;
-  letter-spacing: 6px;
-}
-#loader{
-  width: 445px;
-  height: 65px;
-  position: absolute;
-  top: 50%;
-  margin-top: -33px;
-  left: 50%;
-  margin-left: -223px;
-  >h1{
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: #4e3638;
-  }
-}
-#up-load{
-  width: 0;
-  height: 65px;
-  max-height: 65px;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  h1{
-    color: $rouge;
-    width: 445px;
-  }
-}
-/********* END LOADER ***********/
-
-
-/************* MENU ************/
-$background: #3d566e;
-$color: #ecf0f1;
-
-$height-icon: 16px;
-$width-line: 28px;
-$height-line: 4px;
-
-$transition-time: 0.4s;
-$rotation: 45deg;
-$translateY: ($height-icon / 2);
-$translateX: 0;
-
-.displayNone{display: none;}
-
-#hamburger-icon {
-  width:$width-line;
-  height:$height-icon;
-  position:absolute;
-  display:block;
-  z-index: 999;
-  left: 20px;
-
-  top:0;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: all 1s 1s ease;
-    -moz-transition: all 1s 1s ease;
-    -o-transition: all 1s 1s ease;
-    transition: all 1s 1s ease;
-  
-  .line {
-    display:block;
-    background:$color;
-    width:$width-line;
-    height:$height-line;
-    position:absolute;
-    left:0;
-    transition: all $transition-time;
-    
-    &.line-1 {
-      top:0;
-    }
-    &.line-2 {
-      top:50%;
-    }
-    &.line-3 {
-      top:100%;
-    }
-  }
-  &:hover{
-     .line-1 {
-        transform: translateY($height-line / 2 * -1);
-        -webkit-transform: translateY($height-line / 2 * -1);
-        -moz-transform: translateY($height-line / 2 * -1);
-     }
-    .line-3 {
-        transform: translateY($height-line / 2);
-        -webkit-transform: translateY($height-line / 2);
-        -moz-transform: translateY($height-line / 2);
-    }  
-  }
-  &.active {
-    .line-1 {
-      transform: translateY($translateY) translateX($translateX) rotate($rotation);
-      -webkit-transform: translateY($translateY) translateX($translateX) rotate($rotation);
-      -moz-transform: translateY($translateY) translateX($translateX) rotate($rotation);
-    }
-    .line-2 {
-      opacity:0;
-    }
-    .line-3 {
-      transform: translateY($translateY * -1) translateX($translateX) rotate($rotation * -1);
-      -webkit-transform: translateY($translateY * -1) translateX($translateX) rotate($rotation * -1);
-      -moz-transform: translateY($translateY * -1) translateX($translateX) rotate($rotation * -1);
-    }
-  }
-}
-#hamburger-icon.animOn {
-  top: 20px;
-  visibility: visible;
-  opacity: 1;
-}
-/************* MENU OVERLAY ************/
-@-webkit-keyframes menu {
-    from {
-        transform: translate(-50%,  -80%) perspective(1000px) rotateX(80deg);
-        -ms-transform: translate(-50%,  -80%) perspective(1000px) rotateX(80deg);
-        -webkit-transform: translate(-50%,  -80%) perspective(1000px) rotateX(80deg);
-        -moz-transform: translate(-50%,  -80%) perspective(1000px) rotateX(80deg);
-        opacity: 0;
-    }
-    to {
-        transform: translate(-50%,  -50%) perspective(1000px) rotateX(0deg);
-        -ms-transform: translate(-50%,  -50%) perspective(1000px) rotateX(0deg);
-        -webkit-transform: translate(-50%,  -50%) perspective(1000px) rotateX(0deg);
-        -moz-transform: translate(-50%,  -50%) perspective(1000px) rotateX(0deg);
-        opacity: 1;
-    }
-}
-@-ms-keyframes menu {
-    from {
-        transform: translate(-50%,  -80%) perspective(1000px) rotateX(80deg);
-        -ms-transform: translate(-50%,  -80%) perspective(1000px) rotateX(80deg);
-        -webkit-transform: translate(-50%,  -80%) perspective(1000px) rotateX(80deg);
-        -moz-transform: translate(-50%,  -80%) perspective(1000px) rotateX(80deg);
-        opacity: 0;
-    }
-    to {
-        transform: translate(-50%,  -50%) perspective(1000px) rotateX(0deg);
-        -ms-transform: translate(-50%,  -50%) perspective(1000px) rotateX(0deg);
-        -webkit-transform: translate(-50%,  -50%) perspective(1000px) rotateX(0deg);
-        -moz-transform: translate(-50%,  -50%) perspective(1000px) rotateX(0deg);
-        opacity: 1;
-    }
-}
-@keyframes menu {
-    from {
-        transform: translate(-50%,  -80%) perspective(1000px) rotateX(80deg);
-        -ms-transform: translate(-50%,  -80%) perspective(1000px) rotateX(80deg);
-        -webkit-transform: translate(-50%,  -80%) perspective(1000px) rotateX(80deg);
-        -moz-transform: translate(-50%,  -80%) perspective(1000px) rotateX(80deg);
-        opacity: 0;
-    }
-    to {
-        transform: translate(-50%,  -50%) perspective(1000px) rotateX(0deg);
-        -ms-transform: translate(-50%,  -50%) perspective(1000px) rotateX(0deg);
-        -webkit-transform: translate(-50%,  -50%) perspective(1000px) rotateX(0deg);
-        -moz-transform: translate(-50%,  -50%) perspective(1000px) rotateX(0deg);
-        opacity: 1;
-    }
-}
-@-webkit-keyframes menu-rev {
-    from {
-        transform: translate(-50%,  -50%) perspective(1000px) rotateX(0deg);
-        -ms-transform: translate(-50%,  -50%) perspective(1000px) rotateX(0deg);
-        -webkit-transform: translate(-50%,  -50%) perspective(1000px) rotateX(0deg);
-        -moz-transform: translate(-50%,  -50%) perspective(1000px) rotateX(0deg);
-        opacity: 1;
-    }
-    to {
-        transform: translate(-50%,  -20%) perspective(1000px) rotateX(-80deg);
-        -ms-transform: translate(-50%,  -20%) perspective(1000px) rotateX(-80deg);
-        -webkit-transform: translate(-50%,  -20%) perspective(1000px) rotateX(-80deg);
-        -moz-transform: translate(-50%,  -20%) perspective(1000px) rotateX(-80deg);
-        opacity: 0;
-    }
-}
-@-ms-keyframes menu-rev {
-    from {
-        transform: translate(-50%,  -50%) perspective(1000px) rotateX(0deg);
-        -ms-transform: translate(-50%,  -50%) perspective(1000px) rotateX(0deg);
-        -webkit-transform: translate(-50%,  -50%) perspective(1000px) rotateX(0deg);
-        -moz-transform: translate(-50%,  -50%) perspective(1000px) rotateX(0deg);
-        opacity: 1;
-    }
-    to {
-        transform: translate(-50%,  -20%) perspective(1000px) rotateX(-80deg);
-        -ms-transform: translate(-50%,  -20%) perspective(1000px) rotateX(-80deg);
-        -webkit-transform: translate(-50%,  -20%) perspective(1000px) rotateX(-80deg);
-        -moz-transform: translate(-50%,  -20%) perspective(1000px) rotateX(-80deg);
-        opacity: 0;
-    }
-}
-@keyframes menu-rev {
-    from {
-        transform: translate(-50%,  -50%) perspective(1000px) rotateX(0deg);
-        -ms-transform: translate(-50%,  -50%) perspective(1000px) rotateX(0deg);
-        -webkit-transform: translate(-50%,  -50%) perspective(1000px) rotateX(0deg);
-        -moz-transform: translate(-50%,  -50%) perspective(1000px) rotateX(0deg);
-        opacity: 1;
-    }
-    to {
-        transform: translate(-50%,  -20%) perspective(1000px) rotateX(-80deg);
-        -ms-transform: translate(-50%,  -20%) perspective(1000px) rotateX(-80deg);
-        -webkit-transform: translate(-50%,  -20%) perspective(1000px) rotateX(-80deg);
-        -moz-transform: translate(-50%,  -20%) perspective(1000px) rotateX(-80deg);
-        opacity: 0;
-    }
-}
-
-
-
-
-@-webkit-keyframes opacity-lat {
-    0% {
-        opacity: 0;
-        visibility: hidden;
-    }
-    70% {
-        opacity: 1;
-        visibility: visible;
-    }
-    100% {
-        opacity: 1;
-        visibility: visible;
-    }
-}
-@-ms-keyframes opacity-lat {
-    0% {
-        opacity: 0;
-        visibility: hidden;
-    }
-    70% {
-        opacity: 1;
-        visibility: visible;
-    }
-    100% {
-        opacity: 1;
-        visibility: visible;
-    }
-}
-@keyframes opacity-lat {
-    0% {
-    opacity: 0;
-    visibility: hidden;
-    }
-    70% {
-        opacity: 1;
-        visibility: visible;
-    }
-    100% {
-        opacity: 1;
-        visibility: visible;
-    }
-}
-@-webkit-keyframes opacity-lat-rev {
-    0% {
-        opacity: 1;
-        visibility: visible;
-    }
-    30% {
-        opacity: 0;
-        visibility: hidden;
-    }
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-@-ms-keyframes opacity-lat-rev {
-    0% {
-        opacity: 1;
-        visibility: visible;
-    }
-    30% {
-        opacity: 0;
-        visibility: hidden;
-    }
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-@keyframes opacity-lat-rev {
-    0% {
-        opacity: 1;
-        visibility: visible;
-    }
-    30% {
-        opacity: 0;
-        visibility: hidden;
-    }
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-
-
-#menu-overlay.open {
-  -webkit-animation: opacity-lat 0.8s ease 0ms 1 normal both;
-  animation: opacity-lat 0.8s ease 0ms 1 normal both;
-  .container-effet{
-    -webkit-animation: menu 0.5s ease 0ms 1 normal both;
-    animation: menu 0.5s ease 0ms 1 normal both;
-  } 
-}
-#menu-overlay {
-  .container-effet{
-    position: relative;
-    left: 50%;
-    top: 50%;
-    -webkit-animation: menu-rev 0.5s ease 0ms 1 normal both;
-    animation: menu-rev 0.5s ease 0ms 1 normal both;
-  }
-  -webkit-animation: opacity-lat-rev 2s ease 0ms 1 normal both;
-  animation: opacity-lat-rev 2s ease 0ms 1 normal both;
-}
-
-
-
-#menu-overlay {
-  opacity: 0;
-  position: absolute;
-  z-index: 10;
-  height: 100%;
-  width: 100%;
-  z-index: 110;
-  background-color: rgba(51, 51, 51, .90);
-  li {
-    text-align: center;
-    width: 100%;
-    height: 0.7em;
-    &:hover{
-      background-color: rgba(233, 73, 83, .35)
-    }
-    a{
-      height: 100%;
-      width: 100%;
-      line-height: 2em;
-      display: block;
-      text-decoration: none;
-      text-align: center;
-      font-size: .30rem;
-      font-family: bebas,Georgia,serif;
-      letter-spacing : .05rem;
-      color: #fff;
-      text-transform: uppercase;
-
-    }
-  }
-  .team{
-    width: 886px;
-    margin: 0 auto;
-    h4{
-        display: inline-block;
-        font-size: .25rem;
-        font-family: bebas,Georgia,serif;
-        letter-spacing : .05rem;
-        color: $rouge;
-        text-transform: uppercase;
-    }
-    hr {
-      display: inline-block;
-      width: 690px;
-      margin: 0;
-      color: $rouge;
-      border: none;
-      height: 1px;
-      background-color: $rouge;
-      margin-bottom: 10px; 
-    }
-    .member-wrapper {
-      display: inline-block;
-      hr {
-        margin: 5px auto 10px;
-        display: block;
-        width: 40px;
-        background-color: white;
-      }
-      p{
-        text-transform: none;
-        text-align: center;
-        font-family: 'source_sans_prolight';
-        font-size: .15em;
-        color: white;
-        &.red{
-          color: $rouge;
-        }
-      }
-    }
-    .members{
-      width: 100%;
-      display: block;
-      margin: 0 auto;
-      margin-top: 10px;
-    }
-    .member{
-      -webkit-transition: all .1s ease-out;
-      -moz-transition: all .1s ease-out;
-      -o-transition: all .1s ease-out;
-      transition: all .1s ease-out;
-      font-size: 0;
-      width: 70px;
-      height: 70px;
-      border: 2px solid #313131;
-      display: block;
-      -webkit-border-radius: 50px;
-      -moz-border-radius: 50px;
-      border-radius: 50px;
-      margin: 0 auto 10px;
-      overflow: hidden;
-      &:hover {
-        border-color: $rouge;
-      }
-    }
-    img{
-      width: 75px;
-      height: auto;
-    }
-    
-  }
-}
-
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 400px;
-  background-color: #333;
-  z-index: 99;
-  color: #e9e7e7;
-  font-family: 'bebas', Georgia, serif;
-  -webkit-transition: all 0.1s ease-out;
-  -moz-transition: all 0.1s ease-out;
-  -o-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
-  h2 {
-    letter-spacing: 0.05rem;
-    font-size: 0.4rem;
-    color: $rouge;
-    text-align: center;
-    padding: 100px 100px 0 100px;
-  }
-  ul {
-    font-size: 0.25rem;
-    letter-spacing: 0.01rem;
-  }
-  li {
-    padding: 15px 30px;
-    cursor: pointer;
-    a {
-      &:link, &:visited, &:hover {
-        color: #e9e7e7;
-        text-decoration: none;
-      }
-      &:focus, &:active {
-        text-decoration: none;
-        color: #e9e7e7;
-      }
-    }
-    &:hover {
-      background-color: #733b3e;
-    }
-  }
-  hr {
-    border: 0;
-    height: 1px;
-    width: 3.5rem;
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
-    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
-    background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
-    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
-  }
-  h4 {
-    text-transform: uppercase;
-    font-family: 'source_sans_probold', Georgia, serif;
-    margin-top: 1rem;
-    font-size: 0.2rem;
-    color: $rouge;
-    padding: 15px 30px;
-    a {
-      &:link, &:visited {
-        color: $rouge;
-        text-decoration: none;
-      }
-      &:hover {
-        color: $rouge;
-        text-decoration: underline;
-      }
-      &:focus, &:active {
-        text-decoration: none;
-        color: $rouge;
-      }
-    }
-  }
-  p {
-    padding: 5px 30px;
-    font-family: 'source_sans_prolight';
-    font-size: 0.16rem;
-    a {
-      &:link, &:visited {
-        color: #e9e7e7;
-        text-decoration: none;
-      }
-      &:hover {
-        color: #e9e7e7;
-        text-decoration: underline;
-      }
-      &:focus, &:active {
-        text-decoration: none;
-        color: #e9e7e7;
-      }
-    }
-  }
-}
-
-/* Déclaration pour IE qui assimile l'état :focus à l'état :active */
-
-
-#close {
-  background-color: #333;
-  padding: 10px;
-  position: absolute;
-  right: -30px;
-  top: 125px; 
-  cursor: pointer;
-}
-
-#open {
-  padding: 10px;
-  position: fixed;
-  left: 30px;
-  top: 30px;
-  cursor: pointer;
-  z-index: 95;
-  svg {
-    fill: $rouge;
-  }
-}
-
-#fullpage {
-  height: 100%;
-  > div {
-    height: 100%;
-  }
-  -webkit-transition: all 0.1s ease-out;
-  -moz-transition: all 0.1s ease-out;
-  -o-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
-}
-
-#home {
-  position: relative;
-  z-index: 15;
-  background: url("../img/background-2.jpg") center center no-repeat;
-  text-align: center;
-  text-transform: uppercase;
-  #carte {
-    width: 100%;
-    height: 100%;
-  }
-  h1 {
-    font-family: 'bebas', Georgia, serif;
-    letter-spacing: 0.1rem;
-    font-size: 0.75rem;
-    color: $rouge;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -2.81rem;
-
-    margin-top: -1.2rem;
-    visibility: hidden;
-    opacity: 0;
-    -webkit-transition: all 1s .5s ease;
-    -moz-transition: all 1s .5s ease;
-    -o-transition: all 1s .5s ease;
-    transition: all 1s .5s ease;
-    &.animOn
-    {
-      margin-top: -0.9rem;
-      visibility: visible;
-      opacity: 1;
-    }
-  }
-  h2 {
-    font-size: 0.20rem;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -2.39rem;
-
-    margin-top: 0.5rem;
-    visibility: hidden;
-    opacity: 0;
-    -webkit-transition: all 1s .5s ease;
-    -moz-transition: all 1s .5s ease;
-    -o-transition: all 1s .5s ease;
-    transition: all 1s .5s ease;
-    &.animOn{
-      margin-top: 0.2rem;
-      visibility: visible;
-      opacity: 1;
-    }
-  }
-  hr {
-    position: absolute;
-    top: 43.6%;
-    left: 50%;
-    border: 0;
-    height: 1px;
-    width: 6rem;
-    margin-left: -3rem;
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
-    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
-    background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
-    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
-
-    transform: scaleX(0);
-    -webkit-transition: all .5s ease-out;
-    -moz-transition: all .5s ease-out;
-    -o-transition: all .5s ease-out;
-    transition: all .5s ease-out;
-    &.animOn{
-      transform: scaleX(1);
-    }
-  }
-  
-  .begin{
-    position:absolute;
-    width: 100%;
-    
-    bottom:0;
-    visibility: hidden;
-    opacity: 0;
-    -webkit-transition: all 1s 1s ease;
-    -moz-transition: all 1s 1s ease;
-    -o-transition: all 1s 1s ease;
-    transition: all 1s 1s ease;
-
-    a {
-      font-family: 'source_sans_probold', Georgia, serif;
-      font-size: 0.12rem;
-      display: block;
-      width: 160px;
-      margin: 0 auto;
-      text-align: center;
-      
-      &:first-of-type {
-        
-      }
-      &:last-of-type {
-        
-      }
-      &:link, &:visited, &:hover {
-        color: white;
-        text-decoration: none;
-      }
-      &:focus {
-        text-decoration: none;
-        color: white;
-      }
-      img{
-        margin-top:20px;
-      }
-    }
-  }
-  .begin.animOn{
-    bottom:40px;
-    visibility: visible;
-    opacity: 1;
-  }
-  .social-buttons{
-    position: absolute;
-    left: 20px;
-
-    bottom:0;
-    visibility: hidden;
-    opacity: 0;
-    -webkit-transition: all 1s 1s ease;
-    -moz-transition: all 1s 1s ease;
-    -o-transition: all 1s 1s ease;
-    transition: all 1s 1s ease;
-  }
-  .social-buttons.animOn{
-    bottom: 20px;
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-/* Déclaration pour IE qui assimile l'état :focus à l'état :active */
-
-a:active {
-  text-decoration: none;
-  color: $rouge;
-}
-
-.slide:first-child {
-  background-image: url('../img/pattern-2.png'), url("../img/background-1.jpg");
-  -webkit-background-size: auto,cover;
-  -moz-background-size: auto,cover;
-  -o-background-size: auto,cover;
-  background-size: auto,cover;
-}
-
-
-.module-title {
-  position: inherit;
-  left: 0;
-  top: 0;
-  margin-left: 0;
-  padding-top: 50px;
-  text-align: center;
-
-  h3 {
-    text-align: center;
-    font-size: 0.35rem;
-    font-family: 'bebas', Georgia, serif;
-    letter-spacing: 0.1rem;
-    padding: 0.2rem;
-    color: #fff;
-    text-transform: uppercase;
-    opacity: 0;
-    -webkit-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out;
-    transition-delay: 0.2s;
-  }
-  hr {
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-
-    height: 1px;
-    width: 1.8rem;
-    display: block;
-    margin: 0 auto;
-    border: 0;
-    background-color: $rouge;
-    transform: scaleX(0);
-    -webkit-transform-origin: top right;
-    -ms-transform-origin: top right;
-    transform-origin: top right;
-    &:first-of-type {
-      -webkit-transform-origin: top left;
-      -ms-transform-origin: top left;
-      transform-origin: top left;
-    }
-  }
-  p {
-    -webkit-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out;
-    transition-delay: 0.5s;
-    padding: 0.3rem 0 0.1rem 0;
-    font-family: 'source_sans_probold', Georgia, serif;
-    font-size: 0.14rem;
-    color: $rouge;
-    text-transform: uppercase;
-    margin-top: -10px;
-    opacity: 0;
-  }
-  .animSlide &{
-    h3{
-      opacity: 1;
-    }
-    hr{
-      transform: scaleX(1);
-    }
-    p{
-      margin-top: 0;
-      opacity: 1;
-    }
-  }
-}
-
-#module-1 #list-rapper {
-  width: 100%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 0.93rem;
-  background-color: #4F4F4F;
-  background-image: url('../img/pattern-1.png');
-  border-top: 1px solid #111;
-  z-index: 5;
-}
-
-.departement {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50%;
-  padding-bottom: 0.1rem;
-  font-family: bebas;
-  font-size: 0.7rem;
-  text-align: center;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-#list-bottom {
-  position: relative;
-  top: 1rem;
-  &.active {
-    top: 0;
-  }
-}
-
-
-#list-rapper {
-  ul {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 0.05rem;
-  }
-  li {
-    -webkit-transition: all 0.1s ease-out;
-    -moz-transition: all 0.1s ease-out;
-    -o-transition: all 0.1s ease-out;
-    transition: all 0.1s ease-out;
-    font-size: 0rem;
-    width: 70px;
-    height: 70px;
-    border: 2px solid #313131;
-    display: inline-block;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    margin: 0 0.08rem 0 0.08rem;
-    overflow: hidden;
-    &:hover {
-      border: 2px solid #e04852;
-    }
-  }
-  img {
-	filter: url(filters.svg#grayscale);
-	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
-	filter: gray; /* IE6-9 */
-	-webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
-	width: 70px;
-	position: relative;
-    &:hover {
-      filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
-      -webkit-filter: grayscale(0%);
-    }
-  }
-}
-
-
-#module-1 #list-rapper-name {
-  width: 100%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0.93rem;
-  overflow: hidden;
-  z-index: 6;
-  height: 0.26rem;
-  text-align: center;
-  font-size: 0rem;
-}
-
-#list-rapper-name li {
-  -webkit-transition: all 0.1s ease-out;
-  -moz-transition: all 0.1s ease-out;
-  -o-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
-  position: relative;
-  top: 0.25rem;
-  width: 1.08rem;
-  height: 0.25rem;
-  display: inline-block;
-  vertical-align: top;
-  text-align: center;
-  line-height: 0.25rem;
-  margin: 0 auto;
-  color: #e04852;
-  background-color: #4F4F4F;
-  background-image: url('../img/pattern-1.png');
-  border-top: 1px solid #111;
-  border-left: 1px solid #111;
-  border-right: 1px solid #111;
-  border-bottom: 1px solid #363636;
-  font-size: 0.15rem;
-  &.active {
-    top: 0;
-  }
-}
-
-video#bgvid {
-  position: absolute;
-  top: -200px;
-  width: 50%;
-  z-index: -100;
-  background-size: cover;
-}
-
-.video-alpha {
-  position: absolute;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  z-index: -99;
-  background-color: rgba(0, 0, 0, 0.75);
-}
-
-#page-rapper {
-  overflow-y: scroll;
-  > .top-part {
-    display: block;
-    width: 100%;
-    max-width: 12rem;
-    position: relative;
-    margin: 0 auto;
-    padding-top: 0.7rem;
-  }
-}
-
-#btn-retour {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 9999;
-  cursor: pointer;
-  background: url('.././img/btn-retour.png') center center no-repeat;
-  background-color: $rouge;
-}
-
-#page-rapper > .bottom-part {
-  min-height: 50%;
-  background-color: #333333;
-}
-
-.inline {
-  display: inline-block;
-}
-
-.description {
-  width: 47%;
-  display: inline-block;
-  vertical-align: middle;
-  transform: translateX(800px);
-  opacity: 0;
-  .fp-slide.animSlide.active &{
-    @for $i from 0 to 9 {
-      &:nth-child(#{9-$i}) {
-          transition: all 0.8s ease-out 0.5s;
-          opacity: 1;
-          transform: translateX(0);
-      }
-    }
-  }
-}
-
-.image-centrage {
-  display: inline-block;
-  vertical-align: middle;
-  width: 47%;
-  transform: translateX(-800px);
-  opacity: 0;
-  img {
-    display: block;
-    margin: 0 auto;
-  }
-  .fp-slide.animSlide.active &{
-    @for $i from 0 to 9 {
-      &:nth-child(#{9-$i}) {
-          transition: all 0.8s ease-out 0.5s;
-          opacity: 1;
-          transform: translateX(0);
-      }
-    }
-  }
-}
-
-.description .top-description {
-  padding-bottom: 0.1rem;
-  margin-bottom: 0.1rem;
-  border-bottom: 1px solid #fff;
-}
-
-.top-description h2 {
-  color: #fff;
-  font-size: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05rem;
-  font-family: 'bebas', Georgia, serif;
-}
-
-.top-description .rapper-small-icon, .btn-play-pause {
-  cursor:pointer;
-  float:right;
-  position: relative;
-  top: -0.1rem;
-}
-.top-description .rapper-small-icon{
-  color:white;
-  font-size: .1rem;
-  margin-right: 9px;
-  
-}
-.top-description .fb-icon{
-  font-weight: bold;
-}
-.top-description .tw-icon{
-  font-weight: bold;
-  font-size: .12rem;
-}
-.top-description .rapper-small-icon:hover, .top-description .rapper-small-icon.active{
-  color: $rouge;
-}
-
-.btn-play-pause {
-  width: 25px;
-  height: 11px;
-  background: url("../img/btn-pause.png") no-repeat center right;
-  border-left: 1px solid white;
-  padding-left: 7px;
-}
-
-.description .bottom-description {
-  position: relative;
-}
-
-.bottom-description {
-  p {
-    line-height: 0.30rem;
-    font-size: 0.18rem;
-    font-family: 'source_sans_regular', Georgia, serif;
-    color: #fff;
-  }
-  a {
-    font-family: 'source_sans_regular', Georgia, serif;
-    font-size: 0.20rem;
-    color: #fff;
-  }
-  .punchline {
-    position: absolute;
-    text-align: right;
-    top: 0.3rem;
-    right: 0;
-    width: 2.5rem;
-    font-family: 'bebas', Georgia, serif;
-    font-size: 0.3rem;
-  }
-  span {
-    font-family: 'source_sans_probold', Georgia, serif;
-    color: #e04852;
-  }
-  > ul {
-    margin-top: 0.1rem;
-    > ul {
-      width: 1.25rem;
-      display: inline-block;
-    }
-  }
-  li {
-    text-align: center;
-    height: 0.5rem;
-    font-family: 'bebas', Georgia, serif;
-    &:first-child {
-      font-size: 0.2rem;
-      letter-spacing: 0.01rem;
-      vertical-align: top;
-      color: #e04852;
-    }
-    &:last-child {
-      font-size: 0.4rem;
-      color: #fff;
-    }
-  }
-}
-
-.bottom-part {
-  > .container {
-    width: 100%;
-    position: relative;
-    display: block;
-    margin: 0 auto;
-    ul.menu-fiche {
-      text-align: center;
-    }
-  }
-  ul.menu-fiche li {
-    width: 150px;
-    margin: 0 60px;
-    padding-bottom: 10px;
-    text-align: center;
-    display: inline-block;
-    font-family: 'bebas', Georgia, serif;
-    font-size: 0.3rem;
-    color: #fff;
-    cursor: pointer;
-    border: 1px solid transparent;
-    -webkit-transition: all 0.1s ease;
-    -moz-transition: all 0.1s ease;
-    -o-transition: all 0.1s ease;
-    transition: all 0.1s ease;
-    opacity: 0;
-    translate : translateY(-10px);
-    .fp-slide.animSlide.active &{
-      @for $i from 0 to 4 {
-        &:nth-child(#{$i}) {
-            transition: opacity 0.8s ease-out #{$i*0.1+1}s, transform 0.8s ease-out #{$i*0.1+1}s;
-            opacity: 1;
-            transform: translateY(0px);
-        }
-      }
-    }
-
-    span {
-      display: block;
-      margin: 10px auto 0 auto;
-      height: 1px;
-      width: 1px;
-      background-color: transparent;
-      -webkit-transition: all 0.1s ease;
-      -moz-transition: all 0.1s ease;
-      -o-transition: all 0.1s ease;
-      transition: all 0.1s ease;
-    }
-    &:hover span, &.activeLiFiche span {
-      background-color: $rouge;
-      width: 70px;
-    }
-    &:hover, &.activeLiFiche {
-      color: $rouge;
-    }
-  }
-}
-
-/******* module vente album ***********/
-
-.container-infos-rapper {
-  width: 1090px;
-  margin: 0 auto;
-}
-
-#conteiner-module-albums.displayNonePage, #conteiner-popularite.displayNonePage, #conteiner-biographie.displayNonePage {
-  display: none;
-}
-
-#conteiner-module-albums {
-  padding-bottom: 20px;
-  margin-top: 20px;
-}
-
-#graph-albums {
-  padding-left: 85px;
-  padding-right: 85px;
-  padding-top: 75px;
-  padding-bottom: 20px;
-  width: 960px;
-  height: 280px;
-  .g-axis-albums text, .g-axis-albums-x text {
-    font-family: 'source_sans_probold';
-    font: 15px sans-serif;
-    font-weight: bold;
-    fill: #f0f0f0;
-    text-anchor: middle;
-  }
-}
-
-.g-rapper text {
-  font-family: 'source_sans_probold';
-  font: 15px sans-serif;
-  font-weight: bold;
-  fill: #f0f0f0;
-  text-anchor: middle;
-}
-
-#graph-albums {
-  .g-rapper {
-    text, rect {
-      display: none;
-    }
-    text.activeDisplay, rect.activeDisplay {
-      display: block;
-    }
-  }
-  .g-axis-albums-x text {
-    text-anchor: start;
-  }
-  .g-axis-albums {
-    path, line {
-      display: none;
-    }
-  }
-  .g-axis-albums-x {
-    path, line {
-      display: none;
-    }
-  }
-  .area {
-    fill: rgba(98, 42, 45, 0.75);
-  }
-  .line {
-    stroke: #cc424b;
-    stroke-width: 1;
-  }
-}
-
-#conteiner-module-albums ul {
-  height: 20px;
-  padding-top: 10px;
-  padding-left: 56px;
-  li {
-    width: 100px;
-    display: inline-block;
-    vertical-align: top;
-    font-size: 14px;
-    font-family: 'source_sans_probold';
-    text-transform: uppercase;
-    color: #f0f0f0;
-    &.displayNoneNbAlbum {
-      display: none;
-    }
-    em {
-      font-size: 8px;
-      display: inline-block;
-      vertical-align: top;
-    }
-  }
-}
-
-/********* container popularite **********/
-
-#conteiner-popularite {
-  width: 950px;
-  height: 380px;
-  margin: 0 auto;
-  padding-top: 30px;
-  ul {
-    text-align: center;
-    li {
-      width: 190px;
-      height: 90px;
-      display: inline-block;
-      font-family: "bebas";
-      font-size: 50px;
-      color: #f0f0f0;
-      span {
-        font-size: 20px;
-        padding-left: 35px;
-        background-position: left center;
-        background-repeat: no-repeat;
-        &.likes {
-          color: #3b5998;
-          background-image: url('../img/fb.png');
-        }
-        &.twitter {
-          color: #4099ff;
-          background-image: url('../img/twitter.png');
-        }
-        &.abonne {
-          color: #e52d27;
-          background-image: url('../img/abonne.png');
-        }
-        &.instagram {
-          color: #956d53;
-          background-image: url('../img/instagram.png');
-        }
-      }
-    }
-  }
-  div h3 {
-    width: 300px;
-    height: 90px;
-    display: inline-block;
-    font-family: "bebas";
-    font-size: 75px;
-    span {
-      font-size: 25px;
-    }
-  }
-}
-
-#module-fan {
-  text-align: center;
-  margin-top: 30px;
-}
-
-#conteiner-popularite {
-  .fan-rappeur {
-    color: $rouge;
-    text-align: center;
-    display: inline-block;
-    vertical-align: middle;
-  }
-  .total-fan {
-    color: white;
-    text-align: center;
-    display: inline-block;
-    vertical-align: middle;
-  }
-  .circle-fan-vs {
-    width: 200px;
-    height: 200px;
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    .circle-total {
-      width: 184px;
-      height: 184px;
-      border: 8px solid #f0f0f0;
-      -webkit-border-radius: 200px;
-      -moz-border-radius: 200px;
-      border-radius: 200px;
-      text-align: center;
-      line-height: 184px;
-      font-size: 50px;
-      font-family: 'bebas';
-    }
-    #graph-fans {
-      width: 200px;
-      height: 200px;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-  }
-}
-
-/*********** container biographie *************/
-
-#conteiner-biographie {
-  width: 950px;
-  min-height: 380px;
-  margin: 0 auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  p {
-    color: #f0f0f0;
-    font-size: 15px;
-    line-height: 24px;
-    font-family: 'source_sans_prolight';
-    width: 100%;
-    display: inline-block;
-    vertical-align: top;
-    margin-bottom: 40px;
-    opacity: 0;
-    translate: transformX(-40px);
-    .fp-slide.animSlide.active &{
-      transition: transform 2.8s ease-out 1.5s, opacity 2.8s ease-out 1.5s;
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  .maskBio {
-    width: 17%;
-    border: 5px solid #f0f0f0;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 0;
-    opacity: 0;
-    transform: translateY(-30px);
-    .fp-slide.animSlide.active & {
-      @for $i from 0 to 7 {
-        &:nth-child(#{$i}) {
-            transition: transform 0.8s ease-out #{($i*0.15)+1.3}s, opacity 0.8s ease-out #{($i*0.15)+1.3}s;
-            transform: translateY(0);
-            opacity: 1;
-        }
-      }
-    }
-    img{
-      width: 100%;
-    }
-  }
-}
-
-#carte path {
-  display: block;
-  -webkit-transform: scale(10);
-  opacity: 0;
-  -webkit-transform-origin: 40% 40%;
-  -webkit-transition: all 0.5s ease-out;
-  &.bouge {
-    -webkit-transform: scale(0);
-    -webkit-transform-origin: 40% 40%;
-    -webkit-transition: all 0.5s ease-out;
-  }
-  .animSlide &{
-    @for $i from 0 to 9 {
-      &:nth-child(#{9-$i}) {
-          transition: transform 0.5s ease-out #{$i*0.25}s, opacity 0.5s ease-out #{$i*0.25}s;
-          transform: scale(1);
-          opacity: 1;
-      }
-    }
-  }
-}
-#carte {
-  -webkit-transition: all 1s ease-out;
-  opacity: 0.2;
-  .animSlide &{
-    opacity: 1;
-    transition-delay:2.5s;
-  }
-}
-
-
-// #_75.zoom {
-//   -webkit-transform: scale(6.3);
-//   // -webkit-transform-origin: 40% 20%;
-//   -webkit-transition: all 0.5s ease-out;
-// }
-
-// #_77.zoom {
-//   -webkit-transform: scale(1.3);
-//   // -webkit-transform-origin: 160% 70%;
-//   -webkit-transition: all 0.5s ease-out;
-// }
-
-// #_78.zoom {
-//   -webkit-transform: scale(2);
-//   // -webkit-transform-origin: -40% 29%;
-//   -webkit-transition: all 0.5s ease-out;
-// }
-
-// #_91.zoom {
-//   -webkit-transform: scale(2.3);
-//   // -webkit-transform-origin: 20% 70%;
-//   -webkit-transition: all 0.5s ease-out;
-// }
-
-// #_92.zoom {
-//   -webkit-transform: scale(5);
-//   // -webkit-transform-origin: 30% 30%;
-//   -webkit-transition: all 0.5s ease-out;
-// }
-
-// #_93.zoom {
-//   -webkit-transform: scale(5.5);
-//   // -webkit-transform-origin: 51% 20%;
-//   -webkit-transition: all 0.5s ease-out;
-// }
-
-// #_94.zoom {
-//   -webkit-transform: scale(6);
-//   // -webkit-transform-origin: 50% 32%;
-//   -webkit-transition: all 0.5s ease-out;
-// }
-
-// #_95.zoom {
-//   -webkit-transform: scale(3.5);
-//   // -webkit-transform-origin: 35% -5%;
-//   -webkit-transition: all 0.5s ease-out;
-// }
-
-/* Css module comparaison */
-
-#module-comparaison {
-  background-image: url('../img/bg_boss.jpg');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-#container-module-comparaison {
-  -moz-transform-origin: 50% 100%;
-  -webkit-transform-origin: 50% 100%;
-  -o-transform-origin: 50% 100%;
-  -ms-transform-origin: 50% 100%;
-  transform-origin: 50% 100%;
-  svg {
-    position: relative;
-    z-index: 99;
-  }
-  .module-button {
-    width: 1.6rem;
-    position: absolute;
-    z-index: 200;
-    top: 50%;
-    left: -25px;
-  }
-}
-
-#btn-albums {
-  position: relative;
-  color: #367f2d;
-  border: 1px solid #367f2d;
-  &.active, &:hover {
-    color: white;
-    background-color: #367f2d;
-  }
-}
-
-#btn-ventes {
-  color: #4880E6;
-  border: 1px solid #4880E6;
-  &.active, &:hover {
-    color: white;
-    background-color: #4880E6;
-  }
-}
-
-#btn-popularite {
-  color: $rouge;
-  border: 1px solid $rouge;
-  &.active, &:hover {
-    color: white;
-    background-color: $rouge;
-  }
-}
-
-#btn-reset {
-  color: #FFFFFF;
-  border: 1px solid #FFFFFF;
-  &.active, &:hover {
-    color: #333;
-    background-color: #FFFFFF;
-  }
-}
-
-#container-module-comparaison {
-  width: 1320px;
-  height: 600px;
-  position: absolute;
-  bottom: 14%;
-  display: block;
-  margin: 0 auto;
-  left: 50%;
-  margin-left: -660px;
-}
-
-[class*="line"] {
-  fill: none;
-  stroke-width: 1px;
-}
-
-#module-comparaison {
-  text {
-    color: #fff;
-    fill: #fff;
-    font-size: 0.15rem;
-  }
-  .line-green {
-    stroke: rgba(0, 255, 0, 0.3);
-  }
-  .line-blue {
-    stroke: rgba(0, 0, 255, 0.3);
-  }
-  .line-red {
-    stroke: rgba(255, 0, 0, 0.3);
-  }
-}
-
-#echelle-comparaison {
-  position: absolute;
-  bottom: 0;
-  left: 1px;
-  width: 100%;
-  > img {
-    width: 100%;
-    position: absolute;
-  }
-  .album {
-    top: 7px;
-    left: 501px;
-  }
-  .vente {
-    top: 7px;
-    left: 357px;
-  }
-  .popu {
-    top: 7px;
-    left: 186px;
-  }
-  #btn-reset {
-    position: absolute;
-    left: 50%;
-    background-color: red;
-    width: 12px;
-    height: 12px;
-  }
-}
-
-#infos-comparaison {
-  position: absolute;
-  bottom: 0;
-  /*left:50%;
-  margin-left:-512px;*/
-  padding-bottom: 20px;
-  font-size: 0.16rem;
-  width: 100%;
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease;
-  &.inactive-infos {
-    bottom: -120px;
-  }
-}
-
-.infos-inactive {
-  left: -100%;
-}
-
-#infos-comparaison {
-  h3 {
-    margin-bottom: 10px;
-    color: $rouge;
-  }
-  p {
-    font-family: "source_sans_prolight";
-    color: #f0f0f0;
-    line-height: 25px;
-  }
-}
-
-#rapper-card-comparaison {
-  position: absolute;
-  left: 50%;
-  margin-left: -206px;
-  width: 400px;
-  height: 160px;
-  bottom: -94px;
-  text-align: center;
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease;
-  .head-card {
-    height: 114px;
-    width: 114px;
-    margin-right: 10px;
-    border-radius: 64px;
-    -webkit-border-radius: 64px;
-    border: 2px solid $rouge;
-    background-color: none;
-    background-size: 114px 114px;
-    margin: 0 auto;
-  }
-  h4 {
-    font-family: "source_sans_probold" !important;
-    position: relative;
-    top: -30px;
-    display: inline-block;
-    position: relative;
-    top: -45px;
-    display: inline-block;
-  }
-  h3 {
-    position: relative;
-    top: -45px;
-    display: inline-block;
-  }
-  h4 {
-    font-family: "bebas";
-    text-transform: uppercase;
-    padding-top: 0.05rem;
-    color: #f0f0f0;
-    font-size: 0.2rem;
-  }
-  hr {
-    height: 1px;
-    border: none;
-    background-color: #f0f0f0;
-    margin: 5px 0;
-  }
-  h4 {
-    color: #fff;
-    font-size: 0.19rem;
-    font-family: 'source_sans_probold', Georgia, serif;
-    text-transform: uppercase;
-  }
-  h3 {
-    position: relative;
-    left: -10px;
-    font-size: 0.19rem;
-    font-family: 'source_sans_prolight';
-    color: #f0f0f0;
-    text-transform: none;
-  }
-  a {
-    display: inline-block;
-    vertical-align: baseline;
-    font-family: 'source_sans_regular';
-    font-size: 0.14rem;
-    color: $rouge;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-}
-
-/* Css module hardcore */
-
-#module-3 {
-  position: relative;
-  overflow: hidden;
-  background: url("../img/background-3.jpg") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-  text{
-    opacity: 0;
-    transition: all .5s ease-in-out;
-    .animSlide &{
-      opacity: 1;
-      @for $i from 0 to 30 {
-        &:nth-of-type(#{$i}) {
-           transition-delay: #{($i*0.05)+1}s;
-        }
-      }
-    }
-  }
-.module-button2 {
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
-  z-index: 105;
-  position: relative;
-  display: block;
-  button {
-    .animSlide &{
-      transform: translate3d(0,0,0);
-      opacity: 1;
-      @for $i from 0 to 5 {
-        &:nth-child(#{$i}) {
-           transition-delay: #{($i*0.1)+0.4}s;
-        }
-      }
-    }
-    transform: translate3d(0,-20px,0);
-    opacity: 0;
-    height: 40px;
-    width: 160px;
-    display: inline-block;
-    margin: 10px auto;
-    font-family: 'bebas', Georgia, sans-serif;
-    font-size: 0.18rem;
-    color: $rouge;
-    text-transform: uppercase;
-    cursor: pointer;
-    outline: 0;
-    -webkit-appearance: none;
-    background: none;
-    border: 1px solid $rouge;
-    -webkit-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    -o-transition: all .5s ease;
-    transition: all .5s ease;
-  }
-}
-
-.module-button {
-  margin: 0 auto;
-  display: inline-block;
-  width:15%;
-  /*background:yellow;*/
-  button {
-    height: 40px;
-    width: 160px;
-    display: block;
-    margin: 10px auto;
-    font-family: 'bebas', Georgia, sans-serif;
-    font-size: 0.18rem;
-    color: $rouge;
-    text-transform: uppercase;
-    cursor: pointer;
-    outline: 0;
-    -webkit-appearance: none;
-    background: none;
-    border: 1px solid $rouge;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
-  }
-  .active, button:hover {
-    color: white;
-    background-color: $rouge;
-  }
-}
-
-.buttonSlide{
-  height: 25px;
-  width: 25px;
-  position: absolute;
-  bottom:20px;
-  border:0;
-  outline: none;
-  cursor: pointer;
-  -webkit-transition: all .1s ease;
-    -moz-transition: all .1s ease;
-    -o-transition: all .1s ease;
-    transition: all .1s ease;
-}
-.slideL{background: url("../img/btn-left-hardcore-slide.png") no-repeat center center;left:-25px;}
-.slideL:hover{background: url("../img/btn-left-hardcore-slide-hover.png") no-repeat center center;}
-.slideR{background: url("../img/btn-right-hardcore-slide.png") no-repeat center center;right:-25px;}
-.slideR:hover{background: url("../img/btn-right-hardcore-slide-hover.png") no-repeat center center;}
-
-#container-module {
-  height:50%;
-  width: 75%;
-  vertical-align: middle;
-  display: inline-block;
-  margin: 50px auto 0 auto;
-  /*background:green;*/
-  position:relative;
-}
-
-#inter-container{
-  display: block;
-  height: 100%;width: 100%;
-  overflow: hidden;
-  position: absolute;
-}
-
-#head-rappers {
-  height: 20%;
-  margin: 0 auto;
-  position: absolute;
-  left: 0px;
-  bottom: 0;
-  -webkit-transition: left 1s ease-out;
-  -moz-transition: left 1s ease-out;
-  -o-transition: left 1s ease-out;
-  transition: left 1s ease-out;
-}
-
-.head-rapper {
-  width: 60px;
-  height: 60px;
-  position: absolute;
-  bottom: 0;
-  z-index: 2;
-  /*margin-left: -20px;*/
-  overflow: hidden;
-  border-radius: 80px;
-  -webkit-border-radius: 80px;
-  border: 2px solid rgba(255, 0, 0, 0);
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  transition: all .3s ease;
-  cursor: pointer;
-  &:hover {
-    border: 2px solid rgba(233, 73, 83, 1);
-  }
-  div {
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-size: 100%;
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    transition: all .3s ease;
-  }
-  &:hover div {
-    filter: grayscale(0%);
-    -webkit-filter: grayscale(0%);
-    -moz-filter: grayscale(0%);
-    -ms-filter: grayscale(0%);
-    -o-filter: grayscale(0%);
-  }
-}
-
-#graph-hardcore {
-  height: 80%;
-  position: absolute;
-  left:0;
-  display: block;
-  margin: 0 auto;
-  padding-top: 1px;
-  /*margin-bottom: 10px;*/
-  overflow: inherit;
-  -webkit-transition: left 1s ease-out;
-  -moz-transition: left 1s ease-out;
-  -o-transition: left 1s ease-out;
-  transition: left 1s ease-out;
-  .graph-lines {
-    fill: #f0f0f0;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
-  }
-  .graph-circles {
-    fill: transparent;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
-  }
-  .graph-text {
-    fill: #f0f0f0;
-    font: 11px sans-serif;
-    text-anchor: middle;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
-  }
-}
-
-#axis-moy{
-  overflow: inherit;
-  .g-axis {
-    text {
-      font-family: 'bebas';
-      font: 16px sans-serif;
-      font-weight: bold;
-      fill: #f0f0f0;
-      text-anchor: middle;
-    }
-    path, line {
-      display: none;
-    }
-  }
-  .moy {
-    line {
-      stroke: $rouge;
-      stroke-width: 1;
-      stroke-dasharray: 3px,2px;
-    }
-    text {
-      font: 14px sans-serif;
-      font-weight: bold;
-      fill: $rouge;
-    }
-  }
-}
-
-#infos-hardcore-insults, #infos-hardcore-vocab {
-  position: absolute;
-  bottom: 0;
-  /*left:50%;
-  margin-left:-512px;*/
-  padding-bottom: 20px;
-  font-size: 0.16rem;
-  width: 100%;
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease;
-}
-
-#infos-hardcore-insults.inactive-infos, #infos-hardcore-vocab.inactive-infos {
-  bottom: -120px;
-}
-
-.infos-card {
-  padding: 0 10px;
-  margin: 0 auto;
-  max-width: 980px;
-  width: 100%;
-  position: relative;
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease;
-}
-
-.infos-inactive {
-  left: -100%;
-}
-
-#infos-hardcore-insults h3, #infos-hardcore-vocab h3 {
-  margin-bottom: 10px;
-  color: $rouge;
-}
-
-#infos-hardcore-insults p, #infos-hardcore-vocab p {
-  font-family: "source_sans_prolight";
-  color: #f0f0f0;
-  line-height: 25px;
-}
-
-#rapper-card {
-  height: 66px;
-  width: 490px;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease;
-  &.active-card {
-    left: 50%;
-    margin-left: -245px;
-  }
-  .head-card {
-    height: 64px;
-    width: 64px;
-    float: left;
-    margin-right: 10px;
-    border-radius: 64px;
-    -webkit-border-radius: 64px;
-    border: 2px solid $rouge;
-    background-color: black;
-    background-size: 100%;
-  }
-  h4 {
-    width: 340px;
-    display: inline-block;
-    vertical-align: baseline;
-    font-family: "bebas";
-    text-transform: uppercase;
-    color: #f0f0f0;
-    font-size: 0.2rem;
-  }
-  a {
-    float: right;
-    display: inline-block;
-    vertical-align: baseline;
-    font-family: 'source_sans_regular';
-    font-size: 0.14rem;
-    color: $rouge;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-  hr {
-    height: 1px;
-    border: none;
-    background-color: #f0f0f0;
-    margin: 5px 0;
-  }
-}
-
-#infos-hardcore-insults #rapper-card h3, #infos-hardcore-vocab #rapper-card h3 {
-  margin-bottom: 3px;
-  text-transform: uppercase;
-}
-
-#rapper-card h3 span {
-  font-family: 'source_sans_prolight';
-  color: #f0f0f0;
-  text-transform: none;
-}
-
-.clear {
-  clear: both;
-}
-/*----------- MODULE 4 -----------*/
-#module-4{
-  background: url("../img/background-4.jpg") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  .fans-container{
-    top: 50%;
-    position: absolute;
-    height: 355px;
-    width: 80%;
-    max-width: 1030px;
-    margin: auto;
-    left: 0;
-    right: 0;
-    margin-top: -190px;
-  }
-  .fans{
-    width: 100%;
-    position: relative;
-    height: 360px;
-    overflow: hidden;
-    ul {
-      position: relative;
-      top: 0;
-      -webkit-transition: all .02s linear;
-      -moz-transition: all .02s linear;
-      -o-transition: all .02s linear;
-      transition: all .02s linear;
-    }
-    li{
-      height: 71px;
-      border-bottom: 1px solid #555;
-      position: relative;
-    }
-
-    p{
-      font-size: .24rem;
-      font-family: bebas,Georgia,serif;
-      color: white;
-      display: inline-block;
-    }
-    .name{
-      color: $rouge;
-    }
-    .left {
-      height: 71px;
-      position: absolute;
-      left: 0;
-      img {
-        -webkit-border-radius: 50px;
-        -moz-border-radius: 50px;
-        -ms-border-radius: 50px;
-        -o-border-radius: 50px;
-        border-radius: 50px;
-        width: 50px;
-        height: auto;
-        display: inline-block;
-        position: relative;
-        top: -17px;
-        margin-left: 20px;
-      }
-      p{
-        vertical-align: super
-      }
-    }
-    .btn-vote{
-      top: 20px;
-      border: 1px solid $rouge;
-      width: 100px;
-      height: 30px;
-      position: absolute;
-      right: 46px;
-      display: inline-block;
-      img{
-        display: inline-block;
-        width: auto;
-        margin-top: 10px;
-        margin-left: 10px;
-      }
-      p{
-        position: absolute;
-        top: 8px;
-        right: 23px;
-        display: inline-block;
-        color: $rouge;
-        font-size: 0.14rem;
-        font-family: 'source_sans_prosemibold', Georgia, serif;
-        text-transform: uppercase;
-      }
-    }
-    .nbr-votes{
-      display: block;
-      width: 100%;
-      line-height: 72px;
-      text-align: center;
-      font-size: 0.22rem;
-      letter-spacing: 1px;
-    }
-  }
-  .up{
-    float: right;
-    display: inline-block;
-    opacity: 0.5;
-    position: relative;
-    top: -10px;
-    z-index: 10;
-  }
-  .bottom{
-    float: right;
-    display: inline-block;
-    position: relative;
-    top: 20px;
-    z-index: 10;
-  }
-  .information{
-    padding: 0 10px;
-    margin: 0 auto;
-    max-width: 980px;
-    width: 100%;
-    font-size: 0.16rem;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    h3{
-      color: $rouge;
-      text-transform: uppercase;
-      font-family: 'source_sans_prosemibold', Georgia, serif;
-    }
-    p {
-      color: white;
-      font-family: 'source_sans_prolight', Georgia, serif;
-      margin-top: 10px;
-      line-height: 25px;
-    }
-    .red{
-      color: $rouge;
-    }
-  }
-}
-/*----------- END MODULE 4 -----------*/
-/*-------------  ABOUT 4 -------------*/
-
-#about {
-  background: url("../img/background-5.jpg") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  p,h2,ul{
-      opacity: 0;
-      margin-top: -30px;
-      -webkit-transition: all .5s ease-out;
-      -moz-transition: all .5s ease-out;
-      -o-transition: all .5s ease-out;
-      transition: all .5s ease-out;
-      @for $i from 0 to 8 {
-        &:nth-child(#{$i}) {
-           transition-delay: #{$i*0.2}s;
-        }
-      }
-  }
-  p{
-    color: white;
-    font-size: 0.16rem;
-    font-family: 'source_sans_prolight';
-    line-height: 25px;
-  }
-  h2{
-    color: $rouge;
-    font-size: 0.24rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-family: bebas,Georgia,serif;
-    padding: 33px 0;
-  }
-  .content{
-    width: 100%;
-    max-width: 1024px;
-    padding: 0 24px;
-    box-sizing: border-box;
-    margin: 60px auto;
-  }
-  a{
-    color:$rouge;
-    font-size: 0.16rem;
-    text-decoration: none;
-    cursor: pointer;
-    line-height: 0.20rem;
-    display: block;
-    font-family: 'source_sans_prolight';
-    &:hover{
-      text-decoration: underline;
-    }
-  }
-  ul{
-    margin-left:30px;
-    margin-top: 0;
-  }
-  li{
-    height: 0.20rem;
-  }
-  &.animSlide{
-    p{
-      opacity: 1;
-      margin-top: 0;
-    }
-    h2{
-      opacity: 1;
-      margin-top: 0;
-    }
-    ul{
-      margin-top: 20px;
-      opacity: 1;
-    }
-  }
-}
-/*----------- END  ABOUT -----------*/
-
-/*------------utils---------------*/
-
-.rotate {
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-  -webkit-transition-property: -webkit-transform;
-  -moz-transition-property: -moz-transform;
-  -o-transition-property: -o-transform;
-  transition-property: transform;
-  overflow: hidden;
-  &:hover {
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-  }
-}
-
-
-
-// Media queries
-
-@media screen and (max-width: 1250px) {
-  #container-module {
-    margin: 0 auto;
-    display: block;
-  }
-  .module-button {
-    display: block;
-    width: 100%;
-    height: 60px;
-    text-align: center;
-    button {
-      display: inline-block;
-      vertical-align: top;
-    }
-  }
-}
-
-@media screen and (max-width: 1250px) {
-  .bottom-description {
-    > ul {
-      > ul {
-        width: 1rem;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 990px) {
-  .departement {
-    font-size: .5em;
-  }
-}
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>PANAM ALL STARZ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--     <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" /> -->
+    <link rel="stylesheet" href="./style/master.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.3&appId=697353357039820";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <div id="loader-overlay">
+        <div id="loader">
+            <h1>Panam all starz</h1>
+            <div id="up-load">
+                <h1>Panam all starz</h1>
+            </div>
+        </div>
+    </div>
+    <a id="hamburger-icon" href="#" title="Menu">
+      <span class="line line-1"></span>
+      <span class="line line-2"></span>
+      <span class="line line-3"></span>
+    </a>
+    <div id="menu-overlay">
+        <div class="container-effet">
+            <ul>
+                <li>
+                    <a href="#/1">Accueil</a>
+                </li>
+                <li>
+                    <a href="#/2">All starz map</a>
+                </li>
+                <li>
+                    <a href="#/3">Panam Boss</a>
+                </li>
+                <li>
+                    <a href="#/4">All starz lyrics</a>
+                </li>
+                <!--<li>
+                    <a href="#/5">All starz fans</a>
+                </li>-->
+                <li>
+                    <a href="#/6">A propos</a>
+                </li>
+            </ul>
+            <div class="team">
+                <div class="sep">
+                    <h4>Notre équipe</h4>
+                    <hr>
+                </div>
+                <div class="members">
+                    <div class="member-wrapper">
+                        <div class="member">
+                            <a href="http://antoine-mourgues.fr/" target="_blank"><img src="./img/member-antoine.jpg" alt="Mini pic rappeur"></a>
+                        </div>
+                        <p>Antoine MOURGUES</p>
+                        <hr>
+                        <p class="red">Art director / Project manager</p>
+                    </div>
+                    <div class="member-wrapper">
+                        <div class="member">
+                            <a href="http://allanraquin.fr/" target="_blank"><img src="./img/member-allan.jpg" alt="Mini pic rappeur"></a>
+                        </div>
+                        <p>Allan RAQUIN</p>
+                        <hr>
+                        <p class="red">Lead front-end developpement</p>
+                    </div>
+                    <div class="member-wrapper">
+                        <div class="member">
+                            <a href="https://www.hopwork.com/profile/julienacquaviva" target="_blank"><img src="./img/member-julien.jpg" alt="Mini pic rappeur"></a>
+                        </div>
+                        <p>Julien ACQUAVIVA</p>
+                        <hr>
+                        <p class="red">Webdesign</p>
+                    </div>
+                    <div class="member-wrapper">
+                        <div class="member">
+                            <a href="http://www.kevinchapron.fr" target="_blank"><img src="./img/member-kevin.jpeg" alt="Mini pic rappeur"></a>
+                        </div>
+                        <p>Kévin CHAPRON</p>
+                        <hr>
+                        <p class="red">Front-end developpement</p>
+                    </div>
+                    <div class="member-wrapper">
+                        <div class="member">
+                            <a href="http://florianpygmalion.fr/" target="_blank"><img src="./img/member-florian.png" alt="Mini pic rappeur"></a>
+                        </div>
+                        <p>Florian PYGMALION</p>
+                        <hr>
+                        <p class="red">Back-end developpement</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="fullpage">
+        <div class="section" id="home">
+            <h1>PANAM ALL STARZ</h1>
+            <hr>
+            <h2>Découvrez qui est le boss du rap game français</h2>
+            <div class="begin">
+                <a href="#">Commencer l'expérience</a>
+                <a href="#"><img src="img/mouse-down.png" alt="Flèche pour aller vers le bas"></a>
+            </div>
+            <div class="social-buttons">
+                <div class="fb-share-button" data-href="http://panamallstarz.fr/" data-layout="button_count"></div>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-text="Panam All Starz - Qui est le boss du rap game ?" data-via="PanamAllStarz75" data-lang="fr" data-hashtags="PanamAllStarz">Tweeter</a>
+            </div>
+        </div>
+        <div class="section" id="module-1">
+            <div class="slide">
+                <div class="module-title">
+                    <hr>
+                    <h3>All starz map</h3>
+                    <hr>
+                    <p>Sélectionnez le département que vous souhaitez pour découvrir les rappeurs qui le représentent</p>
+                </div>
+                <svg version="1.1" id="carte" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" style="margin-top: -180px;" viewBox="360 70 550 560" xml:space=sj"preserve">
+                <path id="_95" fill="rgba(255,0,50,0)" 
+                    stroke="#FFFFFF" 
+                    d="M602.125 248.121L                600.125 251.671 599.725 254.021 595.825 254.471 592.475 256.121 588.375 255.421 591.275 252.621 586.925 250.371                 583.675 250.771 581.975 249.971 581.225 252.371 578.875 250.921 575.975 248.271 572.175 247.121 568.925 246.571                 566.475 241.571 564.675 243.271 561.525 244.371 559.575 246.021 556.925 246.871 551.775 249.771 549.225 248.121                 547.325 250.321 542.675 250.621 534.375 253.221 533.025 250.321 528.925 251.221 526.525 252.521 523.725 249.821                 520.025 248.721 517.225 247.521 513.875 250.071 511.725 248.771 507.375 243.071 510.375 240.821 511.475 238.121                 505.575 235.871 500.525 242.371 499.375 249.671 498.975 255.071 497.125 258.071 497.625 260.871 492.875 267.071                 492.225 271.771 489.825 273.821 495.925 272.971 499.875 273.621 502.575 275.371 503.575 279.171 508.325 282.071                 512.875 281.321 514.225 277.521 519.075 278.971 520.275 275.421 524.625 274.371 531.425 279.171 529.025 285.071                 530.475 289.821 533.975 288.521 534.325 285.271 539.025 283.121 543.075 288.071 545.875 287.321 549.625 288.721                 553.975 290.971 556.975 293.971 560.725 293.021 563.675 291.421 564.875 293.071 567.175 289.871 570.375 291.171                 572.925 288.971 573.775 291.371 573.025 293.871 573.875 296.171 580.175 298.121 582.275 302.571 582.125 303.471                 581.225 305.021 586.625 305.921 586.775 308.021 585.425 309.521 585.725 316.021 590.625 311.321 596.875 306.771                 600.025 305.721 600.625 305.821 600.025 303.671 601.675 301.871 604.025 302.871 606.525 303.521 607.325 304.571                 608.525 302.321 612.675 299.871 614.225 300.471 615.325 300.621 619.375 304.371 621.025 303.571 627.275 304.421                 627.825 304.621 634.525 299.621 639.725 292.421 642.975 291.071 640.176 287.621 643.926 287.021 645.625 283.721                 649.676 281.821 646.275 278.871 649.074 273.821 647.725 273.621 646.775 270.671 643.975 269.421 643.074 264.521                 639.625 264.921 639.375 268.921 632.675 267.271 634.475 264.821 630.675 261.171 628.075 259.821 624.425 258.571                 619.825 256.021 617.275 256.571 613.775 254.221 611.325 256.971 605.475 248.021 602.125 248.121z "></path>
+                <path id="_78" fill="rgba(255,0,50,0)" 
+                    stroke="#FFFFFF" 
+                    d="M563.675 291.471L                560.775 293.021 557.025 293.971 553.975 290.971 549.625 288.721 545.925 287.371 543.125 288.021 539.025 283.071                 534.325 285.271 534.025 288.521 530.475 289.821 529.075 285.071 531.425 279.121 524.675 274.371 520.275 275.421                 519.125 278.971 514.225 277.571 512.875 281.321 508.375 282.071 503.575 279.121 502.625 275.371 499.925 273.621                 495.975 272.971 489.825 273.771 487.525 272.521 483.925 273.971 475.575 276.021 473.875 272.071 472.675 278.271                 470.025 280.021 465.925 277.121 463.575 279.521 465.075 283.771 465.225 286.271 467.475 288.171 468.825 291.421                 465.725 295.521 468.375 297.921 474.925 298.221 471.075 301.171 473.675 304.271 472.075 307.371 473.725 309.271                 474.025 312.121 478.375 313.021 478.025 315.921 482.075 319.971 479.175 324.421 481.175 326.421 485.125 328.171                 484.175 331.371 487.025 332.721 484.875 334.971 486.275 338.071 484.475 340.171 483.925 345.971 484.875 350.321                 488.525 352.121 491.725 354.971 490.925 358.171 484.625 368.021 489.375 369.871 488.525 372.171 488.675 377.021                 491.125 379.371 494.075 380.721 496.775 386.471 500.725 387.121 506.075 388.671 503.975 395.571 508.025 398.571                 511.575 397.821 514.225 401.271 517.875 403.371 516.025 410.021 516.075 413.471 517.675 418.771 521.125 425.121                 525.275 424.771 526.225 427.021 529.825 430.421 533.575 431.571 537.875 430.121 539.825 427.221 539.025 423.271                 541.675 421.371 541.875 417.821 544.975 411.021 548.975 410.021 541.925 404.771 542.525 401.421 546.625 401.871                 549.925 402.821 555.625 402.671 558.175 392.621 561.775 390.271 558.725 384.321 556.125 381.821 554.725 378.971                 557.575 376.471 558.925 372.421 561.975 370.771 566.275 371.121 568.825 369.021 570.875 364.021 570.325 363.321                 570.025 358.171 575.625 356.921 577.675 354.521 581.575 353.321 583.875 354.421 584.075 349.021 586.775 350.221                 590.275 349.121 589.875 347.471 587.075 346.171 585.975 343.321 582.875 343.571 581.975 339.321 579.275 339.771                 577.275 335.821 576.775 333.821 579.025 331.121 577.525 325.321 580.625 319.271 581.425 318.471 585.725 316.021                 585.475 309.521 586.775 308.021 586.625 305.921 581.275 305.071 582.125 303.421 582.275 302.571 580.175 298.071                 573.875 296.221 573.025 293.871 573.775 291.371 572.925 288.971 570.375 291.171 567.175 289.871 564.875 293.071                 563.675 291.471z"></path>
+                <path id="_91" fill="rgba(255,0,50,0)" 
+                    stroke="#FFFFFF" 
+                    d="M605.175 355.521L                602.575 360.371 597.925 357.621 598.025 353.621 594.525 352.621 590.275 349.121 586.775 350.171 584.025 349.021                 583.825 354.371 581.525 353.271 577.675 354.471 575.575 356.921 569.975 358.171 570.325 363.321 570.875 363.971                 568.825 368.971 566.225 371.121 561.925 370.771 558.925 372.421 557.525 376.421 554.725 378.971 556.125 381.771                 558.725 384.321 561.725 390.221 558.175 392.571 555.575 402.671 549.925 402.821 546.625 401.871 542.475 401.421                 541.925 404.771 548.975 409.971 544.975 410.971 541.875 417.821 541.675 421.371 538.975 423.271 539.825 427.221                 541.525 430.171 542.325 432.721 542.525 436.021 541.125 440.471 546.325 440.471 548.875 441.671 547.025 446.321                 550.425 450.421 548.475 452.121 547.625 456.271 549.575 459.221 548.725 462.721 545.725 464.021 548.225 467.321                 551.425 469.521 553.975 469.821 557.175 469.021 566.825 467.571 568.925 465.071 570.625 466.971 575.675 466.421                 579.075 466.671 577.775 464.171 580.575 462.571 586.575 455.221 590.575 458.921 592.825 466.671 596.775 462.571                 601.875 463.521 604.625 458.471 606.675 458.221 608.475 461.671 611.025 463.721 618.725 461.221 617.025 457.421                 619.975 457.371 623.825 457.771 623.275 454.571 625.075 452.171 625.025 449.371 631.825 445.971 632.425 442.421                 635.775 442.821 638.275 440.621 642.426 441.271 635.525 434.221 635.425 429.721 634.625 427.021 635.075 420.771                 636.625 418.071 636.925 414.521 634.275 412.671 634.525 406.321 639.775 398.721 638.175 398.871 637.575 396.321                 641.375 393.021 641.525 390.021 638.725 386.971 637.875 384.521 641.176 383.921 642.375 379.971 640.125 378.071                 642.324 374.471 645.225 375.121 648.324 373.171 646.275 369.521 641.775 367.921 639.125 366.471 637.675 364.371                 636.175 358.971 632.025 360.421 630.275 360.771 626.525 363.771 625.175 362.371 624.775 361.371 620.575 363.171                 620.025 361.171 616.025 362.621 613.375 360.721 613.275 356.221 610.775 358.021 606.925 355.721 605.175 355.521z"></path>
+                <path id="_77" fill="rgba(255,0,50,0)" 
+                    stroke="#FFFFFF" 
+                    d="M795.975 332.821L                794.875 328.721 792.475 329.071 791.176 332.071 788.475 330.921 789.525 327.721 786.426 326.821 784.775 324.971                 782.375 325.971 781.875 322.971 779.025 324.221 778.074 320.521 775.975 318.021 776.875 314.771 775.475 310.021                 774.574 312.271 769.525 315.171 766.676 311.971 766.475 308.471 765.225 305.171 761.875 307.321 758.824 307.671                 758.426 305.221 755.574 298.571 752.824 295.571 749.574 294.271 747.875 291.321 742.025 287.871 746.426 281.221                 744.775 278.921 744.926 277.421 741.125 272.971 742.125 268.171 737.824 266.571 734.025 266.471 726.975 263.921                 724.574 269.321 726.125 271.921 720.975 271.121 716.025 271.121 711.324 274.621 710.725 271.121 706.375 272.921                 703.074 273.821 698.375 274.171 694.676 275.621 692.074 275.971 690.275 272.271 686.375 271.821 684.475 269.171                 681.625 271.021 677.824 272.771 680.574 274.671 676.676 277.771 672.475 278.421 670.676 273.471 667.275 277.421                 663.275 272.221 655.926 266.671 653.676 270.121 649.025 273.771 646.225 278.821 649.676 281.771 645.574 283.671                 643.875 287.021 640.125 287.571 642.975 291.021 646.676 293.371 647.375 296.671 645.125 299.471 649.324 305.921                 650.275 308.721 649.426 311.921 649.275 316.371 644.074 321.771 645.375 326.571 648.625 326.771 646.475 329.621                 648.525 334.321 650.074 339.271 649.475 340.971 648.926 347.371 651.875 349.421 653.225 352.371 650.426 352.521                 650.725 354.971 648.824 356.621 649.975 359.621 647.625 361.821 645.625 365.271 646.225 369.471 648.275 373.121                 645.176 375.071 642.275 374.421 640.074 378.071 642.375 379.921 641.125 383.871 637.875 384.471 638.675 386.971                 641.525 390.021 641.375 392.921 637.575 396.321 638.125 398.821 639.725 398.721 634.475 406.321 634.225 412.621                 636.875 414.521 636.625 418.021 635.025 420.771 634.575 426.971 635.375 429.671 635.475 434.171 642.426 441.221                 638.275 440.571 635.725 442.821 632.375 442.371 631.775 445.921 624.975 449.371 625.025 452.121 623.225 454.521                 623.825 457.721 619.925 457.321 617.025 457.421 618.725 461.171 621.675 466.421 621.825 475.171 626.775 478.471                 630.925 478.371 632.125 481.271 635.775 481.421 637.275 484.271 637.075 487.371 637.625 487.371 638.575 491.221                 636.225 495.621 637.275 499.571 635.825 501.671 632.025 499.671 630.125 502.121 628.425 506.171 625.575 507.821                 627.575 509.921 631.075 508.421 638.475 509.321 640.975 505.571 646.475 505.471 647.676 507.721 651.176 507.721                 657.875 505.921 663.775 509.271 668.926 509.321 671.525 506.221 676.775 502.621 673.775 499.071 676.824 500.271                 681.176 498.771 684.125 498.571 686.025 500.371 684.275 506.171 687.824 508.021 690.676 506.471 695.324 501.471                 706.775 499.571 706.525 495.771 709.875 492.371 712.475 491.971 715.426 488.221 718.225 488.121 719.324 484.971                 722.525 478.371 724.975 478.121 724.324 472.671 721.176 471.771 721.975 469.371 720.375 466.671 719.574 463.971                 723.926 457.771 723.275 454.771 725.025 450.921 730.125 450.671 733.926 453.421 737.025 448.671 740.725 448.971                 745.125 446.371 747.275 448.671 750.525 449.671 754.125 448.121 759.574 448.421 763.426 445.271 767.975 447.271                 771.176 447.421 773.824 447.121 776.275 447.271 777.025 442.571 780.074 440.771 784.975 442.771 785.975 438.121                 782.875 436.621 781.324 434.171 783.324 427.221 781.875 423.621 779.525 421.071 782.875 419.171 786.225 417.771                 786.225 412.571 782.975 408.821 790.426 408.571 795.324 405.321 792.725 398.171 795.926 395.671 797.725 393.321                 800.775 393.021 799.625 389.421 807.275 385.571 804.824 383.271 801.824 381.121 803.525 379.271 800.125 379.921                 796.824 379.171 794.275 381.521 790.125 382.421 791.324 378.271 788.625 373.071 790.875 370.471 793.176 369.371                 794.225 366.621 792.074 364.471 792.426 360.571 792.426 356.671 787.426 355.621 787.324 353.171 781.324 352.721                 782.926 345.671 785.926 346.371 788.225 344.521 787.875 341.221 784.625 341.021 782.375 339.971 783.875 337.221                 786.824 338.671 793.324 336.771 795.975 332.821z"></path>
+                <path id="_93" fill="rgba(255,0,50,0)" 
+                    stroke="#FFFFFF" 
+                    d="M639.725 292.421L                634.525 299.621 627.875 304.621 627.275 304.421 621.025 303.521 619.425 304.371 615.325 300.621 614.275 300.471                 612.675 299.871 608.525 302.271 607.325 304.571 606.525 303.471 604.075 302.821 601.675 301.871 600.075 303.621                 600.625 305.821 603.775 306.421 607.575 307.971 607.725 310.021 607.575 310.721 606.775 312.921 605.525 313.521                 605.275 314.221 604.175 314.771 605.175 318.021 616.475 317.871 617.975 320.821 619.925 323.521 620.375 324.821                 620.725 329.271 621.025 330.721 625.875 330.271 631.475 327.721 633.875 328.121 634.475 329.121 636.825 330.321                 640.824 333.321 645.676 338.321 649.525 340.971 650.074 339.321 648.574 334.371 646.525 329.671 648.676 326.771                 645.426 326.571 644.125 321.771 649.324 316.371 649.475 311.921 650.324 308.721 649.375 305.971 645.176 299.521                 647.426 296.721 646.725 293.371 643.025 291.071 639.725 292.421z"></path>
+                <path id="_92" fill="rgba(255,0,50,0)" 
+                    stroke="#FFFFFF" 
+                    d="M596.875 306.721L                590.675 311.321 585.775 316.021 581.475 318.471 580.675 319.271 577.525 325.321 579.025 331.171 576.775 333.821                 577.275 335.871 579.275 339.721 581.975 339.321 582.875 343.571 586.025 343.321 587.075 346.171 589.925 347.471                 590.325 349.121 594.525 352.621 598.025 353.621 597.925 357.621 602.575 360.371 605.225 355.521 604.625 351.121                 605.175 350.121 606.075 347.371 604.975 345.871 605.775 342.571 605.025 340.471 606.575 339.571 607.125 338.721                 595.875 334.521 593.425 331.521 589.525 329.721 589.775 328.271 590.975 325.721 593.075 324.021 595.475 323.121                 598.675 323.521 599.375 321.771 605.175 318.071 604.175 314.771 605.275 314.221 605.525 313.571 606.775 312.971                 607.575 310.721 607.725 310.021 607.575 308.021 603.775 306.421 600.075 305.721 596.875 306.721z"></path>
+                
+                <path id="_94" fill="rgba(255,0,50,0)" 
+                    stroke="#FFFFFF" 
+                    d="M649.525 340.971L                645.725 338.321 640.875 333.321 636.875 330.321 634.475 329.121 633.875 328.121 631.525 327.771 625.875 330.271                 621.025 330.721 620.825 331.371 620.875 334.321 622.725 332.621 625.925 331.771 629.175 333.221 628.975 336.271                 628.175 338.371 621.425 337.021 616.575 336.471 612.425 338.921 609.125 338.971 607.125 338.721 606.575 339.571                 605.025 340.421 605.775 342.571 604.975 345.821 606.075 347.371 605.175 350.071 604.625 351.121 605.225 355.471                 606.925 355.721 610.775 358.021 613.325 356.221 613.425 360.721 616.025 362.621 620.025 361.171 620.575 363.171                 624.775 361.371 625.175 362.371 626.525 363.771 630.275 360.771 632.075 360.371 636.225 358.971 637.725 364.371                 639.125 366.471 641.824 367.921 646.324 369.471 645.725 365.321 647.725 361.871 650.025 359.621 648.875 356.621                 650.824 354.971 650.475 352.571 653.275 352.421 651.926 349.421 648.975 347.421 649.525 340.971z"></path>
+                <path id="_75" fill="rgba(255,0,50,0)" 
+                    stroke="#FFFFFF" 
+                    d="M619.925 323.521L                618.025 320.821 616.525 317.921 605.175 318.071 599.375 321.771 598.725 323.521 595.475 323.121 593.125 324.021                 590.975 325.721 589.825 328.271 589.575 329.721 593.475 331.521 595.875 334.521 607.175 338.721 609.125 338.971                 612.425 338.921 616.625 336.521 621.475 337.021 628.175 338.371 628.975 336.321 629.175 333.221 625.975 331.821                 622.725 332.621 620.875 334.321 620.825 331.421 621.025 330.721 620.725 329.271 620.375 324.821 619.925 323.521z"></path>
+                </svg>
+                <p class="departement">selectionnez votre département</p>
+                <div id="list-bottom">                
+                </div>
+            </div>
+            <div class="slide" id="page-rapper">
+            </div>
+        </div>
+        <div class="section" id="module-comparaison">
+                <div class="module-title">
+                    <hr>
+                    <h3>PANAM BOSS</h3>
+                    <hr>
+                    <p>Découvrez qui domine le rap-game parisien !</p>
+                </div>
+<!--             <div id="tes"></div>-->
+            <div class="module-button2">
+                <button class="option" id="btn-reset">TOUS</button> 
+                <button class="option album" data-class="album" id="btn-albums">ALBUMS</button>
+                <button class="option vente" id="btn-ventes" data-class="vente">VENTES</button>
+                <button class="option popu" id="btn-popularite" data-class="popu">POPULARITE</button>
+            </div>
+            <div id="container-module-comparaison">
+                <div id="echelle-comparaison">
+                    <img src="img/echelle.svg" alt="echelle">
+                </div>
+                <div id="rapper-card-comparaison">
+                    <div class="head-card"></div>
+                    <h4></h4>
+                    <h3 class="album"></h3>
+                </div>
+            </div>
+<!--             <div id="infos-comparaison">
+                <div class="infos-card">
+                    <h3>INFORMATIONS</h3>
+                    <p>Ce module répertorie le nombre de propos injurieux recensés dans les 10 premiers titres du dernier album de chaque rappeur. Il permet de déterminer quel est le plus hardcore.</p>
+                </div>
+            </div> -->
+        </div>
+        <div class="section" id="module-3">
+            <div class="module-title">
+                <hr>
+                <h3>ALL STARZ LYRICS</h3>
+                <hr>
+                <p>Découvrez LE Détail des paroles de chaque rappeur à travers les modules « hardcore » et « vocabulaire »</p>
+            </div>
+            <div class="module-button">
+                <button id="insults-module" class="active">Hardcore</button>
+                <button id="vocabulaire-module">Vocabulaire</button>
+            </div>
+            <div id="container-module">
+                <div id="inter-container">
+                    <svg id="graph-hardcore"></svg>
+                    <div id="head-rappers"></div>
+                </div>
+                <svg id="axis-moy"></svg>
+                <button id="slide-left" class="buttonSlide slideL"></button>
+                <button id="slide-right" class="buttonSlide slideR"></button>
+            </div>
+            <div id="infos-hardcore-insults">
+                <div class="infos-card">
+                    <h3>INFORMATIONS</h3>
+                    <p>Ce module répertorie le nombre de propos injurieux recensés dans les 10 premiers titres du dernier album de chaque rappeur. Il permet de déterminer quel est le plus hardcore.</p>
+                </div>
+                <div id="rapper-card">
+                    <div class="head-card"></div>
+                    <h4>Black M</h4>
+                    <a href="#">Découvrir</a>
+                    <hr></hr>
+                    <h3 class="album">Album : <span>Les yeux plus gros que le monde</span></h3>
+                    <h3 class="nb">Injures : <span>60</span></h3>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <div id="infos-hardcore-vocab" class="inactive-infos">
+                <div class="infos-card">
+                    <h3>INFORMATIONS</h3>
+                    <p>Ce module répertorie le nombre de mots différents dans les 10 premiers titres du dernier album de chaque rappeur. Il permet de déterminer quel a le plus de vocabulaire.</p>
+                </div>
+                <div id="rapper-card">
+                    <div class="head-card"></div>
+                    <h4>Black M</h4>
+                    <a href="#">Découvrir</a>
+                    <hr></hr>
+                    <h3 class="album">Album : <span>Les yeux plus gros que le monde</span></h3>
+                    <h3 class="nb">Nombre de mots différents : <span>60</span></h3>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <!--
+        <div class="section" id="module-4">
+            <div class="module-title">
+                <hr>
+                <h3>All starz fans</h3>
+                <hr>
+                <p>Découvrez quel est le rappeur préféré des utilisateurs et partcipez vous aussi à ce classement</p>
+            </div>
+            <div class="fans-container">
+                
+                <img class="up" src="img/btn-up-fans.png" alt="btn-up">
+                <div class="fans">
+                    <ul>
+                        <li>
+                            <div class="left">
+                                <p>1</p>
+                                <img src="./img/rapper-min/min-1.jpg" alt="Mini pic rappeur">
+                                <p class="name">La fouine</p>
+                            </div>
+                            <p class="nbr-votes">125612 votes</p>
+                            <div class="btn-vote">
+                                <img src="img/btn-tick.png" alt="tick">
+                                <p>voter</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <p>2</p>
+                                <img src="./img/rapper-min/min-4.jpg" alt="Mini pic rappeur">
+                                <p class="name">allan</p>
+                            </div>
+                            <p class="nbr-votes">186912 votes</p>
+                            <div class="btn-vote">
+                                <img src="img/btn-tick.png" alt="tick">
+                                <p>voter</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <p>3</p>
+                                <img src="./img/rapper-min/min-2.jpg" alt="Mini pic rappeur">
+                                <p class="name">booba</p>
+                            </div>
+                            <p class="nbr-votes">12638 votes</p>
+                            <div class="btn-vote">
+                                <img src="img/btn-tick.png" alt="tick">
+                                <p>voter</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <p>4</p>
+                                <img src="./img/rapper-min/min-5.jpg" alt="Mini pic rappeur">
+                                <p class="name">ton père</p>
+                            </div>
+                            <p class="nbr-votes">712393 votes</p>
+                            <div class="btn-vote">
+                                <img src="img/btn-tick.png" alt="tick">
+                                <p>voter</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <p>5</p>
+                                <img src="./img/rapper-min/min-6.jpg" alt="Mini pic rappeur">
+                                <p class="name">ton père</p>
+                            </div>
+                            <p class="nbr-votes">125612 votes</p>
+                            <div class="btn-vote">
+                                <img src="img/btn-tick.png" alt="tick">
+                                <p>voter</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <p>6</p>
+                                <img src="./img/rapper-min/min-7.jpg" alt="Mini pic rappeur">
+                                <p class="name">ton père</p>
+                            </div>
+                            <p class="nbr-votes">125612 votes</p>
+                            <div class="btn-vote">
+                                <img src="img/btn-tick.png" alt="tick">
+                                <p>voter</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <p>7</p>
+                                <img src="./img/rapper-min/min-8.jpg" alt="Mini pic rappeur">
+                                <p class="name">ton père</p>
+                            </div>
+                            <p class="nbr-votes">125612 votes</p>
+                            <div class="btn-vote">
+                                <img src="img/btn-tick.png" alt="tick">
+                                <p>voter</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <img class="bottom" src="img/btn-bottom-fans.png" alt="btn-down">
+            </div>
+            <div class="information">
+                <h3>information</h3>
+                <p>Ce module permet aux internautes d’élire leur rappeur préféré. Le classement est mis à jour automatiquement et chaque vote est comptabilisé instantanément. Vous avez la possibilité de voter pour un seul rappeur soit en cliquant sur le bouton VOTER soit en cliquant sur le <span class="red">♥</span> présent sur la page du rappeur.</p>
+            </div>
+        </div>
+    -->
+        <div class="section" id="about">
+            <div class="module-title">
+                <hr>
+                <h3>A propos</h3>
+                <hr>
+            </div>
+            <div class="content">
+                <h2>Le concept</h2>
+                <p>Panam All Starz est un projet étudiant réalisé par des troisièmes années à HETIC. Ce dernier a pour but de comparer différents rappeurs de l’Ile de France sous la forme d’une datavisualisation. Le site n’a pas pour but de déterminer quel est le meilleur rappeur mais de mettre à disposition des données pour que chacun se fasse sa propre idée.</p>
+                <h2>Les rappeurs</h2>
+                <p>Les rappeurs de Panam All Starz sont sélectionnés selon différents critères. Le premier est l’origine géographique, les rappeurs doivent être originaires de la région Ile-de-France. Le deuxième critère est le nombre d’albums studio sortis. Chaque rappeur doit avoir enregistré au minimum 2 albums studio(solo ou groupe).
+
+    Nous sommes conscients qu’il manque de nombreux rappeurs respectants ces critères, et nous essayons d’y travailler pour enrichir le site. Néanmoins, certaines données comme les ventes d’albums sont difficiles à trouver. Nous ne prétendons pas être des spécialistes dans le domaine du rap, donc n'hésitez pas à nous conctacter panamallstarz75@gmail.com si vous souhaitez que nous ajoutions du contenu, ou si vous pensez que des données sont fausses.</p>
+                <h2>Les sources</h2>
+                <p>Les données utilisées pour les différents modules et les fiches rappeurs du site proviennent des sites suivants :</p>
+                <ul>
+                    <li><a href="http://www.booska-p.com">http://www.booska-p.com</a></li>
+                    <li><a href="http://fr.wikipedia.org">http://fr.wikipedia.org</a></li>
+                    <li><a href="http://www.lourdson.com">http://www.lourdson.com</a></li>
+                    <li><a href="http://www.chartsinfrance.net">http://www.chartsinfrance.net</a></li>
+                    <li><a href="http://rapgenius.com">http://rapgenius.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </body>
+    <!-- === Références aux Frameworks === -->
+    <script data-main="js/main" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.11/require.min.js"></script>
+</html>

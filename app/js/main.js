@@ -442,14 +442,56 @@ $('#home>.begin>a').on('click',function(event){
   });
 
 
+  /*==========================================================================================*/
+/*-------------------------------------  GESTION LOADER ------------------------------------*/
+/*==========================================================================================*/
 
 
+if(Backbone.history.getFragment() === "" || Backbone.history.getFragment() === undefined || Backbone.history.getFragment() === "1" ){
+  $('#loader2').css('display', 'none');
+  $('#loader1>.loader').css('display', 'block');
+  var loader = setInterval(function(){ progessload(); }, 25); 
 
+  function progessload() {
+    if ($('#up-load').width() < 560) {
+      $('#up-load').width($('#up-load').width()+(Math.random()*20));
+    }else{
+      stopLoader();
+    }
+  }
 
-
-
-
-
+  function stopLoader() {
+      $('#loader1').addClass('finish');
+      clearInterval(loader);
+      setTimeout(function(){
+        $('#loader1').fadeOut();
+        launchHomeAnim();
+      },250);
+  }
+  
+}else{
+  $('#loader2 p').css('display', 'block');
+  $('#top-load').css('display', 'block');
+  $('#loader1').css('display', 'none');
+  var width;
+  
+  var loader2 = setInterval(function(){ progessload2(); }, 20); 
+  
+  function progessload2() {
+    width = Math.round(( 100 * parseFloat($('#top-load').css('width')) / parseFloat($('#top-load').parent().css('width')) ));
+    if (width <= 100) {
+      $('#top-load').width(width+(Math.random()*10)+'%');
+      $('#percentage-progress').text(width);
+    }else{
+      $('#percentage-progress').text("100");
+      stopLoader2();
+    }
+  }
+  function stopLoader2() {
+    clearInterval(loader2);
+    $('#loader2').fadeOut();
+  }
+}
 
 
 
