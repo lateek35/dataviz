@@ -81,7 +81,6 @@ function progessload() {
   }else{
     stopLoader();
   }
-  console.log($('#up-load').width()+(Math.random()*10));
 }
 
 function stopLoader() {
@@ -432,7 +431,6 @@ $('#home>.begin>a').on('click',function(event){
   // });
 
   router.on('route:a-propos',function(){
-    console.log('test');
     $.fn.fullpage.moveTo(5,0);
   });
 

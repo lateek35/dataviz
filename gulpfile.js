@@ -183,7 +183,7 @@ gulp.task('build', function() {
 //COMMANDE DE BUILD-PREPROD SEQUENCER
 gulp.task('deploy', function() {
   runSequence('master-clean',
-  	['fonts','style','json','html','jshint','js','requirejsBuild'],'ask'
+  	['fonts','style','json','html','jshint','js','requirejsBuild','images'],'ask'
   );
 });
 
