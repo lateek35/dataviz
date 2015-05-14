@@ -9,9 +9,9 @@
       "begin_year":2001,
       "official_website":"lafouine78.com",
       "punchline":"\u00c0 trop ha\u00efr les noirs, Le Pen fait des nuits blanches",
-      "disque_or":4,
-      "disque_platine":2,
-      "double_disque_platine":0,
+      "disque_or":5,
+      "disque_platine":3,
+      "double_disque_platine":1,
       "disque_diamant":0,
       "v1":5,
       "v2":380000,
@@ -51,13 +51,13 @@
          },
          {  
             "a_name":"Aller-Retour",
-            "a_sells":40000,
+            "a_sells":50000,
             "a_years":2007,
             "a_traks":17
          },
          {  
             "a_name":"Mes Rep\u00e8res",
-            "a_sells":100000,
+            "a_sells":110000,
             "a_years":2009,
             "a_traks":19
          },
@@ -69,8 +69,14 @@
          },
          {  
             "a_name":"Dr\u00f4le de parcours",
-            "a_sells":86000,
+            "a_sells":100000,
             "a_years":2013,
+            "a_traks":16
+         },
+         {  
+            "a_name":"Team BS",
+            "a_sells":68000,
+            "a_years":2014,
             "a_traks":16
          }
       ],
@@ -102,10 +108,10 @@
       "begin_year":2002,
       "official_website":"maitre-gims.fr",
       "punchline":"J\u2019ai mang\u00e9 trop de probl\u00e8mes, donc j\u2019en chie des solutions",
-      "disque_or":1,
-      "disque_platine":1,
-      "double_disque_platine":1,
-      "disque_diamant":1,
+      "disque_or":3,
+      "disque_platine":3,
+      "double_disque_platine":2,
+      "disque_diamant":2,
       "v1":3,
       "v2":2050000,
       "v3":7263106,
@@ -145,7 +151,7 @@
          },
          {  
             "a_name":"Subliminal",
-            "a_sells":710000,
+            "a_sells":1000000,
             "a_years":2013,
             "a_traks":24
          }
@@ -258,9 +264,9 @@
       "official_website":"blackmesrimes.com",
       "punchline":"Evidemment qu\u2019on fait du cin\u00e9ma, ram\u00e8ne Di Cap\u2019, je l\u2019handicape",
       "disque_or":3,
-      "disque_platine":2,
+      "disque_platine":3,
       "double_disque_platine":2,
-      "disque_diamant":1,
+      "disque_diamant":2,
       "v1":3,
       "v2":1390000,
       "v3":4038051,
@@ -275,7 +281,7 @@
       "total_fans":43033493,
       "insults":19,
       "vocabulaire":1351,
-      "biographie":"Black M ou Black Mesrimes, de son vrai nom Alpha Diallo est un rappeur fran\u00e7ais n\u00e9 le 27 d\u00e9cembre 1984. Il est membre de Sexion d'Assaut. Il r\u00e9side dans le 13e arrondissement de Paris ; il a cependant grandi rue du Bac. Il est mari\u00e9 et a un enfant. Le 31 mars 2014, il sort son album solo intitul\u00e9 Les Yeux plus gros que le monde.",
+      "biographie":"Black M, de son vrai nom Alpha Diallo, est un rappeur né le 27 décembre 1984 à Paris. Il se fait connaître avec le groupe Sexion d'Assault dont il est un des membres fondateurs.  Il est également connu sous le nom de Black Mesrimes, un jeu de mot entre Jacques Mesrine, l'ennemi public numéro un en France dans les années soixante-dix,  et le mot « rimes ».",
       "label":[  
          {  
             "l_name":"Wati B"
@@ -302,7 +308,7 @@
          },
          {  
             "a_name":"Les Yeux plus gros que le monde",
-            "a_sells":50000,
+            "a_sells":500000,
             "a_years":2014,
             "a_traks":19
          }
@@ -335,7 +341,7 @@
       "begin_year":1994,
       "official_website":"unkut.fr",
       "punchline":"Tu veux t\u2019asseoir sur le tr\u00f4ne ? Faudra t\u2019asseoir sur mes genoux",
-      "disque_or":6,
+      "disque_or":7,
       "disque_platine":3,
       "double_disque_platine":1,
       "disque_diamant":0,
@@ -353,7 +359,7 @@
       "total_fans":43033493,
       "insults":70,
       "vocabulaire":1375,
-      "biographie":"Booba, de son vrai nom \u00c9lie Yaffa, est un rappeur fran\u00e7ais n\u00e9 le 9 d\u00e9cembre 1976 \u00e0 Boulogne-Billancourt. Il est membre du 92I, un collectif de rap fran\u00e7ais dont il a \u00e9t\u00e9 le fondateur, regroupant des rappeurs issus des Hauts-de-Seine, Mala et Bram's (ce dernier est mort le 21 mai 2011). Il a cr\u00e9\u00e9 sa propre marque de v\u00eatements streetwear nomm\u00e9e \u00dcnkut. Apr\u00e8s 20 ans de carri\u00e8re, Booba reste un des plus c\u00e9l\u00e8bres rappeurs francophones.  Il est le premier rappeur solo fran\u00e7ais \u00e0 remplir le Palais omnisports de Paris-Bercy sans aucune aide de la part des m\u00e9dias. Alors second artiste rap \u00e0 remplir Bercy apr\u00e8s NTM, il s'est d'abord fait conna\u00eetre gr\u00e2ce au groupe Lunatic, avec son comp\u00e8re Ali originaire d'Issy-les-Moulineaux, o\u00f9 le succ\u00e8s vient \u00e0 la fois de la critique et du public. L'album Mauvais \u0153il entrera dans l'histoire du rap fran\u00e7ais en obtenant un disque d'or. Il s'agit en effet du premier album en ind\u00e9pendant \u00e0 obtenir une telle r\u00e9compense. Booba a d\u00e9j\u00e0 vendu plus d'un million d'albums et en a produit six.  Le premier, nomm\u00e9 Temps mort, voit le jour en 2002 ; en 2004 sort la mixtape, Autopsie Vol. 1. Un cinqui\u00e8me album, nomm\u00e9 Lunatic, est sorti le 22 novembre 2010, le titre reprend le nom de l'ancien groupe de Booba. L'album a \u00e9t\u00e9 certifi\u00e9 disque d'or d\u00e8s la premi\u00e8re semaine et est aujourd'hui double-disque de platine. Le 26 novembre 2012, Booba sort son sixi\u00e8me album nomm\u00e9 Futur qui deviendra disque d'or en une seule semaine en se vendant \u00e0 plus de 51 000 exemplaires ce qui est le meilleur d\u00e9marrage de vente de toute la carri\u00e8re du rappeur. Il a battu \u00e9galement le record fran\u00e7ais d'albums num\u00e9riques vendus, toutes cat\u00e9gories musicales confondues, sur iTunes avec plus de 17 000 exemplaires en une seule semaine, d\u00e9tr\u00f4n\u00e9 aujourd'hui par les Daft Punk.",
+      "biographie":"Élie Yaffa, dit Booba, est un rappeur français né le 9 décembre 1976 à Boulogne-Billancourt. Il est membre du 92I, un collectif de rap français dont il a été le fondateur, regroupant des rappeurs issus des Hauts-de-Seine, Mala et Bram's. Après 20 ans de carrière, Booba reste un des plus célèbres rappeurs francophones. Il est le premier rappeur solo français à remplir le Palais omnisports de Paris-Bercy et second artiste rap à remplir Bercy après NTM.",
       "label":[  
          {  
             "l_name":"Tallac"
@@ -398,7 +404,7 @@
          },
          {  
             "a_name":"0.9",
-            "a_sells":100000,
+            "a_sells":90000,
             "a_years":2008,
             "a_traks":15
          },
@@ -410,9 +416,15 @@
          },
          {  
             "a_name":"Futur",
-            "a_sells":180000,
+            "a_sells":170000,
             "a_years":2012,
             "a_traks":16
+         },
+         {  
+            "a_name":"D.U.C",
+            "a_sells":81000,
+            "a_years":2015,
+            "a_traks":20
          }
       ],
       "bioimg":[  
@@ -461,7 +473,7 @@
       "total_fans":43033493,
       "insults":44,
       "vocabulaire":1521,
-      "biographie":"Mister You, de son vrai nom Younes Latifi, n\u00e9 le 5 f\u00e9vrier 1984 \u00e0 Paris est un rappeur fran\u00e7ais d'origine marocaine. Il devient c\u00e9l\u00e8bre gr\u00e2ce \u00e0 sa cavale qui a \u00e9t\u00e9 un tremplin pour sa carri\u00e8re.",
+      "biographie":"Younes Latifi est né le 5 février 1984 à Paris, il est d'origine marocaine. Mister You dit aussi Yougataga, vit dans le quartier de Barbès, et participe à des petits trafics. Il est condamné en 2007 à cinq années de prison pour trafic de stupéfiants. Mister You échappe à la police venue l'arrêter, rejugé par contumace, Mister You voit sa peine passer à six ans d'emprisonnement.",
       "label":[  
          {  
             "l_name":"STAIVEMUSIC"
@@ -485,7 +497,7 @@
          },
          {  
             "a_name":"Le Prince",
-            "a_sells":16000,
+            "a_sells":17800,
             "a_years":2014,
             "a_traks":15
          }
@@ -518,9 +530,9 @@
       "begin_year":1994,
       "official_website":"roh2f.com",
       "punchline":"Y\u2019a pas de sentiments, que des centim\u00e8tres",
-      "disque_or":6,
-      "disque_platine":3,
-      "double_disque_platine":0,
+      "disque_or":7,
+      "disque_platine":4,
+      "double_disque_platine":1,
       "disque_diamant":0,
       "v1":7,
       "v2":1238000,
@@ -536,7 +548,7 @@
       "total_fans":43033493,
       "insults":39,
       "vocabulaire":1628,
-      "biographie":"Rohff, de son vrai nom Housni Mkouboi, est un rappeur fran\u00e7ais d'origine comorienne n\u00e9 le 15 d\u00e9cembre 1977 \u00e0 Antananarivo, Madagascar. En 20 ans de carri\u00e8re, Rohff a produit sept albums, pour un total de 1 400 000 albums vendus. Consid\u00e9r\u00e9 comme \u00e9tant l'un des plus grands rappeur fran\u00e7ais de sa g\u00e9n\u00e9ration, Rohff est le rappeur fran\u00e7ais qui a vendu le plus d'album solo parmi les rappeur toujours en activit\u00e9. Ex-membre de la Mafia K'1 Fry, il sort son premier album intitul\u00e9 Le Code De L'Honneur en d\u00e9cembre 1999. Cet album restera un classique du rap fran\u00e7ais avec notamment le titre G\u00e9n\u00e9ration sacrifi\u00e9e. Son second album sorti en 2001, nomm\u00e9 La Vie Avant La Mort, se vendra \u00e0 plus de 300 000 exemplaires, et donc certifi\u00e9 disque de platine : c'est l'album le plus vendu de sa carri\u00e8re. En 2008, Rohff sort son cinqui\u00e8me album, Le Code De L'Horreur. D\u00e8s la premi\u00e8re semaine, l'album est certifi\u00e9 disque d'or avec 58 400 exemplaires \u00e9croul\u00e9s. Apr\u00e8s un sixi\u00e8me album nomm\u00e9 La Cuenta, qui sera vendu \u00e0 seulement 80 000 exemplaires, Rohff sort un septi\u00e8me album en 2013, P.D.R.G., qu'il consid\u00e8re comme \u00e9tant le meilleur album de sa carri\u00e8re. Son fr\u00e8re, Ikbal Vockal, est membre du groupe TLF avec Alain 2 L'ombre. Rohff a cr\u00e9\u00e9 en 2007 sa propre marque de v\u00eatement nomm\u00e9e Distinct qu'il relance en 2013 afin de conqu\u00e9rir le march\u00e9.",
+      "biographie":"Rohff, de son vrai nom Housni Mkouboi, est un rappeur français né le 15 décembre 1977 à Antananarivo à Madagascar. Après avoir passé toute son enfance dans la Grande Comore, Rohffarrive en France en 1984 et s'installe à Saint-Ouen avant de déménager à Vitry-sur-Seine. Rohff commence à rapper en 1994. Quatre ans plus tard, il pose sa voix sur \"On fait les choses\" avec Nég' Marrons, Pit Baccardi et Mystik et fait sa première apparition dans un clip vidéo. En 1999, Rohffparticipe à l'EP \"Légendaire\" de la Mafia K'1 Fry, dont il fait partie avec 113 et Kery James.",
       "label":[  
          {  
             "l_name":"Warner"
@@ -575,25 +587,25 @@
          },
          {  
             "a_name":"La fiert\u00e9 des n\u00f4tres",
-            "a_sells":275000,
+            "a_sells":250000,
             "a_years":2004,
             "a_traks":30
          },
          {  
             "a_name":"Au-del\u00e0 de mes limites",
-            "a_sells":220000,
+            "a_sells":270000,
             "a_years":2005,
             "a_traks":31
          },
          {  
             "a_name":"Le code de l'horreur",
-            "a_sells":250000,
+            "a_sells":200000,
             "a_years":2008,
             "a_traks":17
          },
          {  
             "a_name":"La cuenta",
-            "a_sells":80000,
+            "a_sells":70000,
             "a_years":2010,
             "a_traks":18
          },
@@ -650,7 +662,7 @@
       "total_fans":43033493,
       "insults":26,
       "vocabulaire":1597,
-      "biographie":"Youssoupha, de son vrai nom Youssoupha Mabiki, n\u00e9 le 29 ao\u00fbt 1979 \u00e0 Kinshasa (Za\u00efre), est un rappeur fran\u00e7ais d'origine congolaise.",
+      "biographie":"D'origine sénégalo-congolaise, Youssoupha est un rappeur français né au Congo où il vit jusqu'à ses 10 ans. Il est marqué, durant son enfance, par la corruption et la dictature qui sévissent dans son pays. Cela donne lieu dans son oeuvre à des remarques acérées sur la face sombre de la Françafrique. Par la suite, Youssoupha rejoint la France pour finir ses études..Amoureux des mots et de la langue française, Youssoupha débute dans le rap en montant le groupe Frères Lumières , avec des amis. Son style s'impose petit à petit et il décroche les premières parties de plusieurs grands noms du rap comme 50 Cent, Method Man ou Nas. En 2007, son premier album solo, \"A chaque frère\" voit le jour et s'écoule à 50 000 exemplaires. Sa facilité à manier la plume commence à être reconnue dans les médias, il devient professeur d'écriture dans l'émission Popstars qui consacre cette année-là Sheryfa Luna.",
       "label":[  
          {  
             "l_name":"Bomay\u00e9 Musik"
@@ -736,7 +748,7 @@
       "total_fans":43033493,
       "insults":37,
       "vocabulaire":1729,
-      "biographie":"Sefyu, de son vrai nom Youssef Soukouna, est un rappeur fran\u00e7ais d'origine s\u00e9n\u00e9galaise n\u00e9 le 20 avril 1981 \u00e0 Paris. R\u00e9sidant \u00e0 Aulnay-sous-Bois (\u00ab cit\u00e9 de l'Europe \u00bb), en Seine-Saint-Denis, Sefyu fait carri\u00e8re dans le milieu du hip-hop fran\u00e7ais au d\u00e9but des ann\u00e9es 2000 apr\u00e8s avoir tent\u00e9 une carri\u00e8re de footballeur.",
+      "biographie":"Né au début des années 80 à Aulnay-sous-Bois, Youssef Soukoura se destine tout d'abord au football, évoluant au sein des équipes de jeunes du Red Star de Saint-Ouen et passant par le centre de formation du prestigieux club londonien Arsenal (Londres). Mais une blessure le contraint à renoncer à une carrière professionnelle. C'est alors qu'il se tourne vers son autre passion : le rap. C'est grâce à des participations à des mix tapes et compilations que le jeune rappeur se fait connaître à partir de 2001.",
       "label":[  
          {  
             "l_name":"G-Huit"
@@ -817,7 +829,7 @@
       "total_fans":43033493,
       "insults":26,
       "vocabulaire":1758,
-      "biographie":"Diam's, de son vrai nom M\u00e9lanie Georgiades, est une ancienne rappeuse fran\u00e7aise n\u00e9e \u00e0 Nicosie (Chypre) le 25 juillet 1980. Le 30 septembre 2012, elle annonce mettre un terme \u00e0 sa carri\u00e8re.",
+      "biographie":"Diam's, de son vrai nom Mélanie Georgiades, est une rappeuse française née à Nicosie le 25 juillet 1980 dans une famille chypriote grecque. Elle passe son enfance dans le département de l'Essonne, à Brunoy puis Massy, mais principalment aux Ulis (91), où elle passera la majeure partie de son adolescence. Elle y rencontrera d'ailleurs le rappeur Sinik. Elle découvre le rap avec l'album \"The Chronic\" (1992) de Dr. Dre, que lui offre sa mère et avec le premier titre du groupe NTM, \"Je rap\"(1990) édité sur \"Rapattitude\", la première compilation de rap français.",
       "label":[  
          {  
             "l_name":"Hostile Records"
@@ -926,7 +938,7 @@
          },
          {  
             "a_name":"Or Noir Part 2",
-            "a_sells":10000,
+            "a_sells":15000,
             "a_years":2014,
             "a_traks":28
          }
@@ -992,7 +1004,7 @@
       "album":[  
          {  
             "a_name":"Si c'\u00e9tait \u00e0 refaire",
-            "a_sells":120000,
+            "a_sells":125000,
             "a_years":2001,
             "a_traks":12
          },
@@ -1016,13 +1028,13 @@
          },
          {  
             "a_name":"R\u00e9el",
-            "a_sells":80000,
+            "a_sells":100000,
             "a_years":2009,
             "a_traks":13
          },
          {  
             "a_name":"92-2012",
-            "a_sells":5880,
+            "a_sells":10000,
             "a_years":2012,
             "a_traks":14
          },
@@ -1078,7 +1090,7 @@
       "total_fans":43033493,
       "insults":38,
       "vocabulaire":1792,
-      "biographie":"Sniper est un groupe de rap fran\u00e7ais originaire de Deuil-la-Barre (Val-d'Oise). Il est compos\u00e9 de Tunisiano (Bachir Baccour), d'Aketo (Ryad Selmi) et anciennement de Blacko (Karl Appela), qui les quitta en 2007. Dj Boudj a fait partie des deux premiers albums du groupe, mais le quittera par la suite. Le 18 mars 2011, ils publient un extrait de leur nouvel album intitul\u00e9 Blues de la tess, marquant leur retour sur la sc\u00e8ne fran\u00e7aise.",
+      "biographie":"Originaires du Val d'Oise, les quatre membres du collectif qui allait donner naissance au groupe Sniper ont, à l'image de la plupart des rappeurs, évolué tout d'abord dans d'autres groupes avant de constituer leur combo définitif. Ryad Selmi (Aketo), membre du Comité de Deuil rejoint rapidement le collectif M Group, où il rencontre El Tunisiano (Bachir Baccour). Les deux rappeurs sont vite rejoints par Karl Appela (Blacko), ancien membre des Killers du Microphone, dont les inspirations ragga viennent arrondir les textes revendicatifs des deux rappeurs à la fin des années 1990. Ne manque qu'un scratcheur au trio, DJ Boudj, ramené au sein du collectif par Aketo. Evoluant dans le milieu du rap underground, les quatre compères s'imposent vite comme l'un des crews porte-paroles du Val d'Oise et plus particulièrement des cités de Deuil-la-Barre et de Montfermeil.",
       "label":[  
          {  
             "l_name":"EMI"
@@ -1091,19 +1103,19 @@
       "album":[  
          {  
             "a_name":"Du rire aux larmes",
-            "a_sells":200000,
+            "a_sells":238000,
             "a_years":2001,
             "a_traks":19
          },
          {  
             "a_name":"Grav\u00e9 dans la roche",
-            "a_sells":600000,
+            "a_sells":430000,
             "a_years":2003,
             "a_traks":16
          },
          {  
             "a_name":"Trait pour trait",
-            "a_sells":156800,
+            "a_sells":172000,
             "a_years":2006,
             "a_traks":15
          }
@@ -1154,7 +1166,7 @@
       "total_fans":43033493,
       "insults":56,
       "vocabulaire":1566,
-      "biographie":"Disiz, n\u00e9 le 22 mars 1978 \u00e0 Amiens (Somme), de son vrai nom Serigne Mbaye Gueye1, est un rappeur et un \u00e9crivain fran\u00e7ais.",
+      "biographie":"Serigne M'Baye alias Disiz la Peste, naît le 22 mars 1978 à Amiens, d'origine sénégalaise par son père et belge du côté maternel. Il déménage à Evry où il grandit auprès d'une mère bibliothécaire qui lui donne le goût des mots, avec en fond les albums de NTM et d'IAM l'initiant au rap. Disiz commence sa carrière avec le collectif Rimeur à Gages, au sein du label Nouvelle Donne, qui produit de jeunes rappeurs. En 2001, au summum de la médiatisation du rap français, Disiz la Peste signe son premier album Le Poisson Rouge. Drôle de titre en référence à un triste fait divers survenu en banlieue. Ce disque explose grâce au single « J'Pète les plombs » vendu à 400.000 exemplaires.",
       "label":[  
          {  
             "l_name":"Lucidream Republic"
@@ -1214,7 +1226,7 @@
          },
          {  
             "a_name":"Transe-Lucide",
-            "a_sells":7000,
+            "a_sells":9400,
             "a_years":2014,
             "a_traks":17
          }
@@ -1265,7 +1277,7 @@
       "total_fans":43033493,
       "insults":34,
       "vocabulaire":1603,
-      "biographie":"Sinik, de son vrai nom Thomas Idir, n\u00e9 le 26 juin 1980 \u00e0 Paris, est un rappeur fran\u00e7ais d'origine alg\u00e9rienne par son p\u00e8re kabyle, et fran\u00e7aise par sa m\u00e8re, aussi connu sous les noms de sc\u00e8ne de Malsain L'assassin ou S.I.N.I.K. En 1996, Sinik forme le groupe L'Amalgame, un collectif de rap fran\u00e7ais avec Sinik, Templar, Fik\u2019s, Niavo, Gr\u00f6dash, Kid Butch, P.Kaer Reno, Djorka Fella. L'Amalgame a fusionn\u00e9 avec d'autres groupes de l'Essonne et des Hauts-de-Seine comme L'Affront (R2eno \/ P.Kaer) et Fr\u00e8res Guerriers (K.I.D \/ Templar) et Djorka Fella pour former Ul'Team Atom en 1998. Apr\u00e8s plus de 10 ans de carri\u00e8re, avec pr\u00e8s de un million exemplaires de vente en quatre albums studio, deux Street albums, deux mixtape, deux maxis. Le premier, nomm\u00e9 Malsain, sort en 2002. En 2004 sort l'album La Main sur le c\u0153ur qui arrive en t\u00eate des ventes d\u00e8s la premi\u00e8re semaine alors que Sinik est encore peu connu. L'album est un \u00e9norme succ\u00e8s et devient disque de platine avec plus de 250 000 exemplaires vendus, suivi de Sang froid avec 300 000 exemplaires vendus Le Toit du monde avec 250 000 exemplaires vendus puis Ballon D'or et La Plume et le Poignard vendu a 50 000 exemplaires.",
+      "biographie":"Sinik, de son vrai nom Thomas Idir, né le 26 juin 1980 à Paris, est un rappeur français d'origine algérienne par son père kabyle, et française par sa mère, aussi connu sous les noms de scène de Malsain L'assassin ou S.I.N.I.K. En 1996, Sinik forme le groupe L'Amalgame, un collectif de rap français avec Sinik, Templar, Fik’s, Niavo, Grödash, Kid Butch, P.Kaer Reno, Djorka Fella. L'Amalgame a fusionné avec d'autres groupes de l'Essonne et des Hauts-de-Seine comme L'Affront (R2eno / P.Kaer) et Frères Guerriers (K.I.D / Templar) et Djorka Fella pour former Ul'Team Atom en 1998. Après plus de 10 ans de carrière, avec près de un million exemplaires de vente en quatre albums studio, deux Street albums, deux mixtape, deux maxis. Le premier, nommé Malsain, sort en 2002. En 2004 sort l'album La Main sur le cœur qui arrive en tête des ventes dès la première semaine alors que Sinik est encore peu connu.",
       "label":[  
          {  
             "l_name":"Six-O-Nine"
@@ -1316,6 +1328,12 @@
             "a_sells":50000,
             "a_years":2012,
             "a_traks":19
+         },
+         {  
+            "a_name":"Immortel II",
+            "a_sells":10000,
+            "a_years":2015,
+            "a_traks":16
          }
       ],
       "bioimg":[  
@@ -1363,7 +1381,7 @@
       "total_fans":43033493,
       "insults":5,
       "vocabulaire":1321,
-      "biographie":"MC Solaar, de son vrai nom Claude M'Barali, est un rappeur fran\u00e7ais d'origine s\u00e9n\u00e9galo-tchadienne n\u00e9 le 5 mars 1969 \u00e0 Dakar. MC Solaar est l'un des premiers \u00e0 avoir r\u00e9ussi \u00e0 populariser le rap en France en le faisant d\u00e9couvrir au grand public, notamment gr\u00e2ce \u00e0 ses textes \u00e9labor\u00e9s et nettement moins violents que certains de ses confr\u00e8res. Il est reconnu comme faisant partie des piliers du rap fran\u00e7ais des ann\u00e9es 1990 avec des artistes comme Lionel D, Assassin, IAM et Supr\u00eame NTM. Son succ\u00e8s et la qualit\u00e9 litt\u00e9raire de ses textes sont le fruit d'inspirations diverses allant de Serge Gainsbourg (auquel il rend hommage en samplant Bonnie and Clyde sur Nouveau Western), en passant par les musiques africaines (ivoiriennes, maliennes, tchadiennes) sans oublier les classiques noirs am\u00e9ricains (jazz et rap US). Ses textes sont r\u00e9guli\u00e8rement \u00e9tudi\u00e9s \u00e0 l'\u00e9tranger (USA, Australie, Grande-Bretagne, Europe de l'Est) alors qu'il est toujours le meilleur vendeur de disques dans la cat\u00e9gorie rap fran\u00e7ais (plus de 15 millions vendus \u00e0 ce jour).",
+      "biographie":"MC Solaar, de son vrai nom Claude M'Barali, est un rappeur français d'origine sénégalo-tchadienne né le 5 mars 1969 à Dakar. MC Solaar est l'un des premiers à avoir réussi à populariser le rap en France en le faisant découvrir au grand public, notamment grâce à ses textes élaborés et nettement moins violents que certains de ses confrères. Il est reconnu comme faisant partie des piliers du rap français des années 1990 avec des artistes comme Lionel D, Assassin, IAM et Suprême NTM. Son succès et la qualité littéraire de ses textes sont le fruit d'inspirations diverses allant de Serge Gainsbourg (auquel il rend hommage en samplant Bonnie and Clyde sur Nouveau Western), en passant par les musiques africaines (ivoiriennes, maliennes, tchadiennes) sans oublier les classiques noirs américains (jazz et rap US).",
       "label":[  
          {  
             "l_name":"Elektra Records"
@@ -1414,19 +1432,19 @@
          },
          {  
             "a_name":"Cinqui\u00e8me As",
-            "a_sells":600000,
+            "a_sells":678800,
             "a_years":2001,
             "a_traks":19
          },
          {  
             "a_name":"Mach 6",
-            "a_sells":300000,
+            "a_sells":235000,
             "a_years":2003,
             "a_traks":16
          },
          {  
             "a_name":"Chapitre 7",
-            "a_sells":188300,
+            "a_sells":190000,
             "a_years":2007,
             "a_traks":18
          }
@@ -1459,9 +1477,9 @@
       "begin_year":1995,
       "official_website":"tunisiano-lesite.fr",
       "punchline":"Non t\u2019es pas une salope, t\u2019es vaginalement tr\u00e8s sociable",
-      "disque_or":0,
-      "disque_platine":0,
-      "double_disque_platine":0,
+      "disque_or":3,
+      "disque_platine":3,
+      "double_disque_platine":1,
       "disque_diamant":0,
       "v1":2,
       "v2":43650,
@@ -1477,7 +1495,7 @@
       "total_fans":43033493,
       "insults":52,
       "vocabulaire":1734,
-      "biographie":"Tunisiano, de son vrai nom Bachir Baccour, est un rappeur fran\u00e7ais d'origine tunisienne n\u00e9 le 19 mai 1979 \u00e0 Deuil-la-Barre (Val-d'Oise). Il est membre du groupe Sniper.",
+      "biographie":"C'est de son ascendance tunisienne que provient le nom de scène de Bachir Baccour, né le 19 mai 1979. Il grandit en banlieue parisienne, à Deuil-la-Barre (Val d'Oise), et découvre le rap à l'adolescence, se retrouvant dans ce style musical et les valeurs qu'il véhicule. En 1995, il intègre M Group, avec lequel il enregistre un album et qui marque un tournant : « C'était sur le maxi Fidèle au Rap que le public a pu m'entendre pour la première fois sur disque. C'était un moment important dans ma carrière ». Il quitte le groupe deux ans plus tard, pour former Sniper avec la complicité d'Aketo et Blacko. En 2000, le trio fait une entrée plus que remarquée sur la scène rap française avec un premier album intitulé Du Rire aux Larmes, qui se vend à plus de 200 000 exemplaires.",
       "label":[  
          {  
             "l_name":"Columbia"
@@ -1487,7 +1505,25 @@
          }
       ],
       "dep":95,
-      "album":[  
+      "album":[
+         {  
+            "a_name":"Du rire aux larmes",
+            "a_sells":238000,
+            "a_years":2001,
+            "a_traks":19
+         },
+         {  
+            "a_name":"Grav\u00e9 dans la roche",
+            "a_sells":430000,
+            "a_years":2003,
+            "a_traks":16
+         },
+         {  
+            "a_name":"Trait pour trait",
+            "a_sells":172000,
+            "a_years":2006,
+            "a_traks":15
+         },
          {  
             "a_name":"Le Regard des Gens",
             "a_sells":38350,
@@ -1496,7 +1532,7 @@
          },
          {  
             "a_name":"Marqu\u00e9 \u00e0 vie",
-            "a_sells":5300,
+            "a_sells":10000,
             "a_years":2014,
             "a_traks":19
          }
@@ -1564,10 +1600,16 @@
       "album" :[
 			{
 				"a_name" : "La force du nombre",
-				"a_sells" : 0,
+				"a_sells" : 6989,
 				"a_years" : 2013,
 				"a_traks" : 20
-			}
+			},
+         {  
+            "a_name":"Team BS",
+            "a_sells":68000,
+            "a_years":2014,
+            "a_traks":16
+         }
       ],
       "bioimg":[  
          {  
@@ -1597,7 +1639,7 @@
 	  "begin_year" : 1994,
 	  "official_website" : "www.mafiak1fry.fr",
 	  "punchline" : "Je regarde en bas, je vois trop de futurs drogués si peu de futurs Drogba",
-	  "disque_or" : 3,
+	  "disque_or" : 4,
 	  "disque_platine" : 1,
 	  "double_disque_platine" : 0,
 	  "disque_diamant" : 0,
@@ -1615,7 +1657,7 @@
       "total_fans":0,
       "insults":11,
       "vocabulaire":1514,
-      "biographie":"Le 113 est un groupe de rap français formé en 1994 et originaire de Vitry-sur-Seine en banlieue sud de Paris1. Leurs labels sont Jive Epic et Frenesik pour des projets moins commerciaux que leurs albums.",
+      "biographie":"Le groupe 113 voit le jour dans les années 90. Rim k, AP et Mokobé adorent la musique depuis qu'ils sont petits. Ensemble, ils décident de fonder le groupe pour vivre de leur passion. C'est leur titre \"Truc de Fou\" qui les fait connaître en 1998, single issu de leur premier maxi \"Ni barreaux, ni barrières, no frontières\". Les trois membres du groupe participent pendant de nombreuses années à plusieurs compilations comme \"Planète Rap II\", \"Première classe\" etc... Leur premier album \"Les princes des villes\" sort en 1999. On note la participation de Manu Key, Pone de la Fonky Family et Cut Killer. L'album est poussé par le titre \"Tonton du bled\" remporte une victoire de la musique pour le meilleur album rap groove de l'année.",
       "label" :[
 			{
 				"l_name" : "Jive Epic"
@@ -1628,7 +1670,7 @@
 	  "album" :[
 			{
 				"a_name" : "Les princes de la ville",
-				"a_sells": 1000000,
+				"a_sells": 370200,
 				"a_years": 1999,
 				"a_traks": 14
 			},
@@ -1646,7 +1688,7 @@
 			},
 			{
 				"a_name" : "113 Degrés",
-				"a_sells" : 100000,
+				"a_sells" : 125113,
 				"a_years" : 2005,
 				"a_traks" : 21
 			},
@@ -1703,7 +1745,7 @@
       "total_fans":0,
       "insults":19,
       "vocabulaire":1506,
-      "biographie":"Nessbeal, de son vrai nom Nabil Sahli, né le 16 août 1978 à Boulogne-Billancourt, est un rappeur français d'origine marocaine. Il a à son actif quatre albums solo, dont le premier est sorti en 2006, et un album avec son groupe fondateur Dicidens en 2004.",
+      "biographie":"Nessbeal, naît à Boulogne. Braqué contre le système scolaire, il abandonne les études après la troisième et connaît la galère, de cité en cité, à Sevran, à Villiers-sur-Marne. Sa grande chance aura été de se découvrir un talent de rappeur, dès l'âge de 12 ans. Après une période d'échauffement avec son premier groupe, Dicidens, il se fait repérer par le milieu et collabore avec Lunatic, puis Booba, qui l'invite sur la BO de « Taxi 3 ». C'est en 2006 qu'il sort enfin son premier album, « La Mélodie Des Briques », précédé d'une mémorable campagne publicitaire, où il pose un cocktail Molotov à la main ! On est prévenu, c'est de hardcore qu'il s'agit : Nessbeal n'est pas là pour amuser la galerie.",
       "label" :[
 			{
 				"l_name" : "7th Magnitude"
@@ -1767,10 +1809,10 @@
 	  "begin_year" : 2002,
 	  "official_website" : "www.sexiondassaut.com",
 	  "punchline" : "On dit qu’les chiens font pas des chats pourtant trop d’chattes sont des chiennes.",
-	  "disque_or" : 0,
-	  "disque_platine" : 0,
-	  "double_disque_platine" : 0,
-	  "disque_diamant" : 0,
+	  "disque_or" : 2,
+	  "disque_platine" : 2,
+	  "double_disque_platine" : 1,
+	  "disque_diamant" : 1,
 	  "v1": 4,
 	  "v2": 2040000,
 	  "v3": 7124744,
@@ -1785,7 +1827,7 @@
       "total_fans":0,
       "insults":31,
       "vocabulaire":1904,
-      "biographie":"Sexion d'Assaut est un groupe de rap formé en 2002, composé de huit artistes originaires de Paris : Maître Gims, Barack Adama, Maska,Doomams, JR O Chrome, Black Mesrimes, Lefa, et Pétrodollars.Sexion d'Assaut est un groupe de rap formé en 2002, composé de huit artistes originaires de Paris : Maître Gims, Barack Adama, Maska,Doomams, JR O Chrome, Black Mesrimes, Lefa, et Pétrodollars.",
+      "biographie":"Formé en 2002 par des MC's parisiens, Sexion d 'Assaut se démarque par son flow et ses punch lines qui rythment des sujets parfois graves et souvent poignants. C'est notamment avec l'album, « L'école des points vitaux », dont sont extraits « Casquette à l'envers » ou encore « Désolé », que Sexion d'assaut redonne son sens au hip hop !",
       "label" :[
 			{
 				"l_name" : "Wati B"
@@ -1794,22 +1836,10 @@
 	  "dep" : 75,
 	  "album" :[
 			{
-				"a_name" : "L'écrasement de tête",
-				"a_sells" : 400000,
-				"a_years" : 2009,
-				"a_traks" : 18
-			},
-			{
 				"a_name" : "L'école des points vitaux",
 				"a_sells" : 520000,
 				"a_years" : 2010,
 				"a_traks" : 16
-			},
-			{
-				"a_name" : "En attendant l'apogée: les chroniques du 75",
-				"a_sells" : 300000,
-				"a_years" : 2011,
-				"a_traks" : 20
 			},
 			{
 				"a_name" : "L'apogée",
@@ -1845,8 +1875,8 @@
 	  "birth_place" : "Paris",
 	  "begin_year" : 2008,
 	  "official_website" : "https://www.facebook.com/undoubleneufcinq",
-	  "punchline" : "Que tu sois un shlag du game ou dans ta hype de merde une seule chose : on voudrait que ta race décède",
-	  "disque_or" : 0,
+	  "punchline" : "Mon rap est un métro : à chaque ligne y’a du changement.",
+	  "disque_or" : 1,
 	  "disque_platine" : 0,
 	  "double_disque_platine" : 0,
 	  "disque_diamant" : 0,
@@ -1864,7 +1894,7 @@
       "total_fans":0,
       "insults":41,
       "vocabulaire":1793,
-      "biographie":"1995 (plusieurs appellations sont possibles : « un, neuf, neuf, cinq » ; « un, double neuf, cinq » ; « mille neuf cent quatre-vingt-quinze » etc.) est un groupe de rap français originaire du sud de Paris et fondé en 2008. Après deux EPs en 2011 et 2012, le groupe son premier album, Paris Sud Minute, le 31 décembre 2012.",
+      "biographie":"Originaire du sud de Paris, le collectif 1995 est composé de Alpha Wann (chant), Areno Jaz (chant), Fonky Flav'(chant), Nek le Fennek (chant) et Sneazzy (chant), ainsi que de DJ Lo'. Le groupe écrit aussi son nom Doubleneufcinq, et s'emploie à se faire connaitre à travers maints freestyles et vidéos mitonnées maison. C'est sa participation au concours Rap Contenders qui braque les feux sur 1995, Nek le Fennek terrassant Logik Konstantine au cours d'un clash mémorable.",
       "label" :[
 			{
 				"l_name" : "Undoubleneufcinq"
@@ -1889,7 +1919,7 @@
 			},
 			{
 				"a_name" : "Paris Sud Minute",
-				"a_sells" : 40000,
+				"a_sells" : 50000,
 				"a_years" : 2013,
 				"a_traks" : 18
 			}
@@ -1940,7 +1970,7 @@
       "total_fans":0,
       "insults":143,
       "vocabulaire":1386,
-      "biographie":"Seth Gueko, de son vrai nom Nicolas Salvadori, né le 27 octobre 1980, est un rappeur français originaire de Saint-Ouen-l'Aumône, dans le Val-d'Oise. D'ascendance russo-italienne, il est membre du label et collectif Néochrome. Son pseudonyme est inspiré du personnage joué par George Clooney (Seth Gecko) dans le film Une nuit en enfer réalisé par Robert Rodriguez en 1996.",
+      "biographie":"Nicolas Salvadori vient au jour le 27 octobre 1981 à Saint-Ouen-l'Aumône (Val d'Oise). Ses origines siciliennes et russes font émerger une personnalité détonnante. Seth Gueko s'immerge dans une mythologie du gangstérisme où il vit son personnage d'iguane de banlieue. Révélation et pilier du label Néochrome, Seth Gueko sort tout d'abord le maxi Mains Sales en 2003. Petit à petit, il intègre un vocabulaire issu du parler gitan, Patate de Forain en 2007 et Drive by en Caravane de 2008 montrent parfaitement cet apport. Son titre « Le Million », inclus sur la bande originale du film Mesrine, lui laisse le champ libre pour sortir Les Fils de Jacques Mess où il s'autoproclame fils caché du défunt ennemi public n° 1.",
       "label" :[
 			{
 				"l_name" : "Warner"
