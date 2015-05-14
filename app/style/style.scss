@@ -19,6 +19,33 @@ html, body {
   user-select: none;
   background-color: #333;
 }
+ 
+.arrow-anim{
+  position: relative;
+  display:block;
+  width:6px;height:43px;
+  margin:0 auto 20px auto;
+  background:url("../img/arrow.png") no-repeat center;
+
+  -webkit-animation: movingarrow 1.5s infinite;
+  -moz-animation: movingarrow 1.5s infinite; 
+  -o-animation: movingarrow 1.5s infinite; 
+  animation: movingarrow 1.5s infinite;
+}
+@-webkit-keyframes movingarrow {
+  0%{bottom:10px;}
+  30%{bottom: 0px;}
+  70%{bottom:10px;}
+  100%{bottom:10px;}
+} 
+@keyframes movingarrow {
+  0%{bottom:10px;}
+  30%{bottom: 0px;}
+  70%{bottom:10px;}
+  100%{bottom:10px;}
+}
+
+
 /********* LOADER ***********/
 h1 {
     font-family: 'bebas', Georgia, serif;
@@ -2388,6 +2415,10 @@ text{
     font-size: 0.16rem;
     font-family: 'source_sans_prolight';
     line-height: 25px;
+    a{
+      font-weight: bold;
+      display: inline;
+    }
   }
   h2{
     color: $rouge;
