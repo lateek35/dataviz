@@ -335,7 +335,7 @@ $('#fullpage').fullpage({
   css3 : true,
   easingcss3: 'ease',
   scrollingSpeed: 1400,
-  normalScrollElements: '#page-rapper, #about',
+  normalScrollElements: '#page-rapper',
   afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){ 
     if(slideIndex===1){
       $('.fp-slide.active').addClass('animSlide');
