@@ -70,6 +70,25 @@ require([
   'd3'
 ], function (slimScroll,fullpage, backbone, modelRapper, collectionRapper,viewRapperList,viewRapperPage,viewModuleComparaison,viewRapperListInsults,d3) {
 /*==========================================================================================*/
+/*-------------------------------------  GESTION LOADER ------------------------------------*/
+/*==========================================================================================*/
+
+var loader = setInterval(function(){ progessload() }, 25);
+
+function progessload() {
+  if ($('#up-load').width() < 455) {
+    $('#up-load').width($('#up-load').width()+(Math.random()*20));
+  }else{
+    stopLoader();
+  }
+}
+
+function stopLoader() {
+    clearInterval(loader);
+    $('#loader-overlay').fadeOut();
+    launchHomeAnim();
+}
+/*==========================================================================================*/
 /*-----------------------------------  GESTION RESPONSIVE ----------------------------------*/
 /*==========================================================================================*/
 
@@ -254,10 +273,10 @@ $('body').on('click',".btn-play-pause",function(){
 });
 /*__________________________________________________________________________________________*/
 /*---------------------------------------Animation home ------------------------------------*/
-function launchHomeAnim(){
+launchHomeAnim = function (){
   $('#home hr, #home h1, #home h2, #hamburger-icon, #home .social-buttons, #home .begin').addClass('animOn');
 }
-launchHomeAnim();
+
 /*__________________________________________________________________________________________*/
 /*----------------------------------  Animation liste fans  --------------------------------*/
 
@@ -317,7 +336,13 @@ $('#fullpage').fullpage({
   easingcss3: 'ease',
   scrollingSpeed: 1400,
   normalScrollElements: '#page-rapper',
+  afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){ 
+    if(slideIndex===1){
+      $('.fp-slide.active').addClass('animSlide');
+    }
+  },
   afterLoad: function(anchorLink, index){
+    $(this).addClass('animSlide');
     var suplmement = (Backbone.history.fragment).substring(2);
     if (suplmement.length == 0)
     {
@@ -328,6 +353,7 @@ $('#fullpage').fullpage({
     if(index == '4'){
       rapperListInsults.render();
     }
+
   }
 });
 $.fn.fullpage.setKeyboardScrolling(true);
@@ -391,6 +417,7 @@ $('#home>.begin>a').on('click',function(event){
   });
 
   router.on('route:module-hard',function(){
+    setTimeout(updateData ,2000);
     $.fn.fullpage.moveTo(3,0);
     //moduleComparaison.render(-1);
   });
@@ -404,7 +431,6 @@ $('#home>.begin>a').on('click',function(event){
   // });
 
   router.on('route:a-propos',function(){
-    console.log('test');
     $.fn.fullpage.moveTo(5,0);
   });
 
@@ -414,14 +440,56 @@ $('#home>.begin>a').on('click',function(event){
   });
 
 
+  /*==========================================================================================*/
+/*-------------------------------------  GESTION LOADER ------------------------------------*/
+/*==========================================================================================*/
 
 
+if(Backbone.history.getFragment() === "" || Backbone.history.getFragment() === undefined || Backbone.history.getFragment() === "1" ){
+  $('#loader2').css('display', 'none');
+  $('#loader1>.loader').css('display', 'block');
+  var loader = setInterval(function(){ progessload(); }, 25); 
 
+  function progessload() {
+    if ($('#up-load').width() < 560) {
+      $('#up-load').width($('#up-load').width()+(Math.random()*20));
+    }else{
+      stopLoader();
+    }
+  }
 
-
-
-
-
+  function stopLoader() {
+      $('#loader1').addClass('finish');
+      clearInterval(loader);
+      setTimeout(function(){
+        $('#loader1').fadeOut();
+        launchHomeAnim();
+      },250);
+  }
+  
+}else{
+  $('#loader2 p').css('display', 'block');
+  $('#top-load').css('display', 'block');
+  $('#loader1').css('display', 'none');
+  var width;
+  
+  var loader2 = setInterval(function(){ progessload2(); }, 20); 
+  
+  function progessload2() {
+    width = Math.round(( 100 * parseFloat($('#top-load').css('width')) / parseFloat($('#top-load').parent().css('width')) ));
+    if (width <= 100) {
+      $('#top-load').width(width+(Math.random()*10)+'%');
+      $('#percentage-progress').text(width);
+    }else{
+      $('#percentage-progress').text("100");
+      stopLoader2();
+    }
+  }
+  function stopLoader2() {
+    clearInterval(loader2);
+    $('#loader2').fadeOut();
+  }
+}
 
 
 
@@ -445,71 +513,72 @@ $('body').on('click','.option',
 /*-----------------------------------  CREATION DU MODULE  ----------------------------------*/
 /*==========================================================================================*/
 
-    var r = 593;
-    var p = Math.PI;
-    var intervalScale = 6.2;
-    var color = d3.scale.linear()
-        .domain([-1, 0, 1])
-        .range(["#515e44", "#4a4758", "#e84852"]);
+var r = 593;
+var p = Math.PI;
+var intervalScale = 6.2;
+var color = d3.scale.linear()
+    .domain([-1, 0, 1])
+    .range(["#515e44", "#4a4758", "#e84852"]);
 
-    var colorB = d3.scale.linear()
-        .domain([-1, 0, 1])
-        .range(["#516839", "#453F61", "#F73943"]);
+var colorB = d3.scale.linear()
+    .domain([-1, 0, 1])
+    .range(["#516839", "#453F61", "#F73943"]);
 
-    var canvas = d3.select('#container-module-comparaison').append('svg')
-        .attr('width','100%')
-        .attr('height','100%');
+var canvas = d3.select('#container-module-comparaison').append('svg')
+    .attr('width','100%')
+    .attr('height','100%');
 
-    var group3 = canvas.append('g')
-        .attr('class','popu')
-        .attr('transform','translate('+(r+60)+','+(r)+')');
-    var group2 = canvas.append('g')
-        .attr('class','vente')
-        .attr('transform','translate('+(r+60)+','+(r)+')');
-    var group1 = canvas.append('g')
-        .attr('class','album')
-        .attr('transform','translate('+(r+60)+','+(r)+')');
+var group3 = canvas.append('g')
+    .attr('class','popu')
+    .attr('transform','translate('+(r+60)+','+(r)+')');
+var group2 = canvas.append('g')
+    .attr('class','vente')
+    .attr('transform','translate('+(r+60)+','+(r)+')');
+var group1 = canvas.append('g')
+    .attr('class','album')
+    .attr('transform','translate('+(r+60)+','+(r)+')');
 
-    var debutScaleAlbum = 76;
-    var finScaleAlbum = 76+(14*(intervalScale));
+var debutScaleAlbum = 76;
+var finScaleAlbum = 76+(14*(intervalScale));
 
-    var debutScaleVente = finScaleAlbum+intervalScale;
-    var finScaleVente = debutScaleVente+(20*(intervalScale));
+var debutScaleVente = finScaleAlbum+intervalScale;
+var finScaleVente = debutScaleVente+(20*(intervalScale));
 
-    var debutScalePopu = finScaleVente+intervalScale;
-    var finScalePopu = debutScalePopu+(35*(intervalScale));
+var debutScalePopu = finScaleVente+intervalScale;
+var finScalePopu = debutScalePopu+(35*(intervalScale));
 
 
-    var scale1 = d3.scale.linear();
-        scale1.domain([1, 8]);
-        scale1.range([76, finScaleAlbum]);
+var scale1 = d3.scale.linear();
+    scale1.domain([1, 8]);
+    scale1.range([76, finScaleAlbum]);
 
-    var scale2 = d3.scale.linear();
-        scale2.domain([0, 2000000]);
-        scale2.range([debutScaleVente, finScaleVente]);
+var scale2 = d3.scale.linear();
+    scale2.domain([0, 2000000]);
+    scale2.range([debutScaleVente, finScaleVente]);
 
-    var scale3 = d3.scale.linear();
-        scale3.domain([0, 4000000]);
-        scale3.range([debutScalePopu,finScalePopu]);
+var scale3 = d3.scale.linear();
+    scale3.domain([0, 4000000]);
+    scale3.range([debutScalePopu,finScalePopu]);
 
-    var arc1,
-        arc2,
-        arc3,
-        total;
+var arc1,
+    arc2,
+    arc3,
+    arc0,
+    total;
 
-    var radius = 100,
-        radians = 2 * p,
-        points = 30;
+var radius = 100,
+    radians = 2 * p,
+    points = 30;
 
-    var angle = d3.scale.linear()
-        .domain([0, points-1])
-        .range([0, radians/2]);
+var angle = d3.scale.linear()
+    .domain([0, points-1])
+    .range([0, radians/2]);
 
-    var line = d3.svg.line.radial()
-        .interpolate("basis")
-        .tension(0)
-        .radius(function(d, i) {return radius;})
-        .angle(function(d, i) { return angle(i); });
+var line = d3.svg.line.radial()
+    .interpolate("basis")
+    .tension(0)
+    .radius(function(d, i) {return radius;})
+    .angle(function(d, i) { return angle(i); });
 
 d3.json('./js/data.json',function(data){
 
@@ -517,6 +586,15 @@ d3.json('./js/data.json',function(data){
 
 /*__________________________________________________________________________________________*/
 /*-------------------------CREATION DES CERCLES RELIES A L'ECHELLE-------------------------*/
+    arc0 = d3.svg.arc()
+                .innerRadius(76)
+                .outerRadius(76)
+                .startAngle(function(d,i){
+                    return (-p/2)+(p/total)*i; 
+                })
+                .endAngle(function(d,i){
+                    return(-p/2)+(p/total)*(i+1);
+                });
     arc1 = d3.svg.arc()
         .innerRadius(debutScaleAlbum)
         .outerRadius(function(d){
@@ -569,7 +647,7 @@ d3.json('./js/data.json',function(data){
         .data(data)
         .enter()
         .append('path')
-        .attr('d',arc1)
+        .attr('d',arc0)
         .style("fill", function(d){
             return d3.rgb(color(-1));
         })
@@ -596,7 +674,7 @@ d3.json('./js/data.json',function(data){
         .data(data)
         .enter()
         .append('path')
-        .attr('d',arc2)
+        .attr('d',arc0)
         .style("fill", function(d){
             return d3.rgb(color(0));
         })
@@ -622,7 +700,7 @@ d3.json('./js/data.json',function(data){
         .data(data)
         .enter()
         .append('path')
-        .attr('d',arc3)
+        .attr('d',arc0)
         .style("fill", function(d){
             return d3.rgb(color(1));
         })
@@ -696,13 +774,14 @@ d3.json('./js/data.json',function(data){
       }
     }
 });
-updateData();
+// updateData();
 
 function updateData(eventPassed) {
 
     /*Je récupère l'attribut data-class */
+    var classClicked = undefined;
     if (eventPassed) {
-        var classClicked = eventPassed.target.getAttribute('data-class');
+        classClicked = eventPassed.target.getAttribute('data-class');
     }
 
     // Get the data again
@@ -712,17 +791,6 @@ function updateData(eventPassed) {
         var gChosen = d3.selectAll("svg g."+classClicked).transition();
 
       /*Je défini 1 à 1 mes 3 arcs qui serviront a représenté mes 3 données*/
-
-            /*Je créer un arc de "reboot*/
-            var arc0 = d3.svg.arc()
-                .innerRadius(76)
-                .outerRadius(76)
-                .startAngle(function(d,i){
-                    return (-p/2)+(p/total)*i; 
-                })
-                .endAngle(function(d,i){
-                    return(-p/2)+(p/total)*(i+1);
-                });
 
             /*Je défini un compteur j car le i revient à 0 au changement de donnée*/
             var j = 0;

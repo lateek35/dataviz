@@ -167,12 +167,12 @@ define(['backbone','modelRapper','collectionRapper','text!templates/page-rappeur
 
               barAlbums.append("rect")
                   .attr("id",function(d,i){return "album-rect"+i;})
-                  .attr("width", "170px")
+                  .attr("width", "250px")
                   .attr("height", "50px")
                   .attr("rx","3")
                   .attr("ry","3")
                   .attr("fill", "#e94953")
-                  .attr("x","-85")
+                  .attr("x","-125")
                   .attr("y", function(d) { return y(d.a_sells)-62; });
 
               barAlbums.append("text")
@@ -187,7 +187,7 @@ define(['backbone','modelRapper','collectionRapper','text!templates/page-rappeur
                   .style("font-family","source_sans_probold")
                   .attr("id",function(d,i){return "album-text"+i;})
                   .attr("y",function(d) { return y(d.a_sells)-20; })
-                  .text(function(d) { return d.a_sells; });
+                  .text(function(d) { return d.a_sells===0?"NC":d.a_sells; });
 
           });
 
@@ -253,7 +253,11 @@ define(['backbone','modelRapper','collectionRapper','text!templates/page-rappeur
                       f = d3.format(",");
                   return function(t) {
                     // tickFormat(d3.format("d"))
-                      this.textContent = f(Math.round(i(t) * round) / round)+"%";
+                      if(Math.round(i(t)=='Infinity')){
+                        this.textContent = "0%";
+                      }else{
+                        this.textContent = f(Math.round(i(t) * round) / round)+"%";
+                      }
                   };
               });
 

@@ -4,11 +4,11 @@
   "description": "Datavisualisation sur le rap, projet HETIC",
   "main": "build.js",
   "dependencies": {
-    "gulp": "^3.8.8",
-    "gulp-compass": "^2.0.3"
+    "gulp-compass": "^2.0.3",
+    "gulp-prompt": "^0.1.2"
   },
   "devDependencies": {
-    "gulp": "^3.8.8",
+    "gulp": "^3.8.11",
     "gulp-changed": "^1.0.0",
     "gulp-clean": "^0.3.1",
     "gulp-filelog": "^0.2.0",
