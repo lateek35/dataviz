@@ -187,7 +187,10 @@ define(['backbone','modelRapper','collectionRapper','text!templates/page-rappeur
                   .style("font-family","source_sans_probold")
                   .attr("id",function(d,i){return "album-text"+i;})
                   .attr("y",function(d) { return y(d.a_sells)-20; })
-                  .text(function(d) { return d.a_sells===0?"NC":d.a_sells; });
+                  .text(function(d) { 
+                    f = d3.format(",");
+                    return d.a_sells===0?"NC":f(d.a_sells); 
+                  });
 
           });
 
