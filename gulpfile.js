@@ -19,7 +19,8 @@ var gulp = require('gulp'),
 	yesno = require('yesno'),
 	filelog = require("gulp-filelog"),
 	open = require('open'),
-	Notification = require('node-notifier');
+	Notification = require('node-notifier'),
+  autoprefixer = require('gulp-autoprefixer');
 
 var config = require('./config');
 
@@ -67,7 +68,11 @@ gulp.task('style', function(){
     .on('error', function(err) {
       // Would like to catch the error here
     })
-		.pipe(size())
+    .pipe(autoprefixer({
+        browsers: ['> 1%', 'last 3 versions', 'Firefox ESR','Opera 12.1','ie 9'],
+        cascade: false
+    }))
+    .pipe(size())
 		.pipe(minifyCSS({
 			keepSpecialComments : 0,
 
